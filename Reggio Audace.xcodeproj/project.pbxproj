@@ -15,6 +15,7 @@
 		527E94F121B0648900A8CAD0 /* Hind-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C721B0603600CBD2BE /* Hind-Medium.ttf */; };
 		527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C321B0603600CBD2BE /* Hind-Regular.ttf */; };
 		527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */; };
+		527E94F521B06A7B00A8CAD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 527E94F421B06A7B00A8CAD0 /* Info.plist */; };
 		52F650C921B0607B00CBD2BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C821B0607A00CBD2BE /* Default-568h@2x.png */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
+		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
 		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Bold.ttf"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
+				527E94F421B06A7B00A8CAD0 /* Info.plist */,
 			);
 			path = "Reggio Audace";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */,
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
+				527E94F521B06A7B00A8CAD0 /* Info.plist in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
