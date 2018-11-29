@@ -12,14 +12,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Ir-yE-3S0" customClass="CvcChat" customModule="Reggio_Audace" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Chats" id="5Ir-yE-3S0" customClass="CvcChat" customModule="Reggio_Audace" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9wB-7h-5Yt">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Formazioni" translatesAutoresizingMaskIntoConstraints="NO" id="9wB-7h-5Yt">
                         <rect key="frame" x="10" y="10" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="ZfF-N0-jIG"/>
@@ -62,4 +62,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="-101.64917541229386"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Formazioni" width="32" height="32"/>
+    </resources>
 </document>

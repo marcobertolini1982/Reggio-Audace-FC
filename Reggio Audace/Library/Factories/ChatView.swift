@@ -30,16 +30,15 @@ class ChatView
     func LoadChat()
     {
         var l_Chats:[Chat] = [Chat]()
-        
-        let l_Json : [String: String] = ["cod_device": "1"]
+        let l_Json : [String: String] = ["cod_user": "SRAYGq4tCcPzfM3K5JwLrBvDblk2"]
         let l_JsonData = try? JSONSerialization.data(withJSONObject: l_Json)
         
         // Create Chat request
-        let l_Url = URL(string: "http://192.168.1.60:8080/wRegia/GetChat")!
+        let l_Url = URL(string: "http://192.168.1.60:8080/wRegia/GetChats")!
         var l_URLRequest = URLRequest(url: l_Url)
         
         // Set properties
-        l_URLRequest.httpMethod = "Chat"
+        l_URLRequest.httpMethod = "POST"
         l_URLRequest.httpBody = l_JsonData
         
         // Set task
@@ -59,16 +58,12 @@ class ChatView
                     
                     // Init
                     l_Chat = Chat()
-                    l_Chat.prg_chat = dict["prg_Chat"] as? Int64
-                    l_Chat.dat_chat = dict["dat_Chat"] as? String
-                    l_Chat.des_title = dict["des_title"] as? String
-                    l_Chat.des_chat = dict["des_Chat"] as? String
-                    l_Chat.des_channel = dict["des_channel"] as? String
-                    l_Chat.prg_file = dict["prg_file"] as? Int64
-                    l_Chat.des_file = dict["des_file"] as? String
-                    l_Chat.num_files = dict["num_files"] as? Int64
-                    l_Chat.num_poll = dict["num_poll"] as? Int64
-                    // Set data
+                    l_Chat.prg_chat = dict["prg_chat"] as? Int64
+                   l_Chat.prg_user  = dict["prg_user"] as? Int64
+                    l_Chat.des_user = dict["des_user"] as? String
+                   l_Chat.cod_user  = dict["cod_user"] as? String
+                   l_Chat.des_lastmessage = dict["des_lastmessage"] as? String
+                  // l_Chat.dat_last_modified = dict["dat_lastmodified"] as? String
                    
                     
                     // Add

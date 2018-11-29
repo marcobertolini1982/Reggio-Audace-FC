@@ -8,29 +8,51 @@
 
 import UIKit
 
-private let reuseIdentifier = "Chats"
+private let CHATID = "Chats"
 
 class VcrChat: VcrBase,ProChatObs
 {
+    //Declarations
+    var  CHATS:[Chat] = [Chat]()
+    
     func ChatLoaded(chats: [Chat])
     {
-        
+        self.CHATS = chats
+        self.DataBind()
+    }
+    
+    func DataBind()
+    {
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+        }
+    }
+    
+    func LoadRecord()
+    {
+        //Declarations
+        let l_ChatView:ChatView = ChatView()
+        //Add event
+        l_ChatView.SetOnChatsLoaded(proChatObss: self)
+        l_ChatView.LoadChat()
     }
     
     func Init()
     {
-        let nib:UINib = UINib(nibName:"Chats", bundle: nil)
-        self.collectionView?.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+        let nib:UINib = UINib(nibName:"CvcChat", bundle: nil)
+        self.collectionView?.register(nib, forCellWithReuseIdentifier: CHATID)
+        self.SetLayoutVertical(heigth: 100)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.Init()
+        self.LoadRecord()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+     
 
         // Do any additional setup after loading the view.
     }
@@ -55,19 +77,21 @@ class VcrChat: VcrBase,ProChatObs
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        return self.CHATS.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-       guard let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CvcChat
-        else
+        //Declarations
+        let l_Index:Int = indexPath.row
+       guard let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: CHATID, for: indexPath) as? CvcChat
+       else
        {
-        return UICollectionViewCell()
-        }
+         return UICollectionViewCell()
+       }
     
         // Configure the cell
-    
+        l_Cell.lbl_desuser.text = self.CHATS[l_Index].des_user
         return l_Cell
     }
 
