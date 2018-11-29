@@ -35,6 +35,11 @@
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
+		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-Regular.ttf"; path = "../../../../Downloads/Hind/Hind-Regular.ttf"; sourceTree = "<group>"; };
+		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-Bold.ttf"; path = "../../../../Downloads/Hind/Hind-Bold.ttf"; sourceTree = "<group>"; };
+		52F650C521B0603600CBD2BE /* Hind-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-Light.ttf"; path = "../../../../Downloads/Hind/Hind-Light.ttf"; sourceTree = "<group>"; };
+		52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-SemiBold.ttf"; path = "../../../../Downloads/Hind/Hind-SemiBold.ttf"; sourceTree = "<group>"; };
+		52F650C721B0603600CBD2BE /* Hind-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-Medium.ttf"; path = "../../../../Downloads/Hind/Hind-Medium.ttf"; sourceTree = "<group>"; };
 		D11B714D21AF0A6600887D2A /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		D11B714F21AF0F3600887D2A /* ProFileObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProFileObs.swift; sourceTree = "<group>"; };
 		D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrBase.swift; sourceTree = "<group>"; };
@@ -74,6 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */,
+				52F650C421B0603600CBD2BE /* Hind-Bold.ttf */,
+				52F650C521B0603600CBD2BE /* Hind-Light.ttf */,
+				52F650C721B0603600CBD2BE /* Hind-Medium.ttf */,
+				52F650C321B0603600CBD2BE /* Hind-Regular.ttf */,
+				52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -169,12 +179,12 @@
 				D174232021AEAE10009AAEFC /* ViewControllers */,
 				D174231D21AEA802009AAEFC /* Protocols */,
 				D1BE6D9421AD7D2E00114084 /* Library */,
+				52F650C221B0576200CBD2BE /* Font */,
 				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
 				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
 				D1BE6D7221AD60EA00114084 /* Info.plist */,
-				52F650C221B0576200CBD2BE /* Font */,
 			);
 			path = "Reggio Audace";
 			sourceTree = "<group>";
