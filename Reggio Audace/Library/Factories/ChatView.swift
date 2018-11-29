@@ -34,7 +34,7 @@ class ChatView
         let l_JsonData = try? JSONSerialization.data(withJSONObject: l_Json)
         
         // Create Chat request
-        let l_Url = URL(string: "http://192.168.1.60:8080/wRegia/GetChats")!
+        let l_Url = URL(string: "http://portal.lensolution.it:8080/wRegia/GetChats")!
         var l_URLRequest = URLRequest(url: l_Url)
         
         // Set properties
