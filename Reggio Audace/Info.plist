@@ -51,7 +51,16 @@
 		</dict>
         <key>NSAllowsArbitraryLoads</key>
         <true/>
-	</dict>
+    </dict>
+    <key>UIAppFonts</key>
+    <array>
+        <string>BigNoodleTitling</string>
+        <string>Hind-Light</string>
+        <string>Hind-Medium</string>
+        <string>Hind-Regular</string>
+        <string>Hind-Bold</string>
+        <string>Hind-SemiBold</string>
+    </array>
 
 </dict>
 </plist>
