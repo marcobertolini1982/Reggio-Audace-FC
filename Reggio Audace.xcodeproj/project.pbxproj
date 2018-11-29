@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526BF73021B0450500465AD7 /* SingoloCalciatoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* SingoloCalciatoreTableViewCell.xib */; };
+		526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
 		D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		526BF72F21B0450500465AD7 /* SingoloCalciatoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SingoloCalciatoreTableViewCell.xib; path = "../../../../VApp/Tab Stagione/SingoloCalciatoreTableViewCell.xib"; sourceTree = "<group>"; };
+		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CvcSingleTeamStanding.xib; path = "../../../../VApp/Tab Stagione/CvcSingleTeamStanding.xib"; sourceTree = "<group>"; };
 		D11B714D21AF0A6600887D2A /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		D11B714F21AF0F3600887D2A /* ProFileObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProFileObs.swift; sourceTree = "<group>"; };
 		D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrBase.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				D174232621AED6BA009AAEFC /* CvcNews.xib */,
 				D1633DD521B0276500D5CE2F /* CvcChat.xib */,
+				526BF72F21B0450500465AD7 /* SingoloCalciatoreTableViewCell.xib */,
+				526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -243,6 +249,8 @@
 				D174232821AED6C1009AAEFC /* CvcNews.xib in Resources */,
 				D1633DD621B0276500D5CE2F /* CvcChat.xib in Resources */,
 				D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */,
+				526BF73021B0450500465AD7 /* SingoloCalciatoreTableViewCell.xib in Resources */,
+				526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */,
 				D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
