@@ -72,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52F650C221B0576200CBD2BE /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		D1633DD721B0298C00D5CE2F /* PageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +177,7 @@
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
 				D1BE6D7221AD60EA00114084 /* Info.plist */,
-				52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */,
+				52F650C221B0576200CBD2BE /* Font */,
 			);
 			path = "Reggio Audace";
 			sourceTree = "<group>";
