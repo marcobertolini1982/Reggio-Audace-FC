@@ -42,11 +42,11 @@
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
-		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-Regular.ttf"; path = "../../../../Downloads/Hind/Hind-Regular.ttf"; sourceTree = "<group>"; };
-		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-Bold.ttf"; path = "../../../../Downloads/Hind/Hind-Bold.ttf"; sourceTree = "<group>"; };
-		52F650C521B0603600CBD2BE /* Hind-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-Light.ttf"; path = "../../../../Downloads/Hind/Hind-Light.ttf"; sourceTree = "<group>"; };
-		52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-SemiBold.ttf"; path = "../../../../Downloads/Hind/Hind-SemiBold.ttf"; sourceTree = "<group>"; };
-		52F650C721B0603600CBD2BE /* Hind-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hind-Medium.ttf"; path = "../../../../Downloads/Hind/Hind-Medium.ttf"; sourceTree = "<group>"; };
+		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
+		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Bold.ttf"; sourceTree = "<group>"; };
+		52F650C521B0603600CBD2BE /* Hind-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Light.ttf"; sourceTree = "<group>"; };
+		52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-SemiBold.ttf"; sourceTree = "<group>"; };
+		52F650C721B0603600CBD2BE /* Hind-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Medium.ttf"; sourceTree = "<group>"; };
 		52F650C821B0607A00CBD2BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D11B714D21AF0A6600887D2A /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		D11B714F21AF0F3600887D2A /* ProFileObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProFileObs.swift; sourceTree = "<group>"; };
