@@ -28,21 +28,18 @@
 		<true/>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
-    </dict>
-    <key>UIAppFonts</key>
-    <array>
-        <string>BigNoodleTitling</string>
-    </array>
-        <string>Hind-Medium</string>
-    </array>
-        <string>Hind-Regular</string>
-    </array>
-        <string>Hind-Bold</string>
-    </array>
-        <string>Hind-SemiBold</string>
-    </array>
-        <string>Hind-Light</string>
-    </array>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BigNoodleTitling</string>
+		<string>Hind Light</string>
+		<string>Hind Medium</string>
+		<string>Hind Regular</string>
+		<string>Hind Bold
+Hind Bold
+</string>
+		<string>Hind SemiBold</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
