@@ -68,7 +68,6 @@
 		D1BE6D6B21AD60D800114084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1BE6D6D21AD60EA00114084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BE6D7021AD60EA00114084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D1BE6D7221AD60EA00114084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1BE6D9621AD7D6100114084 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +192,6 @@
 				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
-				D1BE6D7221AD60EA00114084 /* Info.plist */,
 			);
 			path = "Reggio Audace";
 			sourceTree = "<group>";
