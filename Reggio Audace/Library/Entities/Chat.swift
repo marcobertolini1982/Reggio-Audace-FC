@@ -10,14 +10,13 @@ import Foundation
 class Chat
 {
     var prg_chat: Int64?
-    var dat_chat:String?
-    var des_title: String?
-    var des_chat:String?
-    var des_channel:String?
-    var prg_file:Int64?
-    var des_file:String?
-    var num_files:Int64?
-    var num_poll:Int64?
+    var prg_user:Int64?
+    var des_user: String?
+      var cod_user:String?
+    var dat_last_modified:String?
+    var des_lastmessage:String?
+  
+   
     
     
 }

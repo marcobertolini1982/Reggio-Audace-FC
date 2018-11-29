@@ -30,7 +30,7 @@ class FileView
     {
         
         // Create post request
-        let l_Url = URL(string: "http://192.168.1.60:8080/wRegia/GetFile?prg_file=\(prg_file)")!
+        let l_Url = URL(string: "http://portal.lensolution.it:8080/wRegia/GetFile?prg_file=\(prg_file)")!
         var l_URLRequest = URLRequest(url: l_Url)
         
         // Set properties
