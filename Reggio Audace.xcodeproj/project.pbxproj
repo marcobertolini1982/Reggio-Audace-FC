@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
 		526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */; };
+		52F650C021B056FD00CBD2BE /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650BF21B056FC00CBD2BE /* big_noodle_titling.ttf */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
 		D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
+		52F650BF21B056FC00CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = big_noodle_titling.ttf; path = ../VApp/Font/big_noodle_titling.ttf; sourceTree = "<group>"; };
+		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		D11B714D21AF0A6600887D2A /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		D11B714F21AF0F3600887D2A /* ProFileObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProFileObs.swift; sourceTree = "<group>"; };
 		D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrBase.swift; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 			children = (
 				D1BE6D6521AD60D800114084 /* Reggio Audace */,
 				D1BE6D6421AD60D800114084 /* Products */,
+				52F650BF21B056FC00CBD2BE /* big_noodle_titling.ttf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +169,7 @@
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
 				D1BE6D7221AD60EA00114084 /* Info.plist */,
+				52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */,
 			);
 			path = "Reggio Audace";
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
 				526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */,
+				52F650C021B056FD00CBD2BE /* big_noodle_titling.ttf in Resources */,
 				D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

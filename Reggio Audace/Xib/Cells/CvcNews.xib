@@ -122,6 +122,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="share" width="32" height="32"/>
+        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>

@@ -28,7 +28,11 @@
 		<true/>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
-	</dict>
+    </dict>
+    <key>UIAppFonts</key>
+    <array>
+        <string>BigNoodleTitling</string>
+    </array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
