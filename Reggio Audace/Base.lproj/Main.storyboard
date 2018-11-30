@@ -703,7 +703,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modifica i dati d'accesso:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hZ-0y-vZY">
-                                <rect key="frame" x="16" y="80" width="133" height="19"/>
+                                <rect key="frame" x="16" y="80" width="343" height="19"/>
                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -757,16 +757,19 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4hZ-0y-vZY" firstAttribute="leading" secondItem="Ayu-Cb-OsY" secondAttribute="leading" constant="16" id="2o6-iR-8lk"/>
                             <constraint firstItem="bXy-xW-Akf" firstAttribute="leading" secondItem="jaC-KO-Wmv" secondAttribute="leading" id="9VA-ha-TG8"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="trailing" secondItem="CR5-yi-ueR" secondAttribute="trailing" id="DgY-ZU-P4t"/>
                             <constraint firstItem="4hZ-0y-vZY" firstAttribute="leading" secondItem="ATo-OO-yRk" secondAttribute="leading" id="HBx-1p-BKP"/>
                             <constraint firstItem="4hZ-0y-vZY" firstAttribute="leading" secondItem="dbh-ln-19D" secondAttribute="leadingMargin" id="IEL-Jo-cXa"/>
                             <constraint firstItem="CR5-yi-ueR" firstAttribute="trailing" secondItem="bXy-xW-Akf" secondAttribute="trailing" id="Luv-n7-vMA"/>
-                            <constraint firstItem="Ayu-Cb-OsY" firstAttribute="trailing" secondItem="4hZ-0y-vZY" secondAttribute="trailing" constant="226" id="Nil-JM-Ycp"/>
                             <constraint firstItem="jaC-KO-Wmv" firstAttribute="firstBaseline" secondItem="oly-ke-QZk" secondAttribute="firstBaseline" id="Nnp-bm-NTP"/>
+                            <constraint firstItem="ATo-OO-yRk" firstAttribute="top" secondItem="4hZ-0y-vZY" secondAttribute="bottom" constant="17" id="P0d-oT-yvD"/>
                             <constraint firstItem="bXy-xW-Akf" firstAttribute="trailing" secondItem="oly-ke-QZk" secondAttribute="trailing" id="WfU-nx-QMx"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="leading" secondItem="CR5-yi-ueR" secondAttribute="leading" id="X8k-7c-zDU"/>
                             <constraint firstItem="Ayu-Cb-OsY" firstAttribute="bottom" secondItem="jaC-KO-Wmv" secondAttribute="bottom" constant="58" id="ZFH-zg-9K3"/>
+                            <constraint firstItem="Ayu-Cb-OsY" firstAttribute="trailing" secondItem="4hZ-0y-vZY" secondAttribute="trailing" constant="16" id="ZLV-Wk-bEY"/>
+                            <constraint firstItem="4hZ-0y-vZY" firstAttribute="top" secondItem="Ayu-Cb-OsY" secondAttribute="top" constant="16" id="duU-2P-Say"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="top" secondItem="4hZ-0y-vZY" secondAttribute="bottom" constant="17" id="ezR-wP-SR6"/>
                             <constraint firstItem="jaC-KO-Wmv" firstAttribute="baseline" secondItem="oly-ke-QZk" secondAttribute="baseline" id="gkv-vf-JI0"/>
                             <constraint firstItem="4hZ-0y-vZY" firstAttribute="top" secondItem="Ayu-Cb-OsY" secondAttribute="top" constant="16" id="hQb-qv-FZt"/>
@@ -774,12 +777,13 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                             <constraint firstItem="bXy-xW-Akf" firstAttribute="top" secondItem="CR5-yi-ueR" secondAttribute="bottom" constant="8" symbolic="YES" id="ida-O0-pc9"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="trailing" secondItem="dbh-ln-19D" secondAttribute="trailingMargin" id="luj-0y-Nvx"/>
                             <constraint firstItem="CR5-yi-ueR" firstAttribute="leading" secondItem="bXy-xW-Akf" secondAttribute="leading" id="lxe-U2-wQd"/>
+                            <constraint firstItem="oly-ke-QZk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jaC-KO-Wmv" secondAttribute="trailing" constant="8" symbolic="YES" id="wd3-DF-pEQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ayu-Cb-OsY"/>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3510" y="3318"/>
+            <point key="canvasLocation" x="3510" y="3317.9577464788731"/>
         </scene>
         <!--LoggedAccount-->
         <scene sceneID="iiK-lw-hTc">
