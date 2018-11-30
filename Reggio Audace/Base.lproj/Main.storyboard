@@ -192,7 +192,7 @@
         <scene sceneID="lfB-fi-J8E">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJf-uW-Hy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="yys-1z-Oat" sceneMemberID="viewController">
+                <viewController title="Account" id="yys-1z-Oat" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wfr-GJ-y1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,11 +387,11 @@
             </objects>
             <point key="canvasLocation" x="2372" y="1630"/>
         </scene>
-        <!--MainAccountPage-->
+        <!--AccountMainPage-->
         <scene sceneID="hMV-bO-gyC">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFS-gO-1Ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="MainAccountPage" id="3eu-QL-cUl" sceneMemberID="viewController">
+                <viewController title="AccountMainPage" id="3eu-QL-cUl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RRT-ug-pPq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -456,13 +456,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-Fk-KGC">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-Fk-KGC">
                                 <rect key="frame" x="14" y="400" width="345" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="upm-aW-EnD"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-p2-zlS" customClass="RoundImageView" customModule="VApp" customModuleProvider="target">
@@ -659,11 +658,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
             </objects>
             <point key="canvasLocation" x="2351" y="2486"/>
         </scene>
-        <!--MediaAccountPage-->
+        <!--AccountMediaPage-->
         <scene sceneID="SAx-ua-Pq2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eF3-wT-2ED" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <collectionViewController title="MediaAccountPage" id="zp5-hw-gOW" sceneMemberID="viewController">
+                <collectionViewController title="AccountMediaPage" id="zp5-hw-gOW" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6a9-T8-2s2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -693,11 +692,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
             </objects>
             <point key="canvasLocation" x="3513" y="2486"/>
         </scene>
-        <!--ResetAccountPage-->
+        <!--Reset Account-->
         <scene sceneID="HMr-2t-ihO">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgw-L2-qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="ResetAccountPage" id="qqv-dV-hdx" sceneMemberID="viewController">
+                <viewController title="Reset Account" id="qqv-dV-hdx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dbh-ln-19D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
