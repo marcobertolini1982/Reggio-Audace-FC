@@ -15,7 +15,6 @@
 		527E94F121B0648900A8CAD0 /* Hind-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C721B0603600CBD2BE /* Hind-Medium.ttf */; };
 		527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C321B0603600CBD2BE /* Hind-Regular.ttf */; };
 		527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */; };
-		52F650C921B0607B00CBD2BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C821B0607A00CBD2BE /* Default-568h@2x.png */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
 		D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */; };
@@ -48,7 +47,6 @@
 		52F650C521B0603600CBD2BE /* Hind-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Light.ttf"; sourceTree = "<group>"; };
 		52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-SemiBold.ttf"; sourceTree = "<group>"; };
 		52F650C721B0603600CBD2BE /* Hind-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Medium.ttf"; sourceTree = "<group>"; };
-		52F650C821B0607A00CBD2BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D11B714D21AF0A6600887D2A /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		D11B714F21AF0F3600887D2A /* ProFileObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProFileObs.swift; sourceTree = "<group>"; };
 		D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrBase.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 		D1BE6D5A21AD60D800114084 = {
 			isa = PBXGroup;
 			children = (
-				52F650C821B0607A00CBD2BE /* Default-568h@2x.png */,
 				D1BE6D6521AD60D800114084 /* Reggio Audace */,
 				D1BE6D6421AD60D800114084 /* Products */,
 			);
@@ -285,7 +282,6 @@
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
-				52F650C921B0607B00CBD2BE /* Default-568h@2x.png in Resources */,
 				526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */,
 				D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */,
 			);
