@@ -24,4 +24,15 @@ class VcrBase: UICollectionViewController {
         
     }
 
+    func BindData()
+    {
+        
+        DispatchQueue.main.async {
+            
+            // Bind data
+            self.collectionView?.reloadData()
+            
+        }
+        
+    }
 }

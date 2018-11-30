@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PagChat: UIPageViewController
+class PagChat: PagBase
 {
    
     override func viewDidLoad()

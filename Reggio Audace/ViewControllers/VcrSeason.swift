@@ -1,104 +1,64 @@
 //
-//  ctr_news.swift
+//  VcrSeasonCollectionViewController.swift
 //  Reggio Audace
 //
-//  Created by Michele on 28/11/18.
+//  Created by Michele on 30/11/18.
 //  Copyright © 2018 LEN Solution. All rights reserved.
 //
 
 import UIKit
 
-private let reuseIdentifier = "PostCell"
+private let reuseIdentifier = "Cell"
 
-class VcrNews: VcrBase,ProPostObs
+class VcrSeasonCollectionViewController: VcrBase, ProSeasonObs
 {
-    
-    // Declarations
-    var POSTS:[Post] = [Post]()
-
-    func PostsLoaded(posts:[Post])
+    func SeasonLOaded(seasons: [Season])
     {
         
-        self.POSTS = posts
-        
-        self.BindData()
-        
-    }
-   
-    func Init() {
-        
-        // Register control
-        self.collectionView?.register(UINib(nibName: "CvcNews", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        
-        // Set layout
-        self.SetLayoutVertical(heigth: 300)
-        
     }
     
-    func SetParamsProperties() {
-        
-    }
-    
-    func LoadRecord() {
-        
-        // Declarations
-        let l_PostView : PostView = PostView()
-        
-        // Add event
-        l_PostView.SetOnPostsLoaded(proPostObs: self)
-        
-        // Load file
-        l_PostView.LoadPosts()
-        
-        
-    }
-    
-   
 
     override func viewDidLoad() {
-        
-        // Super
         super.viewDidLoad()
-        
-        // Init
-        self.Init()
-        
-        // Load record
-        self.LoadRecord()
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Register cell classes
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
+        // Do any additional setup after loading the view.
     }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+    // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
+
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return POSTS.count
+        return 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
-        
-        // Declarations
-        let l_Index:Int = indexPath.row
-        
-        // Eval registration cell
-        guard let l_Cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CvcNews
-        else {
-            return UICollectionViewCell()
-        }
-        
-        // Set image
-        l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
-        
-        // Set data
-        l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
-
-        // Return
-        return l_Cell
-        
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+    
+        // Configure the cell
+    
+        return cell
     }
 
     // MARK: UICollectionViewDelegate

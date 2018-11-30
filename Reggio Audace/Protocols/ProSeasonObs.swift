@@ -9,6 +9,6 @@
 import Foundation
 protocol ProSeasonObs
 {
-    func SeasonLOaded()
+    func SeasonLOaded(seasons:[Season])
     
 }

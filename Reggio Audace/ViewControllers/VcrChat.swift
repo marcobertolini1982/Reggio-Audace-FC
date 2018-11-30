@@ -18,15 +18,10 @@ class VcrChat: VcrBase,ProChatObs
     func ChatLoaded(chats: [Chat])
     {
         self.CHATS = chats
-        self.DataBind()
+        self.BindData()
     }
     
-    func DataBind()
-    {
-        DispatchQueue.main.async {
-            self.collectionView?.reloadData()
-        }
-    }
+   
     
     func LoadRecord()
     {
