@@ -34,7 +34,7 @@ class ChatView
         let l_JsonData = try? JSONSerialization.data(withJSONObject: l_Json)
         
         // Create Chat request
-        let l_Url = URL(string: "http://192.168.1.60:8080/wRegia/GetChats")!
+        let l_Url = URL(string: "http://portal.lensolution.it:8080/wRegia/GetChats")!
         var l_URLRequest = URLRequest(url: l_Url)
         
         // Set properties
@@ -59,15 +59,15 @@ class ChatView
                     // Init
                     l_Chat = Chat()
                     l_Chat.prg_chat = dict["prg_chat"] as? Int64
-                   l_Chat.prg_user  = dict["prg_user"] as? Int64
+                    l_Chat.prg_user  = dict["prg_user"] as? Int64
                     l_Chat.des_user = dict["des_user"] as? String
-                   l_Chat.cod_user  = dict["cod_user"] as? String
-                   l_Chat.des_lastmessage = dict["des_lastmessage"] as? String
+                    l_Chat.cod_user  = dict["cod_user"] as? String
+                    l_Chat.des_lastmessage = dict["des_lastmessage"] as? String
                   // l_Chat.dat_last_modified = dict["dat_lastmodified"] as? String
                    
                     
                     // Add
-                    l_Chats.append(l_Chat)
+                  l_Chats.append(l_Chat)
                     
                 }
                 
