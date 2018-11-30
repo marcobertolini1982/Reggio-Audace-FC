@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let CHATID = "Chats"
+private let CHATID = "ChatCell"
 
 class VcrChat: VcrBase,ProChatObs
 {
@@ -91,7 +91,7 @@ class VcrChat: VcrBase,ProChatObs
        }
     
         // Configure the cell
-        l_Cell.lbl_desuser.text = self.CHATS[l_Index].des_user
+       l_Cell.lbl_desuser.text = self.CHATS[l_Index].des_user
         return l_Cell
     }
 

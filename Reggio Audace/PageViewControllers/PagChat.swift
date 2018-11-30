@@ -8,14 +8,14 @@
 
 import UIKit
 
-class VcrChatPage: UIPageViewController
+class PagChat: UIPageViewController
 {
    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.SetPages()
-        // Do any additional setup after loading the view.
+     
     }
 
 
