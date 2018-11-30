@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class VcrBase: UICollectionViewController {
 
     func SetLayoutVertical(heigth: CGFloat) {

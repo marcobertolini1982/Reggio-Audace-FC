@@ -30,6 +30,11 @@
 		D174232321AEAE68009AAEFC /* VcrNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174232221AEAE68009AAEFC /* VcrNews.swift */; };
 		D174232821AED6C1009AAEFC /* CvcNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = D174232621AED6BA009AAEFC /* CvcNews.xib */; };
 		D174232921AED6C1009AAEFC /* CvcNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174232721AED6BF009AAEFC /* CvcNews.swift */; };
+		D17963F721B146EF005311A8 /* VcrUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963F621B146EF005311A8 /* VcrUsers.swift */; };
+		D17963F921B14779005311A8 /* VcrChannels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963F821B14779005311A8 /* VcrChannels.swift */; };
+		D17963FB21B1509D005311A8 /* SeasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963FA21B1509D005311A8 /* SeasonView.swift */; };
+		D17963FD21B151EB005311A8 /* ProSeasonObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963FC21B151EB005311A8 /* ProSeasonObs.swift */; };
+		D17963FF21B15773005311A8 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963FE21B15773005311A8 /* Season.swift */; };
 		D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D6621AD60D800114084 /* AppDelegate.swift */; };
 		D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6A21AD60D800114084 /* Main.storyboard */; };
 		D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6D21AD60EA00114084 /* Assets.xcassets */; };
@@ -62,6 +67,11 @@
 		D174232221AEAE68009AAEFC /* VcrNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrNews.swift; sourceTree = "<group>"; };
 		D174232621AED6BA009AAEFC /* CvcNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcNews.xib; sourceTree = "<group>"; };
 		D174232721AED6BF009AAEFC /* CvcNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CvcNews.swift; sourceTree = "<group>"; };
+		D17963F621B146EF005311A8 /* VcrUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrUsers.swift; sourceTree = "<group>"; };
+		D17963F821B14779005311A8 /* VcrChannels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrChannels.swift; sourceTree = "<group>"; };
+		D17963FA21B1509D005311A8 /* SeasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonView.swift; sourceTree = "<group>"; };
+		D17963FC21B151EB005311A8 /* ProSeasonObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProSeasonObs.swift; sourceTree = "<group>"; };
+		D17963FE21B15773005311A8 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		D1BE6D6321AD60D800114084 /* Reggio Audace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reggio Audace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BE6D6621AD60D800114084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1BE6D6B21AD60D800114084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +118,7 @@
 				D174231B21AE93AC009AAEFC /* PostView.swift */,
 				D11B714D21AF0A6600887D2A /* FileView.swift */,
 				D1633DCF21B0008A00D5CE2F /* ChatView.swift */,
+				D17963FA21B1509D005311A8 /* SeasonView.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -118,6 +129,7 @@
 				D174231E21AEA99B009AAEFC /* ProPostObs.swift */,
 				D11B714F21AF0F3600887D2A /* ProFileObs.swift */,
 				D1633DCD21B0000000D5CE2F /* ProChatObs.swift */,
+				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -128,6 +140,8 @@
 				D174232221AEAE68009AAEFC /* VcrNews.swift */,
 				D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */,
 				D1633DD321B01E9600D5CE2F /* VcrChat.swift */,
+				D17963F621B146EF005311A8 /* VcrUsers.swift */,
+				D17963F821B14779005311A8 /* VcrChannels.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -209,6 +223,7 @@
 			children = (
 				D1BE6D9621AD7D6100114084 /* Post.swift */,
 				D1633DD121B0135100D5CE2F /* Chat.swift */,
+				D17963FE21B15773005311A8 /* Season.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -294,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17963F921B14779005311A8 /* VcrChannels.swift in Sources */,
 				D1633DD221B0135100D5CE2F /* Chat.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
@@ -301,8 +317,12 @@
 				D1633DD421B01E9600D5CE2F /* VcrChat.swift in Sources */,
 				D174232321AEAE68009AAEFC /* VcrNews.swift in Sources */,
 				D1BE6D9721AD7D6100114084 /* Post.swift in Sources */,
+				D17963FD21B151EB005311A8 /* ProSeasonObs.swift in Sources */,
 				D174232921AED6C1009AAEFC /* CvcNews.swift in Sources */,
+				D17963FB21B1509D005311A8 /* SeasonView.swift in Sources */,
 				D11B714E21AF0A6600887D2A /* FileView.swift in Sources */,
+				D17963FF21B15773005311A8 /* Season.swift in Sources */,
+				D17963F721B146EF005311A8 /* VcrUsers.swift in Sources */,
 				D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */,
 				D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */,
 				D174231F21AEA99B009AAEFC /* ProPostObs.swift in Sources */,

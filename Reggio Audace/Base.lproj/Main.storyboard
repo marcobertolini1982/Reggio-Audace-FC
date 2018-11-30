@@ -110,7 +110,57 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3FF-F5-1Qw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1351" y="715"/>
+            <point key="canvasLocation" x="-2026" y="1634"/>
+        </scene>
+        <!--Vcr Users-->
+        <scene sceneID="YAU-xa-sbm">
+            <objects>
+                <collectionViewController storyboardIdentifier="Users" id="S4w-Hh-rdV" customClass="VcrUsers" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oeY-uq-Uet">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IV8-8f-oRP">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="S4w-Hh-rdV" id="hZG-JI-XCS"/>
+                            <outlet property="delegate" destination="S4w-Hh-rdV" id="dCN-qF-5Oh"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0z-R8-Abw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2026" y="2336"/>
+        </scene>
+        <!--Vcr Channels-->
+        <scene sceneID="7f4-iM-RmH">
+            <objects>
+                <collectionViewController storyboardIdentifier="Channels" id="oSU-Z4-JZi" customClass="VcrChannels" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="CXs-IO-x9g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ouB-AB-3ts">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="oSU-Z4-JZi" id="vvk-Tz-cmx"/>
+                            <outlet property="delegate" destination="oSU-Z4-JZi" id="fRK-Jc-Jpg"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0f-7l-9co" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2044" y="3090"/>
         </scene>
         <!--Stagione-->
         <scene sceneID="iFe-Mr-wtn">
