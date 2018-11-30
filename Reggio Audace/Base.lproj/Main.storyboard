@@ -6,8 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="big_noodle_titling.ttf">
+            <string>BigNoodleTitling</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="xa9-jR-CMf">
@@ -16,6 +22,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R8I-cW-7EL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="mID-Pm-WcN" kind="relationship" relationship="rootViewController" id="eCf-5I-us5"/>
@@ -42,7 +57,7 @@
                         <segue destination="Nj2-b9-YpC" kind="relationship" relationship="viewControllers" id="WYG-eN-PwS"/>
                         <segue destination="8TC-GE-GRC" kind="relationship" relationship="viewControllers" id="DpG-1N-U7m"/>
                         <segue destination="uEl-cb-2Re" kind="relationship" relationship="viewControllers" id="Faa-6A-wrI"/>
-                        <segue destination="bXR-GO-68I" kind="relationship" relationship="viewControllers" id="d00-Vw-Ej4"/>
+                        <segue destination="yys-1z-Oat" kind="relationship" relationship="viewControllers" id="9W8-A9-ev9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iof-km-ekz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,14 +189,607 @@
             <point key="canvasLocation" x="1094" y="725"/>
         </scene>
         <!--Account-->
+        <scene sceneID="lfB-fi-J8E">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJf-uW-Hy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="yys-1z-Oat" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wfr-GJ-y1w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accedi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROt-dt-zeA">
+                                <rect key="frame" x="16" y="124" width="343" height="19"/>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OMt-N9-gMa">
+                                <rect key="frame" x="16" y="151" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="zES-Lz-fVA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="wpe-AB-VX3">
+                                <rect key="frame" x="16" y="196" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="WmY-3R-Q7S"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imz-i7-pOD">
+                                <rect key="frame" x="98" y="241" width="175" height="31"/>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Accedi">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-mf-dIP">
+                                <rect key="frame" x="16" y="280" width="343" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XuD-l0-bts" kind="show" id="bf3-xz-Mz7"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cll-ee-Fnn">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Nuovo Utente" id="My0-tI-tZk" customClass="BarButtonItem" customModule="VApp" customModuleProvider="target">
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="n7D-DU-FTI" kind="show" id="gRE-mu-Vxl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rZT-OP-aXk"/>
+                                    <barButtonItem title="Reset Password" id="u1W-j3-dov" customClass="BarButtonItem" customModule="VApp" customModuleProvider="target">
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="qqv-dV-hdx" kind="show" id="qUC-rm-hEP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ROt-dt-zeA" firstAttribute="leading" secondItem="OMt-N9-gMa" secondAttribute="leading" id="0uw-jw-Sh4"/>
+                            <constraint firstItem="xjt-mf-dIP" firstAttribute="top" secondItem="imz-i7-pOD" secondAttribute="bottom" constant="8" symbolic="YES" id="5Q2-tT-YHn"/>
+                            <constraint firstItem="imz-i7-pOD" firstAttribute="top" secondItem="wpe-AB-VX3" secondAttribute="bottom" constant="8" symbolic="YES" id="Bez-Eo-dVQ"/>
+                            <constraint firstItem="ROt-dt-zeA" firstAttribute="trailing" secondItem="OMt-N9-gMa" secondAttribute="trailing" id="HJ7-vX-Jo9"/>
+                            <constraint firstItem="ROt-dt-zeA" firstAttribute="leading" secondItem="wfr-GJ-y1w" secondAttribute="leadingMargin" id="IjW-rf-q83"/>
+                            <constraint firstItem="wpe-AB-VX3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xjt-mf-dIP" secondAttribute="trailing" id="Jbc-WM-hwP"/>
+                            <constraint firstItem="wpe-AB-VX3" firstAttribute="top" secondItem="OMt-N9-gMa" secondAttribute="bottom" constant="8" symbolic="YES" id="K5Q-Lw-Uae"/>
+                            <constraint firstItem="OMt-N9-gMa" firstAttribute="trailing" secondItem="wpe-AB-VX3" secondAttribute="trailing" id="ONb-jd-nJ9"/>
+                            <constraint firstItem="wpe-AB-VX3" firstAttribute="leading" secondItem="xjt-mf-dIP" secondAttribute="leading" id="QYQ-Wm-Gvb"/>
+                            <constraint firstItem="aAg-xx-dA6" firstAttribute="trailing" secondItem="imz-i7-pOD" secondAttribute="trailing" constant="102" id="RoX-rb-6m4"/>
+                            <constraint firstItem="OMt-N9-gMa" firstAttribute="leading" secondItem="wpe-AB-VX3" secondAttribute="leading" id="Ybw-Bg-ejG"/>
+                            <constraint firstItem="Cll-ee-Fnn" firstAttribute="leading" secondItem="wfr-GJ-y1w" secondAttribute="leading" id="Zhg-y5-JeZ"/>
+                            <constraint firstItem="ROt-dt-zeA" firstAttribute="top" secondItem="aAg-xx-dA6" secondAttribute="top" constant="60" id="mgx-qY-I37"/>
+                            <constraint firstItem="OMt-N9-gMa" firstAttribute="top" secondItem="ROt-dt-zeA" secondAttribute="bottom" constant="8" symbolic="YES" id="swK-LJ-Dt8"/>
+                            <constraint firstItem="Cll-ee-Fnn" firstAttribute="bottom" secondItem="aAg-xx-dA6" secondAttribute="bottom" id="uf7-rj-agF"/>
+                            <constraint firstItem="imz-i7-pOD" firstAttribute="leading" secondItem="aAg-xx-dA6" secondAttribute="leading" constant="98" id="xFz-Ue-DXG"/>
+                            <constraint firstItem="xjt-mf-dIP" firstAttribute="centerX" secondItem="Cll-ee-Fnn" secondAttribute="centerX" id="z41-zm-qPv"/>
+                            <constraint firstAttribute="trailing" secondItem="Cll-ee-Fnn" secondAttribute="trailing" id="zjn-OX-CU1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aAg-xx-dA6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="IconaAccount" id="759-YS-t0J"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2372" y="725"/>
+        </scene>
+        <!--Registrazione-->
+        <scene sceneID="dFr-a6-Ak2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCi-oY-5v2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Registrazione" id="n7D-DU-FTI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sVl-mJ-EgW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registra un nuovo utente:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzp-4P-X8k">
+                                <rect key="frame" x="16" y="74" width="343" height="18.5"/>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indirizzo email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ukX-SC-A5k">
+                                <rect key="frame" x="16" y="100.5" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Sg4-TC-4nJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="Sh4-Xv-3Sc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lGs-lf-fN3">
+                                <rect key="frame" x="16" y="145.5" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Xu3-7D-4fB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-Gx-a3Y">
+                                <rect key="frame" x="16" y="255" width="333" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="hTc-HI-DrG"/>
+                                </constraints>
+                                <string key="text">Cliccando su Registrati presti il consenso al trattamento dei dati inseriti nel form. Per maggiori info consulta la Privacy Policy.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3y-xy-0kw">
+                                <rect key="frame" x="16" y="284" width="333" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="NqZ-ak-lyA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XuD-l0-bts" kind="show" id="6Ex-yp-Fq3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owf-Nv-KFf">
+                                <rect key="frame" x="100" y="190.5" width="165" height="31"/>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Vd7-BP-4n0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="REGISTRATI">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0v3-Gx-a3Y" firstAttribute="trailing" secondItem="h3y-xy-0kw" secondAttribute="trailing" id="5AH-P3-lGz"/>
+                            <constraint firstItem="Pzp-4P-X8k" firstAttribute="trailing" secondItem="ukX-SC-A5k" secondAttribute="trailing" id="9L4-Il-0Bw"/>
+                            <constraint firstItem="Pzp-4P-X8k" firstAttribute="leading" secondItem="ukX-SC-A5k" secondAttribute="leading" id="F8M-Ft-Y65"/>
+                            <constraint firstItem="ukX-SC-A5k" firstAttribute="leading" secondItem="lGs-lf-fN3" secondAttribute="leading" id="GuO-W5-dvN"/>
+                            <constraint firstItem="ukX-SC-A5k" firstAttribute="trailing" secondItem="lGs-lf-fN3" secondAttribute="trailing" id="HC0-tW-2hs"/>
+                            <constraint firstItem="owf-Nv-KFf" firstAttribute="top" secondItem="lGs-lf-fN3" secondAttribute="bottom" constant="8" symbolic="YES" id="KPD-dV-rWF"/>
+                            <constraint firstItem="owf-Nv-KFf" firstAttribute="leading" secondItem="zs8-Xm-PaY" secondAttribute="leading" constant="100" id="Lj7-5m-wok"/>
+                            <constraint firstItem="0v3-Gx-a3Y" firstAttribute="top" secondItem="owf-Nv-KFf" secondAttribute="bottom" constant="33.666666666666686" id="O43-y2-krv"/>
+                            <constraint firstItem="lGs-lf-fN3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0v3-Gx-a3Y" secondAttribute="trailing" id="Pee-O8-ugh"/>
+                            <constraint firstItem="owf-Nv-KFf" firstAttribute="centerX" secondItem="0v3-Gx-a3Y" secondAttribute="centerX" id="PjT-mq-trd"/>
+                            <constraint firstItem="ukX-SC-A5k" firstAttribute="top" secondItem="Pzp-4P-X8k" secondAttribute="bottom" constant="8" id="Qgg-vi-FEa"/>
+                            <constraint firstItem="h3y-xy-0kw" firstAttribute="top" secondItem="0v3-Gx-a3Y" secondAttribute="bottom" constant="7" id="SYG-9Y-u37"/>
+                            <constraint firstItem="lGs-lf-fN3" firstAttribute="leading" secondItem="0v3-Gx-a3Y" secondAttribute="leading" id="Um4-ow-Zay"/>
+                            <constraint firstItem="lGs-lf-fN3" firstAttribute="top" secondItem="ukX-SC-A5k" secondAttribute="bottom" constant="8" symbolic="YES" id="a91-Zm-hNs"/>
+                            <constraint firstItem="0v3-Gx-a3Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h3y-xy-0kw" secondAttribute="leading" id="bao-Dk-EXA"/>
+                            <constraint firstItem="Pzp-4P-X8k" firstAttribute="trailing" secondItem="sVl-mJ-EgW" secondAttribute="trailingMargin" id="dLd-1S-Cft"/>
+                            <constraint firstItem="Pzp-4P-X8k" firstAttribute="top" secondItem="zs8-Xm-PaY" secondAttribute="top" constant="10" id="egb-x8-8jN"/>
+                            <constraint firstItem="Pzp-4P-X8k" firstAttribute="leading" secondItem="sVl-mJ-EgW" secondAttribute="leadingMargin" id="vac-Ie-IaU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zs8-Xm-PaY"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2372" y="1630"/>
+        </scene>
+        <!--MainAccountPage-->
+        <scene sceneID="hMV-bO-gyC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFS-gO-1Ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="MainAccountPage" id="3eu-QL-cUl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RRT-ug-pPq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-hz-OBT">
+                                <rect key="frame" x="14" y="196" width="345" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="MAh-L6-H6e"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFB-IM-UhL">
+                                <rect key="frame" x="14" y="142" width="290" height="19"/>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cognome" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FKc-4N-sLr">
+                                <rect key="frame" x="14" y="264" width="345" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="XVe-gr-S2s"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COGNOME:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4W-Q7-6a6">
+                                <rect key="frame" x="14" y="241" width="347" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="iOe-lB-XuD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Status" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Oeg-tB-6TV">
+                                <rect key="frame" x="14" y="332" width="345" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="66C-Pj-JD6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATUS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3C-Te-UaC">
+                                <rect key="frame" x="14" y="309" width="288" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="feq-zh-qMJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIO:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMh-Rv-8oG">
+                                <rect key="frame" x="16" y="378" width="288" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0NJ-BJ-yys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-Fk-KGC">
+                                <rect key="frame" x="14" y="400" width="345" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="upm-aW-EnD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-p2-zlS" customClass="RoundImageView" customModule="VApp" customModuleProvider="target">
+                                <rect key="frame" x="161" y="82" width="52" height="52"/>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="M2k-p2-zlS" secondAttribute="height" multiplier="1:1" id="4bd-Sb-Ome"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOME:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bh-O9-Oew">
+                                <rect key="frame" x="14" y="175" width="290" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="zK5-GF-X9b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgR-yJ-kgu">
+                                <rect key="frame" x="212" y="112" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="6qt-jp-KVo"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FKc-4N-sLr" firstAttribute="trailing" secondItem="F3C-Te-UaC" secondAttribute="trailing" constant="57" id="6cE-mU-A9W"/>
+                            <constraint firstItem="XFB-IM-UhL" firstAttribute="trailing" secondItem="RRT-ug-pPq" secondAttribute="trailingMargin" constant="-55" id="8Va-ZA-a0D"/>
+                            <constraint firstItem="B0D-hz-OBT" firstAttribute="top" secondItem="8bh-O9-Oew" secondAttribute="bottom" constant="1" id="9qO-wY-HYB"/>
+                            <constraint firstItem="Oeg-tB-6TV" firstAttribute="top" secondItem="F3C-Te-UaC" secondAttribute="bottom" constant="3" id="AYK-ra-Xxw"/>
+                            <constraint firstItem="F3C-Te-UaC" firstAttribute="top" secondItem="FKc-4N-sLr" secondAttribute="bottom" constant="8" id="Bmk-PE-cWe"/>
+                            <constraint firstItem="XFB-IM-UhL" firstAttribute="leading" secondItem="M7G-3p-HP3" secondAttribute="leading" constant="14" id="CBd-ij-wlK"/>
+                            <constraint firstItem="8bh-O9-Oew" firstAttribute="trailing" secondItem="B0D-hz-OBT" secondAttribute="trailing" constant="-55" id="DSS-Z1-7B3"/>
+                            <constraint firstItem="DMh-Rv-8oG" firstAttribute="top" secondItem="Oeg-tB-6TV" secondAttribute="bottom" constant="8" id="F9z-Ej-ouB"/>
+                            <constraint firstItem="M2k-p2-zlS" firstAttribute="centerX" secondItem="B0D-hz-OBT" secondAttribute="centerX" constant="0.5" id="Fqz-6K-dK5"/>
+                            <constraint firstItem="DMh-Rv-8oG" firstAttribute="leading" secondItem="hUI-Fk-KGC" secondAttribute="leading" constant="2" id="GEF-zx-5Z7"/>
+                            <constraint firstItem="M2k-p2-zlS" firstAttribute="leading" secondItem="M7G-3p-HP3" secondAttribute="leading" constant="161" id="ICH-gA-DSw"/>
+                            <constraint firstItem="q4W-Q7-6a6" firstAttribute="leading" secondItem="M7G-3p-HP3" secondAttribute="leading" constant="14" id="J2N-Sb-OSa"/>
+                            <constraint firstItem="M2k-p2-zlS" firstAttribute="top" secondItem="M7G-3p-HP3" secondAttribute="top" constant="62" id="Kgu-7x-BUb"/>
+                            <constraint firstItem="8bh-O9-Oew" firstAttribute="top" secondItem="XFB-IM-UhL" secondAttribute="bottom" constant="14" id="M3d-mO-yEX"/>
+                            <constraint firstItem="XFB-IM-UhL" firstAttribute="leading" secondItem="8bh-O9-Oew" secondAttribute="leading" id="MVY-Oy-Kh9"/>
+                            <constraint firstItem="B0D-hz-OBT" firstAttribute="leading" secondItem="FKc-4N-sLr" secondAttribute="leading" id="UGp-n3-bh1"/>
+                            <constraint firstItem="DMh-Rv-8oG" firstAttribute="trailing" secondItem="hUI-Fk-KGC" secondAttribute="trailing" constant="-55" id="VoS-cx-TLL"/>
+                            <constraint firstItem="FKc-4N-sLr" firstAttribute="leading" secondItem="F3C-Te-UaC" secondAttribute="leading" id="Vwb-zS-kCv"/>
+                            <constraint firstItem="TgR-yJ-kgu" firstAttribute="top" secondItem="M7G-3p-HP3" secondAttribute="top" constant="92" id="WaN-w4-zwB"/>
+                            <constraint firstItem="TgR-yJ-kgu" firstAttribute="leading" secondItem="M2k-p2-zlS" secondAttribute="trailing" constant="-1" id="XiR-Mv-zBO"/>
+                            <constraint firstItem="B0D-hz-OBT" firstAttribute="trailing" secondItem="FKc-4N-sLr" secondAttribute="trailing" id="Y87-H6-n2L"/>
+                            <constraint firstItem="XFB-IM-UhL" firstAttribute="top" secondItem="M2k-p2-zlS" secondAttribute="bottom" constant="8" symbolic="YES" id="Ycr-3Y-nQB"/>
+                            <constraint firstItem="q4W-Q7-6a6" firstAttribute="top" secondItem="B0D-hz-OBT" secondAttribute="bottom" constant="8" id="bVf-sC-Qvu"/>
+                            <constraint firstItem="hUI-Fk-KGC" firstAttribute="top" secondItem="DMh-Rv-8oG" secondAttribute="bottom" constant="2" id="djJ-b9-8LO"/>
+                            <constraint firstItem="Oeg-tB-6TV" firstAttribute="leading" secondItem="DMh-Rv-8oG" secondAttribute="leading" constant="-2" id="eef-PU-1L5"/>
+                            <constraint firstItem="M7G-3p-HP3" firstAttribute="trailing" secondItem="q4W-Q7-6a6" secondAttribute="trailing" constant="14" id="gU8-KT-mL8"/>
+                            <constraint firstItem="F3C-Te-UaC" firstAttribute="trailing" secondItem="Oeg-tB-6TV" secondAttribute="trailing" constant="-57" id="geg-GE-VLm"/>
+                            <constraint firstItem="XFB-IM-UhL" firstAttribute="trailing" secondItem="8bh-O9-Oew" secondAttribute="trailing" id="lAa-ax-rLj"/>
+                            <constraint firstItem="B0D-hz-OBT" firstAttribute="leading" secondItem="RRT-ug-pPq" secondAttribute="leadingMargin" constant="-2" id="nOX-Ci-xkM"/>
+                            <constraint firstItem="F3C-Te-UaC" firstAttribute="leading" secondItem="Oeg-tB-6TV" secondAttribute="leading" id="oVf-mV-2uU"/>
+                            <constraint firstItem="FKc-4N-sLr" firstAttribute="top" secondItem="q4W-Q7-6a6" secondAttribute="bottom" constant="3" id="pkf-Gt-zlN"/>
+                            <constraint firstItem="XFB-IM-UhL" firstAttribute="top" secondItem="TgR-yJ-kgu" secondAttribute="bottom" constant="8" symbolic="YES" id="qMg-mq-vwc"/>
+                            <constraint firstItem="Oeg-tB-6TV" firstAttribute="trailing" secondItem="DMh-Rv-8oG" secondAttribute="trailing" constant="55" id="xRe-5F-vC1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M7G-3p-HP3"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3513" y="1630"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="tZc-Wh-aRs">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z45-VW-P9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Privacy Policy" id="XuD-l0-bts" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qiN-Cz-6je">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tiw-Nw-oeV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cs0-I2-5Xj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2366"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2366" id="xw6-3g-jdE"/>
+                                        </constraints>
+                                        <string key="text">PRIVACY POLICY - INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI
+(adempimenti connessi al Decreto Legislativo 30 giugno 2003, n. 196 – Codice Privacy)
+La presente informativa sulla privacy descrive il trattamento dei dati personali immessi o raccolti sul sito www.reggioaudacefc.com (“Sito”) ed eventuali altri siti nei quali la stessa è pubblicata. L’informativa illustra inoltre il trattamento dei dati personali immessi o raccolti attraverso Applicazioni che la Reggio Audace FC rende disponibile su piattaforme o siti di terze parti.
+1. Definizioni
+2. Tipologia dei dati personali raccolti
+3. Modalità di raccolta dei dati personali
+4. Finalità del trattamento
+5. Soft Spamming
+6. Comunicazione e diffusione dei dati
+7. Modalità di trattamento dei dati
+8. Eventuale indicazione da parte dell’interessato di dati personali di terzi soggetti
+9. Trasferimento, conservazione e trattamento dei dati personali a livello internazionale
+10. La privacy dei minori
+11. Titolare e responsabile del trattamento
+12. Diritti dell’interessato
+13. Modifiche alla presente informativa sulla privacy
+1. Definizioni
+Dati aggregati. Per dati aggregati si intendono le informazioni su gruppi o categorie di utenti, che non identificano e non possono ragionevolmente essere utilizzate per identificare un singolo utente.
+Dati anonimi. Per dati anonimi si intendono le informazioni che non identificano direttamente o indirettamente e che non possono essere ragionevolmente usate per identificare un singolo utente.
+Applicazione. Per applicazione si intende un programma o servizio gestito da Reggio Audace (o per conto della Reggio Audace) che può essere visualizzato su vari ambienti e piattaforme online, mobili o di altra natura, ivi compresi quelli gestiti da parti terze, che ci consentono di interagire direttamente con i nostri utenti.
+Minori. Per minori si intendono gli individui da noi identificati quali minorenni non in grado per legge di acconsentire alla raccolta e al trattamento dei dati personali.
+Titolare del trattamento. Il titolare del trattamento dei dati personali responsabile delle informazioni personali raccolte dal Sito e Applicazioni, ovvero Reggio Audace FC SRL con sede in Via Emilia all’Angelo, 44/B, 42124 Reggio Emilia (RE).
+Responsabile del trattamento. Il responsabile del trattamento dei dati personali è una persona o entità che si occupa del trattamento dei dati personali per conto di uno o più titolari del trattamento, autorizzata a eseguire il trattamento dei dati solamente secondo le
+indicazioni del titolare.
+Indirizzo IP. L’indirizzo IP è associato al punto di accesso tramite il quale ci si collega a internet e solitamente è controllato dall'Internet Service Provider (ISP) dell'utente.
+Notifica. Una notifica può essere inoltrata per e-mail all’utente all’ultimo indirizzo di posta elettronica comunicato, tramite la pubblicazione di avvisi di modifiche sul Siti e Applicazioni o con altri mezzi ai sensi delle leggi vigenti.
+Genitori. Il termine genitori indica un genitore o un tutore legale.
+Dati personali. Per dati personali si intendono le informazioni che identificano (direttamente o indirettamente) uno specifico individuo, per esempio il nome, l’indirizzo postale, l’indirizzo di posta elettronica, il numero di telefono, dati di navigazione, indirizzo
+IP. Quando sono associati direttamente o indirettamente ai dati personali, i dati anonimi sono altresì trattati quali dati personali.
+Forum pubblici. Il Sito e le Applicazioni possono offrire bacheche di messaggi, pagine di conversazione, chat room, ambienti di comunità sociale, pagine profilo e altri forum il cui pubblico non è limitato. Se si forniscono dati personali quando si utilizzano tali funzionalità, tali informazioni possono essere rese pubbliche o divulgate altrimenti senza limitazioni all'uso da parte nostra o di terzi. Per richiedere la cancellazione dei propri dati personali da un forum pubblico su uno dei nostri siti o applicazioni, contattare Reggio Audace .
+Sito. Il sito www.reggioaudacefc.it
+2. Tipologia dei dati personali raccolti
+Raccogliamo due tipi basilari di informazioni: dati personali e dati anonimi; inoltre, possiamo utilizzare dati sia personali sia anonimi per la creazione di un terzo tipo di informazioni: dati aggregati. Raccogliamo le seguenti categorie di dati personali:
+• dati di registrazione immessi quando l’utente crea un account, i quali includono nome e cognome, indirizzo di residenza, sesso, data di nascita, nazione di nascita, indirizzo e-mail, nome utente e password;
+• dati della transazione immessi quando si acquista un nostro prodotto o servizio sul nostro Sito o attraverso le nostre Applicazioni, i quali comprendono informazioni sui prodotti/servizi acquistati, l’indirizzo postale, il numero di telefono e le informazioni
+di pagamento;
+• dati immessi in forum pubblici sul Sito e Applicazioni;
+• dati personali inviati da un utente a un altro o all’interno di un gruppo ristretto, per mezzo delle funzionalità di messaggistica, chat, pubblicazione di messaggi o simili, ove attivato il servizio E consentito dalle leggi applicabili;
+• dati personali immessi in occasione dell’utilizzo del Sito, delle nostre Applicazioni, di nostre Applicazioni su piattaforme o siti internet di terze parti, quali i siti di social networking, ovvero quando l’utente collega il proprio profilo su un sito o piattaforma di terzi con l’account di registrazione;
+• informazioni di localizzazione dell'utente all’atto della visita al nostro Sito o dell’uso delle nostre Applicazioni, ivi comprese le informazioni di localizzazione fornite da un dispositivo mobile che interagisce con il nostro Sito o Applicazioni, o relative all’indirizzo IP dell’utente, laddove il trattamento di tali dati è consentito dalle leggi vigenti;
+• dati d’uso, di visualizzazione e tecnici, ivi compresi l’identificativo del dispositivo o l’indirizzo IP dell’utente, il momento in cui l’utente visita il Sito, utilizza le nostre Applicazioni su siti e piattaforme di terze parti, ovvero apre i nostri messaggi e-mail.
+3. Modalità di raccolta dei dati personali
+• Raccogliamo i dati personali immessi dall’utente quando sono richiesti prodotti, servizi o informazioni, oppure quando l’utente si registra sul Sito, partecipa a forum pubblici o altre attività sul nostro Sito e Applicazioni, comunica con il nostro customer care, risponde a questionari o sondaggi, partecipa a una promozione, un gioco, o un concorso, ovvero interagisce con noi in altro modo. Si prenda atto che quando l’utente fornisce dati personali su piattaforme o siti internet di terze parti (ad esempio, attraverso le nostre Applicazioni), i dati inviati potrebbero essere raccolti separatamente dal sito o piattaforma di terzi. Raccogliamo dati personali in conformità alle direttive della presente informativa sulla privacy; inoltre, i dati personali raccolti da siti e piattaforme di terze parti sono soggetti alle direttive sulla privacy di tali siti e piattaforme di terzi. Le scelte in relazione alla privacy effettuate dall’utente sui siti e sulle piattaforme di terze parti non si applicano all’uso da parte nostra dei dati personali da noi raccolti direttamente per mezzo delle nostre Applicazioni.
+• I sistemi informatici e le procedure software preposte al funzionamento del Sito acquisiscono, nel corso del loro normale esercizio, alcuni dati personali la cui trasmissione è implicita nell'uso dei protocolli di comunicazione di Internet. Si tratta di informazioni che non sono raccolte per essere associate a interessati identificati, ma che per loro stessa natura potrebbero, attraverso elaborazioni ed associazioni con dati detenuti da terzi, permettere di identificare gli utenti. In questa categoria di dati rientrano gli indirizzi IP o i nomi a dominio dei computer utilizzati dagli utenti che si connettono al Sito, gli indirizzi in notazione URI (Uniform Resource Identifier) delle risorse richieste, l'orario della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) ed altri parametri relativi al sistema operativo e all'ambiente informatico dell'utente. Questi dati vengono utilizzati al solo fine di ricavare informazioni statistiche anonime sull'uso del Sito e per controllarne il corretto funzionamento e sono conservati per i tempi definiti dalla normativa legale di riferimento. I dati potrebbero essere utilizzati per l'accertamento di responsabilità in caso di ipotetici reati informatici ai danni del Sito.
+• Raccogliamo dati personali per mezzo di elementi tecnologici quali cookie, quando l’utente visita il nostro Sito e Applicazioni o quando utilizza le nostre Applicazioni su siti e piattaforme di terze parti. Si prega di prendere visione dell’allegata Cookie Policy per ulteriori informazioni, incluse le modalità di disattivazione dei cookie.
+4. Finalità del trattamento
+L’accesso e la navigazione del Sito sono liberi, ma la possibilità di fruire di alcuni servizi online a disposizione sul Sito è consentita solo previa registrazione dell’utente. Il processo di registrazione consiste nella compilazione di un modulo online nel quale è richiesto all’utente di indicare suoi dati personali – alcuni da inserire obbligatoriamente – per l’attivazione di credenziali di autenticazione (email + password) con le quali successivamente l’interessato accederà a tutte le aree e ai servizi del Sito riservati agli utenti registrati. Quindi, in primo luogo, le finalità primarie del trattamento sono rappresentate dalla necessità di consentire l’espletamento delle richieste procedure di previa registrazione online e la creazione di un account e di consentire ai gestori del Sito la generazione e la successiva gestione tecnica e amministrativa (ivi incluse le finalità di fornire supporto e assistenza tecnica su richiesta) dell’account, dei codici di attivazione, delle password e similari credenziali di autenticazione da utilizzare sul Sito così come creati dagli utenti nell'ambito del processo di registrazione. Gli utenti registrati, una volta autenticatisi al Sito, sono poi abilitati alla fruizione di tutti i servizi messi a disposizione online sul Sito. Quindi il trattamento dei dati personali (ivi inclusa la loro registrazione nelle anagrafiche della Reggio Audace FC) è diretto al raggiungimento delle seguenti finalità primarie:
+a) per garantire la registrazione al Sito/Applicazione, consentire all'utente di accedere alle pagine web del Sito/Applicazione ove è possibile fruire dei servizi online, garantire la corretta erogazione dei servizi richiesti a Reggio Audace tramite il Sito/Applicazione, e, quindi, per adempiere in maniera corretta e puntuale a tutti gli obblighi derivanti dal rapporto contrattuale instaurato, nonché agli obblighi derivanti dalla legge o dai regolamenti in vigore, in particolare, in ambito fiscale, nonché di pubblica sicurezza;
+b) per finalità di tipo amministrativo e contabile, ivi inclusa l'eventuale trasmissione per posta elettronica di fatture commerciali da parte di Reggio Audace e/o di società collegate alla stessa nell’erogazione del servizio, per l’invio di comunicazioni all’utente riguardanti l’account o le transazioni effettuate con Reggio Audace;
+c) infine, tra le finalità primarie rientrano anche taluni trattamenti tecnici svolti mediante i cosiddetti “cookies tecnici” in base a quanto più in dettaglio illustrato nella Cookie Policy. In questi casi specifici, i trattamenti tecnici sono finalizzati unicamente ad effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica nella misura strettamente necessaria per fornire i servizi esplicitamente richiesti dagli utenti.
+In tutti i casi sopra illustrati ai punti a), b) e c), la Reggio Audace non ha l'obbligo di acquisire lo specifico consenso da parte dell'utente. Tutti i trattamenti sopra illustrati perseguono infatti finalità primarie per le quali l'art. 24 del Codice Privacy esclude la necessità di acquisire un consenso specifico dell'interessato, vuoi perché il trattamento è necessario per adempiere ad un obbligo previsto dalla legge, da un regolamento o dalla normativa comunitaria, oppure perché il trattamento è necessario per eseguire obblighi derivanti da un contratto del quale è parte l'interessato, o per adempiere, prima della conclusione del contratto, a specifiche richieste dell'interessato. Laddove l'utente non intendesse conferire comunque i dati personali richiesti e necessari in base a quanto precede, la conseguenza sarebbe quella dell'impossibilità di procedere alla registrazione al Sito/Applicazione e di fruire di tutti i servizi per i quali la registrazione e il conferimento dei dati sono comunque tecnicamente e contrattualmente necessari.
+Resterebbe comunque possibile navigare sul Sito come utente non registrato e anonimo e visualizzare i soli contenuti e materiali disponibili senza registrazione. Nel rispetto del Codice Privacy e delle scelte dell’utente i dati potranno altresì essere trattati per le seguenti ulteriori finalità secondarie:
+d) per l’iscrizione alle mailing list tenute dalla nostra Società, l’effettuazione di indagini di mercato e sondaggi (anche telefonici, online, mediante formulari), l’invio di materiale pubblicitario ed informativo sui prodotti e servizi offertReggio Audace o dai partner di Reggio Audace, sollecitazioni all'acquisto, a mezzo di sistemi automatizzati, quali e-mail, fax, sms o MMS, ovvero mediante modalità tradizionali (es: posta cartacea), o mediante il telefono con operatore (di seguito complessivamente “Trattamento per finalità di Marketing”);
+e) per l’elaborazione del profilo commerciale del cliente (tramite rilevazione delle abitudini
+di consumo), finalizzato, sia a monitorare il grado di soddisfazione della clientela per assicurare un miglior soddisfacimento delle esigenze della stessa, sia all’invio di materiale informativo e/o pubblicitario di interesse specifico per il cliente, a mezzo di sistemi automatizzati, quali e-mail, fax, sms o MMS, ovvero per posta.
+In tutti i casi sopra illustrati ai punti d) ed e) i dati potranno essere trattati solo in caso di prestazione dello specifico consenso. La mancata indicazione del consenso sarà corrispondente al diniego. Prestando dunque il consenso opzionale, l'interessato prende specificamente atto ed autorizza tali ulteriori possibili trattamenti. In ogni caso anche laddove l'interessato abbia prestato il consenso a perseguire le finalità menzionate ai punti d) ed e), resterà comunque libero di revocarlo in ogni momento, inviando una chiara comunicazione in tal senReggio Audace alla email reggioaudace@reggioaudacefc.it.
+L’eventuale rifiuto non comporterà alcuna conseguenza salvo l’impossibilità di essere inclusi in analisi statistiche e/o di profilazione e ricevere promozioni, sconti e comunicazioni mirate, in base ai dati forniti, o di essere informati circa eventuali iniziative di marketing e promo-pubblicitarie. Pertanto, per tali ulteriori finalità il trattamento avverrà esclusivamente secondo le finalità e sulla base dello specifico consenso prestato dall’interessato in sede di registrazione al Sito.
+5. Soft Spamming
+Limitatamente alle coordinate di posta elettronica fornite dall'utente nel contesto dell'acquisto di un servizio tramite il Sito, il dato fornito potrà essere utilizzato per consentire l’offerta diretta da parte di Reggio Audace di prodotti o servizi analoghi (c.d. Soft spamming), fermo restando il diritto dell'utente di opporsi a tale trattamento.
+6. Comunicazione e diffusione dei dati
+Tutti i dati raccolti potranno essere comunicati:
+• a soggetti esterni di propria fiducia ai quali Reggio Audace affida talune attività o parte di esse, funzionali all’erogazione e alla distribuzione dei servizi offerti tramite il Sito/Applicazione (ad es: società di hosting, project manager, programmatori, sistemisti e amministratori di database) ovvero la cui attività sia connessa, strumentale o di supporto a quella della Reggio Audace (ad es. soggetti cui Reggio Audace può affidare l’attività di customer care; soggetti che svolgono compiti di natura tecnica od organizzativa quali la prestazione di servizi di stampa, imbustamento, trasmissione, trasporto e smistamento di comunicazioni; consulenti). In tal caso detti soggetti saranno nominati come Responsabili o Incaricati dei trattamenti. L’elenco completo dei Responsabili è disponibile facendone richiesta al Responsabile di riferimento del trattamento designato dalla società per il riscontro all’interessato;
+• a tutti quei soggetti (ivi incluse le Pubbliche Autorità) che hanno accesso ai dati personali in forza di provvedimenti normativi o amministrativi;
+• a tutti quei soggetti pubblici e/o privati, persone fisiche e/o giuridiche (studi di consulenza legale, amministrativa e fiscale, Uffici Giudiziari, Camere di Commercio, Camere ed Uffici del Lavoro, ecc.), qualora la comunicazione risulti necessaria o funzionale al corretto adempimento degli obblighi contrattuali assunti, nonché degli obblighi derivanti dalla legge;
+• agli istituti bancari ed alle società che gestiscono i circuiti nazionali o internazionali di pagamento tramite i quali vengono effettuati i pagamenti online dei prodotti acquistati tramite il Sito. I dati personali non saranno i ogni caso oggetto di diffusione.
+7. Modalità di trattamento dei dati
+Il trattamento dei dati personali sarà principalmente effettuato con l’ausilio di mezzi elettronici o comunque automatizzati, secondo le modalità e con gli strumenti idonei a garantire la sicurezza e la riservatezza dei dati stessi, in conformità di quanto previsto dal D. Lgs. 196/2003. In particolare, saranno adottate tutte le misure tecniche, informatiche, organizzative, logistiche e procedurali di sicurezza, come previste dal D. Lgs. 196/2003, in modo che sia garantito il livello minimo di protezione dei dati previsto dalla legge, consentendo l’accesso alle sole persone incaricate del trattamento da parte del Titolare o dei Responsabili designati dal Titolare.
+8. Eventuale indicazione da parte dell’interessato di dati personali di terzi soggetti
+L’utente prende atto che la eventuale indicazione di dati personali e di contatto di qualsiasi terzo soggetto diverso dall’interessato rappresenta un trattamento di dati personali rispetto al quale egli si pone come autonomo titolare, assumendosi tutti gli obblighi e le responsabilità previste dal Codice Privacy. In tal senso l’utente garantisce a Reggio Audace che qualsiasi dato di terzi soggetti che sarà così indicato dall’utente (e che sarà conseguentemente trattato come se il terzo soggetto avesse fornito in proprio il consenso informato al trattamento e alla comunicazione dei dati a Reggio Audace) è stato acquisito dall’utente medesimo in piena conformità al Codice Privacy. L’utente conferisce sul punto la più ampia manleva rispetto ad ogni contestazione, pretesa, richiesta di risarcimento del danno da trattamento, etc che dovesse pervenire a Reggio Audace da qualsivoglia terzo soggetto interessato a causa della fornitura dei dati indicati dall’utente in violazione delle norme sulla tutela dei dati personali applicabili.
+9. Trasferimento, conservazione e trattamento dei dati personali a livello internazionale
+I dati sono conservati su server in Italia. E’ possibile che Reggio Audace memorizzi i dati personali in un cloud, ciò significa che i dati potrebbero essere trattati da provider di servizi cloud per conto di Reggio Audace e memorizzati in località diverse in tutto il mondo. Qualora la nostra attività contempli il trasferimento dei dati personali a terze parti situate in diversi luoghi nel mondo, per gli scopi descritti in questa informativa sulla privacy, ovunque i dati personali siano da noi trasferiti, conservati o trattati, adotteremo misure organizzative e contrattuali idonee alla salvaguardia dei dati personali e imporremo requisiti simili, ma non meno restrittivi, ai provider di servizi cloud, ivi compreso l’obbligo di trattare i dati personali esclusivamente per le finalità sopra indicate. Inoltre quando utilizziamo o divulghiamo dati personali trasferiti da paesi che hanno sviluppato Accordi Safe Harbor con gli USA, ci conformiamo ai principi di Safe Harbor definiti dal Dipartimento del Commercio statunitense, utilizziamo clausole contrattuali standard approvate dalla Commissione Europea, adottiamo altre misure ai sensi delle leggi dell’Unione Europea per assicurare una tutela adeguata, ovvero otteniamo il consenso dell’utente.
+10. La privacy dei Minori
+Non raccogliamo intenzionalmente dati personali di Minori in relazione alle funzionalità del Sito. In conformità alle leggi applicabili, il Genitore deve fornire il consenso alla raccolta dei dati personali del Minore; la registrazione al Sito/Applicazione del Minore deve pertanto essere autorizzata dal Genitore ed effettuata sotto la supervisione dello stesso Genitore, per tale motivo l’indirizzo di posta elettronica fornito deve essere del Genitore. Il genitore ha il diritto di visionare e richiedere l’eliminazione dei dati personali.
+Solo persone di età superiore ai 18 anni, con una carta di credito valida, possono acquistare i prodotti servizi sul Sito.
+11. Titolare e responsabile del trattamento
+Il Titolare del Reggio Audace FC SRL con sede legale in Via Emilia all’Angelo, 44/B - Reggio Emilia; Responsabile di riferimento del Trattamento designato è il Responsabile pro-tempore dell’ente Direzione Commerciale, nominato dal Titolare per il riscontro all’interessato in caso di esercizio dei diritti di cui all’articolo 7, al quale l’interessato potrà rivolgersi scrivendo al seguente indirizzo: Reggio Emilia - Via Emilia all’Angelo, 44/B.
+12. Diritti dell’interessato
+Si rammenta infine che l’art. 7 D. Lgs. 196/2003 conferisce all’interessato l’esercizio di specifici diritti, tra cui quelli di ottenere la conferma dell’esistenza o meno di propri dati personali anche se non ancora registrati, la comunicazione in forma intelligibile dei medesimi dati, la loro origine, le finalità e modalità del trattamento nonché la logica applicata in caso di trattamento effettuato con l’ausilio di strumenti elettronici. L’interessato può inoltre ottenere l’aggiornamento, la rettificazione o, se vi è interesse, l’integrazione dei dati come pure la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge. E’ anche diritto dell’interessato di opporsi, in tutto o in parte, per motivi legittimi, al trattamento dei suoi dati personali ancorché pertinenti allo scopo della raccolta ovvero per comunicazioni commerciali, per l’invio di materiale pubblicitario o per la vendita diretta.
+13. Modifiche alla presente informativa sulla privacy
+Occasionalmente potremo apportare modifiche alla presente informativa sulla privacy, allo scopo di inserire nuove tecnologie, prassi di settore e requisiti normativi, oppure per altri scopi. Informeremo l’utente con relativa Notifica qualora tali modifiche siano significative e otterremo il consenso dell’utente laddove previsto dalle leggi vigenti.
+Ultimo aggiornamento: 1 ottobre 2018</string>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cs0-I2-5Xj" firstAttribute="leading" secondItem="Tiw-Nw-oeV" secondAttribute="leading" id="74k-dP-6Ca"/>
+                                    <constraint firstAttribute="bottom" secondItem="cs0-I2-5Xj" secondAttribute="bottom" constant="20" symbolic="YES" id="Fiv-CH-o77"/>
+                                    <constraint firstItem="cs0-I2-5Xj" firstAttribute="centerX" secondItem="Tiw-Nw-oeV" secondAttribute="centerX" id="Pch-GG-heq"/>
+                                    <constraint firstItem="cs0-I2-5Xj" firstAttribute="top" secondItem="Tiw-Nw-oeV" secondAttribute="top" id="TMx-KC-UWw"/>
+                                    <constraint firstAttribute="trailing" secondItem="cs0-I2-5Xj" secondAttribute="trailing" id="yDY-2q-bw3"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tiw-Nw-oeV" secondAttribute="trailing" id="1pK-pP-bCu"/>
+                            <constraint firstItem="Tiw-Nw-oeV" firstAttribute="top" secondItem="4Ab-Ty-Z0C" secondAttribute="top" id="Lwu-Da-XsX"/>
+                            <constraint firstAttribute="bottom" secondItem="Tiw-Nw-oeV" secondAttribute="bottom" constant="20" symbolic="YES" id="q5z-QC-zg9"/>
+                            <constraint firstItem="Tiw-Nw-oeV" firstAttribute="leading" secondItem="qiN-Cz-6je" secondAttribute="leading" id="vH0-u2-p9U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Ab-Ty-Z0C"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2351" y="2486"/>
+        </scene>
+        <!--MediaAccountPage-->
+        <scene sceneID="SAx-ua-Pq2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eF3-wT-2ED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <collectionViewController title="MediaAccountPage" id="zp5-hw-gOW" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6a9-T8-2s2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1si-Oe-m8d">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="djD-Ur-9C0">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="zp5-hw-gOW" id="21h-EV-or6"/>
+                            <outlet property="delegate" destination="zp5-hw-gOW" id="gq4-59-o2X"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+            </objects>
+            <point key="canvasLocation" x="3513" y="2486"/>
+        </scene>
+        <!--ResetAccountPage-->
+        <scene sceneID="HMr-2t-ihO">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fgw-L2-qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="ResetAccountPage" id="qqv-dV-hdx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dbh-ln-19D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modifica i dati d'accesso:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hZ-0y-vZY">
+                                <rect key="frame" x="16" y="80" width="133" height="19"/>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-KO-Wmv">
+                                <rect key="frame" x="16" y="584" width="62" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="YSw-HQ-JqW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indirizzo email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-OO-yRk">
+                                <rect key="frame" x="16" y="116" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="HSj-zI-0OI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nuova Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CR5-yi-ueR">
+                                <rect key="frame" x="16" y="161" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="NFG-9J-hZl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conferma nuova Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bXy-xW-Akf">
+                                <rect key="frame" x="16" y="206" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="FA9-1f-FQf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oly-ke-QZk">
+                                <rect key="frame" x="317" y="584" width="42" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="LOG OUT">
+                                    <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bXy-xW-Akf" firstAttribute="leading" secondItem="jaC-KO-Wmv" secondAttribute="leading" id="9VA-ha-TG8"/>
+                            <constraint firstItem="ATo-OO-yRk" firstAttribute="trailing" secondItem="CR5-yi-ueR" secondAttribute="trailing" id="DgY-ZU-P4t"/>
+                            <constraint firstItem="4hZ-0y-vZY" firstAttribute="leading" secondItem="ATo-OO-yRk" secondAttribute="leading" id="HBx-1p-BKP"/>
+                            <constraint firstItem="4hZ-0y-vZY" firstAttribute="leading" secondItem="dbh-ln-19D" secondAttribute="leadingMargin" id="IEL-Jo-cXa"/>
+                            <constraint firstItem="CR5-yi-ueR" firstAttribute="trailing" secondItem="bXy-xW-Akf" secondAttribute="trailing" id="Luv-n7-vMA"/>
+                            <constraint firstItem="Ayu-Cb-OsY" firstAttribute="trailing" secondItem="4hZ-0y-vZY" secondAttribute="trailing" constant="226" id="Nil-JM-Ycp"/>
+                            <constraint firstItem="jaC-KO-Wmv" firstAttribute="firstBaseline" secondItem="oly-ke-QZk" secondAttribute="firstBaseline" id="Nnp-bm-NTP"/>
+                            <constraint firstItem="bXy-xW-Akf" firstAttribute="trailing" secondItem="oly-ke-QZk" secondAttribute="trailing" id="WfU-nx-QMx"/>
+                            <constraint firstItem="ATo-OO-yRk" firstAttribute="leading" secondItem="CR5-yi-ueR" secondAttribute="leading" id="X8k-7c-zDU"/>
+                            <constraint firstItem="Ayu-Cb-OsY" firstAttribute="bottom" secondItem="jaC-KO-Wmv" secondAttribute="bottom" constant="58" id="ZFH-zg-9K3"/>
+                            <constraint firstItem="ATo-OO-yRk" firstAttribute="top" secondItem="4hZ-0y-vZY" secondAttribute="bottom" constant="17" id="ezR-wP-SR6"/>
+                            <constraint firstItem="jaC-KO-Wmv" firstAttribute="baseline" secondItem="oly-ke-QZk" secondAttribute="baseline" id="gkv-vf-JI0"/>
+                            <constraint firstItem="4hZ-0y-vZY" firstAttribute="top" secondItem="Ayu-Cb-OsY" secondAttribute="top" constant="16" id="hQb-qv-FZt"/>
+                            <constraint firstItem="CR5-yi-ueR" firstAttribute="top" secondItem="ATo-OO-yRk" secondAttribute="bottom" constant="8" symbolic="YES" id="hUq-aD-lWD"/>
+                            <constraint firstItem="bXy-xW-Akf" firstAttribute="top" secondItem="CR5-yi-ueR" secondAttribute="bottom" constant="8" symbolic="YES" id="ida-O0-pc9"/>
+                            <constraint firstItem="ATo-OO-yRk" firstAttribute="trailing" secondItem="dbh-ln-19D" secondAttribute="trailingMargin" id="luj-0y-Nvx"/>
+                            <constraint firstItem="CR5-yi-ueR" firstAttribute="leading" secondItem="bXy-xW-Akf" secondAttribute="leading" id="lxe-U2-wQd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ayu-Cb-OsY"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3510" y="3318"/>
+        </scene>
+        <!--LoggedAccount-->
         <scene sceneID="iiK-lw-hTc">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qib-Vh-FcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="IconaAccount" id="mUl-Vu-44E"/>
                 </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qib-Vh-FcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2550" y="725"/>
+            <point key="canvasLocation" x="3514" y="725"/>
         </scene>
     </scenes>
     <resources>
@@ -191,4 +799,7 @@
         <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
         <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bf3-xz-Mz7"/>
+    </inferredMetricsTieBreakers>
 </document>
