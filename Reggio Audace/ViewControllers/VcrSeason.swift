@@ -10,22 +10,44 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class VcrSeasonCollectionViewController: VcrBase, ProSeasonObs
+class VcrSeason: VcrBase, ProSeasonObs
 {
-    func SeasonLOaded(seasons: [Season])
+    func SeasonLoaded(seasons: [Season])
     {
-        
+        self.SEASONS = seasons
+        self.BindData()
     }
     
+    var SEASONS:[Season] = [Season]()
+    func SeasonLOaded(seasons: [Season])
+    {
+        self.SEASONS = seasons
+        self.BindData()
+    }
+    
+    func LoadRecord()
+    {
+        let l_SeasonView:SeasonView = SeasonView()
+        l_SeasonView.SetOnSeasonLoaded(proSeasonObs: self)
+        l_SeasonView.LoadSeason()
+    }
+    
+    func Init()
+    {
+        let nib:UINib = UINib(nibName:"CvcChat", bundle: nil)
+        self.collectionView?.register(nib, forCellWithReuseIdentifier: CHATID)
+        self.SetLayoutVertical(heigth: 100)
+    }
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
+        self.Init()
+        self.LoadRecord()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -54,11 +76,15 @@ class VcrSeasonCollectionViewController: VcrBase, ProSeasonObs
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+       guard let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CvcChat
+        else
+       {
+        return UICollectionViewCell()
+       }
     
         // Configure the cell
     
-        return cell
+        return l_Cell
     }
 
     // MARK: UICollectionViewDelegate

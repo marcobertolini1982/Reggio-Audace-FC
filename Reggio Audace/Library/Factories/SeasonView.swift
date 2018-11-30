@@ -16,9 +16,15 @@ class SeasonView
     {
         for l_ProSeasonObs in self.proSeasonObss
         {
-          l_ProSeasonObs.SeasonLOaded(seasons: seasons)
+          l_ProSeasonObs.SeasonLoaded(seasons: seasons)
         }
     }
+    
+    func SetOnSeasonLoaded(proSeasonObs:ProSeasonObs)
+    {
+        self.proSeasonObss.append(proSeasonObs)
+    }
+    
     func LoadSeason()
     {
         //Declarations

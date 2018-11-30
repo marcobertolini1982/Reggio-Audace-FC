@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let CHATID = "ChatCell"
+ let CHATID = "ChatCell"
 
 class VcrChat: VcrBase,ProChatObs
 {

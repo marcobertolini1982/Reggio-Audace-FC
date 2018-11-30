@@ -10,9 +10,11 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class VcrChannels: VcrBase {
+class VcrChannels: VcrBase
+{
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
