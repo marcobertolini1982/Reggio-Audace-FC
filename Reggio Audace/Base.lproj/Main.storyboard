@@ -110,7 +110,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3FF-F5-1Qw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1351" y="715"/>
+            <point key="canvasLocation" x="-2026" y="1495"/>
         </scene>
         <!--Stagione-->
         <scene sceneID="iFe-Mr-wtn">
@@ -185,10 +185,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="32" height="32"/>
-        <image name="IconaAccount" width="25" height="25"/>
-        <image name="News" width="25" height="25"/>
-        <image name="Tabellino" width="32" height="32"/>
-        <image name="football-game" width="32" height="32"/>
+        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="IconaAccount" width="50" height="50"/>
+        <image name="News" width="50" height="50"/>
+        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>
