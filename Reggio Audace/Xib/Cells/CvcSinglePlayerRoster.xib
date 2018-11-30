@@ -106,7 +106,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNT-9c-1qU">
-                        <rect key="frame" x="129" y="72" width="156.5" height="22"/>
+                        <rect key="frame" x="185" y="70" width="119" height="22"/>
                         <attributedString key="attributedText">
                             <fragment content="LUOGO DI NASCITA">
                                 <attributes>
@@ -123,12 +123,13 @@
                     <constraint firstItem="HSM-EL-vug" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="1Zz-Bc-iqg"/>
                     <constraint firstAttribute="trailing" secondItem="mbx-kf-Vfi" secondAttribute="trailing" constant="5" id="1mL-Km-G8j"/>
                     <constraint firstItem="ai6-8P-1xN" firstAttribute="top" secondItem="Rcv-pT-s56" secondAttribute="bottom" constant="13.5" id="2W4-Ws-3kc"/>
-                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="baseline" secondItem="yNT-9c-1qU" secondAttribute="baseline" constant="1" id="3kL-LY-EJ8"/>
+                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="baseline" secondItem="yNT-9c-1qU" secondAttribute="baseline" constant="3" id="3kL-LY-EJ8"/>
                     <constraint firstAttribute="trailing" secondItem="mbx-kf-Vfi" secondAttribute="trailing" constant="5" id="3zh-TZ-u0v"/>
                     <constraint firstItem="Rcv-pT-s56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="A3n-We-0ES"/>
                     <constraint firstAttribute="bottom" secondItem="HSM-EL-vug" secondAttribute="bottom" constant="4.5" id="FGb-X4-3eB"/>
-                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="trailing" secondItem="yNT-9c-1qU" secondAttribute="trailing" constant="29.5" id="Gno-NA-uz7"/>
+                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="trailing" secondItem="yNT-9c-1qU" secondAttribute="trailing" constant="11" id="Gno-NA-uz7"/>
                     <constraint firstAttribute="trailing" secondItem="Rcv-pT-s56" secondAttribute="trailing" constant="5" id="H0l-74-pRL"/>
+                    <constraint firstItem="yNT-9c-1qU" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="SJl-aF-QnH"/>
                     <constraint firstItem="ai6-8P-1xN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="84" id="Sz8-W9-7Qf"/>
                     <constraint firstItem="qep-pF-A1C" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="Vor-gK-IP1"/>
                     <constraint firstItem="ai6-8P-1xN" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Xa3-NQ-Zjw"/>
@@ -139,7 +140,7 @@
                     <constraint firstItem="Rcv-pT-s56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="j4p-By-Qw3"/>
                     <constraint firstItem="qep-pF-A1C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="j79-Dp-ZMH"/>
                     <constraint firstItem="qep-pF-A1C" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="lks-dD-dVg"/>
-                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="firstBaseline" secondItem="yNT-9c-1qU" secondAttribute="firstBaseline" constant="2" id="mET-vg-il7"/>
+                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="firstBaseline" secondItem="yNT-9c-1qU" secondAttribute="firstBaseline" constant="4" id="mET-vg-il7"/>
                     <constraint firstItem="mbx-kf-Vfi" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="5" id="n4T-Vy-4Nt"/>
                     <constraint firstAttribute="trailing" secondItem="qep-pF-A1C" secondAttribute="trailing" constant="5" id="p0p-Q3-Rdi"/>
                     <constraint firstAttribute="bottom" secondItem="mbx-kf-Vfi" secondAttribute="bottom" constant="4.5" id="vXc-EN-qXJ"/>
