@@ -10,5 +10,7 @@ import Foundation
 
 class Season
 {
-  
+    var prg_season:Int64
+    
+    
 }
