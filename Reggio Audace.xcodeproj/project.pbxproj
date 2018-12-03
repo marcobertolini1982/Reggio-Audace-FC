@@ -18,6 +18,7 @@
 		527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */; };
 		5293A15021B576E90081E805 /* VcvNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A14F21B576E90081E805 /* VcvNews.xib */; };
 		5293A15221B57E5B0081E805 /* AccountPagerLogged.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */; };
+		5293A15421B583370081E805 /* AccountPagerLogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15321B583370081E805 /* AccountPagerLogIn.xib */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
 		D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4A21B521F000DAEF67 /* AuthUtils.swift */; };
@@ -64,6 +65,7 @@
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* VcvNews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VcvNews.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccountPagerLogged.xib; path = "../../VApp/Tab Account/AccountPagerLogged.xib"; sourceTree = "<group>"; };
+		5293A15321B583370081E805 /* AccountPagerLogIn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountPagerLogIn.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
 		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Bold.ttf"; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
 				5293A14F21B576E90081E805 /* VcvNews.xib */,
 				5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */,
+				5293A15321B583370081E805 /* AccountPagerLogIn.xib */,
 				527E94F421B06A7B00A8CAD0 /* Info.plist */,
 				526ABD4021B1564B004177CB /* GoogleService-Info.plist */,
 			);
@@ -376,6 +379,7 @@
 				527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */,
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
+				5293A15421B583370081E805 /* AccountPagerLogIn.xib in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
