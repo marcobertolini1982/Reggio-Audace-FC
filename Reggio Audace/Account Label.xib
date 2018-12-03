@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageControl" customModule="Reggio_Audace" customModuleProvider="target">
+            <connections>
+                <outlet property="contentview" destination="iN0-l3-epB" id="6Zf-Fs-oiX"/>
+                <outletCollection property="indicators" destination="Hng-Uu-gGm" collectionClass="NSMutableArray" id="MuT-EO-AQP"/>
+                <outletCollection property="indicators" destination="P6h-tw-jIv" collectionClass="NSMutableArray" id="fGe-SI-PAG"/>
+                <outletCollection property="indicators" destination="9Cr-74-WSJ" collectionClass="NSMutableArray" id="kRI-gF-mVp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uc7-Hv-Uy5" customClass="PageControl" customModule="Reggio_Audace" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="320" height="25"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6h-tw-jIv" customClass="PageIndicator" customModule="Reggio_Audace" customModuleProvider="target">
+                            <rect key="frame" x="145" y="3" width="30" height="19"/>
+                            <attributedString key="attributedText">
+                                <fragment content="MEDIA">
+                                    <attributes>
+                                        <font key="NSFont" size="17" name="BigNoodleTitling"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cr-74-WSJ" customClass="PageIndicator" customModule="Reggio_Audace" customModuleProvider="target">
+                            <rect key="frame" x="259" y="3" width="53" height="19"/>
+                            <attributedString key="attributedText">
+                                <fragment content="RESET">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="17" name="BigNoodleTitling"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hng-Uu-gGm" customClass="PageIndicator" customModule="Reggio_Audace" customModuleProvider="target">
+                            <rect key="frame" x="8" y="3" width="44.5" height="19"/>
+                            <attributedString key="attributedText">
+                                <fragment content="ACCOUNT">
+                                    <attributes>
+                                        <color key="NSColor" red="0.48627450980392156" green="0.0078431372549019607" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="17" name="BigNoodleTitling"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="P6h-tw-jIv" firstAttribute="centerX" secondItem="Uc7-Hv-Uy5" secondAttribute="centerX" id="BkA-3P-SoH"/>
+                        <constraint firstAttribute="height" constant="25" id="REG-KX-G6C"/>
+                        <constraint firstItem="Hng-Uu-gGm" firstAttribute="baseline" secondItem="P6h-tw-jIv" secondAttribute="baseline" id="cQ6-pe-rTL"/>
+                        <constraint firstItem="Hng-Uu-gGm" firstAttribute="centerY" secondItem="Uc7-Hv-Uy5" secondAttribute="centerY" id="gAj-EO-eD6"/>
+                        <constraint firstItem="9Cr-74-WSJ" firstAttribute="leading" secondItem="P6h-tw-jIv" secondAttribute="trailing" constant="84" id="jN0-Cc-Ucf"/>
+                        <constraint firstItem="9Cr-74-WSJ" firstAttribute="trailing" secondItem="Uc7-Hv-Uy5" secondAttribute="trailingMargin" id="pFR-A1-qfS"/>
+                        <constraint firstItem="Hng-Uu-gGm" firstAttribute="leading" secondItem="Uc7-Hv-Uy5" secondAttribute="leadingMargin" id="r9V-3a-IjZ"/>
+                        <constraint firstItem="P6h-tw-jIv" firstAttribute="baseline" secondItem="9Cr-74-WSJ" secondAttribute="baseline" id="srM-oS-5MR"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="wux-rF-zHf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Uc7-Hv-Uy5" secondAttribute="trailing" id="4WG-ig-YgY"/>
+                <constraint firstItem="Uc7-Hv-Uy5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BDi-d0-DBl"/>
+                <constraint firstItem="Uc7-Hv-Uy5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QJS-nb-WfB"/>
+                <constraint firstItem="Uc7-Hv-Uy5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="d8h-89-4kv"/>
+                <constraint firstItem="Uc7-Hv-Uy5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="jbB-Yg-9Eq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="50.625" y="15.845070422535212"/>
+        </view>
+    </objects>
+</document>
