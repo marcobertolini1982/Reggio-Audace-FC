@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class VcrBase: UICollectionViewController {
 
     func SetLayoutVertical(heigth: CGFloat) {
@@ -25,4 +24,15 @@ class VcrBase: UICollectionViewController {
         
     }
 
+    func BindData()
+    {
+        
+        DispatchQueue.main.async {
+            
+            // Bind data
+            self.collectionView?.reloadData()
+            
+        }
+        
+    }
 }

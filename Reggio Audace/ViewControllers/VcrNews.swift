@@ -53,16 +53,7 @@ class VcrNews: VcrBase,ProPostObs
         
     }
     
-    func BindData() {
-        
-        DispatchQueue.main.async {
-            
-            // Bind data
-            self.collectionView?.reloadData()
-            
-        }
-        
-    }
+   
 
     override func viewDidLoad() {
         

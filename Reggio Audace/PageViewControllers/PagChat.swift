@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PagChat: UIPageViewController
+class PagChat: PagBase
 {
    
     override func viewDidLoad()
@@ -30,9 +30,11 @@ class PagChat: UIPageViewController
     */
     func SetPages()
     {
-        let l_Storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let l_ChatPage:UIViewController =  l_Storyboard.instantiateViewController(withIdentifier: "Chat")
-        let l_Pages:[   UIViewController] = [l_ChatPage]
+        //Init
+        let l_Storyboard:UIStoryboard   =   UIStoryboard(name: "Main", bundle:nil)
+        let l_ChatPage:UIViewController =   l_Storyboard.instantiateViewController(withIdentifier: "Chat")
+        let l_Pages:[UIViewController]  =   [l_ChatPage]
+       //Load first page 
         self.setViewControllers(l_Pages, direction: NavigationDirection.forward, animated: true)
     }
 }
