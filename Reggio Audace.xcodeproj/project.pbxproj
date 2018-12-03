@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52127B3021B5890D006CE2AB /* ArticlePager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52127B2F21B5890D006CE2AB /* ArticlePager.xib */; };
 		526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ABD4021B1564B004177CB /* GoogleService-Info.plist */; };
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
 		526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reggio_Audace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52127B2E21B5882E006CE2AB /* Reggio Audace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Reggio Audace.entitlements"; sourceTree = "<group>"; };
+		52127B2F21B5890D006CE2AB /* ArticlePager.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticlePager.xib; sourceTree = "<group>"; };
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				5293A14F21B576E90081E805 /* VcvNews.xib */,
 				5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */,
 				5293A15321B583370081E805 /* AccountPagerLogIn.xib */,
+				52127B2F21B5890D006CE2AB /* ArticlePager.xib */,
 				527E94F421B06A7B00A8CAD0 /* Info.plist */,
 				526ABD4021B1564B004177CB /* GoogleService-Info.plist */,
 			);
@@ -382,6 +385,7 @@
 				D174232821AED6C1009AAEFC /* CvcNews.xib in Resources */,
 				D1633DD621B0276500D5CE2F /* CvcChat.xib in Resources */,
 				D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */,
+				52127B3021B5890D006CE2AB /* ArticlePager.xib in Resources */,
 				527E94F121B0648900A8CAD0 /* Hind-Medium.ttf in Resources */,
 				527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */,
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
