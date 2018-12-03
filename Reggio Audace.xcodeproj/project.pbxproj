@@ -44,9 +44,11 @@
 		D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6D21AD60EA00114084 /* Assets.xcassets */; };
 		D1BE6D7121AD60EA00114084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */; };
 		D1BE6D9721AD7D6100114084 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D9621AD7D6100114084 /* Post.swift */; };
+		D5D8A8995F382F955705B5E6 /* Pods_Reggio_Audace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reggio_Audace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D8A8995F382F955705B5E6 /* Pods_Reggio_Audace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +115,14 @@
 				52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		740F66140C8470DE6B6460A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8B068B4192118DC85083F5D5 /* Pods */ = {
@@ -202,6 +213,7 @@
 				D1BE6D6521AD60D800114084 /* Reggio Audace */,
 				D1BE6D6421AD60D800114084 /* Products */,
 				8B068B4192118DC85083F5D5 /* Pods */,
+				740F66140C8470DE6B6460A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
