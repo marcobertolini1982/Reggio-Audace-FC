@@ -85,7 +85,7 @@
                     <state key="normal" image="Like"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPz-r3-icK">
-                    <rect key="frame" x="226" y="196" width="24" height="24"/>
+                    <rect key="frame" x="220" y="196" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="24" id="4m3-J4-Z7m"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="58k-7l-7xc"/>
@@ -103,7 +103,7 @@
                 <constraint firstItem="avt-tk-dyt" firstAttribute="leading" secondItem="WqX-ul-3bb" secondAttribute="trailing" constant="8" id="Hmu-sd-8tG"/>
                 <constraint firstItem="avt-tk-dyt" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-6" id="Llp-uS-9Ae"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="FPz-r3-icK" secondAttribute="bottom" constant="8" id="NcW-if-Dn4"/>
-                <constraint firstItem="WqX-ul-3bb" firstAttribute="leading" secondItem="FPz-r3-icK" secondAttribute="trailing" constant="8" id="Npr-QR-gKS"/>
+                <constraint firstItem="WqX-ul-3bb" firstAttribute="leading" secondItem="FPz-r3-icK" secondAttribute="trailing" constant="14" id="Npr-QR-gKS"/>
                 <constraint firstItem="g2q-KX-6In" firstAttribute="top" secondItem="g9Q-H2-owN" secondAttribute="bottom" constant="6" id="SeQ-fp-S4l"/>
                 <constraint firstItem="Ux6-ZJ-28b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TKp-9G-Ch4"/>
                 <constraint firstItem="Ux6-ZJ-28b" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" id="Tc9-9p-GTV"/>
