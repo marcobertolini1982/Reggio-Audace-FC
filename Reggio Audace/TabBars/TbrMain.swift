@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-class TbrMainViewController: UITabBarController
+class TbrMain: UITabBarController,UITabBarControllerDelegate
 {
 
     override func viewDidLoad()
@@ -17,10 +17,48 @@ class TbrMainViewController: UITabBarController
         Auth.auth().addStateDidChangeListener({(auth,user)in
             self.SetTabItems()
         })
+        
+        self.delegate = self
+       
+        
         // Do any additional setup after loading the view.
     }
     
-
+    open func tabBarController(_ tabBarcontroller:UITabBarController,shouldSelect viewController:UIViewController)->Bool
+    {
+        
+        // Declarations
+        
+        let l_tag:Int = viewController.tabBarItem.tag
+        
+        // Eval User
+        if AuthUtils.User == nil
+        {
+           switch l_tag
+           {
+           case 0:
+            return true
+           case 4:
+            return true
+           default:
+            tabBarcontroller.selectedIndex = 4
+            }
+            // Retrun
+            return false
+        }
+        
+        
+       
+        //if self.viewControllers  != nil && viewController != self.viewControllers?.last && viewController != self.viewControllers?.first
+        //{
+        //    tabBarcontroller.selectedIndex = (self.viewControllers?.index(of:(self.viewControllers?.last)!)!)!
+        //    return Auth.auth().currentUser?.uid != nil
+        //}
+        
+        // Return
+       return true
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -47,6 +85,7 @@ class TbrMainViewController: UITabBarController
           
             l_viewControllers.remove(at: l_LastIndex)
             let l_LoggedINUser:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "LoggedIn")
+            l_LoggedINUser.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "IconaAccountRegistrato"),selectedImage: UIImage(named:"IconaAccountRegistrato"))
             l_viewControllers.append(l_LoggedINUser)
             self.setViewControllers(l_viewControllers, animated: true)
         }
@@ -56,6 +95,7 @@ class TbrMainViewController: UITabBarController
             l_viewControllers.remove(at: l_LastIndex)
             let l_LoggedINUser:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "LogIn")
             l_viewControllers.append(l_LoggedINUser)
+            l_LoggedINUser.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "IconaAccount"),selectedImage: UIImage(named:"IconaAccount"))
             self.setViewControllers(l_viewControllers, animated: true)
         }
     }

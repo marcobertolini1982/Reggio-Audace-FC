@@ -25,6 +25,7 @@
 		D160DC5521B531B700DAEF67 /* VcrLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC5421B531B700DAEF67 /* VcrLogin.swift */; };
 		D160DC5821B5333D00DAEF67 /* TbrMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC5721B5333D00DAEF67 /* TbrMain.swift */; };
 		D160DC5A21B5375200DAEF67 /* PagLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC5921B5375200DAEF67 /* PagLogin.swift */; };
+		D160DC5C21B568BD00DAEF67 /* VcrRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC5B21B568BD00DAEF67 /* VcrRegister.swift */; };
 		D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */; };
 		D1633DCB21AFFDE300D5CE2F /* PagChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DC921AFFDE300D5CE2F /* PagChat.swift */; };
 		D1633DCE21B0000000D5CE2F /* ProChatObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DCD21B0000000D5CE2F /* ProChatObs.swift */; };
@@ -76,6 +77,7 @@
 		D160DC5421B531B700DAEF67 /* VcrLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrLogin.swift; sourceTree = "<group>"; };
 		D160DC5721B5333D00DAEF67 /* TbrMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbrMain.swift; sourceTree = "<group>"; };
 		D160DC5921B5375200DAEF67 /* PagLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagLogin.swift; sourceTree = "<group>"; };
+		D160DC5B21B568BD00DAEF67 /* VcrRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrRegister.swift; sourceTree = "<group>"; };
 		D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrBase.swift; sourceTree = "<group>"; };
 		D1633DC921AFFDE300D5CE2F /* PagChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagChat.swift; sourceTree = "<group>"; };
 		D1633DCD21B0000000D5CE2F /* ProChatObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProChatObs.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		D174232021AEAE10009AAEFC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D160DC5B21B568BD00DAEF67 /* VcrRegister.swift */,
 				D174232221AEAE68009AAEFC /* VcrNews.swift */,
 				D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */,
 				D1633DD321B01E9600D5CE2F /* VcrChat.swift */,
@@ -502,6 +505,7 @@
 				D160DC5A21B5375200DAEF67 /* PagLogin.swift in Sources */,
 				D17963F921B14779005311A8 /* VcrChannels.swift in Sources */,
 				D1633DD221B0135100D5CE2F /* Chat.swift in Sources */,
+				D160DC5C21B568BD00DAEF67 /* VcrRegister.swift in Sources */,
 				D160DC5121B529A800DAEF67 /* SeasonDay.swift in Sources */,
 				D179640521B1A7FB005311A8 /* VcrSeason.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
