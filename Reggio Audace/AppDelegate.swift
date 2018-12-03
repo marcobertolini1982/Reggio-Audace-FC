@@ -21,7 +21,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // Use Firebase library to configure APIs
             
         FirebaseApp.configure()
-       
+        let l_JsonData:[String:Any] = ["prg_season":1]
+        guard let l_url:URL = URL(string: UrlUtils.URL_GETSEASONACTIVEDAY) else{return true}
+        var l_request:URLRequest = URLRequest(url: l_url)
+        guard let l_data:Data = try? JSONSerialization.data(withJSONObject: l_JsonData, options: [])   else{return true}
+        l_request.httpMethod  = "POST"
+        l_request.httpBody    = l_data
+        let l_DaatTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_request){(data:Data?,response:URLResponse?,error:Error?)in
+            
+            if error == nil && data != nil, let l_ResponseJson:String = String(data: data!, encoding: String.Encoding.utf8)
+            {
+                //Init
+                #if DEBUG
+                print(l_ResponseJson)
+                #endif
+            }
+          
+            
+        }
+        l_DaatTask.resume()
 
         // Override point for customization after application launch.
         

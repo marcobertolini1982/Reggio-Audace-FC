@@ -232,7 +232,7 @@
         <!--Account-->
         <scene sceneID="lfB-fi-J8E">
             <objects>
-                <viewController id="yys-1z-Oat" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" id="yys-1z-Oat" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wfr-GJ-y1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -807,7 +807,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <!--LoggedAccount-->
         <scene sceneID="iiK-lw-hTc">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="LogggedIn" autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="IconaAccount" id="mUl-Vu-44E"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qib-Vh-FcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
