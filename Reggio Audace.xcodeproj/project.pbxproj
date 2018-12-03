@@ -59,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reggio_Audace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52127B2E21B5882E006CE2AB /* Reggio Audace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Reggio Audace.entitlements"; sourceTree = "<group>"; };
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
@@ -268,6 +269,7 @@
 		D1BE6D6521AD60D800114084 /* Reggio Audace */ = {
 			isa = PBXGroup;
 			children = (
+				52127B2E21B5882E006CE2AB /* Reggio Audace.entitlements */,
 				D160DC5621B532FF00DAEF67 /* TabBars */,
 				D160DC4921B521C900DAEF67 /* Utils */,
 				D1633DD721B0298C00D5CE2F /* PageViewControllers */,
@@ -345,6 +347,11 @@
 				TargetAttributes = {
 					D1BE6D6221AD60D800114084 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -687,6 +694,7 @@
 			baseConfigurationReference = E806AFB83CF3ABA360FAF618 /* Pods-Reggio Audace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Reggio Audace/Reggio Audace.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78G92GQSH6;
 				INFOPLIST_FILE = "Reggio Audace/Info.plist";
@@ -706,6 +714,7 @@
 			baseConfigurationReference = 544CC687D7D6DCF8A15E205F /* Pods-Reggio Audace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Reggio Audace/Reggio Audace.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78G92GQSH6;
 				INFOPLIST_FILE = "Reggio Audace/Info.plist";
