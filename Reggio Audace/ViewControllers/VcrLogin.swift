@@ -8,15 +8,15 @@
 
 import UIKit
 import FirebaseAuth
-class VcrLoginViewController: UIViewController
+class VcrLogIn: UIViewController
 {
-    @IBOutlet weak var usermame:UITextField!
-    @IBOutlet weak var password:UITextField!
-    @IBOutlet weak var signinbutton:UIButton!
+    @IBOutlet weak var txt_DesUserr:UITextField!
+    @IBOutlet weak var txt_Password:UITextField!
+    @IBOutlet weak var btn_LogIn:UIButton!
     
     @IBAction public func  OnSingInButtonClick(_ sender:UIButton)
     {
-        Auth.auth().signIn(withEmail:usermame.text!,password:password.text!)
+        Auth.auth().signIn(withEmail:txt_DesUserr.text!,password:txt_Password.text!)
     }
 
     override func viewDidLoad()
