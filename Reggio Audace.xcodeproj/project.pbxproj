@@ -68,7 +68,7 @@
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* VcvNews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VcvNews.xib; sourceTree = "<group>"; };
-		5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccountPagerLogged.xib; path = "../../VApp/Tab Account/AccountPagerLogged.xib"; sourceTree = "<group>"; };
+		5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountPagerLogged.xib; sourceTree = "<group>"; };
 		5293A15321B583370081E805 /* AccountPagerLogIn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountPagerLogIn.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
