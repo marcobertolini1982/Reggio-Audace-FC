@@ -17,8 +17,8 @@
 		527E94F121B0648900A8CAD0 /* Hind-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C721B0603600CBD2BE /* Hind-Medium.ttf */; };
 		527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C321B0603600CBD2BE /* Hind-Regular.ttf */; };
 		527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */; };
-		5293A15021B576E90081E805 /* VcvNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A14F21B576E90081E805 /* VcvNews.xib */; };
-		5293A15221B57E5B0081E805 /* AccountPagerLogged.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */; };
+		5293A15021B576E90081E805 /* VieArticle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A14F21B576E90081E805 /* VieArticle.xib */; };
+		5293A15221B57E5B0081E805 /* ViiePageIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */; };
 		5293A15421B583370081E805 /* AccountPagerLogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15321B583370081E805 /* AccountPagerLogIn.xib */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
@@ -49,7 +49,7 @@
 		D17963FD21B151EB005311A8 /* ProSeasonObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963FC21B151EB005311A8 /* ProSeasonObs.swift */; };
 		D17963FF21B15773005311A8 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963FE21B15773005311A8 /* Season.swift */; };
 		D179640121B184CE005311A8 /* PagBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640021B184CE005311A8 /* PagBase.swift */; };
-		D179640321B18660005311A8 /* PagAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccountViewController.swift */; };
+		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D179640521B1A7FB005311A8 /* VcrSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640421B1A7FB005311A8 /* VcrSeason.swift */; };
 		D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D6621AD60D800114084 /* AppDelegate.swift */; };
 		D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6A21AD60D800114084 /* Main.storyboard */; };
@@ -67,8 +67,8 @@
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5293A14F21B576E90081E805 /* VcvNews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VcvNews.xib; sourceTree = "<group>"; };
-		5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountPagerLogged.xib; sourceTree = "<group>"; };
+		5293A14F21B576E90081E805 /* VieArticle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieArticle.xib; sourceTree = "<group>"; };
+		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
 		5293A15321B583370081E805 /* AccountPagerLogIn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountPagerLogIn.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		D17963FC21B151EB005311A8 /* ProSeasonObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProSeasonObs.swift; sourceTree = "<group>"; };
 		D17963FE21B15773005311A8 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		D179640021B184CE005311A8 /* PagBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagBase.swift; sourceTree = "<group>"; };
-		D179640221B18660005311A8 /* PagAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccountViewController.swift; sourceTree = "<group>"; };
+		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D179640421B1A7FB005311A8 /* VcrSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrSeason.swift; sourceTree = "<group>"; };
 		D1BE6D6321AD60D800114084 /* Reggio Audace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reggio Audace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BE6D6621AD60D800114084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +159,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D15EBBE421B68F7B00835C0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D15EBBE521B68F8E00835C0B /* Xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D15EBBE521B68F8E00835C0B /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				5293A14F21B576E90081E805 /* VieArticle.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		D160DC4921B521C900DAEF67 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +198,7 @@
 			children = (
 				D1633DC921AFFDE300D5CE2F /* PagChat.swift */,
 				D179640021B184CE005311A8 /* PagBase.swift */,
-				D179640221B18660005311A8 /* PagAccountViewController.swift */,
+				D179640221B18660005311A8 /* PagAccount.swift */,
 				D160DC5921B5375200DAEF67 /* PagLogin.swift */,
 			);
 			path = PageViewControllers;
@@ -274,6 +290,7 @@
 		D1BE6D6521AD60D800114084 /* Reggio Audace */ = {
 			isa = PBXGroup;
 			children = (
+				D15EBBE421B68F7B00835C0B /* Views */,
 				52127B2E21B5882E006CE2AB /* Reggio Audace.entitlements */,
 				D160DC5621B532FF00DAEF67 /* TabBars */,
 				D160DC4921B521C900DAEF67 /* Utils */,
@@ -288,8 +305,7 @@
 				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
-				5293A14F21B576E90081E805 /* VcvNews.xib */,
-				5293A15121B57E5B0081E805 /* AccountPagerLogged.xib */,
+				5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */,
 				5293A15321B583370081E805 /* AccountPagerLogIn.xib */,
 				52127B2F21B5890D006CE2AB /* ArticlePager.xib */,
 				527E94F421B06A7B00A8CAD0 /* Info.plist */,
@@ -398,10 +414,10 @@
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
 				526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */,
-				5293A15021B576E90081E805 /* VcvNews.xib in Resources */,
+				5293A15021B576E90081E805 /* VieArticle.xib in Resources */,
 				D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */,
 				526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */,
-				5293A15221B57E5B0081E805 /* AccountPagerLogged.xib in Resources */,
+				5293A15221B57E5B0081E805 /* ViiePageIndicator.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +567,7 @@
 				D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */,
 				D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */,
 				D160DC5521B531B700DAEF67 /* VcrLogin.swift in Sources */,
-				D179640321B18660005311A8 /* PagAccountViewController.swift in Sources */,
+				D179640321B18660005311A8 /* PagAccount.swift in Sources */,
 				D174231F21AEA99B009AAEFC /* ProPostObs.swift in Sources */,
 				D1633DCE21B0000000D5CE2F /* ProChatObs.swift in Sources */,
 				D174231C21AE93AC009AAEFC /* PostView.swift in Sources */,

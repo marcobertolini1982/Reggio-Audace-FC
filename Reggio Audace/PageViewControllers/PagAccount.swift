@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PagAccountViewController: PagBase
+class PagAccount: PagBase
 {
 
     override func viewDidLoad()

@@ -820,7 +820,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <!--LoggedAccount-->
         <scene sceneID="iiK-lw-hTc">
             <objects>
-                <pageViewController storyboardIdentifier="LoggedIn" autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PagAccount" autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="IconaAccount" id="mUl-Vu-44E"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qib-Vh-FcR" userLabel="First Responder" sceneMemberID="firstResponder"/>

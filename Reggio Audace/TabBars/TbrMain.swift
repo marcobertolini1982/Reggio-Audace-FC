@@ -19,7 +19,7 @@ class TbrMain: UITabBarController,UITabBarControllerDelegate
         })
         
         self.delegate = self
-       
+       try? Auth.auth().signOut()
         
         // Do any additional setup after loading the view.
     }
@@ -31,8 +31,8 @@ class TbrMain: UITabBarController,UITabBarControllerDelegate
         
         let l_tag:Int = viewController.tabBarItem.tag
         
-        // Eval User
-        if AuthUtils.User == nil
+        // Eval User and email
+        if AuthUtils.User == nil 
         {
            switch l_tag
            {
@@ -46,14 +46,6 @@ class TbrMain: UITabBarController,UITabBarControllerDelegate
             // Retrun
             return false
         }
-        
-        
-       
-        //if self.viewControllers  != nil && viewController != self.viewControllers?.last && viewController != self.viewControllers?.first
-        //{
-        //    tabBarcontroller.selectedIndex = (self.viewControllers?.index(of:(self.viewControllers?.last)!)!)!
-        //    return Auth.auth().currentUser?.uid != nil
-        //}
         
         // Return
        return true

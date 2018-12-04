@@ -29,7 +29,10 @@ class VcrChat: VcrBase,ProChatObs
         let l_ChatView:ChatView = ChatView()
         //Add event
         l_ChatView.SetOnChatsLoaded(proChatObss: self)
-        l_ChatView.LoadChat()
+        if let l_CodUser:String = AuthUtils.Uid
+        {
+            l_ChatView.LoadChat(cod_user: l_CodUser)
+        }
     }
     
     func Init()
