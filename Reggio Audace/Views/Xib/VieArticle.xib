@@ -40,26 +40,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-KX-6In">
-                    <rect key="frame" x="16" y="274" width="63" height="21"/>
+                    <rect key="frame" x="16" y="274" width="70" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="eYS-rK-vhi"/>
                     </constraints>
                     <attributedString key="attributedText">
                         <fragment content="DATA E ORA">
                             <attributes>
-                                <font key="NSFont" size="12" name="Hind-Light"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux6-ZJ-28b">
-                    <rect key="frame" x="16" y="303" width="288" height="27.5"/>
-                    <attributedString key="attributedText">
-                        <fragment content="TESTO ARTICOLO">
-                            <attributes>
-                                <font key="NSFont" size="17" name="Hind-Regular"/>
+                                <font key="NSFont" metaFont="cellTitle"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -96,24 +84,31 @@
                     </constraints>
                     <state key="normal" image="Comment"/>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
+                    <rect key="frame" x="16" y="303" width="288" height="245"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ehj-lV-4qd" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" id="2CY-RB-9lo"/>
+                <constraint firstItem="ehj-lV-4qd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7Dv-lw-5zf"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="awQ-GB-qOL" secondAttribute="bottom" constant="8" id="ApH-Ac-XX2"/>
                 <constraint firstItem="avt-tk-dyt" firstAttribute="leading" secondItem="WqX-ul-3bb" secondAttribute="trailing" constant="8" id="Hmu-sd-8tG"/>
                 <constraint firstItem="avt-tk-dyt" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-6" id="Llp-uS-9Ae"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="FPz-r3-icK" secondAttribute="bottom" constant="8" id="NcW-if-Dn4"/>
                 <constraint firstItem="WqX-ul-3bb" firstAttribute="leading" secondItem="FPz-r3-icK" secondAttribute="trailing" constant="14" id="Npr-QR-gKS"/>
                 <constraint firstItem="g2q-KX-6In" firstAttribute="top" secondItem="g9Q-H2-owN" secondAttribute="bottom" constant="6" id="SeQ-fp-S4l"/>
-                <constraint firstItem="Ux6-ZJ-28b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TKp-9G-Ch4"/>
-                <constraint firstItem="Ux6-ZJ-28b" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" id="Tc9-9p-GTV"/>
                 <constraint firstItem="awQ-GB-qOL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="WSs-E0-DtC"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="WqX-ul-3bb" secondAttribute="bottom" constant="14" id="fxN-my-ngu"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="hom-O3-ENA"/>
                 <constraint firstItem="awQ-GB-qOL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iHK-ip-kXi"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="avt-tk-dyt" secondAttribute="bottom" constant="14" id="l8n-rf-jJH"/>
                 <constraint firstItem="g2q-KX-6In" firstAttribute="leading" secondItem="g9Q-H2-owN" secondAttribute="leading" id="qvN-la-GYC"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ux6-ZJ-28b" secondAttribute="trailing" constant="16" id="uQ9-ze-Ovm"/>
+                <constraint firstAttribute="bottom" secondItem="ehj-lV-4qd" secondAttribute="bottom" constant="20" symbolic="YES" id="qx0-Vs-qp9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ehj-lV-4qd" secondAttribute="trailing" constant="16" id="s2r-vv-erR"/>
                 <constraint firstItem="awQ-GB-qOL" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="uVh-dv-Ys7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g9Q-H2-owN" secondAttribute="trailing" constant="16" id="z8I-mm-oAq"/>
             </constraints>
@@ -122,8 +117,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Comment" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Comment" width="32" height="32"/>
+        <image name="Like" width="32" height="32"/>
+        <image name="share" width="32" height="32"/>
     </resources>
 </document>

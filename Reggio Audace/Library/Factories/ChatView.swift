@@ -27,10 +27,10 @@ class ChatView
             l_proChatObs.ChatLoaded(chats: chats)
         }
     }
-    func LoadChat()
+    func LoadChat(cod_user:String)
     {
         var l_Chats:[Chat] = [Chat]()
-        let l_Json : [String: String] = ["cod_user": "SRAYGq4tCcPzfM3K5JwLrBvDblk2"]
+        let l_Json : [String: String] = ["cod_user":cod_user]
         let l_JsonData = try? JSONSerialization.data(withJSONObject: l_Json)
         
         // Create Chat request
