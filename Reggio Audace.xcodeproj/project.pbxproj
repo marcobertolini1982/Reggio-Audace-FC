@@ -11,7 +11,6 @@
 		526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ABD4021B1564B004177CB /* GoogleService-Info.plist */; };
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
 		526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */; };
-		52743B2E21B6962F00065DA7 /* AccountPagerLogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52743B2D21B6962F00065DA7 /* AccountPagerLogIn.xib */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
 		527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C521B0603600CBD2BE /* Hind-Light.ttf */; };
@@ -22,6 +21,12 @@
 		5293A15221B57E5B0081E805 /* ViiePageIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
+		D15EBBE821B698D900835C0B /* LabIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBE721B698D900835C0B /* LabIndicator.swift */; };
+		D15EBBEA21B69A1600835C0B /* SelectorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBE921B69A1600835C0B /* SelectorUtils.swift */; };
+		D15EBBEC21B69B1A00835C0B /* ViePageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBEB21B69B1A00835C0B /* ViePageIndicator.swift */; };
+		D15EBBF021B6A08C00835C0B /* VieBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBEF21B6A08C00835C0B /* VieBase.swift */; };
+		D15EBBF221B6C1C400835C0B /* LabBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBF121B6C1C400835C0B /* LabBase.swift */; };
+		D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBF321B6C64100835C0B /* ColorUtils.swift */; };
 		D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4A21B521F000DAEF67 /* AuthUtils.swift */; };
 		D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */; };
 		D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4C21B521F000DAEF67 /* UrlUtils.swift */; };
@@ -66,10 +71,10 @@
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
-		52743B2D21B6962F00065DA7 /* AccountPagerLogIn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountPagerLogIn.xib; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* VieArticle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieArticle.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
+		5293A15321B583370081E805 /* AccountPagerLogIn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountPagerLogIn.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
 		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Bold.ttf"; sourceTree = "<group>"; };
@@ -79,6 +84,12 @@
 		544CC687D7D6DCF8A15E205F /* Pods-Reggio Audace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reggio Audace.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reggio Audace/Pods-Reggio Audace.release.xcconfig"; sourceTree = "<group>"; };
 		D11B714D21AF0A6600887D2A /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		D11B714F21AF0F3600887D2A /* ProFileObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProFileObs.swift; sourceTree = "<group>"; };
+		D15EBBE721B698D900835C0B /* LabIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabIndicator.swift; sourceTree = "<group>"; };
+		D15EBBE921B69A1600835C0B /* SelectorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorUtils.swift; sourceTree = "<group>"; };
+		D15EBBEB21B69B1A00835C0B /* ViePageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePageIndicator.swift; sourceTree = "<group>"; };
+		D15EBBEF21B6A08C00835C0B /* VieBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VieBase.swift; sourceTree = "<group>"; };
+		D15EBBF121B6C1C400835C0B /* LabBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBase.swift; sourceTree = "<group>"; };
+		D15EBBF321B6C64100835C0B /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		D160DC4A21B521F000DAEF67 /* AuthUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthUtils.swift; sourceTree = "<group>"; };
 		D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardUtils.swift; sourceTree = "<group>"; };
 		D160DC4C21B521F000DAEF67 /* UrlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlUtils.swift; sourceTree = "<group>"; };
@@ -163,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				D15EBBE521B68F8E00835C0B /* Xib */,
+				D15EBBEB21B69B1A00835C0B /* ViePageIndicator.swift */,
+				D15EBBEF21B6A08C00835C0B /* VieBase.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,17 +183,29 @@
 		D15EBBE521B68F8E00835C0B /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */,
 				5293A14F21B576E90081E805 /* VieArticle.xib */,
 			);
 			path = Xib;
+			sourceTree = "<group>";
+		};
+		D15EBBE621B6980200835C0B /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				D15EBBF121B6C1C400835C0B /* LabBase.swift */,
+				D15EBBE721B698D900835C0B /* LabIndicator.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 		D160DC4921B521C900DAEF67 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				D160DC4A21B521F000DAEF67 /* AuthUtils.swift */,
+				D15EBBE921B69A1600835C0B /* SelectorUtils.swift */,
 				D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */,
 				D160DC4C21B521F000DAEF67 /* UrlUtils.swift */,
+				D15EBBF321B6C64100835C0B /* ColorUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -290,26 +315,26 @@
 		D1BE6D6521AD60D800114084 /* Reggio Audace */ = {
 			isa = PBXGroup;
 			children = (
-				D15EBBE421B68F7B00835C0B /* Views */,
+				5293A15321B583370081E805 /* AccountPagerLogIn.xib */,
+				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
+				52127B2F21B5890D006CE2AB /* ArticlePager.xib */,
+				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
+				D174232A21AED728009AAEFC /* Cells */,
+				52F650C221B0576200CBD2BE /* Font */,
+				526ABD4021B1564B004177CB /* GoogleService-Info.plist */,
+				527E94F421B06A7B00A8CAD0 /* Info.plist */,
+				D15EBBE621B6980200835C0B /* Labels */,
+				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
+				D1BE6D9421AD7D2E00114084 /* Library */,
+				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
+				D1633DD721B0298C00D5CE2F /* PageViewControllers */,
+				D174231D21AEA802009AAEFC /* Protocols */,
 				52127B2E21B5882E006CE2AB /* Reggio Audace.entitlements */,
 				D160DC5621B532FF00DAEF67 /* TabBars */,
 				D160DC4921B521C900DAEF67 /* Utils */,
-				D1633DD721B0298C00D5CE2F /* PageViewControllers */,
-				D174232B21AED7C1009AAEFC /* Xib */,
-				D174232A21AED728009AAEFC /* Cells */,
 				D174232021AEAE10009AAEFC /* ViewControllers */,
-				D174231D21AEA802009AAEFC /* Protocols */,
-				D1BE6D9421AD7D2E00114084 /* Library */,
-				52F650C221B0576200CBD2BE /* Font */,
-				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
-				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
-				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
-				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
-				5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */,
-				52127B2F21B5890D006CE2AB /* ArticlePager.xib */,
-				52743B2D21B6962F00065DA7 /* AccountPagerLogIn.xib */,
-				527E94F421B06A7B00A8CAD0 /* Info.plist */,
-				526ABD4021B1564B004177CB /* GoogleService-Info.plist */,
+				D15EBBE421B68F7B00835C0B /* Views */,
+				D174232B21AED7C1009AAEFC /* Xib */,
 			);
 			path = "Reggio Audace";
 			sourceTree = "<group>";
@@ -409,7 +434,6 @@
 				527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */,
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
-				52743B2E21B6962F00065DA7 /* AccountPagerLogIn.xib in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
@@ -551,13 +575,16 @@
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
 				D1633DD421B01E9600D5CE2F /* VcrChat.swift in Sources */,
+				D15EBBF221B6C1C400835C0B /* LabBase.swift in Sources */,
 				D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */,
 				D174232321AEAE68009AAEFC /* VcrNews.swift in Sources */,
 				D179640121B184CE005311A8 /* PagBase.swift in Sources */,
 				D1BE6D9721AD7D6100114084 /* Post.swift in Sources */,
+				D15EBBF021B6A08C00835C0B /* VieBase.swift in Sources */,
 				D17963FD21B151EB005311A8 /* ProSeasonObs.swift in Sources */,
 				D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */,
 				D174232921AED6C1009AAEFC /* CvcNews.swift in Sources */,
+				D15EBBEC21B69B1A00835C0B /* ViePageIndicator.swift in Sources */,
 				D17963FB21B1509D005311A8 /* SeasonView.swift in Sources */,
 				D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */,
 				D11B714E21AF0A6600887D2A /* FileView.swift in Sources */,
@@ -566,10 +593,13 @@
 				D17963F721B146EF005311A8 /* VcrUsers.swift in Sources */,
 				D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */,
 				D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */,
+				D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */,
+				D15EBBE821B698D900835C0B /* LabIndicator.swift in Sources */,
 				D160DC5521B531B700DAEF67 /* VcrLogin.swift in Sources */,
 				D179640321B18660005311A8 /* PagAccount.swift in Sources */,
 				D174231F21AEA99B009AAEFC /* ProPostObs.swift in Sources */,
 				D1633DCE21B0000000D5CE2F /* ProChatObs.swift in Sources */,
+				D15EBBEA21B69A1600835C0B /* SelectorUtils.swift in Sources */,
 				D174231C21AE93AC009AAEFC /* PostView.swift in Sources */,
 				D1633DCB21AFFDE300D5CE2F /* PagChat.swift in Sources */,
 			);
