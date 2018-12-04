@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-442" y="-1092"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tbr Main-->
         <scene sceneID="h6W-m4-PKq">
             <objects>
-                <tabBarController id="mID-Pm-WcN" sceneMemberID="viewController">
+                <tabBarController id="mID-Pm-WcN" customClass="TbrMain" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fgY-mH-7A5"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oXK-gf-JlP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -96,7 +96,7 @@
         <scene sceneID="Tsn-fE-w2R">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Nj2-b9-YpC" customClass="PagChat" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" image="Chat" id="BJV-dG-kQ1"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Chat" image="Chat" id="BJV-dG-kQ1"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TW-0H-HyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,7 +197,7 @@
                             <outlet property="delegate" destination="8TC-GE-GRC" id="aqR-7y-NW5"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Stagione" image="Tabellino" id="k96-Zf-b7I"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Stagione" image="Tabellino" id="k96-Zf-b7I"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9KD-D6-c0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +223,7 @@
                             <outlet property="delegate" destination="uEl-cb-2Re" id="5HK-DJ-Uyw"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Club Granata" image="football-game" id="CG1-Yg-bsS"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Club Granata" image="football-game" id="CG1-Yg-bsS"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJC-g0-QYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,7 +232,7 @@
         <!--Account-->
         <scene sceneID="lfB-fi-J8E">
             <objects>
-                <viewController storyboardIdentifier="LogIn" id="yys-1z-Oat" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VcrLogin" id="yys-1z-Oat" customClass="VcrLogIn" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wfr-GJ-y1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,6 +269,9 @@
                                 <state key="normal" title="Accedi">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnSingInButtonClick:" destination="yys-1z-Oat" eventType="touchUpInside" id="0Cp-UW-97i"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-mf-dIP">
                                 <rect key="frame" x="156" y="255" width="62" height="23"/>
@@ -302,6 +305,11 @@
                         <viewLayoutGuide key="safeArea" id="aAg-xx-dA6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="IconaAccount" id="759-YS-t0J"/>
+                    <connections>
+                        <outlet property="btn_LogIn" destination="imz-i7-pOD" id="vnw-jX-qHy"/>
+                        <outlet property="txt_DesUserr" destination="OMt-N9-gMa" id="Rcu-Gp-To7"/>
+                        <outlet property="txt_Password" destination="wpe-AB-VX3" id="7ec-Jw-cPL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJf-uW-Hy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,7 +318,7 @@
         <!--Registrazione-->
         <scene sceneID="dFr-a6-Ak2">
             <objects>
-                <viewController title="Registrazione" id="n7D-DU-FTI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VcrRegister" title="Registrazione" id="n7D-DU-FTI" customClass="VcrRegister" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sVl-mJ-EgW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,6 +408,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zs8-Xm-PaY"/>
                     </view>
+                    <connections>
+                        <outlet property="btn_Register" destination="owf-Nv-KFf" id="VHe-VW-6yM"/>
+                        <outlet property="txt_Password" destination="lGs-lf-fN3" id="hv2-4c-6dy"/>
+                        <outlet property="txt_User" destination="ukX-SC-A5k" id="Da5-UC-uht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCi-oY-5v2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -552,7 +565,7 @@
         <!--Privacy Policy-->
         <scene sceneID="tZc-Wh-aRs">
             <objects>
-                <viewController title="Privacy Policy" id="XuD-l0-bts" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VcrPrivacy" title="Privacy Policy" id="XuD-l0-bts" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qiN-Cz-6je">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -797,8 +810,8 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <!--Account-->
         <scene sceneID="TNv-qj-tBc">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="hF0-JY-58a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" image="IconaAccount" id="b2H-uM-ugt"/>
+                <pageViewController storyboardIdentifier="LogIn" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hF0-JY-58a" customClass="PagLogin" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="4" title="Account" image="IconaAccount" id="b2H-uM-ugt"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HA4-Pq-bMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -807,7 +820,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <!--LoggedAccount-->
         <scene sceneID="iiK-lw-hTc">
             <objects>
-                <pageViewController storyboardIdentifier="LogggedIn" autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="LoggedIn" autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="IconaAccount" id="mUl-Vu-44E"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qib-Vh-FcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -816,13 +829,13 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bf3-xz-Mz7"/>
+        <segue reference="6Ex-yp-Fq3"/>
     </inferredMetricsTieBreakers>
 </document>

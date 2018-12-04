@@ -1,5 +1,5 @@
 //
-//  VcrLoginViewController.swift
+//  VcrRegisterViewController.swift
 //  Reggio Audace
 //
 //  Created by Michele on 03/12/18.
@@ -8,17 +8,15 @@
 
 import UIKit
 import FirebaseAuth
-class VcrLogIn: UIViewController
+class VcrRegister: UIViewController
 {
-    @IBOutlet weak var txt_DesUserr:UITextField!
+    @IBOutlet weak var txt_User:UITextField!
     @IBOutlet weak var txt_Password:UITextField!
-    @IBOutlet weak var btn_LogIn:UIButton!
-    
-    @IBAction public func  OnSingInButtonClick(_ sender:UIButton)
+    @IBOutlet weak var btn_Register:UIButton!
+    @IBAction func OnBtnRegisterClikc(_ sender:UIButton)
     {
-        Auth.auth().signIn(withEmail:txt_DesUserr.text!,password:txt_Password.text!)
+        Auth.auth().createUser(withEmail: txt_User.text!, password: txt_User.text!)
     }
-
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -36,5 +34,5 @@ class VcrLogIn: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
- 
+
 }
