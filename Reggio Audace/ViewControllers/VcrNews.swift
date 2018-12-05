@@ -89,10 +89,9 @@ class VcrNews: VcrBase,ProPostObs
         else {
             return UICollectionViewCell()
         }
-        
+        l_Cell.lbl_dat_post.text = POSTS[l_Index].dat_post
         // Set image
         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
-        
         // Set data
         l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
 

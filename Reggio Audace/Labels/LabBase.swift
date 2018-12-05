@@ -22,7 +22,7 @@ class LabBase: UILabel
    {
    // Call base class init
         super.init(frame:frame)
-   
+        self.isUserInteractionEnabled = true
    }
     /*private final func EnableUserInteraction()
     {
@@ -33,13 +33,10 @@ class LabBase: UILabel
         self.addGestureRecognizer(l_GestureRecognizer)
      
     }*/
-  @IBAction func OnClick(sender: UITapGestureRecognizer)
-    {
-        if sender.state == UIGestureRecognizer.State.ended
-        {
-            self.textColor = UIColor.red
-        }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+     
     }
-    
  
 }

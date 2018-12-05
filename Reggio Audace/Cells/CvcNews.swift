@@ -7,8 +7,14 @@
 //
 
 import UIKit
-class CvcNews: UICollectionViewCell,ProFileObs
+class CvcNews: UICollectionViewCell,ProFileObs,ProChannelObs
 {
+    func ChannelLoaded(data: Data) {
+        DispatchQueue.main.async {
+            self.img_prg_channel.image = UIImage(data: data)
+        }
+    }
+    
     
     func FileLoaded(data: Data)
     {
@@ -51,5 +57,16 @@ class CvcNews: UICollectionViewCell,ProFileObs
         l_FileView.LoadFile(prg_file: prg_file)
         
     }
-    
+    func setChannelImage(prg_file:Int64)
+    {
+        
+        // Declarations
+        let l_ChannelView : ChannelView = ChannelView()
+        
+        // Add event
+        l_ChannelView.SetOnChannelLoaded(proChannelObs: self)
+        
+        // Load file
+        l_ChannelView.LoadChannel(prg_file: prg_file)
+    }
 }

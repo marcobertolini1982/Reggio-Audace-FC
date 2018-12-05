@@ -7,12 +7,5 @@
 //
 
 import Foundation
-class SelectorsUtils
-{
-    public static var sel_OnPageIndicatorClicked:Selector
-    {
-        return #selector(LabBase.OnClick(sender:    ))
-        
-    }
-}
+
 

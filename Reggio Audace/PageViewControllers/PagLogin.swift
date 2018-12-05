@@ -21,11 +21,7 @@ class PagLogin: PagBase
         super.viewDidLoad()
         
         //Declarations
-        let l_WIDTH:CGFloat  = self.view.bounds.width
-        let l_RECT:CGRect    = CGRect(x: 0, y: 0, width: l_WIDTH, height: 21)
-        let l_PAGEINDICATOR:ViePageIndicator = ViePageIndicator(frame:l_RECT)
-        //Add page indicator
-        self.view.addSubview(l_PAGEINDICATOR)
+       
         // Set property
         self.ViewControllers =
             [

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PagBase: UIPageViewController, UIPageViewControllerDataSource
+class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate
 {
     // Declarations
     private var VIEWCONTROLLERS:[UIViewController]?
@@ -30,6 +30,11 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let l_WIDTH:CGFloat  = self.view.bounds.width
+        let l_RECT:CGRect    = CGRect(x: 0, y: 0, width: l_WIDTH, height:21)
+        let l_PAGEINDICATOR:ViePageIndicator = ViePageIndicator(frame:l_RECT)
+        //Add page indicator
+        self.view.addSubview(l_PAGEINDICATOR)
         self.dataSource = self
     }
     
@@ -47,4 +52,5 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource
         
         return self.ViewControllers[l_Index + 1]
     }
+    
 }
