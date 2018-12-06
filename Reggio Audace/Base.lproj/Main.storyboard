@@ -794,6 +794,9 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                     <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnLogOutclick:" destination="qqv-dV-hdx" eventType="touchUpInside" id="FO1-ev-P3c"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modifica i dati d'accesso:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hZ-0y-vZY">
                                 <rect key="frame" x="16" y="80" width="343" height="19"/>
@@ -854,6 +857,9 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ayu-Cb-OsY"/>
                     </view>
+                    <connections>
+                        <outlet property="btn_LogOut" destination="oly-ke-QZk" id="3OZ-Ef-e6I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgw-L2-qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -881,11 +887,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6Ex-yp-Fq3"/>
