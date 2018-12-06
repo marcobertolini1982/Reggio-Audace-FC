@@ -745,6 +745,9 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                     <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XuD-l0-bts" kind="show" id="yh6-zj-NZZ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indirizzo email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-OO-yRk">
                                 <rect key="frame" x="16" y="72" width="343" height="37"/>
@@ -780,6 +783,9 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                     <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnLogOutclick:" destination="qqv-dV-hdx" eventType="touchUpInside" id="nSL-87-TNN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -808,6 +814,9 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ayu-Cb-OsY"/>
                     </view>
+                    <connections>
+                        <outlet property="btn_LogOut" destination="oly-ke-QZk" id="WCU-26-bYZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgw-L2-qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -842,6 +851,6 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Ex-yp-Fq3"/>
+        <segue reference="yh6-zj-NZZ"/>
     </inferredMetricsTieBreakers>
 </document>

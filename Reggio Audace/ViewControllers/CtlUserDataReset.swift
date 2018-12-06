@@ -7,25 +7,36 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class CtlUserDataReset: CtlBase
 {
-
+    @IBOutlet private weak var btn_LogOut:UIButton!
+    open var BtnLogOut:UIButton
+    {
+        return btn_LogOut
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func OnLogOutclick(_ sender:UIButton)
+    {
+        do
+        {
+            try Auth.auth().signOut()
+        }
+        
+        catch let e
+        {
+            print(e.localizedDescription)
+        }
     }
-    */
-
+    
+    open override func viewWillAppear(_ animated: Bool)
+    {
+            super.viewWillAppear(animated)
+        btn_LogOut.isHidden = AuthUtils.User != nil ? false:true
+    }
 }
