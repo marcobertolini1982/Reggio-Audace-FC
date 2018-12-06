@@ -24,21 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         FirebaseApp.configure()
         // Override point for customization after application launch.
         //return
-        let l_Json:[String:Any] = ["prg_channel":1]
-        guard let l_Url:URL = URL(string: UrlUtils.URL_GETCHANNEL) else{return true}
-        var l_request:URLRequest = URLRequest(url:l_Url)
-        l_request.httpMethod = "POST"
-        guard let l_JsonData:Data = try? JSONSerialization.data(withJSONObject: l_Json, options: []) else{return true}
-        l_request.httpBody = l_JsonData
-        let l_DatatTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_request){(data:Data?,response:URLResponse?,error:Error?)in
-            if error == nil && data != nil, let l_StringData:String = String(data: data!, encoding: String.Encoding.utf8)
-            {
-                #if DEBUG
-                print("\n\n\n\n\n\(l_StringData)")
-                #endif
-            }
-        }
-        l_DatatTask.resume()
+       
         return true
         
     }

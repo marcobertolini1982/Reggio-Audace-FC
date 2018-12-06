@@ -1,28 +1,18 @@
 //
-//  PagAccountViewController.swift
+//  CtlBase.swift
 //  Reggio Audace
 //
-//  Created by Michele on 30/11/18.
+//  Created by Michele on 06/12/18.
 //  Copyright © 2018 LEN Solution. All rights reserved.
 //
 
 import UIKit
 
-class PagAccount: PagBase
-{
-  
+class CtlBase: UIViewController {
 
-    override func viewDidLoad()
-    {
-        self.ViewControllers =
-            [
-                MainStoryboard.instantiateViewController(withIdentifier: "CtlUserData"),
-                MainStoryboard.instantiateViewController(withIdentifier: "VcrMedia"),
-                MainStoryboard.instantiateViewController(withIdentifier: "CtlUserDataReset")
-            ]
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
+
         // Do any additional setup after loading the view.
     }
     
@@ -36,5 +26,5 @@ class PagAccount: PagBase
         // Pass the selected object to the new view controller.
     }
     */
-  
+
 }

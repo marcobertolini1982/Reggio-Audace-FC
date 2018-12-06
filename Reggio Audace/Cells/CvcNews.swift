@@ -67,6 +67,6 @@ class CvcNews: UICollectionViewCell,ProFileObs,ProChannelObs
         l_ChannelView.SetOnChannelLoaded(proChannelObs: self)
         
         // Load file
-        l_ChannelView.LoadChannel(prg_file: prg_file)
+        //l_ChannelView.LoadChannel(prg_file: prg_file)
     }
 }

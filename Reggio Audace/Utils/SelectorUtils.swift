@@ -7,5 +7,15 @@
 //
 
 import Foundation
-
-
+class SelectorUtils
+{
+    public static var EditSelector:Selector
+    {
+        return #selector(CtlUserData.OnEditClick(_:))
+    }
+    
+    public static var DoneSelector:Selector
+    {
+        return #selector(CtlUserData.OnDoneClick(_:))
+    }
+}

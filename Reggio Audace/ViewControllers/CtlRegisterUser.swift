@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-class VcrRegister: UIViewController
+class CtlRegisterUser: CtlBase
 {
     @IBOutlet weak var txt_User:UITextField!
     @IBOutlet weak var txt_Password:UITextField!

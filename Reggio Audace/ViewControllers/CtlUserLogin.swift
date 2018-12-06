@@ -1,5 +1,5 @@
 //
-//  PagLogin.swift
+//  VcrLoginViewController.swift
 //  Reggio Audace
 //
 //  Created by Michele on 03/12/18.
@@ -7,33 +7,26 @@
 //
 
 import UIKit
-
-class PagLogin: PagBase
+import FirebaseAuth
+class CtlUserLogin: CtlBase
 {
+    @IBOutlet weak var txt_DesUserr:UITextField!
+    @IBOutlet weak var txt_Password:UITextField!
+    @IBOutlet weak var btn_LogIn:UIButton!
     
-    //Declarations
+    @IBAction public func  OnSingInButtonClick(_ sender:UIButton)
+    {
+        Auth.auth().signIn(withEmail:txt_DesUserr.text!,password:txt_Password.text!)
+    }
 
     override func viewDidLoad()
     {
-        // Set Property
-        
-        // Call suoer method
-        self.ViewControllers =
-            [
-                
-                MainStoryboard.instantiateViewController(withIdentifier: "CtlUserLogin"),
-                MainStoryboard.instantiateViewController(withIdentifier: "CtlRegisterUser"),
-                MainStoryboard.instantiateViewController(withIdentifier: "CtlUserDataReset")
-        ]
         super.viewDidLoad()
-        
-        //Declarations
-       
-       
-        
-       
+
+        // Do any additional setup after loading the view.
     }
-   
+    
+
     /*
     // MARK: - Navigation
 
@@ -43,5 +36,5 @@ class PagLogin: PagBase
         // Pass the selected object to the new view controller.
     }
     */
-
+ 
 }

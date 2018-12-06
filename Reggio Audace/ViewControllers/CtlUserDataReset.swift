@@ -1,28 +1,19 @@
 //
-//  VcrLoginViewController.swift
+//  VcrResetUserViewController.swift
 //  Reggio Audace
 //
-//  Created by Michele on 03/12/18.
+//  Created by Michele on 06/12/18.
 //  Copyright © 2018 LEN Solution. All rights reserved.
 //
 
 import UIKit
-import FirebaseAuth
-class VcrLogIn: UIViewController
+
+class CtlUserDataReset: CtlBase
 {
-    @IBOutlet weak var txt_DesUserr:UITextField!
-    @IBOutlet weak var txt_Password:UITextField!
-    @IBOutlet weak var btn_LogIn:UIButton!
-    
-    @IBAction public func  OnSingInButtonClick(_ sender:UIButton)
-    {
-        Auth.auth().signIn(withEmail:txt_DesUserr.text!,password:txt_Password.text!)
-    }
 
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -36,5 +27,5 @@ class VcrLogIn: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
- 
+
 }

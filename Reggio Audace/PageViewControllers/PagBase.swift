@@ -11,6 +11,12 @@ import UIKit
 class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate
 {
     // Declarations
+    
+    override var transitionStyle: TransitionStyle
+    {
+        return TransitionStyle.scroll
+    }
+    
     private var VIEWCONTROLLERS:[UIViewController]?
     public var ViewControllers:[UIViewController]
     {
@@ -27,14 +33,23 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
             self.VIEWCONTROLLERS = newValue
         }
     }
+   
+    
+    // Override viewDidLoad
     override func viewDidLoad()
     {
+        // Call base class method
         super.viewDidLoad()
         let l_WIDTH:CGFloat  = self.view.bounds.width
         let l_RECT:CGRect    = CGRect(x: 0, y: 0, width: l_WIDTH, height:21)
         let l_PAGEINDICATOR:ViePageIndicator = ViePageIndicator(frame:l_RECT)
         //Add page indicator
         self.view.addSubview(l_PAGEINDICATOR)
+        if self.VIEWCONTROLLERS != nil
+        {
+            // Set Initial controller
+            self.setViewControllers([self.ViewControllers[0]], direction: NavigationDirection.forward, animated: true)
+        }
         self.dataSource = self
     }
     

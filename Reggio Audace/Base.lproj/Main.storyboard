@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-442" y="-1092"/>
         </scene>
-        <!--Tbr Main-->
+        <!--Tab Main-->
         <scene sceneID="h6W-m4-PKq">
             <objects>
-                <tabBarController id="mID-Pm-WcN" customClass="TbrMain" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="mID-Pm-WcN" customClass="TabMain" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fgY-mH-7A5"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oXK-gf-JlP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -232,7 +232,7 @@
         <!--Account-->
         <scene sceneID="lfB-fi-J8E">
             <objects>
-                <viewController storyboardIdentifier="VcrLogin" id="yys-1z-Oat" customClass="VcrLogIn" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CtlUserLogin" id="yys-1z-Oat" customClass="CtlUserLogin" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wfr-GJ-y1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,7 +318,7 @@
         <!--Registrazione-->
         <scene sceneID="dFr-a6-Ak2">
             <objects>
-                <viewController storyboardIdentifier="VcrRegister" title="Registrazione" id="n7D-DU-FTI" customClass="VcrRegister" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CtlRegisterUser" title="Registrazione" id="n7D-DU-FTI" customClass="CtlRegisterUser" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sVl-mJ-EgW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,12 +421,12 @@
         <!--MainAccountPage-->
         <scene sceneID="hMV-bO-gyC">
             <objects>
-                <viewController title="MainAccountPage" id="3eu-QL-cUl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CtlUserData" title="MainAccountPage" id="3eu-QL-cUl" customClass="CtlUserData" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RRT-ug-pPq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-hz-OBT">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-hz-OBT">
                                 <rect key="frame" x="14" y="196" width="345" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="MAh-L6-H6e"/>
@@ -557,6 +557,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M7G-3p-HP3"/>
                     </view>
+                    <connections>
+                        <outletCollection property="txt_UserData" destination="B0D-hz-OBT" collectionClass="NSMutableArray" id="3SW-xr-Zr8"/>
+                        <outletCollection property="txt_UserData" destination="FKc-4N-sLr" collectionClass="NSMutableArray" id="O1z-uI-DUp"/>
+                        <outletCollection property="txt_UserData" destination="Oeg-tB-6TV" collectionClass="NSMutableArray" id="aML-B7-jdM"/>
+                        <outletCollection property="txt_UserData" destination="hUI-Fk-KGC" collectionClass="NSMutableArray" id="iRg-WN-XMC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFS-gO-1Ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,7 +699,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <!--MediaAccountPage-->
         <scene sceneID="SAx-ua-Pq2">
             <objects>
-                <collectionViewController title="MediaAccountPage" id="zp5-hw-gOW" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="VcrMedia" title="MediaAccountPage" id="zp5-hw-gOW" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6a9-T8-2s2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -718,7 +724,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <!--ResetAccountPage-->
         <scene sceneID="HMr-2t-ihO">
             <objects>
-                <viewController title="ResetAccountPage" id="qqv-dV-hdx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CtlUserDataReset" title="ResetAccountPage" id="qqv-dV-hdx" customClass="CtlUserDataReset" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dbh-ln-19D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -810,7 +816,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <!--Account-->
         <scene sceneID="TNv-qj-tBc">
             <objects>
-                <pageViewController storyboardIdentifier="LogIn" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hF0-JY-58a" customClass="PagLogin" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PagLogin" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hF0-JY-58a" customClass="PagLogin" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="4" title="Account" image="IconaAccount" id="b2H-uM-ugt"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HA4-Pq-bMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -820,7 +826,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <!--LoggedAccount-->
         <scene sceneID="iiK-lw-hTc">
             <objects>
-                <pageViewController storyboardIdentifier="PagAccount" autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bXR-GO-68I" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PagAccount" autoresizesArchivedViewToFullSize="NO" title="LoggedAccount" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="bXR-GO-68I" customClass="PagAccount" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="IconaAccount" id="mUl-Vu-44E"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qib-Vh-FcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
