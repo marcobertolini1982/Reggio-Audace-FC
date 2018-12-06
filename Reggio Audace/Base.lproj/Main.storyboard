@@ -857,7 +857,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgw-L2-qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3510" y="3316"/>
+            <point key="canvasLocation" x="3508" y="3316"/>
         </scene>
         <!--Account-->
         <scene sceneID="TNv-qj-tBc">
@@ -877,7 +877,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qib-Vh-FcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3514" y="725"/>
+            <point key="canvasLocation" x="3508" y="725"/>
         </scene>
     </scenes>
     <resources>
