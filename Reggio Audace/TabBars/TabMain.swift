@@ -14,6 +14,8 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let l_ImageView:UIImageView   = UIImageView(image: UIImage(named: "Image"))
+        self.navigationItem.titleView = l_ImageView
         Auth.auth().addStateDidChangeListener({(auth,user)in
             self.SetTabItems()
         })
