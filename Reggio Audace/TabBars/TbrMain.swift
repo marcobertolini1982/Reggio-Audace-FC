@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-class TbrMain: UITabBarController,UITabBarControllerDelegate
+class TabMain: UITabBarController,UITabBarControllerDelegate
 {
 
     override func viewDidLoad()
@@ -19,7 +19,7 @@ class TbrMain: UITabBarController,UITabBarControllerDelegate
         })
         
         self.delegate = self
-       try? Auth.auth().signOut()
+      // try? Auth.auth().signOut()
         
         // Do any additional setup after loading the view.
     }

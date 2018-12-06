@@ -80,6 +80,7 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
             l_LoggedINUser.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "IconaAccountRegistrato"),selectedImage: UIImage(named:"IconaAccountRegistrato"))
             l_viewControllers.append(l_LoggedINUser)
             self.setViewControllers(l_viewControllers, animated: true)
+          
         }
         
         else
@@ -89,6 +90,9 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
             l_viewControllers.append(l_LoggedINUser)
             l_LoggedINUser.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "IconaAccount"),selectedImage: UIImage(named:"IconaAccount"))
             self.setViewControllers(l_viewControllers, animated: true)
+         
         }
     }
+    
+  
 }
