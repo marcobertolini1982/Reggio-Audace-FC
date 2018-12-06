@@ -786,6 +786,9 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                     <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XuD-l0-bts" kind="show" id="Dk5-dW-tet"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oly-ke-QZk">
                                 <rect key="frame" x="317" y="584" width="42" height="25"/>
@@ -894,6 +897,6 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Ex-yp-Fq3"/>
+        <segue reference="Dk5-dW-tet"/>
     </inferredMetricsTieBreakers>
 </document>
