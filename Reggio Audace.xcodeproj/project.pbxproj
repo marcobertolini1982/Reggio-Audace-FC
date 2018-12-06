@@ -11,6 +11,7 @@
 		526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ABD4021B1564B004177CB /* GoogleService-Info.plist */; };
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
 		526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */; };
+		5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279757D21B97DCC00923473 /* RoundImageView.swift */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
 		527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C521B0603600CBD2BE /* Hind-Light.ttf */; };
@@ -77,6 +78,7 @@
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
+		5279757D21B97DCC00923473 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* VieArticle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieArticle.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
 				52127B2F21B5890D006CE2AB /* ArticlePager.xib */,
 				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
+				5279757D21B97DCC00923473 /* RoundImageView.swift */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D174232A21AED728009AAEFC /* Cells */,
 				52F650C221B0576200CBD2BE /* Font */,
@@ -604,6 +607,7 @@
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
 				D1633DD421B01E9600D5CE2F /* VcrChat.swift in Sources */,
 				D15EBBF221B6C1C400835C0B /* LabBase.swift in Sources */,
+				5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */,
 				D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */,
 				D174232321AEAE68009AAEFC /* VcrNews.swift in Sources */,
 				D179640121B184CE005311A8 /* PagBase.swift in Sources */,

@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Hind-Medium.ttf">
-            <string>Hind-Medium</string>
-        </array>
         <array key="big_noodle_titling.ttf">
             <string>BigNoodleTitling</string>
         </array>
@@ -42,20 +39,27 @@
                             <blurEffect style="extraLight"/>
                         </vibrancyEffect>
                     </visualEffectView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZq-8g-PfD">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZq-8g-PfD">
                         <rect key="frame" x="10" y="269" width="270" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="oyR-kI-meO"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Hind-Medium" family="Hind" pointSize="17"/>
-                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name="Hind-Light"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-yU-F5O">
-                        <rect key="frame" x="10" y="219" width="300" height="40"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-yU-F5O">
+                        <rect key="frame" x="10" y="179" width="300" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="DJF-vS-0Mk"/>
-                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="GYM-Q0-jO8"/>
+                            <constraint firstAttribute="height" constant="80" id="DJF-vS-0Mk"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="GYM-Q0-jO8"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="s4s-wi-sdA"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="18"/>
@@ -113,7 +117,7 @@
                 <outlet property="lbl_dat_post" destination="uZq-8g-PfD" id="MfJ-Lq-iur"/>
                 <outlet property="lbl_des_title" destination="eba-yU-F5O" id="2wY-rd-mHm"/>
             </connections>
-            <point key="canvasLocation" x="-3489" y="-661"/>
+            <point key="canvasLocation" x="-3489.375" y="-661.79577464788736"/>
         </collectionViewCell>
     </objects>
     <resources>
