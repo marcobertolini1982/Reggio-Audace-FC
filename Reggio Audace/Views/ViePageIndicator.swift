@@ -19,12 +19,12 @@ class ViePageIndicator: VieBase
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         super.touchesBegan(touches, with: event)
-        self.INDICATORS[0].backgroundColor = GARNETCOLOR
+       
     }
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         super.touchesEnded(touches, with: event)
-       self.CONTENTVIEW.backgroundColor = GARNETCOLOR
+      
     }
     
     open subscript(index:Int)->LabIndicator
