@@ -100,7 +100,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         else
         {
              self.PAGEINDICATOR![l_PreviousIndex].textColor = GARNETCOLOR
-             self.PAGEINDICATOR![l_NextIndex].textColor     = zUIColor.black
+             self.PAGEINDICATOR![l_NextIndex].textColor     = UIColor.black
         }
     }
     
