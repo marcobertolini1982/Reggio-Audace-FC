@@ -32,7 +32,7 @@ class CvcNews: UICollectionViewCell,ProFileObs,ProChannelObs
     @IBOutlet weak var img_prg_channel : UIImageView!
     @IBOutlet weak var lbl_dat_post : UILabel!
     @IBOutlet weak var btn_share : UIButton!
-    
+                   var des_post  : String?
     // Raised when the xib merge is execute
     override func awakeFromNib()
     {
@@ -69,4 +69,6 @@ class CvcNews: UICollectionViewCell,ProFileObs,ProChannelObs
         // Load file
         //l_ChannelView.LoadChannel(prg_file: prg_file)
     }
+    
+   
 }

@@ -10,6 +10,13 @@ import UIKit
 
 class VieArticle: VieBase
 {
-    
+    //Declarations
+    @IBOutlet weak var lbl_Title:UILabel!
+    @IBOutlet weak var lbl_Date:UILabel!
+    @IBOutlet weak var txt_Article:UITextView!
+    open override var NIBNAME: String
+        {
+            return "VieArticle"
+        }
 
 }

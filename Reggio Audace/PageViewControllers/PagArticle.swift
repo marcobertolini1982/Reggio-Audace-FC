@@ -8,19 +8,24 @@
 
 import UIKit
 
-class PagArticleViewController: PagBase
+class PagArticle: PagBase
 {
 open override var IndicatorsText: [String]
 {
     return ["Articolo","Media","Commenti"]
+}
+    open var ArticleDEttail:CtlArticle?
+    {
+    return MainStoryboard.instantiateViewController(withIdentifier: "CtlArticle") as? CtlArticle
     }
     override func viewDidLoad()
     {
+        self.ViewControllers = [
+                                    MainStoryboard.instantiateViewController(withIdentifier:"CtlArticle")
+                               ]
         super.viewDidLoad()
 
-        self.ViewControllers = [
-                                    
-                               ]
+       
     }
     
 

@@ -92,6 +92,7 @@ class VcrNews: VcrBase,ProPostObs
         l_Cell.lbl_dat_post.text = POSTS[l_Index].dat_post
         // Set image
         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
+        l_Cell.des_post = POSTS[l_Index].des_post
         // Set data
         l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
 
@@ -100,35 +101,23 @@ class VcrNews: VcrBase,ProPostObs
         
     }
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        //Declarations
+        let l_index:Int = indexPath.item
+        guard let l_PagArticle:PagArticle = MainStoryboard.instantiateViewController(withIdentifier: "PagArticle") as? PagArticle,
+            let l_CTlArticle:CtlArticle = l_PagArticle.ArticleDEttail
+        else
+        {
+        return
+            
+        }
+            l_CTlArticle.VIEARTICLE.lbl_Title.text   = self.POSTS[l_index].des_title
+            l_CTlArticle.VIEARTICLE.lbl_Date.text    = self.POSTS[l_index].dat_post
+            l_CTlArticle.VIEARTICLE.txt_Article.text = self.POSTS[l_index].des_post
+            self.navigationController?.pushViewController(l_PagArticle, animated: true)
+        
+        
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }

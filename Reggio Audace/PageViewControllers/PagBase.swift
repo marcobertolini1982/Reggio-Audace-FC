@@ -53,6 +53,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         self.SetIndicatorLabels()
         //Add page indicator
         self.view.addSubview(self.PAGEINDICATOR!)
+        self.view.bringSubviewToFront(self.PAGEINDICATOR!)
         if self.VIEWCONTROLLERS != nil
         {
             // Set Initial controller
