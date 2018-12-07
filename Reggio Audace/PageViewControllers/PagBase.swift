@@ -12,12 +12,18 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
 {
     // Declarations
     
+    open var IndicatorsText:[String]
+    {
+        return [String]()
+    }
+    
     override var transitionStyle: TransitionStyle
     {
         return TransitionStyle.scroll
     }
     
     private var VIEWCONTROLLERS:[UIViewController]?
+    private var PAGEINDICATOR:ViePageIndicator?
     public var ViewControllers:[UIViewController]
     {
         get
@@ -42,15 +48,17 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         super.viewDidLoad()
         let l_WIDTH:CGFloat  = self.view.bounds.width
         let l_RECT:CGRect    = CGRect(x: 0, y: 0, width: l_WIDTH, height:21)
-        let l_PAGEINDICATOR:ViePageIndicator = ViePageIndicator(frame:l_RECT)
+        self.PAGEINDICATOR = ViePageIndicator(frame:l_RECT)
+        self.SetIndicatorLabels()
         //Add page indicator
-        self.view.addSubview(l_PAGEINDICATOR)
+        self.view.addSubview(self.PAGEINDICATOR!)
         if self.VIEWCONTROLLERS != nil
         {
             // Set Initial controller
             self.setViewControllers([self.ViewControllers[0]], direction: NavigationDirection.forward, animated: true)
         }
         self.dataSource = self
+        self.delegate = self
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
@@ -68,4 +76,33 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         return self.ViewControllers[l_Index + 1]
     }
     
+    open func pageViewController(_ pageViewController:UIPageViewController,willTransitionTo willTrasitionTo:[UIViewController])
+    {
+        if  let l_Index:Int = self.ViewControllers.index(of:willTrasitionTo[0])
+        {
+            self.PAGEINDICATOR![l_Index].textColor = GARNETCOLOR
+           
+           
+        }
+    }
+    
+    
+    open func pageViewController(_ pageViewController:UIPageViewController,didFinishAnimating finished:Bool,previousViewControllers:[UIViewController],transitionCompleted completed:Bool)
+    {
+        if  let l_Index:Int = self.ViewControllers.index(of:previousViewControllers[0])
+        {
+            self.PAGEINDICATOR![l_Index].textColor = UIColor.black
+        }
+    }
+    
+    
+    open func SetIndicatorLabels()
+    {
+        var i:Int = 0
+        while i < self.IndicatorsText.count
+        {
+           self.PAGEINDICATOR![i].text = self.IndicatorsText[i]
+            i += 1
+        }
+    }
 }

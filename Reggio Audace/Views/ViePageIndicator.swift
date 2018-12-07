@@ -11,18 +11,25 @@ import UIKit
 class ViePageIndicator: VieBase
 {
     //Declarations
-    @IBOutlet  var l_Indicators:[LabIndicator]!
+    @IBOutlet  var INDICATORS:[LabIndicator]!
    open override var NIBNAME: String
     {
         return "ViiePageIndicator"
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
         super.touchesBegan(touches, with: event)
-        self.l_Indicators[0].backgroundColor = GARNETCOLOR
+        self.INDICATORS[0].backgroundColor = GARNETCOLOR
     }
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         super.touchesEnded(touches, with: event)
        self.CONTENTVIEW.backgroundColor = GARNETCOLOR
     }
+    
+    open subscript(index:Int)->LabIndicator
+        {
+         return INDICATORS[index]
+        }
+    
 }

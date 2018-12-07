@@ -104,7 +104,7 @@ public class PostView
         if let l_Date:Date = l_DateFormatter.date(from: date!)
         {
             let l_Hourformat:String = DateFormatter.dateFormat(fromTemplate: "jj", options: 0, locale:l_DateFormatter.locale)!
-            l_DateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "EEE, YYYY MMM dd'T'\(l_Hourformat):mm", options: 0, locale:l_DateFormatter.locale)
+            l_DateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "YYYY/MM/dd'T'\(l_Hourformat):mm", options: 0, locale:l_DateFormatter.locale)
           date = l_DateFormatter.string(from:l_Date)
             
           
