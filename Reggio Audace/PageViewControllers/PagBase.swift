@@ -10,6 +10,7 @@ import UIKit
 
 class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate
 {
+    private var WILLTRANSITIONTO:UIViewController?
     // Declarations
     
     open var IndicatorsText:[String]
@@ -78,27 +79,28 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     
     open func pageViewController(_ pageViewController:UIPageViewController,willTransitionTo willTrasitionTo:[UIViewController])
     {
-        if  let l_Index:Int = self.ViewControllers.index(of:willTrasitionTo[0])
-        {
-            self.PAGEINDICATOR![l_Index].textColor = GARNETCOLOR
-           
-           
-        }
+        self.WILLTRANSITIONTO = willTrasitionTo[0]
     }
     
     
     open func pageViewController(_ pageViewController:UIPageViewController,didFinishAnimating finished:Bool,previousViewControllers:[UIViewController],transitionCompleted completed:Bool)
     {
-        guard  let l_Index:Int = self.ViewControllers.index(of:previousViewControllers[0]) else{return}
+        guard  let l_PreviousIndex:Int = self.ViewControllers.index(of:previousViewControllers[0]), let l_NextIndex = self.ViewControllers.index(of:self.WILLTRANSITIONTO!)
+        else
+        {
+            return
+        }
         
         if completed
         {
-            self.PAGEINDICATOR![l_Index].textColor = UIColor.black
+            self.PAGEINDICATOR![l_PreviousIndex].textColor = UIColor.black
+            self.PAGEINDICATOR![l_NextIndex].textColor = GARNETCOLOR
         }
         
         else
         {
-             self.PAGEINDICATOR![l_Index].textColor = GARNETCOLOR
+             self.PAGEINDICATOR![l_PreviousIndex].textColor = GARNETCOLOR
+             self.PAGEINDICATOR![l_NextIndex].textColor     = zUIColor.black
         }
     }
     
