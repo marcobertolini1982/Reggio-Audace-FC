@@ -350,10 +350,10 @@
 			isa = PBXGroup;
 			children = (
 				5293A15321B583370081E805 /* AccountPagerLogIn.xib */,
+				5279757D21B97DCC00923473 /* RoundImageView.swift */,
 				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
 				52127B2F21B5890D006CE2AB /* ArticlePager.xib */,
 				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
-				5279757D21B97DCC00923473 /* RoundImageView.swift */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D174232A21AED728009AAEFC /* Cells */,
 				52F650C221B0576200CBD2BE /* Font */,
