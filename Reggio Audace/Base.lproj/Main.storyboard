@@ -277,7 +277,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-mf-dIP">
-                                <rect key="frame" x="156" y="254.5" width="62" height="23"/>
+                                <rect key="frame" x="129" y="254.5" width="62" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="Privacy Policy">
                                     <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -295,6 +295,7 @@
                             <constraint firstItem="xjt-mf-dIP" firstAttribute="top" secondItem="imz-i7-pOD" secondAttribute="bottom" constant="27" id="5Q2-tT-YHn"/>
                             <constraint firstItem="OMt-N9-gMa" firstAttribute="top" secondItem="ROt-dt-zeA" secondAttribute="bottom" constant="8" id="7za-ga-m7S"/>
                             <constraint firstItem="aAg-xx-dA6" firstAttribute="trailing" secondItem="wpe-AB-VX3" secondAttribute="trailing" constant="16" id="8n5-gW-Scv"/>
+                            <constraint firstItem="xjt-mf-dIP" firstAttribute="centerX" secondItem="wfr-GJ-y1w" secondAttribute="centerX" id="AMW-6n-9p9"/>
                             <constraint firstItem="imz-i7-pOD" firstAttribute="top" secondItem="wpe-AB-VX3" secondAttribute="bottom" constant="8" symbolic="YES" id="Bez-Eo-dVQ"/>
                             <constraint firstItem="wpe-AB-VX3" firstAttribute="top" secondItem="OMt-N9-gMa" secondAttribute="bottom" constant="8" id="Gjj-rJ-Kxz"/>
                             <constraint firstItem="ROt-dt-zeA" firstAttribute="trailing" secondItem="OMt-N9-gMa" secondAttribute="trailing" constant="-198.5" id="HJ7-vX-Jo9"/>
@@ -302,7 +303,6 @@
                             <constraint firstItem="wpe-AB-VX3" firstAttribute="top" secondItem="OMt-N9-gMa" secondAttribute="bottom" constant="8" symbolic="YES" id="K5Q-Lw-Uae"/>
                             <constraint firstItem="OMt-N9-gMa" firstAttribute="trailing" secondItem="wpe-AB-VX3" secondAttribute="trailing" id="ONb-jd-nJ9"/>
                             <constraint firstItem="OMt-N9-gMa" firstAttribute="leading" secondItem="aAg-xx-dA6" secondAttribute="leading" constant="16" id="QVu-Ha-d8E"/>
-                            <constraint firstItem="wpe-AB-VX3" firstAttribute="leading" secondItem="xjt-mf-dIP" secondAttribute="leading" constant="-140" id="QYQ-Wm-Gvb"/>
                             <constraint firstItem="aAg-xx-dA6" firstAttribute="trailing" secondItem="imz-i7-pOD" secondAttribute="trailing" constant="102" id="RoX-rb-6m4"/>
                             <constraint firstItem="OMt-N9-gMa" firstAttribute="leading" secondItem="wpe-AB-VX3" secondAttribute="leading" id="Ybw-Bg-ejG"/>
                             <constraint firstItem="wpe-AB-VX3" firstAttribute="leading" secondItem="aAg-xx-dA6" secondAttribute="leading" constant="16" id="eN6-wr-xGU"/>
@@ -916,6 +916,6 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dk5-dW-tet"/>
+        <segue reference="bf3-xz-Mz7"/>
     </inferredMetricsTieBreakers>
 </document>
