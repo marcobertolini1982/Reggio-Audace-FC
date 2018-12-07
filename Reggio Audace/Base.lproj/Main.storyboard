@@ -778,7 +778,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-KO-Wmv">
-                                <rect key="frame" x="16" y="485" width="62" height="25"/>
+                                <rect key="frame" x="129" y="392" width="62" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="YSw-HQ-JqW"/>
                                 </constraints>
@@ -789,17 +789,6 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                 </state>
                                 <connections>
                                     <segue destination="XuD-l0-bts" kind="show" id="Dk5-dW-tet"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oly-ke-QZk">
-                                <rect key="frame" x="262" y="485" width="42" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="LOG OUT">
-                                    <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnLogOutclick:" destination="qqv-dV-hdx" eventType="touchUpInside" id="FO1-ev-P3c"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modifica i dati d'accesso:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hZ-0y-vZY">
@@ -851,31 +840,42 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                     <action selector="OnSingInButtonClick:" destination="yys-1z-Oat" eventType="touchUpInside" id="b4R-i5-jU5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oly-ke-QZk">
+                                <rect key="frame" x="139" y="453" width="42" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="LOG OUT">
+                                    <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnLogOutclick:" destination="qqv-dV-hdx" eventType="touchUpInside" id="FO1-ev-P3c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K60-Ra-Hmt" firstAttribute="top" secondItem="bXy-xW-Akf" secondAttribute="bottom" constant="8" id="1D4-Sk-Icl"/>
                             <constraint firstItem="4hZ-0y-vZY" firstAttribute="leading" secondItem="Ayu-Cb-OsY" secondAttribute="leading" constant="16" id="2o6-iR-8lk"/>
-                            <constraint firstItem="bXy-xW-Akf" firstAttribute="leading" secondItem="jaC-KO-Wmv" secondAttribute="leading" id="9VA-ha-TG8"/>
+                            <constraint firstItem="jaC-KO-Wmv" firstAttribute="centerX" secondItem="dbh-ln-19D" secondAttribute="centerX" id="6eh-g6-ldg"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="trailing" secondItem="CR5-yi-ueR" secondAttribute="trailing" id="DgY-ZU-P4t"/>
                             <constraint firstItem="4hZ-0y-vZY" firstAttribute="leading" secondItem="ATo-OO-yRk" secondAttribute="leading" id="HBx-1p-BKP"/>
                             <constraint firstItem="4hZ-0y-vZY" firstAttribute="leading" secondItem="dbh-ln-19D" secondAttribute="leadingMargin" id="IEL-Jo-cXa"/>
                             <constraint firstItem="CR5-yi-ueR" firstAttribute="trailing" secondItem="bXy-xW-Akf" secondAttribute="trailing" id="Luv-n7-vMA"/>
-                            <constraint firstItem="jaC-KO-Wmv" firstAttribute="firstBaseline" secondItem="oly-ke-QZk" secondAttribute="firstBaseline" id="Nnp-bm-NTP"/>
+                            <constraint firstItem="jaC-KO-Wmv" firstAttribute="firstBaseline" secondItem="oly-ke-QZk" secondAttribute="firstBaseline" constant="-61" id="Nnp-bm-NTP"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="top" secondItem="4hZ-0y-vZY" secondAttribute="bottom" constant="17" id="P0d-oT-yvD"/>
-                            <constraint firstItem="bXy-xW-Akf" firstAttribute="trailing" secondItem="oly-ke-QZk" secondAttribute="trailing" id="WfU-nx-QMx"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="leading" secondItem="CR5-yi-ueR" secondAttribute="leading" id="X8k-7c-zDU"/>
-                            <constraint firstItem="Ayu-Cb-OsY" firstAttribute="bottom" secondItem="jaC-KO-Wmv" secondAttribute="bottom" constant="58" id="ZFH-zg-9K3"/>
+                            <constraint firstItem="Ayu-Cb-OsY" firstAttribute="bottom" secondItem="jaC-KO-Wmv" secondAttribute="bottom" constant="151" id="ZFH-zg-9K3"/>
                             <constraint firstItem="Ayu-Cb-OsY" firstAttribute="trailing" secondItem="4hZ-0y-vZY" secondAttribute="trailing" constant="16" id="ZLV-Wk-bEY"/>
                             <constraint firstItem="K60-Ra-Hmt" firstAttribute="centerX" secondItem="dbh-ln-19D" secondAttribute="centerX" id="e2T-o3-vCd"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="top" secondItem="4hZ-0y-vZY" secondAttribute="bottom" constant="17" id="ezR-wP-SR6"/>
-                            <constraint firstItem="jaC-KO-Wmv" firstAttribute="baseline" secondItem="oly-ke-QZk" secondAttribute="baseline" id="gkv-vf-JI0"/>
+                            <constraint firstItem="jaC-KO-Wmv" firstAttribute="baseline" secondItem="oly-ke-QZk" secondAttribute="baseline" constant="-61" id="gkv-vf-JI0"/>
                             <constraint firstItem="4hZ-0y-vZY" firstAttribute="top" secondItem="Ayu-Cb-OsY" secondAttribute="top" constant="60" id="hQb-qv-FZt"/>
                             <constraint firstItem="CR5-yi-ueR" firstAttribute="top" secondItem="ATo-OO-yRk" secondAttribute="bottom" constant="8" symbolic="YES" id="hUq-aD-lWD"/>
                             <constraint firstItem="bXy-xW-Akf" firstAttribute="top" secondItem="CR5-yi-ueR" secondAttribute="bottom" constant="8" symbolic="YES" id="ida-O0-pc9"/>
                             <constraint firstItem="ATo-OO-yRk" firstAttribute="trailing" secondItem="dbh-ln-19D" secondAttribute="trailingMargin" id="luj-0y-Nvx"/>
                             <constraint firstItem="CR5-yi-ueR" firstAttribute="leading" secondItem="bXy-xW-Akf" secondAttribute="leading" id="lxe-U2-wQd"/>
-                            <constraint firstItem="oly-ke-QZk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jaC-KO-Wmv" secondAttribute="trailing" constant="8" symbolic="YES" id="wd3-DF-pEQ"/>
+                            <constraint firstItem="oly-ke-QZk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jaC-KO-Wmv" secondAttribute="trailing" constant="-52" id="wd3-DF-pEQ"/>
+                            <constraint firstItem="oly-ke-QZk" firstAttribute="centerX" secondItem="dbh-ln-19D" secondAttribute="centerX" id="yed-Kz-tr7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ayu-Cb-OsY"/>
                     </view>
@@ -909,11 +909,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="32" height="32"/>
-        <image name="IconaAccount" width="25" height="25"/>
-        <image name="News" width="25" height="25"/>
-        <image name="Tabellino" width="32" height="32"/>
-        <image name="football-game" width="32" height="32"/>
+        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="IconaAccount" width="50" height="50"/>
+        <image name="News" width="50" height="50"/>
+        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dk5-dW-tet"/>
