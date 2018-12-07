@@ -10,6 +10,10 @@ import UIKit
 
 class PagLogin: PagBase
 {
+    open override var IndicatorsText: [String]
+    {
+        return ["Accedi","Registrati","Reset"]
+    }
     
     //Declarations
 
