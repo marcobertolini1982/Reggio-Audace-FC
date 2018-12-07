@@ -48,6 +48,8 @@
 		D1633DD421B01E9600D5CE2F /* VcrChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD321B01E9600D5CE2F /* VcrChat.swift */; };
 		D1633DD621B0276500D5CE2F /* CvcChat.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1633DD521B0276500D5CE2F /* CvcChat.xib */; };
 		D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD821B02B1700D5CE2F /* CvcChat.swift */; };
+		D171970721BAABD7008D786B /* PagArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970621BAABD7008D786B /* PagArticleViewController.swift */; };
+		D171970921BAB152008D786B /* VieArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970821BAB152008D786B /* VieArticle.swift */; };
 		D174231C21AE93AC009AAEFC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231B21AE93AC009AAEFC /* PostView.swift */; };
 		D174231F21AEA99B009AAEFC /* ProPostObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231E21AEA99B009AAEFC /* ProPostObs.swift */; };
 		D174232321AEAE68009AAEFC /* VcrNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174232221AEAE68009AAEFC /* VcrNews.swift */; };
@@ -118,6 +120,8 @@
 		D1633DD321B01E9600D5CE2F /* VcrChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrChat.swift; sourceTree = "<group>"; };
 		D1633DD521B0276500D5CE2F /* CvcChat.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcChat.xib; sourceTree = "<group>"; };
 		D1633DD821B02B1700D5CE2F /* CvcChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcChat.swift; sourceTree = "<group>"; };
+		D171970621BAABD7008D786B /* PagArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagArticleViewController.swift; sourceTree = "<group>"; };
+		D171970821BAB152008D786B /* VieArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VieArticle.swift; sourceTree = "<group>"; };
 		D174231B21AE93AC009AAEFC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		D174231E21AEA99B009AAEFC /* ProPostObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostObs.swift; sourceTree = "<group>"; };
 		D174232221AEAE68009AAEFC /* VcrNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrNews.swift; sourceTree = "<group>"; };
@@ -201,8 +205,9 @@
 		D15EBBE421B68F7B00835C0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D15EBBEB21B69B1A00835C0B /* ViePageIndicator.swift */,
+				D171970821BAB152008D786B /* VieArticle.swift */,
 				D15EBBEF21B6A08C00835C0B /* VieBase.swift */,
+				D15EBBEB21B69B1A00835C0B /* ViePageIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				D179640021B184CE005311A8 /* PagBase.swift */,
 				D179640221B18660005311A8 /* PagAccount.swift */,
 				D160DC5921B5375200DAEF67 /* PagLogin.swift */,
+				D171970621BAABD7008D786B /* PagArticleViewController.swift */,
 			);
 			path = PageViewControllers;
 			sourceTree = "<group>";
@@ -601,6 +607,7 @@
 				D160DC5121B529A800DAEF67 /* SeasonDay.swift in Sources */,
 				D179640521B1A7FB005311A8 /* VcrSeason.swift in Sources */,
 				D15ABDB221B915C700C980EE /* CtlUserDataReset.swift in Sources */,
+				D171970921BAB152008D786B /* VieArticle.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
@@ -621,6 +628,7 @@
 				D17963FB21B1509D005311A8 /* SeasonView.swift in Sources */,
 				D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */,
 				D11B714E21AF0A6600887D2A /* FileView.swift in Sources */,
+				D171970721BAABD7008D786B /* PagArticleViewController.swift in Sources */,
 				D160DC5821B5333D00DAEF67 /* TabMain.swift in Sources */,
 				D17963FF21B15773005311A8 /* Season.swift in Sources */,
 				D17963F721B146EF005311A8 /* VcrUsers.swift in Sources */,
