@@ -89,9 +89,16 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     
     open func pageViewController(_ pageViewController:UIPageViewController,didFinishAnimating finished:Bool,previousViewControllers:[UIViewController],transitionCompleted completed:Bool)
     {
-        if  let l_Index:Int = self.ViewControllers.index(of:previousViewControllers[0])
+        guard  let l_Index:Int = self.ViewControllers.index(of:previousViewControllers[0]) else{return}
+        
+        if completed
         {
             self.PAGEINDICATOR![l_Index].textColor = UIColor.black
+        }
+        
+        else
+        {
+             self.PAGEINDICATOR![l_Index].textColor = GARNETCOLOR
         }
     }
     
