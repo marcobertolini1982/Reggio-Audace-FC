@@ -48,7 +48,7 @@
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="17" name="Hind-Light"/>
+                                    <font key="NSFont" size="15" name="Hind-Light"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -56,9 +56,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-yU-F5O">
-                        <rect key="frame" x="10" y="129" width="300" height="130"/>
+                        <rect key="frame" x="10" y="144" width="300" height="115"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="130" id="DJF-vS-0Mk"/>
+                            <constraint firstAttribute="height" constant="115" id="DJF-vS-0Mk"/>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="201" id="GYM-Q0-jO8"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="s4s-wi-sdA"/>
                         </constraints>
