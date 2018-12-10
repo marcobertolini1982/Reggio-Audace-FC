@@ -44,7 +44,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-Reggio-Audace-FC-2018" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-gi-KHZ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-gi-KHZ">
                         <rect key="frame" x="24" y="59" width="63" height="65"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -106,7 +106,7 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-Reggio-Audace-FC-2018" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-bh-jzm">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-bh-jzm">
                         <rect key="frame" x="233" y="59" width="63" height="65"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -179,7 +179,4 @@
             <point key="canvasLocation" x="142.40000000000001" y="-190.70464767616193"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Logo-Reggio-Audace-FC-2018" width="144" height="144"/>
-    </resources>
 </document>
