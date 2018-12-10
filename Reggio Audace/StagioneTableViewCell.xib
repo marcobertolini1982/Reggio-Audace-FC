@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qNH-gk-9N6">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-Mr-Lf1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otd-gQ-j40">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="5mP-Gw-qIM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="f2h-K0-EE8"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="SERIE D 2018/2019">
+                                        <attributes>
+                                            <color key="NSColor" red="0.48627450980392156" green="0.0078431372549019607" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="22" name="BigNoodleTitling"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eql-5V-XbQ">
+                                <rect key="frame" x="209" y="32" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Gdo-st-Tof"/>
+                                    <constraint firstAttribute="height" constant="150" id="UH8-M7-hpf"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Image Button 2">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CALENDARIO">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="39" name="BigNoodleTitling"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMh-bj-iMc">
+                                <rect key="frame" x="16" y="214" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1PS-D8-h8a"/>
+                                    <constraint firstAttribute="width" constant="150" id="wu5-ZU-Qmg"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Image Button 4">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="ROSA PRIMA SQUADRA">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="23" name="BigNoodleTitling"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hul-nw-VVe">
+                                <rect key="frame" x="209" y="214" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="XQ2-Kf-3JW"/>
+                                    <constraint firstAttribute="height" constant="150" id="eCj-BZ-qLg"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Image Button 3">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="REGGIO AUDACE CHANNEL">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="20" name="BigNoodleTitling"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNw-ey-ZhX">
+                                <rect key="frame" x="16" y="32" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="LBF-z8-DHU"/>
+                                    <constraint firstAttribute="width" constant="150" id="ez8-EQ-GAz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Image Button 1">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CLASSIFICA">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="42" name="BigNoodleTitling"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5L-o1-zd4">
+                                <rect key="frame" x="16" y="396" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QgC-rU-NfS"/>
+                                    <constraint firstAttribute="height" constant="150" id="bAi-il-sFA"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Image Button 5">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="LIVE MATCH">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="37" name="BigNoodleTitling"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2F-1s-GLf">
+                                <rect key="frame" x="209" y="396" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8pK-dy-foA"/>
+                                    <constraint firstAttribute="width" constant="150" id="mmW-eA-rik"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Image Button 6">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="work in prog">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="31" name="BigNoodleTitling"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Eql-5V-XbQ" firstAttribute="top" secondItem="otd-gQ-j40" secondAttribute="bottom" id="0Nl-g0-H1P"/>
+                            <constraint firstItem="fNw-ey-ZhX" firstAttribute="leading" secondItem="VGK-Mr-Lf1" secondAttribute="leading" constant="16" id="5aW-T8-hDs"/>
+                            <constraint firstAttribute="trailing" secondItem="Eql-5V-XbQ" secondAttribute="trailing" constant="16" id="CoD-ij-ibb"/>
+                            <constraint firstItem="hul-nw-VVe" firstAttribute="top" secondItem="Eql-5V-XbQ" secondAttribute="bottom" constant="32" id="DNd-9f-KqI"/>
+                            <constraint firstItem="otd-gQ-j40" firstAttribute="top" secondItem="VGK-Mr-Lf1" secondAttribute="top" id="Dvh-du-cbX"/>
+                            <constraint firstItem="aMh-bj-iMc" firstAttribute="top" secondItem="fNw-ey-ZhX" secondAttribute="bottom" constant="32" id="JDv-GR-4AN"/>
+                            <constraint firstItem="l2F-1s-GLf" firstAttribute="top" secondItem="hul-nw-VVe" secondAttribute="bottom" constant="32" id="L9z-4t-mTW"/>
+                            <constraint firstItem="otd-gQ-j40" firstAttribute="leading" secondItem="VGK-Mr-Lf1" secondAttribute="leadingMargin" constant="-8" id="Mys-NV-oyH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="otd-gQ-j40" secondAttribute="trailing" constant="-8" id="NPz-VP-0oY"/>
+                            <constraint firstAttribute="trailing" secondItem="l2F-1s-GLf" secondAttribute="trailing" constant="16" id="PNk-Wu-V3Z"/>
+                            <constraint firstItem="otd-gQ-j40" firstAttribute="leading" secondItem="VGK-Mr-Lf1" secondAttribute="leading" id="Rdb-Wu-79X"/>
+                            <constraint firstItem="Z5L-o1-zd4" firstAttribute="leading" secondItem="VGK-Mr-Lf1" secondAttribute="leading" constant="16" id="VnJ-ks-Kvq"/>
+                            <constraint firstItem="fNw-ey-ZhX" firstAttribute="top" secondItem="otd-gQ-j40" secondAttribute="bottom" id="aSc-Y3-iS0"/>
+                            <constraint firstAttribute="trailing" secondItem="hul-nw-VVe" secondAttribute="trailing" constant="16" id="gsj-Fo-m64"/>
+                            <constraint firstItem="aMh-bj-iMc" firstAttribute="leading" secondItem="VGK-Mr-Lf1" secondAttribute="leading" constant="16" id="lcW-Sm-C65"/>
+                            <constraint firstItem="Z5L-o1-zd4" firstAttribute="top" secondItem="aMh-bj-iMc" secondAttribute="bottom" constant="32" id="rFe-TE-O5z"/>
+                            <constraint firstAttribute="trailing" secondItem="otd-gQ-j40" secondAttribute="trailing" id="riK-p3-35T"/>
+                            <constraint firstItem="otd-gQ-j40" firstAttribute="top" secondItem="VGK-Mr-Lf1" secondAttribute="topMargin" constant="-28" id="vJd-hU-Z8x"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="VGK-Mr-Lf1" firstAttribute="top" secondItem="qNH-gk-9N6" secondAttribute="top" id="0Fm-2d-9TR"/>
+                <constraint firstItem="VGK-Mr-Lf1" firstAttribute="leading" secondItem="qNH-gk-9N6" secondAttribute="leading" id="JRj-PO-NOf"/>
+                <constraint firstAttribute="bottom" secondItem="VGK-Mr-Lf1" secondAttribute="bottom" id="lXK-yI-DzP"/>
+                <constraint firstAttribute="trailing" secondItem="VGK-Mr-Lf1" secondAttribute="trailing" id="syX-qv-t0e"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="4qW-aP-QVg"/>
+            <size key="customSize" width="375" height="659"/>
+            <point key="canvasLocation" x="696.5625" y="-670.24647887323943"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image Button 1" width="960" height="640"/>
+        <image name="Image Button 2" width="960" height="640"/>
+        <image name="Image Button 3" width="960" height="640"/>
+        <image name="Image Button 4" width="960" height="640"/>
+        <image name="Image Button 5" width="960" height="640"/>
+        <image name="Image Button 6" width="960" height="640"/>
+    </resources>
+</document>
