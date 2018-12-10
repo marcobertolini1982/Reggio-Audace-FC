@@ -14,9 +14,9 @@ open override var IndicatorsText: [String]
 {
     return ["Articolo","Media","Commenti"]
 }
-    open var ArticleDEttail:CtlArticle?
+    open var ArticleDEttail:CtlPost?
     {
-    return MainStoryboard.instantiateViewController(withIdentifier: "CtlArticle") as? CtlArticle
+    return MainStoryboard.instantiateViewController(withIdentifier: "CtlArticle") as? CtlPost
     }
     override func viewDidLoad()
     {

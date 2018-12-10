@@ -9,13 +9,11 @@
 import UIKit
 
 private let reuseIdentifier = "PostCell"
-
-class VcrNews: VcrBase,ProPostObs
+class VcrPosts: VcrBase,ProPostObs
 {
     
     // Declarations
     var POSTS:[Post] = [Post]()
-
     func PostsLoaded(posts:[Post])
     {
         
@@ -106,18 +104,15 @@ class VcrNews: VcrBase,ProPostObs
         //Declarations
         let l_index:Int = indexPath.item
         guard let l_PagArticle:PagArticle = MainStoryboard.instantiateViewController(withIdentifier: "PagArticle") as? PagArticle,
-            let l_CTlArticle:CtlArticle = l_PagArticle.ArticleDEttail
+            let l_CTlArticle:CtlPost = l_PagArticle.ArticleDEttail
         else
         {
         return
             
         }
-            l_CTlArticle.VIEARTICLE.lbl_Title.text   = self.POSTS[l_index].des_title
-            l_CTlArticle.VIEARTICLE.lbl_Date.text    = self.POSTS[l_index].dat_post
-            l_CTlArticle.VIEARTICLE.txt_Article.text = self.POSTS[l_index].des_post
+           l_CTlArticle.SetPost(self.POSTS[l_index])
             self.navigationController?.pushViewController(l_PagArticle, animated: true)
         
-        
     }
-
+    
 }

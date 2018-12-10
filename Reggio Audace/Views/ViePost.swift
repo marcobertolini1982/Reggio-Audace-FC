@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VieArticle: VieBase
+class ViePost: VieBase
 {
     //Declarations
     @IBOutlet weak var lbl_Title:UILabel!
@@ -16,7 +16,7 @@ class VieArticle: VieBase
     @IBOutlet weak var txt_Article:UITextView!
     open override var NIBNAME: String
         {
-            return "VieArticle"
+            return "ViePost"
         }
 
 }

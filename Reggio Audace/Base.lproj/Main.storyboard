@@ -68,7 +68,7 @@
         <!--News-->
         <scene sceneID="re0-uU-L4p">
             <objects>
-                <collectionViewController id="mxM-Kh-xes" customClass="VcrNews" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="VcrPosts" id="mxM-Kh-xes" customClass="VcrPosts" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RGm-gC-Cxo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="-2026" y="1634"/>
         </scene>
-        <!--Ctl Article-->
+        <!--Ctl Post-->
         <scene sceneID="Xtz-zB-oaa">
             <objects>
-                <viewController storyboardIdentifier="CtlArticle" id="0WQ-pz-oAF" customClass="CtlArticle" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CtlArticle" id="0WQ-pz-oAF" customClass="CtlPost" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yM3-4s-kFu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

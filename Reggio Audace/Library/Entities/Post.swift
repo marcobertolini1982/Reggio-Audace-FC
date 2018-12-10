@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class Post
+class Post:NSObject
 {
     
     var prg_post: Int64?
