@@ -22,6 +22,7 @@
 		527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */; };
 		5293A15021B576E90081E805 /* ViePost.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A14F21B576E90081E805 /* ViePost.xib */; };
 		5293A15221B57E5B0081E805 /* ViiePageIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */; };
+		52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
 		D15ABDB221B915C700C980EE /* CtlUserDataReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15ABDB121B915C700C980EE /* CtlUserDataReset.swift */; };
@@ -90,6 +91,7 @@
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
+		52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieCalendar.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
 		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Bold.ttf"; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				5258717821BEB53600AA2408 /* StagioneTableViewCell.xib */,
 				5232497921BEB99D00174439 /* FormazioneTableViewCell.xib */,
 				5232497B21BEB9A300174439 /* TabellinoTableViewCell.xib */,
+				52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D174232A21AED728009AAEFC /* Cells */,
 				52F650C221B0576200CBD2BE /* Font */,
@@ -488,6 +491,7 @@
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
+				52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */,
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				5232497C21BEB9A300174439 /* TabellinoTableViewCell.xib in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
