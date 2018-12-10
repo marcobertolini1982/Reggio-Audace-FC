@@ -31,13 +31,7 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hs1-PU-2rE">
-                        <rect key="frame" x="6" y="6" width="39" height="38"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="39" id="Yje-Qc-zj3"/>
-                        </constraints>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WFR-Rc-2TR">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WFR-Rc-2TR">
                         <rect key="frame" x="330" y="6" width="39" height="38"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="39" id="2tY-92-8YE"/>
@@ -55,6 +49,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hs1-PU-2rE">
+                        <rect key="frame" x="6" y="6" width="39" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="39" id="Yje-Qc-zj3"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

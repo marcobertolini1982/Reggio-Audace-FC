@@ -23,6 +23,7 @@
 		5293A15021B576E90081E805 /* ViePost.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A14F21B576E90081E805 /* ViePost.xib */; };
 		5293A15221B57E5B0081E805 /* ViiePageIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */; };
 		52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */; };
+		52E7168521BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
 		D15ABDB221B915C700C980EE /* CtlUserDataReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15ABDB121B915C700C980EE /* CtlUserDataReset.swift */; };
@@ -92,6 +93,7 @@
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
 		52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieCalendar.xib; sourceTree = "<group>"; };
+		52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieClubGranataSingleSponsor.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
 		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Bold.ttf"; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				5258717821BEB53600AA2408 /* StagioneTableViewCell.xib */,
 				5232497921BEB99D00174439 /* FormazioneTableViewCell.xib */,
 				5232497B21BEB9A300174439 /* TabellinoTableViewCell.xib */,
+				52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */,
 				52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D174232A21AED728009AAEFC /* Cells */,
@@ -484,6 +487,7 @@
 				D1BE6D7121AD60EA00114084 /* LaunchScreen.storyboard in Resources */,
 				D174232821AED6C1009AAEFC /* CvcNews.xib in Resources */,
 				D1633DD621B0276500D5CE2F /* CvcChat.xib in Resources */,
+				52E7168521BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib in Resources */,
 				5232497A21BEB99D00174439 /* FormazioneTableViewCell.xib in Resources */,
 				D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */,
 				527E94F121B0648900A8CAD0 /* Hind-Medium.ttf in Resources */,
