@@ -62,7 +62,7 @@
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="201" id="GYM-Q0-jO8"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="s4s-wi-sdA"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="16"/>
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
