@@ -1,53 +1,28 @@
 //
-//  VcrSeasonCollectionViewController.swift
+//  VcrSeasonMenuCollectionViewController.swift
 //  Reggio Audace
 //
-//  Created by Michele on 30/11/18.
+//  Created by Michele on 10/12/18.
 //  Copyright © 2018 LEN Solution. All rights reserved.
 //
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let IDSEASONMENU = "IDSEASONMENU"
 
-class VcrSeason: VcrBase, ProSeasonObs
-{
-    func SeasonLoaded(seasons: [Season])
-    {
-        self.SEASONS = seasons
-        self.BindData()
-    }
-    
-    var SEASONS:[Season] = [Season]()
-    func SeasonLOaded(seasons: [Season])
-    {
-        self.SEASONS = seasons
-        self.BindData()
-    }
-    
-    func LoadRecord()
-    {
-        let l_SeasonView:SeasonView = SeasonView()
-        l_SeasonView.SetOnSeasonLoaded(proSeasonObs: self)
-        l_SeasonView.LoadSeason()
-    }
-    
-    func Init()
-    {
-        let nib:UINib = UINib(nibName:"CvcChat", bundle: nil)
-        self.collectionView?.register(nib, forCellWithReuseIdentifier: CHATID)
-        self.SetLayoutVertical(heigth: 100)
-    }
+class VcrSeasonMenu: VcrBase {
 
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        self.Init()
-        self.LoadRecord()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
+    
+        let nib:UINib = UINib(nibName:"CvcSeasonMenu" , bundle: nil)
+        self.collectionView!.register(nib, forCellWithReuseIdentifier: IDSEASONMENU)
+        self.SetLayoutVertical(heigth:self.collectionView.bounds.height)
 
         // Do any additional setup after loading the view.
     }
@@ -65,22 +40,17 @@ class VcrSeason: VcrBase, ProSeasonObs
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       guard let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CvcChat
-        else
-       {
-        return UICollectionViewCell()
-       }
+        guard  let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: IDSEASONMENU, for: indexPath) as? CvcSeasonMenu else{return UICollectionViewCell()}
     
         // Configure the cell
     
