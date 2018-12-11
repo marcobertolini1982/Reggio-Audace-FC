@@ -11,6 +11,11 @@ import UIKit
 class CtlPost: CtlBase
 {
     private  var POST:Post?
+    open var posts:Post?
+    {
+        get{return self.POST}
+        set{self.POST = newValue}
+    }
  
     //Decvlarations
     let VIEARTICLE:ViePost = ViePost()
@@ -33,15 +38,11 @@ class CtlPost: CtlBase
     open override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
-        self.VIEARTICLE.lbl_Title.text   = self.POST?.des_title!
-        self.VIEARTICLE.lbl_Date.text    = self.POST?.dat_post!
-        self.VIEARTICLE.txt_Article.text = self.POST?.des_post!
+        #if DEBUG
+        print(self.posts?.des_title)
+        #endif
         
     }
     
-    open func SetPost(_ post:Post)
-    {
-        self.POST = post.copy() as? Post
-        
-    }
+
 }

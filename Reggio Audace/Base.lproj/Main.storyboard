@@ -68,7 +68,7 @@
         <!--News-->
         <scene sceneID="re0-uU-L4p">
             <objects>
-                <collectionViewController storyboardIdentifier="VcrPosts" id="mxM-Kh-xes" customClass="VcrPosts" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController restorationIdentifier="VcrPosts" storyboardIdentifier="VcrPosts" id="mxM-Kh-xes" customClass="VcrPosts" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RGm-gC-Cxo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +235,7 @@
         <scene sceneID="iFe-Mr-wtn">
             <objects>
                 <collectionViewController id="8TC-GE-GRC" customClass="VcrSeasonMenu" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" dataMode="prototypes" id="vGl-7q-8Q5">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" id="vGl-7q-8Q5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -962,11 +962,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dk5-dW-tet"/>
