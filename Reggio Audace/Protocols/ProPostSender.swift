@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol ProPostViewWillAppear
+protocol ProPostReceiver
 {
-    func PostViewWillAppear(post:Post)
+    func ReceivePost(post:Post)
 }
