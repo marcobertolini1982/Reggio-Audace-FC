@@ -10,7 +10,7 @@ import UIKit
 
  let CHATID = "ChatCell"
 
-class VcrChat: VcrBase,ProChatObs
+class VcrChats: VcrBase,ProChatObs
 {
     //Declarations
     var  CHATS:[Chat] = [Chat]()

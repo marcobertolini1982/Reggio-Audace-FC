@@ -49,7 +49,7 @@
 		D1633DCE21B0000000D5CE2F /* ProChatObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DCD21B0000000D5CE2F /* ProChatObs.swift */; };
 		D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DCF21B0008A00D5CE2F /* ChatView.swift */; };
 		D1633DD221B0135100D5CE2F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD121B0135100D5CE2F /* Chat.swift */; };
-		D1633DD421B01E9600D5CE2F /* VcrChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD321B01E9600D5CE2F /* VcrChat.swift */; };
+		D1633DD421B01E9600D5CE2F /* VcrChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD321B01E9600D5CE2F /* VcrChats.swift */; };
 		D1633DD621B0276500D5CE2F /* CvcChat.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1633DD521B0276500D5CE2F /* CvcChat.xib */; };
 		D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD821B02B1700D5CE2F /* CvcChat.swift */; };
 		D171970721BAABD7008D786B /* PagArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970621BAABD7008D786B /* PagArticle.swift */; };
@@ -125,7 +125,7 @@
 		D1633DCD21B0000000D5CE2F /* ProChatObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProChatObs.swift; sourceTree = "<group>"; };
 		D1633DCF21B0008A00D5CE2F /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D1633DD121B0135100D5CE2F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
-		D1633DD321B01E9600D5CE2F /* VcrChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrChat.swift; sourceTree = "<group>"; };
+		D1633DD321B01E9600D5CE2F /* VcrChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrChats.swift; sourceTree = "<group>"; };
 		D1633DD521B0276500D5CE2F /* CvcChat.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcChat.xib; sourceTree = "<group>"; };
 		D1633DD821B02B1700D5CE2F /* CvcChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcChat.swift; sourceTree = "<group>"; };
 		D171970621BAABD7008D786B /* PagArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagArticle.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		D15ABDB321B919B800C980EE /* CollectionControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D1633DD321B01E9600D5CE2F /* VcrChat.swift */,
+				D1633DD321B01E9600D5CE2F /* VcrChats.swift */,
 				D17963F621B146EF005311A8 /* VcrUsers.swift */,
 				D17963F821B14779005311A8 /* VcrChannels.swift */,
 				D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */,
@@ -639,7 +639,7 @@
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
-				D1633DD421B01E9600D5CE2F /* VcrChat.swift in Sources */,
+				D1633DD421B01E9600D5CE2F /* VcrChats.swift in Sources */,
 				D15EBBF221B6C1C400835C0B /* LabBase.swift in Sources */,
 				5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */,
 				D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */,
