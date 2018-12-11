@@ -104,16 +104,20 @@ class VcrPosts: VcrBase,ProPostObs
     {
         //Declarations
         let l_index:Int = indexPath.item
-        guard let l_PagArticle:PagArticle = MainStoryboard.instantiateViewController(withIdentifier: "PagArticle") as? PagArticle,
-            let l_CTlArticle:CtlPost = l_PagArticle.ArticleDEttail
-        else
-        {
-        return
-            
-        }
-            l_CTlArticle.posts = self.POSTS[l_index]
-            self.navigationController?.pushViewController(l_PagArticle, animated: true)
-        
+        self.performSegue(withIdentifier: "PostSegue", sender: self.POSTS[l_index])
     }
     
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        switch segue.identifier {
+        case "PostSegue":
+            guard let l_PagPost:PagArticle = segue.destination as? PagArticle, let l_CtlPost:CtlPost = l_PagPost.ArticleDEttail else{return}
+            guard let l_Post:Post = sender as? Post else{return}
+            l_CtlPost.VIEARTICLE.lbl_Title.text      = l_Post.des_title
+            l_CtlPost.VIEARTICLE.txt_Article.text    = l_Post.des_post
+            l_CtlPost.VIEARTICLE.lbl_Date.text       = l_Post.dat_post
+        default:
+            break
+        }
+    }
 }
