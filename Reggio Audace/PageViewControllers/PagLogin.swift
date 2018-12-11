@@ -15,6 +15,7 @@ class PagLogin: PagBase
         return ["Accedi","Registrati","Reset"]
     }
     
+    
     //Declarations
 
     override func viewDidLoad()

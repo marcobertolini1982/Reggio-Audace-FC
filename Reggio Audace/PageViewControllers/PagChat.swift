@@ -11,10 +11,22 @@ import UIKit
 class PagChat: PagBase
 {
    
+    open override var IndicatorsText: [String]
+    {
+        return ["Chat","Utenti","Canali"]
+    }
+    
+    
+    
     override func viewDidLoad()
     {
+        self.ViewControllers = [MainStoryboard.instantiateViewController(withIdentifier: "VcrChats"),
+                                MainStoryboard.instantiateViewController(withIdentifier: "VcrUsers"),
+                                MainStoryboard.instantiateViewController(withIdentifier: "VcrChannels")
+                               ]
+        
         super.viewDidLoad()
-        self.SetPages()
+      
      
     }
 
@@ -28,13 +40,5 @@ class PagChat: PagBase
         // Pass the selected object to the new view controller.
     }
     */
-    func SetPages()
-    {
-        //Init
-        let l_Storyboard:UIStoryboard   =   UIStoryboard(name: "Main", bundle:nil)
-        let l_ChatPage:UIViewController =   l_Storyboard.instantiateViewController(withIdentifier: "Chat")
-        let l_Pages:[UIViewController]  =   [l_ChatPage]
-       //Load first page 
-        self.setViewControllers(l_Pages, direction: NavigationDirection.forward, animated: true)
-    }
+    
 }
