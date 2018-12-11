@@ -74,7 +74,7 @@
 		D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6D21AD60EA00114084 /* Assets.xcassets */; };
 		D1BE6D7121AD60EA00114084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */; };
 		D1BE6D9721AD7D6100114084 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D9621AD7D6100114084 /* Post.swift */; };
-		D1EDE76C21BE8D9D00FDA751 /* ProPostViewWillAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDE76B21BE8D9D00FDA751 /* ProPostViewWillAppear.swift */; };
+		D1EDE76C21BE8D9D00FDA751 /* ProPostSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDE76B21BE8D9D00FDA751 /* ProPostSender.swift */; };
 		D1EDE77121BEBBB300FDA751 /* VcrSeasonMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */; };
 		D1EDE77321BEBCE100FDA751 /* CvcSeasonMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDE77221BEBCE100FDA751 /* CvcSeasonMenu.swift */; };
 		D5D8A8995F382F955705B5E6 /* Pods_Reggio_Audace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */; };
@@ -151,7 +151,7 @@
 		D1BE6D6D21AD60EA00114084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BE6D7021AD60EA00114084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BE6D9621AD7D6100114084 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		D1EDE76B21BE8D9D00FDA751 /* ProPostViewWillAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostViewWillAppear.swift; sourceTree = "<group>"; };
+		D1EDE76B21BE8D9D00FDA751 /* ProPostSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostSender.swift; sourceTree = "<group>"; };
 		D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrSeasonMenu.swift; sourceTree = "<group>"; };
 		D1EDE77221BEBCE100FDA751 /* CvcSeasonMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcSeasonMenu.swift; sourceTree = "<group>"; };
 		E806AFB83CF3ABA360FAF618 /* Pods-Reggio Audace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reggio Audace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reggio Audace/Pods-Reggio Audace.debug.xcconfig"; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 				D1633DCD21B0000000D5CE2F /* ProChatObs.swift */,
 				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
 				D19F62FE21B8312900726165 /* ProChannelObs.swift */,
-				D1EDE76B21BE8D9D00FDA751 /* ProPostViewWillAppear.swift */,
+				D1EDE76B21BE8D9D00FDA751 /* ProPostSender.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -358,25 +358,25 @@
 		D1BE6D6521AD60D800114084 /* Reggio Audace */ = {
 			isa = PBXGroup;
 			children = (
-				5279757D21B97DCC00923473 /* RoundImageView.swift */,
 				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
-				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
-				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
-				52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */,
-				52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D174232A21AED728009AAEFC /* Cells */,
+				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
 				52F650C221B0576200CBD2BE /* Font */,
-				527E94F421B06A7B00A8CAD0 /* Info.plist */,
 				526ABD4021B1564B004177CB /* GoogleService-Info.plist */,
+				527E94F421B06A7B00A8CAD0 /* Info.plist */,
 				D15EBBE621B6980200835C0B /* Labels */,
 				D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */,
 				D1BE6D9421AD7D2E00114084 /* Library */,
+				D1BE6D6A21AD60D800114084 /* Main.storyboard */,
 				D1633DD721B0298C00D5CE2F /* PageViewControllers */,
 				D174231D21AEA802009AAEFC /* Protocols */,
 				52127B2E21B5882E006CE2AB /* Reggio Audace.entitlements */,
+				5279757D21B97DCC00923473 /* RoundImageView.swift */,
 				D160DC5621B532FF00DAEF67 /* TabBars */,
 				D160DC4921B521C900DAEF67 /* Utils */,
+				52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */,
+				52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */,
 				D174232021AEAE10009AAEFC /* ViewControllers */,
 				D15EBBE421B68F7B00835C0B /* Views */,
 				D174232B21AED7C1009AAEFC /* Xib */,
@@ -635,7 +635,7 @@
 				D15ABDB221B915C700C980EE /* CtlUserDataReset.swift in Sources */,
 				D171970921BAB152008D786B /* ViePost.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
-				D1EDE76C21BE8D9D00FDA751 /* ProPostViewWillAppear.swift in Sources */,
+				D1EDE76C21BE8D9D00FDA751 /* ProPostSender.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,

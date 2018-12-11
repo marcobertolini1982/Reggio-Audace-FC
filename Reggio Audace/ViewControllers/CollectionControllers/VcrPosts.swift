@@ -66,7 +66,8 @@ class VcrPosts: VcrBase,ProPostObs
         
     }
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
@@ -110,7 +111,7 @@ class VcrPosts: VcrBase,ProPostObs
         return
             
         }
-           l_CTlArticle.SetPost(self.POSTS[l_index])
+            l_CTlArticle.posts = self.POSTS[l_index]
             self.navigationController?.pushViewController(l_PagArticle, animated: true)
         
     }
