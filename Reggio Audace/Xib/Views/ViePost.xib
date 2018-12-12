@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViePost" customModule="Reggio_Audace" customModuleProvider="target">
             <connections>
                 <outlet property="CONTENTVIEW" destination="iN0-l3-epB" id="MTN-1S-uHt"/>
+                <outlet property="img_Post" destination="awQ-GB-qOL" id="S13-aE-fFE"/>
                 <outlet property="lbl_Date" destination="g2q-KX-6In" id="TIo-lk-Hbe"/>
                 <outlet property="lbl_Title" destination="g9Q-H2-owN" id="MKF-z2-3cF"/>
                 <outlet property="txt_Article" destination="ehj-lV-4qd" id="ste-Du-voz"/>
