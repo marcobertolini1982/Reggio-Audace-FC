@@ -24,10 +24,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
-                    <rect key="frame" x="12" y="323" width="292" height="236"/>
+                    <rect key="frame" x="12" y="323" width="296" height="236"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9Q-H2-owN">
                     <rect key="frame" x="16" y="252" width="288" height="40"/>
@@ -116,6 +117,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ehj-lV-4qd" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="2" id="2CY-RB-9lo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ehj-lV-4qd" secondAttribute="trailing" constant="12" id="6IG-Uz-n1C"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g2q-KX-6In" secondAttribute="trailing" constant="16" id="9Rv-bC-VQh"/>
                 <constraint firstItem="sgh-Pj-VjA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="9dD-Tg-LEC"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="awQ-GB-qOL" secondAttribute="bottom" constant="8" id="ApH-Ac-XX2"/>
@@ -133,7 +135,6 @@
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="avt-tk-dyt" secondAttribute="bottom" constant="14" id="l8n-rf-jJH"/>
                 <constraint firstItem="g2q-KX-6In" firstAttribute="leading" secondItem="g9Q-H2-owN" secondAttribute="leading" id="qvN-la-GYC"/>
                 <constraint firstAttribute="bottom" secondItem="ehj-lV-4qd" secondAttribute="bottom" constant="9" id="qx0-Vs-qp9"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ehj-lV-4qd" secondAttribute="trailing" constant="16" id="s2r-vv-erR"/>
                 <constraint firstItem="sgh-Pj-VjA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="tCd-bM-WtK"/>
                 <constraint firstItem="awQ-GB-qOL" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="uVh-dv-Ys7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g9Q-H2-owN" secondAttribute="trailing" constant="16" id="vwB-iK-G6x"/>
