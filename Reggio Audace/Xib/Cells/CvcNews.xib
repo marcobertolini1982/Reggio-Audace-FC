@@ -27,7 +27,7 @@
                     <imageView contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IU2-Eq-ywo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
                     </imageView>
-                    <visualEffectView opaque="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bNn-Uy-n5D">
+                    <visualEffectView opaque="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bNn-Uy-n5D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zsI-PJ-EHD">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
@@ -55,14 +55,14 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-yU-F5O">
-                        <rect key="frame" x="10" y="209" width="300" height="50"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-yU-F5O">
+                        <rect key="frame" x="10" y="199" width="300" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="DJF-vS-0Mk"/>
+                            <constraint firstAttribute="height" constant="60" id="DJF-vS-0Mk"/>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="201" id="GYM-Q0-jO8"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="s4s-wi-sdA"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="16"/>
+                        <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="18"/>
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
