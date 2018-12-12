@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViePost" customModule="Reggio_Audace" customModuleProvider="target">
             <connections>
                 <outlet property="CONTENTVIEW" destination="iN0-l3-epB" id="MTN-1S-uHt"/>
+                <outlet property="img_Post" destination="awQ-GB-qOL" id="k9l-3i-0hT"/>
                 <outlet property="lbl_Date" destination="g2q-KX-6In" id="TIo-lk-Hbe"/>
                 <outlet property="lbl_Title" destination="g9Q-H2-owN" id="MKF-z2-3cF"/>
                 <outlet property="txt_Article" destination="ehj-lV-4qd" id="ste-Du-voz"/>
@@ -138,7 +139,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g9Q-H2-owN" secondAttribute="trailing" constant="16" id="z8I-mm-oAq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-191" y="136"/>
+            <point key="canvasLocation" x="-621" y="133"/>
         </view>
     </objects>
     <resources>

@@ -14,6 +14,7 @@ class ViePost: VieBase
     @IBOutlet weak var lbl_Title:UILabel!
     @IBOutlet weak var lbl_Date:UILabel!
     @IBOutlet weak var txt_Article:UITextView!
+    @IBOutlet weak var img_Post:UIImageView!
     open override var NIBNAME: String
         {
             return "ViePost"
