@@ -19,5 +19,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reggio Audace/ViewControllers/Controllers/CtlRegisterUser.swift"
+            timestampString = "566399886.579236"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "OnBtnRegisterClick(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reggio Audace/ViewControllers/Controllers/CtlRegisterUser.swift"
+            timestampString = "566399886.579291"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "OnBtnRegisterClick(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Reggio_Audace.CtlRegisterUser.OnBtnRegisterClick(__C.UIButton) -&gt; ()"
+                  moduleName = "Reggio Audace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michele/Documents/Reggio-Audace-FC/Reggio%20Audace/ViewControllers/Controllers/CtlRegisterUser.swift"
+                  timestampString = "566399886.617563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Reggio_Audace.CtlRegisterUser.OnBtnRegisterClick(__C.UIButton) -&gt; ()"
+                  moduleName = "Reggio Audace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michele/Documents/Reggio-Audace-FC/Reggio%20Audace/ViewControllers/Controllers/CtlRegisterUser.swift"
+                  timestampString = "566399886.619258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
