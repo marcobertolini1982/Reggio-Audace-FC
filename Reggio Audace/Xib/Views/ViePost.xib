@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="big_noodle_titling.ttf">
-            <string>BigNoodleTitling</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViePost" customModule="Reggio_Audace" customModuleProvider="target">
             <connections>
@@ -29,25 +24,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
-                    <rect key="frame" x="4" y="331.5" width="312" height="33"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes"/>
-                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
-                </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITOLO" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9Q-H2-owN">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9Q-H2-owN">
                     <rect key="frame" x="6" y="279" width="308" height="24"/>
-                    <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="22"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-KX-6In">
-                    <rect key="frame" x="6" y="309" width="308" height="14.5"/>
                     <attributedString key="attributedText">
-                        <fragment content="DATA E ORA">
+                        <fragment content="TITOLO">
                             <attributes>
-                                <font key="NSFont" metaFont="cellTitle"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="22" name="BigNoodleTitling"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
                     </attributedString>
@@ -96,6 +80,25 @@
                     </constraints>
                     <state key="normal" image="share"/>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
+                    <rect key="frame" x="4" y="333.5" width="312" height="33"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-KX-6In">
+                    <rect key="frame" x="6" y="311" width="308" height="14.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="DATA E ORA">
+                            <attributes>
+                                <font key="NSFont" metaFont="cellTitle"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -110,10 +113,11 @@
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="WqX-ul-3bb" secondAttribute="bottom" constant="8" id="FKy-7d-6ge"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="FPz-r3-icK" secondAttribute="bottom" constant="2" id="HbX-Un-HTO"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="sgh-Pj-VjA" secondAttribute="bottom" constant="2" id="JYL-rm-7do"/>
-                <constraint firstItem="g2q-KX-6In" firstAttribute="top" secondItem="g9Q-H2-owN" secondAttribute="bottom" constant="6" id="LBK-rP-Qaz"/>
+                <constraint firstItem="g2q-KX-6In" firstAttribute="top" secondItem="g9Q-H2-owN" secondAttribute="bottom" constant="8" id="LBK-rP-Qaz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g9Q-H2-owN" secondAttribute="trailing" constant="6" id="ThM-xm-EQK"/>
                 <constraint firstItem="awQ-GB-qOL" firstAttribute="leading" secondItem="ehj-lV-4qd" secondAttribute="leading" constant="-4" id="TiF-wF-Ves"/>
                 <constraint firstItem="ehj-lV-4qd" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" id="VBO-RY-Xaa"/>
+                <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="awQ-GB-qOL" secondAttribute="bottom" constant="2" id="W0w-mh-Knw"/>
                 <constraint firstItem="ehj-lV-4qd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="bRU-CU-0LO"/>
                 <constraint firstItem="avt-tk-dyt" firstAttribute="leading" secondItem="WqX-ul-3bb" secondAttribute="trailing" constant="8" id="gL2-X4-xRN"/>
                 <constraint firstItem="awQ-GB-qOL" firstAttribute="centerX" secondItem="g9Q-H2-owN" secondAttribute="centerX" id="huY-4h-S74"/>
@@ -123,11 +127,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="avt-tk-dyt" secondAttribute="trailing" constant="6" id="rGC-kt-5bQ"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="avt-tk-dyt" secondAttribute="bottom" constant="8" id="rPx-c1-8tb"/>
                 <constraint firstItem="sgh-Pj-VjA" firstAttribute="bottom" secondItem="FPz-r3-icK" secondAttribute="bottom" id="rbq-jB-asF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g9Q-H2-owN" secondAttribute="trailing" constant="6" id="sIj-uN-6mi"/>
                 <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="awQ-GB-qOL" secondAttribute="bottom" constant="2" id="sLd-b9-oUV"/>
                 <constraint firstItem="sgh-Pj-VjA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ulr-SL-ojn"/>
                 <constraint firstItem="awQ-GB-qOL" firstAttribute="centerX" secondItem="g2q-KX-6In" secondAttribute="centerX" id="w4J-CV-X37"/>
                 <constraint firstItem="sgh-Pj-VjA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xsc-M6-8Sq"/>
                 <constraint firstItem="g2q-KX-6In" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="6" id="yu6-gk-q8D"/>
+                <constraint firstItem="g9Q-H2-owN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="6" id="zaG-02-xUt"/>
                 <constraint firstItem="awQ-GB-qOL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zso-Dl-GpB"/>
                 <constraint firstItem="WqX-ul-3bb" firstAttribute="leading" secondItem="FPz-r3-icK" secondAttribute="trailing" constant="8" id="ztF-lp-7oZ"/>
             </constraints>
