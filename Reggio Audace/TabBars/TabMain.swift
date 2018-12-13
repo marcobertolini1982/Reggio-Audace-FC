@@ -17,10 +17,7 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
         let l_ImageView:UIImageView   = UIImageView(image: UIImage(named: "Image"))
         self.navigationItem.titleView = l_ImageView
         Auth.auth().addStateDidChangeListener({(auth,user)in
-            if !user!.isEmailVerified
-            {
-                
-            }
+            
             self.SetTabItems(user: user)
         })
         
@@ -38,6 +35,7 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
         let l_tag:Int = viewController.tabBarItem.tag
         
         // Eval User and email
+        
         if AuthUtils.User == nil || !AuthUtils.User!.isEmailVerified
         {
            switch l_tag
@@ -77,6 +75,7 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
             return
             
         }
+        
         if user != nil && user!.isEmailVerified
         {
          
