@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseInstanceID
 class CtlRegisterUser: CtlBase
 {
     // Declarations
@@ -20,12 +21,28 @@ class CtlRegisterUser: CtlBase
     {
     
         AuthUtils.Authentication.createUser(withEmail: txt_User.text!, password: txt_User.text!){(authResult,error)in
-            guard error != nil && self.txt_Password.text == self.txt_password_confirm.text  else{ return}
-            
-            let l_user:User
-            let l_Device:Device
-            l_user.cod_user = AuthUtils.Uid
-            l_user.des_user = AuthUtils.UserEmail
+            // Eval
+            guard let l_usr:FirebaseAuth.User = authResult?.user, self.txt_Password.text == self.txt_password_confirm.text
+            else
+            {
+                return
+            }
+            // Declartatyions
+            let l_User: User = User()
+            let l_Device:Device = Device()
+            let l_Dev:UIDevice = UIDevice.current
+            // SetProperties
+             if !l_usr.isEmailVerified
+             {
+                l_usr.sendEmailVerification()
+            }
+            l_User.cod_user = l_usr.uid
+            l_User.des_user = l_usr.email
+            l_Device.cod_cdevice = l_Dev.identifierForVendor?.uuidString
+            InstanceID.instanceID().instanceID{(result,error)in
+                guard error == nil && result != nil else{return}
+                l_Device.des_device = result?.token
+            }
             
         }
        

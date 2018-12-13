@@ -17,7 +17,11 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
         let l_ImageView:UIImageView   = UIImageView(image: UIImage(named: "Image"))
         self.navigationItem.titleView = l_ImageView
         Auth.auth().addStateDidChangeListener({(auth,user)in
-            self.SetTabItems()
+            if !user!.isEmailVerified
+            {
+                
+            }
+            self.SetTabItems(user: user)
         })
         
         self.delegate = self
@@ -34,7 +38,7 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
         let l_tag:Int = viewController.tabBarItem.tag
         
         // Eval User and email
-        if AuthUtils.User == nil 
+        if AuthUtils.User == nil || !AuthUtils.User!.isEmailVerified
         {
            switch l_tag
            {
@@ -64,7 +68,7 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
     */
 
     
-    private final func SetTabItems()
+    private final func SetTabItems(user:FirebaseAuth.User?)
     {
         guard var l_viewControllers:[UIViewController] = self.viewControllers, let l_LastItem:UIViewController = l_viewControllers.last,
           let  l_LastIndex:Int = l_viewControllers.index(of:l_LastItem)
@@ -73,7 +77,7 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
             return
             
         }
-        if AuthUtils.User != nil
+        if user != nil && user!.isEmailVerified
         {
          
           

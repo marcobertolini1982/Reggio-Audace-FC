@@ -456,7 +456,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="OnBtnRegisterClick:" destination="n7D-DU-FTI" eventType="touchUpOutside" id="fn2-lT-DST"/>
+                                    <action selector="OnBtnRegisterClick:" destination="n7D-DU-FTI" eventType="touchUpInside" id="anK-J0-n5y"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conferma Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="9HM-CJ-7w9">
@@ -517,6 +517,7 @@
                         <outlet property="btn_Register" destination="owf-Nv-KFf" id="VHe-VW-6yM"/>
                         <outlet property="txt_Password" destination="lGs-lf-fN3" id="hv2-4c-6dy"/>
                         <outlet property="txt_User" destination="ukX-SC-A5k" id="Da5-UC-uht"/>
+                        <outlet property="txt_password_confirm" destination="9HM-CJ-7w9" id="fNT-Ox-tGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCi-oY-5v2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -956,13 +957,13 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dk5-dW-tet"/>
+        <segue reference="6Ex-yp-Fq3"/>
     </inferredMetricsTieBreakers>
 </document>
