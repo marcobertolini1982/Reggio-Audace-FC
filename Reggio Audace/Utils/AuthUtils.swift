@@ -10,13 +10,15 @@ import Foundation
 import FirebaseAuth
 class AuthUtils
 {
-    public static var User:FirebaseAuth.User?
+    public static var User: FirebaseAuth.User?
  {
-    return Auth.auth().currentUser
+        
+        return Auth.auth().currentUser
  }
     
     public static var Uid:String?
     {
+        
         return Auth.auth().currentUser?.uid
     }
     
@@ -25,5 +27,8 @@ class AuthUtils
         return Auth.auth().currentUser?.email
     }
     
-    
+    public static var Authentication:Auth
+    {
+        return Auth.auth()
+    }
 }

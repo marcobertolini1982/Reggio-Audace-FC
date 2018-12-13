@@ -455,6 +455,9 @@
                                 <state key="normal" title="REGISTRATI">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnBtnRegisterClick:" destination="n7D-DU-FTI" eventType="touchUpOutside" id="fn2-lT-DST"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -938,13 +941,13 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dk5-dW-tet"/>
+        <segue reference="6Ex-yp-Fq3"/>
     </inferredMetricsTieBreakers>
 </document>
