@@ -51,7 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-yU-F5O">
-                        <rect key="frame" x="10" y="235" width="300" height="24"/>
+                        <rect key="frame" x="10" y="233" width="300" height="24"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
@@ -61,7 +61,7 @@
                                 </attributes>
                             </fragment>
                         </attributedString>
-                        <color key="highlightedColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tTj-4Z-Tbs">
                         <rect key="frame" x="270" y="10" width="40" height="40"/>
@@ -91,11 +91,11 @@
                 <constraint firstItem="IU2-Eq-ywo" firstAttribute="leading" secondItem="Lpb-Xd-BMo" secondAttribute="leading" id="KBg-z1-sGC"/>
                 <constraint firstItem="uZq-8g-PfD" firstAttribute="top" secondItem="IU2-Eq-ywo" secondAttribute="bottom" constant="10" id="Sco-vU-ov4"/>
                 <constraint firstItem="zbN-9d-rx5" firstAttribute="top" secondItem="IU2-Eq-ywo" secondAttribute="bottom" constant="10" id="VnN-LZ-3Mm"/>
-                <constraint firstItem="uZq-8g-PfD" firstAttribute="top" secondItem="eba-yU-F5O" secondAttribute="bottom" constant="10" id="Vxf-SM-WRD"/>
                 <constraint firstItem="IU2-Eq-ywo" firstAttribute="top" secondItem="Lpb-Xd-BMo" secondAttribute="top" id="X3W-gr-7pc"/>
                 <constraint firstAttribute="bottom" secondItem="zbN-9d-rx5" secondAttribute="bottom" constant="10" id="a44-z6-4fx"/>
                 <constraint firstItem="bNn-Uy-n5D" firstAttribute="leading" secondItem="Lpb-Xd-BMo" secondAttribute="leading" id="aKW-23-nzU"/>
                 <constraint firstAttribute="bottom" secondItem="uZq-8g-PfD" secondAttribute="bottom" constant="10" id="aLk-LO-Mh3"/>
+                <constraint firstItem="uZq-8g-PfD" firstAttribute="top" secondItem="eba-yU-F5O" secondAttribute="bottom" constant="12" id="bIb-hP-hDl"/>
                 <constraint firstAttribute="trailing" secondItem="eba-yU-F5O" secondAttribute="trailing" constant="10" id="em4-Oe-Ibc"/>
                 <constraint firstAttribute="bottom" secondItem="IU2-Eq-ywo" secondAttribute="bottom" constant="40" id="f22-bX-Ufm"/>
                 <constraint firstAttribute="trailing" secondItem="zbN-9d-rx5" secondAttribute="trailing" constant="10" id="fWF-ez-06B"/>
