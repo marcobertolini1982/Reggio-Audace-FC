@@ -56,7 +56,6 @@
 		D16BBFA621C15F74008AF36E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA521C15F74008AF36E /* Device.swift */; };
 		D16BBFA821C160AC008AF36E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA721C160AC008AF36E /* User.swift */; };
 		D16BBFAA21C161FC008AF36E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA921C161FC008AF36E /* UserView.swift */; };
-		D16BBFAC21C16787008AF36E /* ProUserSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFAB21C16787008AF36E /* ProUserSet.swift */; };
 		D171970721BAABD7008D786B /* PagArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970621BAABD7008D786B /* PagArticle.swift */; };
 		D171970921BAB152008D786B /* ViePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970821BAB152008D786B /* ViePost.swift */; };
 		D171970B21BAB550008D786B /* CtlPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970A21BAB550008D786B /* CtlPost.swift */; };
@@ -79,7 +78,6 @@
 		D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6D21AD60EA00114084 /* Assets.xcassets */; };
 		D1BE6D7121AD60EA00114084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BE6D6F21AD60EA00114084 /* LaunchScreen.storyboard */; };
 		D1BE6D9721AD7D6100114084 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D9621AD7D6100114084 /* Post.swift */; };
-		D1EDE76C21BE8D9D00FDA751 /* ProPostSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDE76B21BE8D9D00FDA751 /* ProPostSender.swift */; };
 		D1EDE77121BEBBB300FDA751 /* VcrSeasonMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */; };
 		D1EDE77321BEBCE100FDA751 /* CvcSeasonMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDE77221BEBCE100FDA751 /* CvcSeasonMenu.swift */; };
 		D5D8A8995F382F955705B5E6 /* Pods_Reggio_Audace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */; };
@@ -137,7 +135,6 @@
 		D16BBFA521C15F74008AF36E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D16BBFA721C160AC008AF36E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D16BBFA921C161FC008AF36E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		D16BBFAB21C16787008AF36E /* ProUserSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserSet.swift; sourceTree = "<group>"; };
 		D171970621BAABD7008D786B /* PagArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagArticle.swift; sourceTree = "<group>"; };
 		D171970821BAB152008D786B /* ViePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePost.swift; sourceTree = "<group>"; };
 		D171970A21BAB550008D786B /* CtlPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtlPost.swift; sourceTree = "<group>"; };
@@ -161,7 +158,6 @@
 		D1BE6D6D21AD60EA00114084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BE6D7021AD60EA00114084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BE6D9621AD7D6100114084 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		D1EDE76B21BE8D9D00FDA751 /* ProPostSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostSender.swift; sourceTree = "<group>"; };
 		D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrSeasonMenu.swift; sourceTree = "<group>"; };
 		D1EDE77221BEBCE100FDA751 /* CvcSeasonMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcSeasonMenu.swift; sourceTree = "<group>"; };
 		E806AFB83CF3ABA360FAF618 /* Pods-Reggio Audace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reggio Audace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reggio Audace/Pods-Reggio Audace.debug.xcconfig"; sourceTree = "<group>"; };
@@ -295,8 +291,6 @@
 				D1633DCD21B0000000D5CE2F /* ProChatObs.swift */,
 				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
 				D19F62FE21B8312900726165 /* ProChannelObs.swift */,
-				D1EDE76B21BE8D9D00FDA751 /* ProPostSender.swift */,
-				D16BBFAB21C16787008AF36E /* ProUserSet.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -646,13 +640,11 @@
 				D160DC5A21B5375200DAEF67 /* PagLogin.swift in Sources */,
 				D17963F921B14779005311A8 /* VcrChannels.swift in Sources */,
 				D1633DD221B0135100D5CE2F /* Chat.swift in Sources */,
-				D16BBFAC21C16787008AF36E /* ProUserSet.swift in Sources */,
 				D160DC5C21B568BD00DAEF67 /* CtlRegisterUser.swift in Sources */,
 				D160DC5121B529A800DAEF67 /* SeasonDay.swift in Sources */,
 				D15ABDB221B915C700C980EE /* CtlUserDataReset.swift in Sources */,
 				D171970921BAB152008D786B /* ViePost.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
-				D1EDE76C21BE8D9D00FDA751 /* ProPostSender.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
