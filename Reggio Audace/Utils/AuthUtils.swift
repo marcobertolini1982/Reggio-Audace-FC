@@ -10,7 +10,7 @@ import Foundation
 import FirebaseAuth
 class AuthUtils
 {
-    public static var User:User?
+    public static var User:FirebaseAuth.User?
  {
     return Auth.auth().currentUser
  }
