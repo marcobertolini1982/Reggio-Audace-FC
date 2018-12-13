@@ -17,7 +17,10 @@ class CtlRegisterUser: CtlBase
     @IBAction func OnBtnRegisterClick(_ sender:UIButton)
     {
     
-        AuthUtils.Authentication.createUser(withEmail: txt_User.text!, password: txt_User.text!)
+        AuthUtils.Authentication.createUser(withEmail: txt_User.text!, password: txt_User.text!){(authResult,error)in
+            guard error != nil else{ return}
+            
+        }
        
         
     }
