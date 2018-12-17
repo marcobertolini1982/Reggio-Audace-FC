@@ -44,6 +44,7 @@ class CtlRegisterUser: CtlBase
                         do
                         {
                            try AuthUtils.Authentication.signOut()
+    
                             UIAlertController(title: "email sent", message: "An email was sent to complete the subscription", preferredStyle: UIAlertController.Style.actionSheet)
                         }
                         catch let e as NSError
