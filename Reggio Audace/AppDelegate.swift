@@ -7,11 +7,10 @@
 //
 
 import UIKit
-
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate
+class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate
 {
 
     var window: UIWindow?
@@ -22,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // Set window main view
         window?.rootViewController = MainStoryboard.instantiateInitialViewController()
         FirebaseApp.configure()
+        Messaging.messaging().delegate = self
         // Override point for customization after application launch.
         //return
        

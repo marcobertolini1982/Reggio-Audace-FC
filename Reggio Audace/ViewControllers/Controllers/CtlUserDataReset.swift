@@ -28,7 +28,7 @@ class CtlUserDataReset: CtlBase
             try Auth.auth().signOut()
         }
         
-        catch let e
+        catch let e as NSError
         {
             print(e.localizedDescription)
         }
@@ -37,6 +37,6 @@ class CtlUserDataReset: CtlBase
     open override func viewWillAppear(_ animated: Bool)
     {
             super.viewWillAppear(animated)
-        btn_LogOut.isHidden = AuthUtils.User != nil ? false:true
+        btn_LogOut.isHidden = AuthUtils.User != nil && AuthUtils.User!.isEmailVerified ? false:true
     }
 }

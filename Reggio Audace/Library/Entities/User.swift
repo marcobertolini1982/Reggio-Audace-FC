@@ -11,7 +11,7 @@ class User
 {
     var cod_user:String?
     var des_user:String?
-    var des_ermail:String?
+    var des_email:String?
     var des_topic:String?
     var des_presentation:String?
 }

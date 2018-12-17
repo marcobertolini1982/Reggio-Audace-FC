@@ -50,7 +50,12 @@ class UrlUtils
     
     public static  var URL_SETUSER:String
     {
-        return URL_WEBAPP + "/SetUser"
+        return URL_WEBAPP + "/SetUserLogin"
+    }
+    
+    public static  var URL_SETUSERCREATE:String
+    {
+        return URL_WEBAPP + "/SetUserCreate"
     }
     
     public static  var URL_GETUSER:String
@@ -109,7 +114,7 @@ return URL_WEBAPP +  "/GetRanking"
     }
     public static  var  URL_GETCHANNEL:String
     {
-        return "/GetChannel"
+        return "/GetChannels"
     }
 }
 

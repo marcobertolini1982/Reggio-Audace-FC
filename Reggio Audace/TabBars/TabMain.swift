@@ -22,7 +22,6 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
         })
         
         self.delegate = self
-      // try? Auth.auth().signOut()
         
         // Do any additional setup after loading the view.
     }
@@ -68,36 +67,49 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
     
     private final func SetTabItems(user:FirebaseAuth.User?)
     {
-        guard var l_viewControllers:[UIViewController] = self.viewControllers, let l_LastItem:UIViewController = l_viewControllers.last,
-          let  l_LastIndex:Int = l_viewControllers.index(of:l_LastItem)
+        guard let l_user:FirebaseAuth.User = user
+        else
+        {
+            self.SetLoggedOutItems()
+            return
+            
+        }
+        l_user.reload()
+        #if DEBUG
+        print("Authutils.user\n\n\n\n\n\n\(AuthUtils.User!.isEmailVerified)")
+        #endif
+        guard  var l_ViewControllers:[UIViewController] = self.viewControllers else{return}
+        guard let l_LastIncdex:Int = l_ViewControllers.index(of:l_ViewControllers.last!) else {return}
+        
+        let l_AccountPage :UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "PagAccount")
+        l_AccountPage.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "IconaAccountRegistrato"), selectedImage: UIImage(named: "IconaAccountRegistrato"))
+        if l_user.isEmailVerified
+        {
+            l_ViewControllers.remove(at:l_LastIncdex)
+            l_ViewControllers.append(l_AccountPage)
+            self.setViewControllers(l_ViewControllers, animated: true)
+            
+        }
+        
         else
         {
             return
             
         }
-        
-        if user != nil && user!.isEmailVerified
-        {
-         
-          
-            l_viewControllers.remove(at: l_LastIndex)
-            let l_LoggedINUser:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "PagAccount")
-            l_LoggedINUser.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "IconaAccountRegistrato"),selectedImage: UIImage(named:"IconaAccountRegistrato"))
-            l_viewControllers.append(l_LoggedINUser)
-            self.setViewControllers(l_viewControllers, animated: true)
-          
         }
-        
-        else
+    private final func SetLoggedOutItems()
+    {
+        guard var l_ViewControllers:[UIViewController] = self.viewControllers, let l_LastIndex:Int = l_ViewControllers.index(of:l_ViewControllers.last!)
+            else
         {
-            l_viewControllers.remove(at: l_LastIndex)
-            let l_LoggedINUser:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "PagLogin")
-            l_viewControllers.append(l_LoggedINUser)
-            l_LoggedINUser.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "IconaAccount"),selectedImage: UIImage(named:"IconaAccount"))
-            self.setViewControllers(l_viewControllers, animated: true)
-         
+            return
+            
         }
+        l_ViewControllers.remove(at:l_LastIndex)
+        let l_LogInPage :UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "PagLogin")
+        l_LogInPage.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "IconaAccount"), selectedImage: UIImage(named: "IconaAccount"))
+        l_ViewControllers.append(l_LogInPage)
+        self.setViewControllers(l_ViewControllers, animated: true)
     }
-    
   
 }
