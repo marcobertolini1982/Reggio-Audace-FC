@@ -16,15 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate
     var window: UIWindow?
     
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+    {
         
         // Set window main view
         window?.rootViewController = MainStoryboard.instantiateInitialViewController()
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
-        // Override point for customization after application launch.
-        //return
+        
        
+        
+        
         return true
         
     }
