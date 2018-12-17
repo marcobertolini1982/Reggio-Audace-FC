@@ -19,10 +19,13 @@ class CtlRegisterUser: CtlBase
     
     @IBAction func OnBtnRegisterClick(_ sender:UIButton)
     {
-    
-        AuthUtils.Authentication.createUser(withEmail: txt_User.text!, password: txt_User.text!){(authResult,error)in
+        if  self.txt_Password.text != self.txt_password_confirm.text
+        {
+            return
+        }
+        AuthUtils.Authentication.createUser(withEmail: txt_User.text!, password: txt_Password.text!){(authResult,error)in
             // Eval
-            guard let l_usr:FirebaseAuth.User = authResult?.user, self.txt_Password.text == self.txt_password_confirm.text
+            guard let l_usr:FirebaseAuth.User = authResult?.user
             else
             {
                 return
@@ -30,20 +33,31 @@ class CtlRegisterUser: CtlBase
             // Declartatyions
             let l_User: User = User()
             let l_Device:Device = Device()
+            let l_UserView:UserView = UserView()
             let l_Dev:UIDevice = UIDevice.current
             // SetProperties
              if !l_usr.isEmailVerified
              {
-                l_usr.sendEmailVerification()
+                l_usr.sendEmailVerification{(error)in
+                    if error == nil
+                    {
+                        do
+                        {
+                           try AuthUtils.Authentication.signOut()
+                            UIAlertController(title: "email sent", message: "An email was sent to complete the subscription", preferredStyle: UIAlertController.Style.actionSheet)
+                        }
+                        catch let e as NSError
+                        {
+                            print(e.localizedDescription)
+                        }
+                    }
+                }
             }
             l_User.cod_user = l_usr.uid
-            l_User.des_user = l_usr.email
-            l_Device.cod_cdevice = l_Dev.identifierForVendor?.uuidString
-            InstanceID.instanceID().instanceID{(result,error)in
-                guard error == nil && result != nil else{return}
-                l_Device.des_device = result?.token
-            }
-            
+            l_User.des_email = l_usr.email
+            l_Device.cod_device = l_Dev.identifierForVendor?.uuidString
+            l_Device.des_device = InstanceID.instanceID().token()
+            l_UserView.SetUser(device: l_Device, user: l_User)
         }
        
         

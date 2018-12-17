@@ -10,6 +10,6 @@ import Foundation
 class Device
 {
     //Declarations
-    var cod_cdevice:String?
+    var cod_device:String?
     var des_device:String?
 }
