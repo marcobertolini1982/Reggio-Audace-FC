@@ -652,6 +652,8 @@
                         <viewLayoutGuide key="safeArea" id="M7G-3p-HP3"/>
                     </view>
                     <connections>
+                        <outlet property="img_User" destination="M2k-p2-zlS" id="jGp-cN-Lxt"/>
+                        <outlet property="lbl_email" destination="XFB-IM-UhL" id="zMb-Ej-Hb9"/>
                         <outletCollection property="txt_UserData" destination="B0D-hz-OBT" collectionClass="NSMutableArray" id="3SW-xr-Zr8"/>
                         <outletCollection property="txt_UserData" destination="Oeg-tB-6TV" collectionClass="NSMutableArray" id="aML-B7-jdM"/>
                         <outletCollection property="txt_UserData" destination="hUI-Fk-KGC" collectionClass="NSMutableArray" id="iRg-WN-XMC"/>
@@ -964,6 +966,6 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Ex-yp-Fq3"/>
+        <segue reference="bf3-xz-Mz7"/>
     </inferredMetricsTieBreakers>
 </document>

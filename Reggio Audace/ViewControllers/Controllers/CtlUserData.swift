@@ -8,17 +8,44 @@
 
 import UIKit
 
-class CtlUserData: CtlBase
+class CtlUserData: CtlBase,ProUserObs
 {
+    
     // Declarations
+   
+    @IBOutlet weak  var img_User:UIImageView!
+    @IBOutlet weak var lbl_email:UILabel!
     @IBOutlet var txt_UserData:[UITextField]!
     
+    
+    func UserLoaded(user: User)
+    {
+        
+        self.LoadUserData(user: user)
+      
+     
+    }
+    
+    private final func LoadUserData(user:User)
+    {
+        DispatchQueue.main.async
+            {
+                self.txt_UserData[0].text = user.des_user
+                self.txt_UserData[1].text = user.des_topic
+                self.txt_UserData [2].text = user.des_presentation
+                self.lbl_email.text = self.lbl_email.text! + user.des_email!
+                
+            }
+    }
     
     override func viewDidLoad()
     {
         //Call base function
         super.viewDidLoad()
-        //Init
+        let l_UserView:UserView = UserView()
+        l_UserView.AddUserObs(prouserobs:self)
+        l_UserView.GetUser(cod_user: AuthUtils.Uid!)
+        
         
        
     }
@@ -31,9 +58,12 @@ class CtlUserData: CtlBase
         self.SetUserInfoEnabled(false)
         // Show edit button
         self.SetEditButton()
+       
+       
+      
     }
     
-   
+    
     
     open override func viewDidDisappear(_ animated: Bool)
     {
@@ -77,12 +107,15 @@ class CtlUserData: CtlBase
     //Actions
     @objc func OnEditClick(_ sender:UIBarButtonItem)
     {
+        self.SetDoneButton()
         SetUserInfoEnabled(true)
-       self.SetDoneButton()
+      
     }
     
     @objc func OnDoneClick(_ sender:UIBarButtonItem)
     {
+        // Declarations
+        
         self.SetEditButton()
         self.SetUserInfoEnabled(false)
     }

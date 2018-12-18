@@ -20,8 +20,6 @@ class CtlPost: CtlBase
         self.VIEARTICLE.frame = self.view.bounds
         super.viewDidLoad()
         self.view.addSubview(self.VIEARTICLE)
-   
-    
 
     }
 

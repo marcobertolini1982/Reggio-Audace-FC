@@ -50,6 +50,11 @@ class UrlUtils
     
     public static  var URL_SETUSER:String
     {
+        return URL_WEBAPP + "/SetUser"
+    }
+    
+    public static var URL_SETUSWRLOGIN:String
+    {
         return URL_WEBAPP + "/SetUserLogin"
     }
     

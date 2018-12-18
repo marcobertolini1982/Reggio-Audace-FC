@@ -10,6 +10,8 @@ import UIKit
 import FirebaseAuth
 class CtlUserDataReset: CtlBase
 {
+  
+    
     @IBOutlet private weak var btn_LogOut:UIButton!
     open var BtnLogOut:UIButton
     {
