@@ -115,7 +115,14 @@ class CtlUserData: CtlBase,ProUserObs
     @objc func OnDoneClick(_ sender:UIBarButtonItem)
     {
         // Declarations
-        
+        let l_User:User  = User()
+        l_User.cod_user = AuthUtils.Uid
+        l_User.des_email = AuthUtils.UserEmail
+        l_User.des_user = txt_UserData[0].text
+        l_User.des_topic = txt_UserData[1].text
+        l_User.des_presentation = txt_UserData[2].text
+        let l_UserView:UserView = UserView()
+        l_UserView.SetUser(user: l_User)
         self.SetEditButton()
         self.SetUserInfoEnabled(false)
     }
