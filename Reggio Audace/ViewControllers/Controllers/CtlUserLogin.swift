@@ -19,6 +19,7 @@ class CtlUserLogin: CtlBase
         Auth.auth().signIn(withEmail:txt_DesUserr.text!,password:txt_Password.text!){(dataResult:AuthDataResult?,error:Error?)in
             if error == nil, let l_user:FirebaseAuth.User = dataResult?.user
             {
+                
                 l_user.reload()
             }
         }

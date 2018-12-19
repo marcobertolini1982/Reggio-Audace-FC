@@ -652,6 +652,8 @@
                         <viewLayoutGuide key="safeArea" id="M7G-3p-HP3"/>
                     </view>
                     <connections>
+                        <outlet property="img_User" destination="M2k-p2-zlS" id="jGp-cN-Lxt"/>
+                        <outlet property="lbl_email" destination="XFB-IM-UhL" id="zMb-Ej-Hb9"/>
                         <outletCollection property="txt_UserData" destination="B0D-hz-OBT" collectionClass="NSMutableArray" id="3SW-xr-Zr8"/>
                         <outletCollection property="txt_UserData" destination="Oeg-tB-6TV" collectionClass="NSMutableArray" id="aML-B7-jdM"/>
                         <outletCollection property="txt_UserData" destination="hUI-Fk-KGC" collectionClass="NSMutableArray" id="iRg-WN-XMC"/>
@@ -957,13 +959,13 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dk5-dW-tet"/>
+        <segue reference="bf3-xz-Mz7"/>
     </inferredMetricsTieBreakers>
 </document>

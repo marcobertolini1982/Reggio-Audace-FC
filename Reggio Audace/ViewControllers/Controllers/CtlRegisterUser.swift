@@ -44,8 +44,10 @@ class CtlRegisterUser: CtlBase
                         do
                         {
                            try AuthUtils.Authentication.signOut()
-    
-                            UIAlertController(title: "email sent", message: "An email was sent to complete the subscription", preferredStyle: UIAlertController.Style.actionSheet)
+                           //Declarations
+                           let l_alert = UIAlertController(title: "email sent", message: "An email was sent to your address", preferredStyle: UIAlertController.Style.actionSheet)
+                            self.present(l_alert, animated: true)
+                            
                         }
                         catch let e as NSError
                         {
@@ -58,7 +60,7 @@ class CtlRegisterUser: CtlBase
             l_User.des_email = l_usr.email
             l_Device.cod_device = l_Dev.identifierForVendor?.uuidString
             l_Device.des_device = InstanceID.instanceID().token()
-            l_UserView.SetUser(device: l_Device, user: l_User)
+            l_UserView.SetUserCreate(device: l_Device, user: l_User)
         }
        
         
