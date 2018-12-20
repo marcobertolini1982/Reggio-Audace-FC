@@ -8,20 +8,20 @@
 
 import UIKit
 
-class PagArticle: PagBase
+class PagPost: PagBase
 {
     public required init?(coder: NSCoder)
     {
         super.init(coder: coder)
         self.ViewControllers = [
-                                    MainStoryboard.instantiateViewController(withIdentifier:"CtlArticle")
+                                    MainStoryboard.instantiateViewController(withIdentifier:"CtlPost")
                                ]
     }
 open override var IndicatorsText: [String]
 {
-    return ["Articolo","Media","Commenti"]
+    return ["Post","Media","Commenti"]
 }
-    open var ArticleDEttail:CtlPost?
+    open var PostDettail:CtlPost?
     {
     return self.ViewControllers[0] as? CtlPost
     }

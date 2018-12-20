@@ -103,8 +103,8 @@ func FileLoaded(data: Data)
         let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request){(data:Data?,response:URLResponse?,error:Error?)in
            
             // Eval
-            guard error == nil else{return}
-            guard data != nil else{return}
+            guard error == nil && data != nil else{return}
+            
             do
             {
                 guard let l_JsonResponse:[String:Any] = try JSONSerialization.jsonObject(with:data!, options: []) as? [String:Any]
@@ -118,6 +118,10 @@ func FileLoaded(data: Data)
                 l_User.des_email = l_JsonResponse["des_email"] as? String
                 l_User.des_topic = l_JsonResponse["des_topic"] as? String
                 l_User.des_presentation = l_JsonResponse["des_presentation"] as? String
+                guard let l_PrgFile:Int64 = l_JsonResponse["prg_file"] as? Int64 else{return}
+                let l_FilleView:FileView = FileView()
+                l_FilleView.SetOnFileLoaded(proFileObs: self)
+                l_FilleView.LoadFile(prg_file: l_PrgFile)
                 self.RaiseUserLoaded(user: l_User)
             }
             catch let e as NSError

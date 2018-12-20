@@ -34,6 +34,7 @@ class VieBase: UIView
         Bundle.main.loadNibNamed(self.NIBNAME, owner: self, options: nil)
         self.CONTENTVIEW.frame = self.bounds
         self.addSubview(self.CONTENTVIEW)
+        
     }
  
 }
