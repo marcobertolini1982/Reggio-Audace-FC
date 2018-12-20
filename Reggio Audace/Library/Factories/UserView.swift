@@ -7,8 +7,39 @@
 //
 
 import Foundation
-class UserView
+class UserView:ProFileObs
 {
+func FileLoaded(data: Data)
+{
+    
+    let l_FileManager:FileManager = FileManager.default
+        
+        if !l_FileManager.fileExists(atPath: PathUtils.UserImageFile)
+        {
+             l_FileManager.createFile(atPath: PathUtils.UserImageFile, contents: data)
+           
+        }
+        else
+        {
+          let l_url:URL = URL(fileURLWithPath: PathUtils.UserImageFile)
+            do
+            {
+                try data.write(to: l_url)
+            }
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
+    }
+    }
+    
+    private var PROFILEOBS:ProFileObs?
+    public var proFileObs:ProFileObs?
+    {
+        get{return self.PROFILEOBS}
+        set{ self.PROFILEOBS = newValue}
+    }
+    
     
     private var proUserObss:[ProUserObs] = [ProUserObs]()
     
@@ -40,10 +71,13 @@ class UserView
     
     final func SetUser(user:User)
     {
+        // Eval
         guard let l_Url:URL = URL(string: UrlUtils.URL_SETUSER) else{return}
         var l_Request:URLRequest = URLRequest(url:l_Url)
+        // Set property
         l_Request.httpMethod = "POST"
         var l_Json:[String:Any?] = [String:Any]()
+        // Set json key/value pairs
         l_Json["cod_user"]  = user.cod_user
         l_Json["des_user"]  = user.des_user
         l_Json["des_topic"] = user.des_topic
@@ -82,7 +116,7 @@ class UserView
                 l_User.cod_user = l_JsonResponse["cod_user"] as? String
                 l_User.des_user = l_JsonResponse["des_user"] as? String
                 l_User.des_email = l_JsonResponse["des_email"] as? String
-                l_User.des_topic = l_JsonResponse["des_topicl"] as? String
+                l_User.des_topic = l_JsonResponse["des_topic"] as? String
                 l_User.des_presentation = l_JsonResponse["des_presentation"] as? String
                 self.RaiseUserLoaded(user: l_User)
             }
@@ -90,7 +124,7 @@ class UserView
             {
                 print(e.localizedDescription)
             }
-            // Declarations
+           
            
             
         }
@@ -99,5 +133,49 @@ class UserView
        
        
     }
+    
+    final func SetUserImage(cod_user:String?,bin_file:String)
+    {
+        // Set json key/value pairs
+        var l_Json:[String:Any] = [String:Any]()
+        l_Json["cod_user"] = cod_user
+        l_Json["bin_file"] = bin_file
+        // Eval
+        guard let l_Data:Data = try? JSONSerialization.data(withJSONObject: l_Json, options: []) else{return}
+        guard let l_Url:URL = URL(string: UrlUtils.URL_SET_USERIMAGE) else{return}
+        // Declarations
+        var l_Request:URLRequest = URLRequest(url:l_Url)
+        //Set properties
+        l_Request.httpMethod = "POST"
+        l_Request.httpBody = l_Data
+        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request){(data:Data?,response:URLResponse?,error:Error?)in
+            guard error == nil && data != nil else{return}
+            do
+            {
+                // Eval if response data is null
+                guard let l_JsonResponse:[Any] = try JSONSerialization.jsonObject(with: data!, options: []) as? [Any] else{return}
+                // Eval if user prg_file is nul
+                guard let l_PrgFile:Int64 = l_JsonResponse[0] as? Int64 else{return}
+                // Declartations
+                let l_FileView:FileView = FileView()
+                // Eval if file protocol is nul
+               
+                    // Set user image file protoocl
+                    l_FileView.SetOnFileLoaded(proFileObs: self)
+                    // Exec file protocol
+                    l_FileView.LoadFile(prg_file: l_PrgFile)
+                
+            }
+            // Catch data handling error
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
+        }
+        // Resume async data task
+        l_DataTask.resume()
+        
+    }
+    
     
 }

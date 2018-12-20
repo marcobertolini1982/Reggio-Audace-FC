@@ -575,6 +575,9 @@
                                     <constraint firstAttribute="width" constant="22" id="vMH-Rf-Nu9"/>
                                 </constraints>
                                 <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="OnBtnSetUserImageClick:" destination="3eu-QL-cUl" eventType="touchUpInside" id="nPJ-I7-Ufb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Status" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Oeg-tB-6TV">
                                 <rect key="frame" x="16" y="267" width="288" height="37"/>
@@ -652,11 +655,12 @@
                         <viewLayoutGuide key="safeArea" id="M7G-3p-HP3"/>
                     </view>
                     <connections>
-                        <outlet property="img_User" destination="M2k-p2-zlS" id="jGp-cN-Lxt"/>
-                        <outlet property="lbl_email" destination="XFB-IM-UhL" id="zMb-Ej-Hb9"/>
-                        <outletCollection property="txt_UserData" destination="B0D-hz-OBT" collectionClass="NSMutableArray" id="3SW-xr-Zr8"/>
-                        <outletCollection property="txt_UserData" destination="Oeg-tB-6TV" collectionClass="NSMutableArray" id="aML-B7-jdM"/>
-                        <outletCollection property="txt_UserData" destination="hUI-Fk-KGC" collectionClass="NSMutableArray" id="iRg-WN-XMC"/>
+                        <outlet property="btn_SetUserImage" destination="8ng-ch-lrP" id="y4i-vr-TOF"/>
+                        <outlet property="img_User" destination="M2k-p2-zlS" id="TY6-Iq-yCa"/>
+                        <outlet property="lbl_email" destination="XFB-IM-UhL" id="ZHk-86-b92"/>
+                        <outletCollection property="txt_UserData" destination="B0D-hz-OBT" collectionClass="NSMutableArray" id="DvK-8E-nOe"/>
+                        <outletCollection property="txt_UserData" destination="Oeg-tB-6TV" collectionClass="NSMutableArray" id="dFb-2P-eaD"/>
+                        <outletCollection property="txt_UserData" destination="hUI-Fk-KGC" collectionClass="NSMutableArray" id="z3s-bd-4ak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFS-gO-1Ce" userLabel="First Responder" sceneMemberID="firstResponder"/>

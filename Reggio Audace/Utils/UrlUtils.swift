@@ -53,11 +53,15 @@ class UrlUtils
         return URL_WEBAPP + "/SetUser"
     }
     
-    public static var URL_SETUSWRLOGIN:String
+    public static var URL_SETUSRLOGIN:String
     {
         return URL_WEBAPP + "/SetUserLogin"
     }
     
+    public static var URL_SET_USERIMAGE:String
+    {
+        return URL_WEBAPP + "/SetUserImage"
+    }
     public static  var URL_SETUSERCREATE:String
     {
         return URL_WEBAPP + "/SetUserCreate"

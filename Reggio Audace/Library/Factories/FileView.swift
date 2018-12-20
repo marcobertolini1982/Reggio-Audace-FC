@@ -31,13 +31,11 @@ class FileView
         
         // Create post request
         let l_Url = URL(string: "http://portal.lensolution.it:8080/wRegia/GetFile?prg_file=\(prg_file)")!
-        var l_URLRequest = URLRequest(url: l_Url)
         
         // Set properties
-        l_URLRequest.httpMethod = "POST"
         
         // Set task
-        let l_Task = URLSession.shared.dataTask(with: l_URLRequest) { data, response, error in
+        let l_Task = URLSession.shared.dataTask(with: l_Url) { data, response, error in
             
             // Eval
             guard let dataResponse = data, error == nil else { return }
