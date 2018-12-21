@@ -56,7 +56,7 @@
 		D16BBFA621C15F74008AF36E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA521C15F74008AF36E /* Device.swift */; };
 		D16BBFA821C160AC008AF36E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA721C160AC008AF36E /* User.swift */; };
 		D16BBFAA21C161FC008AF36E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA921C161FC008AF36E /* UserView.swift */; };
-		D171970721BAABD7008D786B /* PagArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970621BAABD7008D786B /* PagArticle.swift */; };
+		D171970721BAABD7008D786B /* PagPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970621BAABD7008D786B /* PagPost.swift */; };
 		D171970921BAB152008D786B /* ViePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970821BAB152008D786B /* ViePost.swift */; };
 		D171970B21BAB550008D786B /* CtlPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970A21BAB550008D786B /* CtlPost.swift */; };
 		D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173431721CBCAEA00D8E75E /* PathUtils.swift */; };
@@ -138,7 +138,7 @@
 		D16BBFA521C15F74008AF36E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D16BBFA721C160AC008AF36E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D16BBFA921C161FC008AF36E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		D171970621BAABD7008D786B /* PagArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagArticle.swift; sourceTree = "<group>"; };
+		D171970621BAABD7008D786B /* PagPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagPost.swift; sourceTree = "<group>"; };
 		D171970821BAB152008D786B /* ViePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePost.swift; sourceTree = "<group>"; };
 		D171970A21BAB550008D786B /* CtlPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtlPost.swift; sourceTree = "<group>"; };
 		D173431721CBCAEA00D8E75E /* PathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathUtils.swift; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 				D179640021B184CE005311A8 /* PagBase.swift */,
 				D179640221B18660005311A8 /* PagAccount.swift */,
 				D160DC5921B5375200DAEF67 /* PagLogin.swift */,
-				D171970621BAABD7008D786B /* PagArticle.swift */,
+				D171970621BAABD7008D786B /* PagPost.swift */,
 			);
 			path = PageViewControllers;
 			sourceTree = "<group>";
@@ -679,7 +679,7 @@
 				D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */,
 				D11B714E21AF0A6600887D2A /* FileView.swift in Sources */,
 				D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */,
-				D171970721BAABD7008D786B /* PagArticle.swift in Sources */,
+				D171970721BAABD7008D786B /* PagPost.swift in Sources */,
 				D160DC5821B5333D00DAEF67 /* TabMain.swift in Sources */,
 				D17963FF21B15773005311A8 /* Season.swift in Sources */,
 				D17963F721B146EF005311A8 /* VcrUsers.swift in Sources */,

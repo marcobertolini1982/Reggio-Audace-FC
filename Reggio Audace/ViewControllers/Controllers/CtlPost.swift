@@ -13,13 +13,13 @@ class CtlPost: CtlBase
    
  
     //Decvlarations
-    let VIEARTICLE:ViePost = ViePost()
+    let VIEPOST:ViePost = ViePost()
    
     override func viewDidLoad()
     {
-        self.VIEARTICLE.frame = self.view.bounds
+        self.VIEPOST.frame = self.view.bounds
         super.viewDidLoad()
-        self.view.addSubview(self.VIEARTICLE)
+        self.view.addSubview(self.VIEPOST)
 
     }
 

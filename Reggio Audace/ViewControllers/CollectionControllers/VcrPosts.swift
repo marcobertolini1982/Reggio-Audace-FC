@@ -119,12 +119,12 @@ class VcrPosts: VcrBase,ProPostObs
         let l_Post:Post = self.POSTS[l_index]
         switch segue.identifier {
         case "PostSegue":
-            guard let l_PagPost:PagArticle = segue.destination as? PagArticle, let l_CtlPost:CtlPost = l_PagPost.ArticleDEttail else{return}
+            guard let l_PagPost:PagPost = segue.destination as? PagPost, let l_CtlPost:CtlPost = l_PagPost.PostDettail else{return}
             
-            l_CtlPost.VIEARTICLE.lbl_Title.text      = l_Post.des_title
-            l_CtlPost.VIEARTICLE.txt_Article.text    = l_Post.des_post
-            l_CtlPost.VIEARTICLE.lbl_Date.text       = l_Post.dat_post
-            l_CtlPost.VIEARTICLE.img_Post.image      = l_Cell.img_prg_file.image
+            l_CtlPost.VIEPOST.lbl_Title.text      = l_Post.des_title
+            l_CtlPost.VIEPOST.txt_Article.text    = l_Post.des_post
+            l_CtlPost.VIEPOST.lbl_Date.text       = l_Post.dat_post
+            l_CtlPost.VIEPOST.img_Post.image      = l_Cell.img_prg_file.image
             
         default:
             break
