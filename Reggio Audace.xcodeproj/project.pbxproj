@@ -72,7 +72,6 @@
 		D17963FF21B15773005311A8 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963FE21B15773005311A8 /* Season.swift */; };
 		D179640121B184CE005311A8 /* PagBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640021B184CE005311A8 /* PagBase.swift */; };
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
-		D17D2D2821C90E50002A7178 /* UserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2721C90E50002A7178 /* UserUtils.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
 		D19F62FD21B830A000726165 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FC21B830A000726165 /* ChannelView.swift */; };
 		D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FE21B8312900726165 /* ProChannelObs.swift */; };
@@ -154,7 +153,6 @@
 		D17963FE21B15773005311A8 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		D179640021B184CE005311A8 /* PagBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagBase.swift; sourceTree = "<group>"; };
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
-		D17D2D2721C90E50002A7178 /* UserUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUtils.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
 		D19F62FC21B830A000726165 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		D19F62FE21B8312900726165 /* ProChannelObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProChannelObs.swift; sourceTree = "<group>"; };
@@ -252,7 +250,6 @@
 				D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */,
 				D160DC4C21B521F000DAEF67 /* UrlUtils.swift */,
 				D15EBBF321B6C64100835C0B /* ColorUtils.swift */,
-				D17D2D2721C90E50002A7178 /* UserUtils.swift */,
 				D173431721CBCAEA00D8E75E /* PathUtils.swift */,
 			);
 			path = Utils;
@@ -665,7 +662,6 @@
 				D179640121B184CE005311A8 /* PagBase.swift in Sources */,
 				D1BE6D9721AD7D6100114084 /* Post.swift in Sources */,
 				D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */,
-				D17D2D2821C90E50002A7178 /* UserUtils.swift in Sources */,
 				D15ABDBC21B9353D00C980EE /* CtlUserData.swift in Sources */,
 				D15EBBF021B6A08C00835C0B /* VieBase.swift in Sources */,
 				D1EDE77121BEBBB300FDA751 /* VcrSeasonMenu.swift in Sources */,

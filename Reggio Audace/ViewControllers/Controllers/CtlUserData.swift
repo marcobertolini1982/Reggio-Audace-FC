@@ -10,13 +10,7 @@ import UIKit
 
 class CtlUserData: CtlBase,ProUserObs, UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
-    func FileLoaded(data: Data)
-    {
-        DispatchQueue.main.async
-        {
-            self.img_User.image = UIImage(data: data)
-        }
-    }
+   
     
     
     // Declarations

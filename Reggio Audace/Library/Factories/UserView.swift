@@ -118,11 +118,15 @@ func FileLoaded(data: Data)
                 l_User.des_email = l_JsonResponse["des_email"] as? String
                 l_User.des_topic = l_JsonResponse["des_topic"] as? String
                 l_User.des_presentation = l_JsonResponse["des_presentation"] as? String
-                guard let l_PrgFile:Int64 = l_JsonResponse["prg_file"] as? Int64 else{return}
-                let l_FilleView:FileView = FileView()
-                l_FilleView.SetOnFileLoaded(proFileObs: self)
-                l_FilleView.LoadFile(prg_file: l_PrgFile)
+                l_User.prg_file = l_JsonResponse["prg_file"] as? Int64
                 self.RaiseUserLoaded(user: l_User)
+                
+                if l_User.prg_file != nil
+                {
+                    let l_FilleView:FileView = FileView()
+                    l_FilleView.SetOnFileLoaded(proFileObs: self)
+                    l_FilleView.LoadFile(prg_file:l_User.prg_file!)
+                }
             }
             catch let e as NSError
             {
@@ -182,4 +186,24 @@ func FileLoaded(data: Data)
     }
     
     
+    final func SetUserLogin(device:Device,user:User)
+    {
+        // Declarations
+        var l_json:[String:Any] = [String:Any]()
+        // SetProperties
+        l_json["cod_device"] = device.cod_device
+        l_json["des_device"] = device.des_device
+        l_json["cod_user"]  = user.cod_user
+        l_json["des_email"] = user.des_email
+        guard let l_Data:Data =  try? JSONSerialization.data(withJSONObject: l_json, options: []) else{return}
+        guard let l_Url:URL = URL(string:UrlUtils.URL_SETUSERLOGIN) else{return}
+        var l_Request:URLRequest = URLRequest(url:l_Url)
+        l_Request.httpMethod = "POST"
+        l_Request.httpBody = l_Data
+        let l_DataTasdk:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request){(data:Data?,response:URLResponse?,error:Error?)in
+            guard error == nil && data != nil, let l_StringData:String = String(data:data!,encoding:String.Encoding.utf8) else{return}
+            print(l_StringData)
+        }
+     l_DataTasdk.resume()
+    }
 }

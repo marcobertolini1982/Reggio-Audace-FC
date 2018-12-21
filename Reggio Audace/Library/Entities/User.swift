@@ -15,5 +15,6 @@ class User
     var des_email:String?
     var des_topic:String?
     var des_presentation:String?
+    var prg_file:Int64?
     }
 
