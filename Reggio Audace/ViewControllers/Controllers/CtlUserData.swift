@@ -8,8 +8,29 @@
 
 import UIKit
 
-class CtlUserData: CtlBase,ProUserObs, UIImagePickerControllerDelegate,UINavigationControllerDelegate
+class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
+   
+    
+    func FileLoaded(data: Data)
+    {
+        DispatchQueue.main.async
+        {
+           
+                 self.img_User.image = UIImage(data: data)
+                let l_Url:URL = URL(fileURLWithPath: PathUtils.UserImageFile)
+                do
+                {
+                    try data.write(to: l_Url)
+                }
+                catch let e as NSError
+                {
+                    print(e.localizedDescription)
+                }
+            
+        }
+    }
+    
    
     
     
@@ -33,7 +54,7 @@ class CtlUserData: CtlBase,ProUserObs, UIImagePickerControllerDelegate,UINavigat
         // Declarations
         let l_Base64String:String = l_Data.base64EncodedString()
         let l_UserView:UserView = UserView()
-        // Set Properties
+        // Set user image
         self.img_User.image = UIImage(data:l_Data)
         l_UserView.SetUserImage(cod_user: AuthUtils.Uid, bin_file: l_Base64String)
         self.dismiss(animated: true)
@@ -62,6 +83,16 @@ class CtlUserData: CtlBase,ProUserObs, UIImagePickerControllerDelegate,UINavigat
     
     private final func LoadUserData(user:User)
     {
+        if !PathUtils.UserImageExists, let l_PrgFile = user.prg_file
+        {
+            let l_Fileview:FileView = FileView()
+            l_Fileview.SetOnFileLoaded(proFileObs: self)
+            l_Fileview.LoadFile(prg_file: l_PrgFile)
+        }
+        else
+        {
+            self.LoadUserImageFromCache()
+        }
         DispatchQueue.main.async
             {
                 self.txt_UserData[0].text = user.des_user
@@ -72,15 +103,6 @@ class CtlUserData: CtlBase,ProUserObs, UIImagePickerControllerDelegate,UINavigat
             }
     }
     
-    override func viewDidLoad()
-    {
-        //Call base function
-        super.viewDidLoad()
-        self.SetUserData()
-        self.LoadUserImage()
-        
-       
-    }
     
     open override func viewWillAppear(_ animated: Bool)
     {
@@ -90,11 +112,14 @@ class CtlUserData: CtlBase,ProUserObs, UIImagePickerControllerDelegate,UINavigat
         self.SetUserInfoEnabled(false)
         // Show edit button
         self.SetEditButton()
-       
-       
       
     }
     
+    open override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.SetUserData()
+    }
     
     
     open override func viewDidDisappear(_ animated: Bool)
@@ -159,18 +184,19 @@ class CtlUserData: CtlBase,ProUserObs, UIImagePickerControllerDelegate,UINavigat
         self.SetUserInfoEnabled(false)
     }
     
-    private final func LoadUserImage()
+    private final func LoadUserImageFromCache()
     {
         
         
-        let l_FileManager:FileManager = FileManager.default
+       
         let l_Url:URL = URL(fileURLWithPath: PathUtils.UserImageFile )
-        if l_FileManager.fileExists(atPath:l_Url.path)
-        {
+        DispatchQueue.main.async
+            {
             do
             {
-                 let l_Data:Data = try Data(contentsOf: l_Url)
+                let l_Data:Data = try Data(contentsOf: l_Url)
                 self.img_User.image = UIImage(data:l_Data)
+            
             }
             catch let e as NSError
             {
@@ -185,4 +211,6 @@ class CtlUserData: CtlBase,ProUserObs, UIImagePickerControllerDelegate,UINavigat
         l_UserView.AddUserObs(prouserobs:self)
         l_UserView.GetUser(cod_user: AuthUtils.Uid!)
     }
+    
+    
 }

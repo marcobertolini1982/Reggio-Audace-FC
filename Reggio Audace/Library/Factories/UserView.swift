@@ -7,40 +7,11 @@
 //
 
 import Foundation
-class UserView:ProFileObs
-{
-func FileLoaded(data: Data)
+class UserView
 {
     
-    let l_FileManager:FileManager = FileManager.default
-        
-        if !l_FileManager.fileExists(atPath: PathUtils.UserImageFile)
-        {
-             l_FileManager.createFile(atPath: PathUtils.UserImageFile, contents: data)
-           
-        }
-        else
-        {
-          let l_url:URL = URL(fileURLWithPath: PathUtils.UserImageFile)
-            do
-            {
-                try data.write(to: l_url)
-            }
-            catch let e as NSError
-            {
-                print(e.localizedDescription)
-            }
-    }
-    }
     
-    private var PROFILEOBS:ProFileObs?
-    public var proFileObs:ProFileObs?
-    {
-        get{return self.PROFILEOBS}
-        set{ self.PROFILEOBS = newValue}
-    }
-    
-    
+    // Declarations
     private var proUserObss:[ProUserObs] = [ProUserObs]()
     
     open func AddUserObs(prouserobs:ProUserObs)
@@ -50,6 +21,7 @@ func FileLoaded(data: Data)
     
     open func RaiseUserLoaded(user:User)
     {
+        // Raise event(s)
         for prouserobs in self.proUserObss
         {
             prouserobs.UserLoaded(user: user)
@@ -121,12 +93,7 @@ func FileLoaded(data: Data)
                 l_User.prg_file = l_JsonResponse["prg_file"] as? Int64
                 self.RaiseUserLoaded(user: l_User)
                 
-                if l_User.prg_file != nil
-                {
-                    let l_FilleView:FileView = FileView()
-                    l_FilleView.SetOnFileLoaded(proFileObs: self)
-                    l_FilleView.LoadFile(prg_file:l_User.prg_file!)
-                }
+               
             }
             catch let e as NSError
             {
@@ -156,30 +123,8 @@ func FileLoaded(data: Data)
         //Set properties
         l_Request.httpMethod = "POST"
         l_Request.httpBody = l_Data
-        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request){(data:Data?,response:URLResponse?,error:Error?)in
-            guard error == nil && data != nil else{return}
-            do
-            {
-                // Eval if response data is null
-                guard let l_JsonResponse:[Any] = try JSONSerialization.jsonObject(with: data!, options: []) as? [Any] else{return}
-                // Eval if user prg_file is nul
-                guard let l_PrgFile:Int64 = l_JsonResponse[0] as? Int64 else{return}
-                // Declartations
-                let l_FileView:FileView = FileView()
-                // Eval if file protocol is nul
-               
-                    // Set user image file protoocl
-                    l_FileView.SetOnFileLoaded(proFileObs: self)
-                    // Exec file protocol
-                    l_FileView.LoadFile(prg_file: l_PrgFile)
-                
-            }
-            // Catch data handling error
-            catch let e as NSError
-            {
-                print(e.localizedDescription)
-            }
-        }
+        // Create async data task
+        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request)
         // Resume async data task
         l_DataTask.resume()
         
@@ -200,10 +145,13 @@ func FileLoaded(data: Data)
         var l_Request:URLRequest = URLRequest(url:l_Url)
         l_Request.httpMethod = "POST"
         l_Request.httpBody = l_Data
-        let l_DataTasdk:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request){(data:Data?,response:URLResponse?,error:Error?)in
-            guard error == nil && data != nil, let l_StringData:String = String(data:data!,encoding:String.Encoding.utf8) else{return}
-            print(l_StringData)
-        }
+        let l_DataTasdk:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request)
      l_DataTasdk.resume()
     }
+    final func SetProFileObs(fileview:FileView,profileobs:ProFileObs)
+    {
+        fileview.SetOnFileLoaded(proFileObs: profileobs)
+    }
+    
+    
 }

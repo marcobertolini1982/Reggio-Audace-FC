@@ -25,4 +25,9 @@ class PathUtils
        
         return CachePath + "/" + l_CodUser + ".jpg"
     }
+    
+    static var UserImageExists: Bool
+    {
+        return FileManager.default.fileExists(atPath: PathUtils.UserImageFile)
+    }
 }
