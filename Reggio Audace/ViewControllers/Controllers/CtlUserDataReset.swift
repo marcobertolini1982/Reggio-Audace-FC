@@ -25,6 +25,7 @@ class CtlUserDataReset: CtlBase
     
     @IBAction func OnLogOutclick(_ sender:UIButton)
     {
+       
         do
         {
             try Auth.auth().signOut()
@@ -34,6 +35,7 @@ class CtlUserDataReset: CtlBase
         {
             print(e.localizedDescription)
         }
+         AppUtils.SetDeviceForLoginLogout()
     }
     
     open override func viewWillAppear(_ animated: Bool)

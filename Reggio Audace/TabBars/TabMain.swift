@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseInstanceID
 class TabMain: UITabBarController,UITabBarControllerDelegate
 {
 
@@ -17,7 +18,7 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
         let l_ImageView:UIImageView   = UIImageView(image: UIImage(named: "Image"))
         self.navigationItem.titleView = l_ImageView
         Auth.auth().addStateDidChangeListener({(auth,user)in
-            
+           
             self.SetTabItems(user: user)
         })
         
@@ -121,5 +122,5 @@ class TabMain: UITabBarController,UITabBarControllerDelegate
         l_ViewControllers.append(l_LogInPage)
         self.setViewControllers(l_ViewControllers, animated: true)
     }
-  
+ 
 }

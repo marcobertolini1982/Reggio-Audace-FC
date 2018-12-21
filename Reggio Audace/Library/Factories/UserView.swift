@@ -186,17 +186,17 @@ func FileLoaded(data: Data)
     }
     
     
-    final func SetUserLogin(device:Device,user:User)
+    final func SetDevice(cod_device:String,des_device:String,cod_user:String?)
     {
         // Declarations
         var l_json:[String:Any] = [String:Any]()
-        // SetProperties
-        l_json["cod_device"] = device.cod_device
-        l_json["des_device"] = device.des_device
-        l_json["cod_user"]  = user.cod_user
-        l_json["des_email"] = user.des_email
+        // Set json
+        l_json["cod_device"] = cod_device
+        l_json["des_device"] = des_device
+        l_json["cod_user"]  = cod_user
+      
         guard let l_Data:Data =  try? JSONSerialization.data(withJSONObject: l_json, options: []) else{return}
-        guard let l_Url:URL = URL(string:UrlUtils.URL_SETUSERLOGIN) else{return}
+        guard let l_Url:URL = URL(string:UrlUtils.URL_SETDEVICE) else{return}
         var l_Request:URLRequest = URLRequest(url:l_Url)
         l_Request.httpMethod = "POST"
         l_Request.httpBody = l_Data

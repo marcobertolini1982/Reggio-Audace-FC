@@ -73,6 +73,7 @@
 		D179640121B184CE005311A8 /* PagBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640021B184CE005311A8 /* PagBase.swift */; };
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
+		D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D195F6B521CD1F0D001B10CB /* AppUtils.swift */; };
 		D19F62FD21B830A000726165 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FC21B830A000726165 /* ChannelView.swift */; };
 		D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FE21B8312900726165 /* ProChannelObs.swift */; };
 		D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D6621AD60D800114084 /* AppDelegate.swift */; };
@@ -154,6 +155,7 @@
 		D179640021B184CE005311A8 /* PagBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagBase.swift; sourceTree = "<group>"; };
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
+		D195F6B521CD1F0D001B10CB /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		D19F62FC21B830A000726165 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		D19F62FE21B8312900726165 /* ProChannelObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProChannelObs.swift; sourceTree = "<group>"; };
 		D1BE6D6321AD60D800114084 /* Reggio Audace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reggio Audace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +253,7 @@
 				D160DC4C21B521F000DAEF67 /* UrlUtils.swift */,
 				D15EBBF321B6C64100835C0B /* ColorUtils.swift */,
 				D173431721CBCAEA00D8E75E /* PathUtils.swift */,
+				D195F6B521CD1F0D001B10CB /* AppUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				D171970921BAB152008D786B /* ViePost.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
+				D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
 				D1633DD421B01E9600D5CE2F /* VcrChats.swift in Sources */,
