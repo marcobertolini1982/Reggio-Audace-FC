@@ -27,6 +27,7 @@ class CtlUserDataReset: CtlBase
             guard error == nil
             else
             {
+                self.ShowErrorMessage(error!)
                 // Return
                 return
             }
@@ -53,6 +54,7 @@ class CtlUserDataReset: CtlBase
             btn_LogOut.isHidden = AuthUtils.User != nil && AuthUtils.User!.isEmailVerified ? false:true
     }
     
+    
     private final func LogOut()
     {
         // Try to logout
@@ -69,4 +71,15 @@ class CtlUserDataReset: CtlBase
         // Set User Logout to db through request
         AppUtils.SetDeviceForLoginLogout()
     }
+    
+    private final func ShowErrorMessage(_ error:Error)
+    {
+        // Declarations
+        let l_AlertController:UIAlertController = UIAlertController(title: "Error", message:error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+        // Add button to alert
+        l_AlertController.addAction(UIAlertAction(title:"Ok", style:UIAlertAction.Style.default))
+        // show Alert
+        self.present(l_AlertController, animated: true)
+    }
+
 }
