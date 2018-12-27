@@ -48,7 +48,7 @@
                             </vibrancyEffect>
                         </visualEffectView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9Q-H2-owN">
-                            <rect key="frame" x="6" y="249" width="308" height="32.5"/>
+                            <rect key="frame" x="6" y="249" width="308" height="35"/>
                             <attributedString key="attributedText">
                                 <fragment content="TITOLO">
                                     <attributes>
@@ -61,7 +61,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-KX-6In">
-                            <rect key="frame" x="6" y="289.5" width="308" height="17"/>
+                            <rect key="frame" x="6" y="292" width="308" height="17"/>
                             <attributedString key="attributedText">
                                 <fragment content="DATA E ORA">
                                     <attributes>
@@ -74,7 +74,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
-                            <rect key="frame" x="4" y="314.5" width="312" height="34"/>
+                            <rect key="frame" x="4" y="317" width="312" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <attributedString key="attributedText">
                                 <fragment content="testo">
@@ -170,8 +170,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Comment" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Comment" width="32" height="32"/>
+        <image name="Like" width="32" height="32"/>
+        <image name="share" width="32" height="32"/>
     </resources>
 </document>

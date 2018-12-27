@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate
         FirebaseApp.configure()
         // Set Firebase Messaging delegate
         Messaging.messaging().delegate = self
-        UIApplication.shared.sendAction(#select(self.fi), to: nil, from: nil, for: nil)
+
         // Return
         return true
         
