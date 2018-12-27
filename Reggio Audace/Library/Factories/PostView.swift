@@ -10,7 +10,7 @@ import UIKit
 
 public class PostView
 {
-    private static let POST:String = "POST"
+
     private var ProPostsObss = [ProPostObs]()
 
     func SetOnPostsLoaded(proPostObs:ProPostObs)
@@ -50,9 +50,13 @@ public class PostView
             guard let dataResponse = data, error == nil else { return }
             
             // Decode json
-            if let l_JsonResponse = try! JSONSerialization.jsonObject(with: dataResponse, options: .allowFragments) as? [[String: Any]]
+             do
             {
-                
+              guard  let l_JsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: .allowFragments) as? [[String: Any]]
+              else
+              {
+                return
+              }
                 // Declarations
                 var l_Post:Post
                 
@@ -79,7 +83,10 @@ public class PostView
                 }
                 
             }
-            
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
             // Raise event
             self.RaisePostsLoaded(posts: l_Posts)
             

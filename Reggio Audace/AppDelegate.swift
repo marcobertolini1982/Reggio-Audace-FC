@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate
         FirebaseApp.configure()
         // Set Firebase Messaging delegate
         Messaging.messaging().delegate = self
+
         // Return
         return true
         

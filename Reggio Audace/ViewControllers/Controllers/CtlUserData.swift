@@ -98,7 +98,7 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
                 self.txt_UserData[0].text = user.des_user
                 self.txt_UserData[1].text = user.des_topic
                 self.txt_UserData [2].text = user.des_presentation
-                self.lbl_email.text = self.lbl_email.text! + user.des_email!
+                self.lbl_email.text = self.lbl_email.text! + " " + user.des_email!
                 
             }
     }
