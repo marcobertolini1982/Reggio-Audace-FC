@@ -110,7 +110,7 @@
         <scene sceneID="LQR-u9-GmY">
             <objects>
                 <collectionViewController storyboardIdentifier="VcrChats" id="eHM-1p-3bl" customClass="VcrChats" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4Rs-Tb-Qaj">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" dataMode="prototypes" id="4Rs-Tb-Qaj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,13 +295,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accedi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROt-dt-zeA">
-                                <rect key="frame" x="16" y="80" width="89.5" height="18.5"/>
+                                <rect key="frame" x="16" y="80" width="89.5" height="20"/>
                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OMt-N9-gMa">
-                                <rect key="frame" x="16" y="106.5" width="288" height="37"/>
+                                <rect key="frame" x="16" y="108" width="288" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="fdu-33-Any"/>
                                     <constraint firstAttribute="height" constant="37" id="zES-Lz-fVA"/>
@@ -311,7 +311,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="wpe-AB-VX3">
-                                <rect key="frame" x="16" y="151.5" width="288" height="37"/>
+                                <rect key="frame" x="16" y="153" width="288" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="WmY-3R-Q7S"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="X8W-VO-gxf"/>
@@ -321,7 +321,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imz-i7-pOD">
-                                <rect key="frame" x="98" y="196.5" width="120" height="31"/>
+                                <rect key="frame" x="98" y="198" width="120" height="32"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -333,7 +333,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-mf-dIP">
-                                <rect key="frame" x="129" y="254.5" width="62" height="23"/>
+                                <rect key="frame" x="129" y="257" width="62" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="Privacy Policy">
                                     <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -825,13 +825,13 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modifica i dati d'accesso:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hZ-0y-vZY">
-                                <rect key="frame" x="16" y="80" width="288" height="18.5"/>
+                                <rect key="frame" x="16" y="80" width="288" height="20"/>
                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indirizzo email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-OO-yRk">
-                                <rect key="frame" x="16" y="106" width="288" height="37"/>
+                                <rect key="frame" x="16" y="107.5" width="288" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="HSj-zI-0OI"/>
                                 </constraints>
@@ -840,7 +840,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nuova Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CR5-yi-ueR">
-                                <rect key="frame" x="16" y="151" width="288" height="37"/>
+                                <rect key="frame" x="16" y="152.5" width="288" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="NFG-9J-hZl"/>
                                 </constraints>
@@ -849,7 +849,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conferma nuova Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bXy-xW-Akf">
-                                <rect key="frame" x="16" y="196" width="288" height="37"/>
+                                <rect key="frame" x="16" y="197.5" width="288" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="FA9-1f-FQf"/>
                                 </constraints>
@@ -858,7 +858,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K60-Ra-Hmt">
-                                <rect key="frame" x="100" y="251" width="120" height="31"/>
+                                <rect key="frame" x="100" y="252.5" width="120" height="31"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="OH3-CN-e2c"/>
@@ -874,7 +874,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-KO-Wmv">
-                                <rect key="frame" x="129" y="326" width="62" height="25"/>
+                                <rect key="frame" x="129" y="327.5" width="62" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="62" id="Gya-ku-LTf"/>
                                     <constraint firstAttribute="height" constant="25" id="zGe-5C-rRz"/>
@@ -889,7 +889,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oly-ke-QZk">
-                                <rect key="frame" x="139" y="387" width="42" height="25"/>
+                                <rect key="frame" x="139" y="388.5" width="42" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="1iW-ri-GBA"/>
                                     <constraint firstAttribute="height" constant="25" id="64Y-6c-orW"/>
@@ -959,11 +959,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="32" height="32"/>
-        <image name="IconaAccount" width="25" height="25"/>
-        <image name="News" width="25" height="25"/>
-        <image name="Tabellino" width="32" height="32"/>
-        <image name="football-game" width="32" height="32"/>
+        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="IconaAccount" width="50" height="50"/>
+        <image name="News" width="50" height="50"/>
+        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bf3-xz-Mz7"/>
