@@ -10,7 +10,7 @@ import UIKit
 
 public class PostView
 {
-    
+    private static let POST:String = "POST"
     private var ProPostsObss = [ProPostObs]()
 
     func SetOnPostsLoaded(proPostObs:ProPostObs)

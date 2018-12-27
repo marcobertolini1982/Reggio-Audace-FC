@@ -30,11 +30,16 @@ class UserView
     
    final func SetUserCreate(device:Device,user:User)
     {
-      
+        
+        // Evsl
         guard let l_Url:URL = URL(string: UrlUtils.URL_SETUSERCREATE) else{return}
         var l_Request:URLRequest = URLRequest(url:l_Url)
         l_Request.httpMethod = "POST"
-        let l_Json:[String:Any?] = ["cod_device":device.cod_device,"des_device":device.des_device,"cod_user":user.cod_user,"des_email":user.des_email]
+        var l_Json:[String:Any?] = [String:Any?]()
+        l_Json ["cod_device"] = device.cod_device
+        l_Json["des_device"]  = device.des_device
+        l_Json["des_device"]  = device.des_device
+        l_Json["des_email"]   = user.des_email
         guard let l_Data:Data = try? JSONSerialization.data(withJSONObject: l_Json, options: []) else{return}
         l_Request.httpBody = l_Data
         let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request)

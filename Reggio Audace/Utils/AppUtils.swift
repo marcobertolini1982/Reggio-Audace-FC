@@ -12,6 +12,7 @@ class AppUtils
 {
     static func SetDeviceForLoginLogout()
     {
+        // Declarations
         let l_UserView:UserView = UserView()
         guard let l_CodDevice:String = UIDevice.current.identifierForVendor?.uuidString else{return}
         guard let l_DesDevice:String = InstanceID.instanceID().token() else{return}
