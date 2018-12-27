@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKo-bW-ua8">
-                    <rect key="frame" x="0.0" y="31" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="31" width="320" height="537"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="awQ-GB-qOL">
                             <rect key="frame" x="0.0" y="8" width="320" height="233"/>
@@ -141,7 +141,7 @@
                         <constraint firstItem="awQ-GB-qOL" firstAttribute="centerX" secondItem="g9Q-H2-owN" secondAttribute="centerX" id="gAe-GC-ajm"/>
                         <constraint firstItem="awQ-GB-qOL" firstAttribute="centerX" secondItem="SKo-bW-ua8" secondAttribute="centerX" id="gNi-HV-xRP"/>
                         <constraint firstItem="g2q-KX-6In" firstAttribute="top" secondItem="g9Q-H2-owN" secondAttribute="bottom" constant="8" id="goE-bz-d0u"/>
-                        <constraint firstAttribute="bottom" secondItem="ehj-lV-4qd" secondAttribute="bottom" constant="864" id="gsC-RE-FFi"/>
+                        <constraint firstAttribute="bottom" secondItem="ehj-lV-4qd" secondAttribute="bottom" constant="188.5" id="gsC-RE-FFi"/>
                         <constraint firstAttribute="trailing" secondItem="g2q-KX-6In" secondAttribute="trailing" constant="6" id="ida-eT-mh4"/>
                         <constraint firstItem="awQ-GB-qOL" firstAttribute="top" secondItem="SKo-bW-ua8" secondAttribute="top" constant="8" id="mzU-57-Ag2"/>
                         <constraint firstItem="awQ-GB-qOL" firstAttribute="top" secondItem="SKo-bW-ua8" secondAttribute="topMargin" id="n3j-GL-rom"/>
@@ -160,10 +160,9 @@
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="5Y0-1A-VVJ"/>
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Guq-Zr-M6f"/>
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="JT4-VT-RiO"/>
-                <constraint firstItem="SKo-bW-ua8" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="31" id="ckx-hb-h2s"/>
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hEP-Af-Ona"/>
                 <constraint firstAttribute="trailing" secondItem="SKo-bW-ua8" secondAttribute="trailing" id="onq-6H-DIo"/>
-                <constraint firstItem="SKo-bW-ua8" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="pBI-fd-gOA"/>
+                <constraint firstItem="SKo-bW-ua8" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-31" id="pBI-fd-gOA"/>
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="zNf-dV-MnO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
