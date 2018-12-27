@@ -8,4 +8,5 @@
 
 import UIKit
 
-public let GARNETCOLOR:UIColor = UIColor(red: 124/255, green: 2/255, blue: 2/255, alpha: 1)
+    public let GARNETCOLOR:UIColor = UIColor(red: 124/255, green: 2/255, blue: 2/255, alpha: 1)
+

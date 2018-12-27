@@ -56,9 +56,10 @@
 		D16BBFA621C15F74008AF36E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA521C15F74008AF36E /* Device.swift */; };
 		D16BBFA821C160AC008AF36E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA721C160AC008AF36E /* User.swift */; };
 		D16BBFAA21C161FC008AF36E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA921C161FC008AF36E /* UserView.swift */; };
-		D171970721BAABD7008D786B /* PagArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970621BAABD7008D786B /* PagArticle.swift */; };
+		D171970721BAABD7008D786B /* PagPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970621BAABD7008D786B /* PagPost.swift */; };
 		D171970921BAB152008D786B /* ViePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970821BAB152008D786B /* ViePost.swift */; };
 		D171970B21BAB550008D786B /* CtlPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970A21BAB550008D786B /* CtlPost.swift */; };
+		D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173431721CBCAEA00D8E75E /* PathUtils.swift */; };
 		D174231C21AE93AC009AAEFC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231B21AE93AC009AAEFC /* PostView.swift */; };
 		D174231F21AEA99B009AAEFC /* ProPostObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231E21AEA99B009AAEFC /* ProPostObs.swift */; };
 		D174232321AEAE68009AAEFC /* VcrPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174232221AEAE68009AAEFC /* VcrPosts.swift */; };
@@ -71,8 +72,8 @@
 		D17963FF21B15773005311A8 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17963FE21B15773005311A8 /* Season.swift */; };
 		D179640121B184CE005311A8 /* PagBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640021B184CE005311A8 /* PagBase.swift */; };
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
-		D17D2D2821C90E50002A7178 /* UserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2721C90E50002A7178 /* UserUtils.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
+		D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D195F6B521CD1F0D001B10CB /* AppUtils.swift */; };
 		D19F62FD21B830A000726165 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FC21B830A000726165 /* ChannelView.swift */; };
 		D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FE21B8312900726165 /* ProChannelObs.swift */; };
 		D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D6621AD60D800114084 /* AppDelegate.swift */; };
@@ -137,9 +138,10 @@
 		D16BBFA521C15F74008AF36E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D16BBFA721C160AC008AF36E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D16BBFA921C161FC008AF36E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		D171970621BAABD7008D786B /* PagArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagArticle.swift; sourceTree = "<group>"; };
+		D171970621BAABD7008D786B /* PagPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagPost.swift; sourceTree = "<group>"; };
 		D171970821BAB152008D786B /* ViePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePost.swift; sourceTree = "<group>"; };
 		D171970A21BAB550008D786B /* CtlPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtlPost.swift; sourceTree = "<group>"; };
+		D173431721CBCAEA00D8E75E /* PathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathUtils.swift; sourceTree = "<group>"; };
 		D174231B21AE93AC009AAEFC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		D174231E21AEA99B009AAEFC /* ProPostObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostObs.swift; sourceTree = "<group>"; };
 		D174232221AEAE68009AAEFC /* VcrPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrPosts.swift; sourceTree = "<group>"; };
@@ -152,8 +154,8 @@
 		D17963FE21B15773005311A8 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		D179640021B184CE005311A8 /* PagBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagBase.swift; sourceTree = "<group>"; };
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
-		D17D2D2721C90E50002A7178 /* UserUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUtils.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
+		D195F6B521CD1F0D001B10CB /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		D19F62FC21B830A000726165 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		D19F62FE21B8312900726165 /* ProChannelObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProChannelObs.swift; sourceTree = "<group>"; };
 		D1BE6D6321AD60D800114084 /* Reggio Audace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reggio Audace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,7 +252,8 @@
 				D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */,
 				D160DC4C21B521F000DAEF67 /* UrlUtils.swift */,
 				D15EBBF321B6C64100835C0B /* ColorUtils.swift */,
-				D17D2D2721C90E50002A7178 /* UserUtils.swift */,
+				D173431721CBCAEA00D8E75E /* PathUtils.swift */,
+				D195F6B521CD1F0D001B10CB /* AppUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -270,7 +273,7 @@
 				D179640021B184CE005311A8 /* PagBase.swift */,
 				D179640221B18660005311A8 /* PagAccount.swift */,
 				D160DC5921B5375200DAEF67 /* PagLogin.swift */,
-				D171970621BAABD7008D786B /* PagArticle.swift */,
+				D171970621BAABD7008D786B /* PagPost.swift */,
 			);
 			path = PageViewControllers;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				D171970921BAB152008D786B /* ViePost.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
+				D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
 				D1633DD421B01E9600D5CE2F /* VcrChats.swift in Sources */,
@@ -661,7 +665,7 @@
 				D174232321AEAE68009AAEFC /* VcrPosts.swift in Sources */,
 				D179640121B184CE005311A8 /* PagBase.swift in Sources */,
 				D1BE6D9721AD7D6100114084 /* Post.swift in Sources */,
-				D17D2D2821C90E50002A7178 /* UserUtils.swift in Sources */,
+				D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */,
 				D15ABDBC21B9353D00C980EE /* CtlUserData.swift in Sources */,
 				D15EBBF021B6A08C00835C0B /* VieBase.swift in Sources */,
 				D1EDE77121BEBBB300FDA751 /* VcrSeasonMenu.swift in Sources */,
@@ -675,7 +679,7 @@
 				D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */,
 				D11B714E21AF0A6600887D2A /* FileView.swift in Sources */,
 				D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */,
-				D171970721BAABD7008D786B /* PagArticle.swift in Sources */,
+				D171970721BAABD7008D786B /* PagPost.swift in Sources */,
 				D160DC5821B5333D00DAEF67 /* TabMain.swift in Sources */,
 				D17963FF21B15773005311A8 /* Season.swift in Sources */,
 				D17963F721B146EF005311A8 /* VcrUsers.swift in Sources */,

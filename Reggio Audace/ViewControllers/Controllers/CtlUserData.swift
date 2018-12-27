@@ -8,15 +8,70 @@
 
 import UIKit
 
-class CtlUserData: CtlBase,ProUserObs
+class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
+   
+    
+    func FileLoaded(data: Data)
+    {
+        DispatchQueue.main.async
+        {
+           
+                 self.img_User.image = UIImage(data: data)
+                let l_Url:URL = URL(fileURLWithPath: PathUtils.UserImageFile)
+                do
+                {
+                    try data.write(to: l_Url)
+                }
+                catch let e as NSError
+                {
+                    print(e.localizedDescription)
+                }
+            
+        }
+    }
+    
+   
+    
     
     // Declarations
    
     @IBOutlet weak  var img_User:UIImageView!
     @IBOutlet weak var lbl_email:UILabel!
     @IBOutlet var txt_UserData:[UITextField]!
+    @IBOutlet weak var btn_SetUserImage:UIButton!
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    {
+        guard let l_Image:UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
+        let l_Data:Data = l_Image.jpegData(compressionQuality: 1.0)
+        else
+        {
+            self.dismiss(animated:true)
+            return
+            
+        }
+        // Declarations
+        let l_Base64String:String = l_Data.base64EncodedString()
+        let l_UserView:UserView = UserView()
+        // Set user image
+        self.img_User.image = UIImage(data:l_Data)
+        l_UserView.SetUserImage(cod_user: AuthUtils.Uid, bin_file: l_Base64String)
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func OnBtnSetUserImageClick(_ sender:UIButton)
+    {
+        
+        let l_ImagePicker:UIImagePickerController = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.savedPhotosAlbum)
+        {
+            l_ImagePicker.delegate = self
+            l_ImagePicker.allowsEditing = false
+            l_ImagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
+            self.present(l_ImagePicker, animated: true)
+        }
+    }
     
     func UserLoaded(user: User)
     {
@@ -28,6 +83,16 @@ class CtlUserData: CtlBase,ProUserObs
     
     private final func LoadUserData(user:User)
     {
+        if !PathUtils.UserImageExists, let l_PrgFile = user.prg_file
+        {
+            let l_Fileview:FileView = FileView()
+            l_Fileview.SetOnFileLoaded(proFileObs: self)
+            l_Fileview.LoadFile(prg_file: l_PrgFile)
+        }
+        else
+        {
+            self.LoadUserImageFromCache()
+        }
         DispatchQueue.main.async
             {
                 self.txt_UserData[0].text = user.des_user
@@ -38,17 +103,6 @@ class CtlUserData: CtlBase,ProUserObs
             }
     }
     
-    override func viewDidLoad()
-    {
-        //Call base function
-        super.viewDidLoad()
-        let l_UserView:UserView = UserView()
-        l_UserView.AddUserObs(prouserobs:self)
-        l_UserView.GetUser(cod_user: AuthUtils.Uid!)
-        
-        
-       
-    }
     
     open override func viewWillAppear(_ animated: Bool)
     {
@@ -58,11 +112,14 @@ class CtlUserData: CtlBase,ProUserObs
         self.SetUserInfoEnabled(false)
         // Show edit button
         self.SetEditButton()
-       
-       
       
     }
     
+    open override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.SetUserData()
+    }
     
     
     open override func viewDidDisappear(_ animated: Bool)
@@ -115,8 +172,45 @@ class CtlUserData: CtlBase,ProUserObs
     @objc func OnDoneClick(_ sender:UIBarButtonItem)
     {
         // Declarations
-        
+        let l_User:User  = User()
+        l_User.cod_user = AuthUtils.Uid
+        l_User.des_email = AuthUtils.UserEmail
+        l_User.des_user = txt_UserData[0].text
+        l_User.des_topic = txt_UserData[1].text
+        l_User.des_presentation = txt_UserData[2].text
+        let l_UserView:UserView = UserView()
+        l_UserView.SetUser(user: l_User)
         self.SetEditButton()
         self.SetUserInfoEnabled(false)
     }
+    
+    private final func LoadUserImageFromCache()
+    {
+        
+        
+       
+        let l_Url:URL = URL(fileURLWithPath: PathUtils.UserImageFile )
+        DispatchQueue.main.async
+            {
+            do
+            {
+                let l_Data:Data = try Data(contentsOf: l_Url)
+                self.img_User.image = UIImage(data:l_Data)
+            
+            }
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
+        }
+    }
+    
+    private final func SetUserData()
+    {
+        let l_UserView:UserView = UserView()
+        l_UserView.AddUserObs(prouserobs:self)
+        l_UserView.GetUser(cod_user: AuthUtils.Uid!)
+    }
+    
+    
 }
