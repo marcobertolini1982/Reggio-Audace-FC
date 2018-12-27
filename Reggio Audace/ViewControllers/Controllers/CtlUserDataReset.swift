@@ -11,16 +11,19 @@ import FirebaseAuth
 class CtlUserDataReset: CtlBase
 {
   
-    
+    @IBOutlet weak var btn_ResetPassword:UIButton!
+    @IBOutlet weak var txt_Email:UITextField!
     @IBOutlet private weak var btn_LogOut:UIButton!
-    open var BtnLogOut:UIButton
+    override func viewDidLoad()
     {
-        return btn_LogOut
-    }
-    override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func OnResetPassword(_ senceer:UIButton)
+    {
+        Auth.auth().sendPasswordReset(withEmail: <#T##String#>, completion: <#T##SendPasswordResetCallback?##SendPasswordResetCallback?##(Error?) -> Void#>)
     }
     
     @IBAction func OnLogOutclick(_ sender:UIButton)

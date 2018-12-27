@@ -560,7 +560,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-p2-zlS" customClass="RoundImageView" customModule="Reggio_Audace" customModuleProvider="target">
-                                <rect key="frame" x="121" y="50" width="77" height="77"/>
+                                <rect key="frame" x="121.5" y="50" width="77" height="77"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -935,6 +935,8 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                     </view>
                     <connections>
                         <outlet property="btn_LogOut" destination="oly-ke-QZk" id="3OZ-Ef-e6I"/>
+                        <outlet property="btn_ResetPassword" destination="K60-Ra-Hmt" id="2wd-me-o1H"/>
+                        <outlet property="txt_Email" destination="ATo-OO-yRk" id="bu5-sl-Cnl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgw-L2-qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -963,13 +965,13 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bf3-xz-Mz7"/>
+        <segue reference="Dk5-dW-tet"/>
     </inferredMetricsTieBreakers>
 </document>
