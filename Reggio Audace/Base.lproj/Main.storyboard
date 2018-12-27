@@ -858,6 +858,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="OnResetPasswordClick:" destination="qqv-dV-hdx" eventType="touchUpInside" id="F6x-X9-W0S"/>
                                     <action selector="OnSingInButtonClick:" destination="yys-1z-Oat" eventType="touchUpInside" id="b4R-i5-jU5"/>
                                 </connections>
                             </button>

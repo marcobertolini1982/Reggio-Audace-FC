@@ -21,29 +21,52 @@ class CtlUserDataReset: CtlBase
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func OnResetPassword(_ senceer:UIButton)
+    @IBAction func OnResetPasswordClick(_ senceer:UIButton)
     {
-        Auth.auth().sendPasswordReset(withEmail: <#T##String#>, completion: <#T##SendPasswordResetCallback?##SendPasswordResetCallback?##(Error?) -> Void#>)
+        Auth.auth().sendPasswordReset(withEmail: txt_Email.text!){(error:Error?)in
+            guard error == nil
+            else
+            {
+                // Return
+                return
+            }
+            // Eval if user is loggerdin
+            if AuthUtils.User != nil
+            {
+                // Exdc user logout
+                self.LogOut()
+            }
+        }
     }
     
     @IBAction func OnLogOutclick(_ sender:UIButton)
     {
-       
-        do
-        {
-            try Auth.auth().signOut()
-        }
+        // Exdc user logout
+        self.LogOut()
+      
         
-        catch let e as NSError
-        {
-            print(e.localizedDescription)
-        }
-         AppUtils.SetDeviceForLoginLogout()
     }
     
     open override func viewWillAppear(_ animated: Bool)
     {
             super.viewWillAppear(animated)
-        btn_LogOut.isHidden = AuthUtils.User != nil && AuthUtils.User!.isEmailVerified ? false:true
+            btn_LogOut.isHidden = AuthUtils.User != nil && AuthUtils.User!.isEmailVerified ? false:true
+    }
+    
+    private final func LogOut()
+    {
+        // Try to logout
+        do
+        {
+            try Auth.auth().signOut()
+        }
+        // Catch logout error
+        catch let e as NSError
+        {
+            print(e.localizedDescription)
+        }
+        
+        // Set User Logout to db through request
+        AppUtils.SetDeviceForLoginLogout()
     }
 }
