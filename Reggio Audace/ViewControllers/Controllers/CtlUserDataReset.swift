@@ -38,6 +38,7 @@ class CtlUserDataReset: CtlBase
                 self.LogOut()
             }
         }
+        self.ShowSuccessMessager()
     }
     
     @IBAction func OnLogOutclick(_ sender:UIButton)
@@ -51,6 +52,7 @@ class CtlUserDataReset: CtlBase
     open override func viewWillAppear(_ animated: Bool)
     {
             super.viewWillAppear(animated)
+            // Set btnlogut visibility
             btn_LogOut.isHidden = AuthUtils.User != nil && AuthUtils.User!.isEmailVerified ? false:true
     }
     
@@ -81,5 +83,16 @@ class CtlUserDataReset: CtlBase
         // show Alert
         self.present(l_AlertController, animated: true)
     }
-
+    
+    
+    private final func ShowSuccessMessager()
+    {
+        // Declarations
+        let l_AlertController:UIAlertController = UIAlertController(title: "Email", message:"An email was sent to your address",preferredStyle: UIAlertController.Style.alert)
+        // Add button to alert
+        l_AlertController.addAction(UIAlertAction(title:"Ok", style:UIAlertAction.Style.default))
+        // show Alert
+        self.present(l_AlertController, animated: true)
+        
+    }
 }

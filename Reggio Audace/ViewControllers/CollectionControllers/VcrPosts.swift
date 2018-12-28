@@ -33,9 +33,7 @@ class VcrPosts: VcrBase,ProPostObs
         
     }
     
-    func SetParamsProperties() {
-        
-    }
+    
     
     func LoadRecord() {
         
