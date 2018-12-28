@@ -89,7 +89,7 @@ class VcrPosts: VcrBase,ProPostObs
         let l_Index:Int = indexPath.row
         
         // Eval registration cell
-        guard let l_Cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CvcNews
+        guard let l_Cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcNews
         else {
             return UICollectionViewCell()
         }
