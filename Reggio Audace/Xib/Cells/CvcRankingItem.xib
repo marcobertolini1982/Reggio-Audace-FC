@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9wr-pi-xB5">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Ranking" id="9wr-pi-xB5" customClass="CvcRankingItem" customModule="Reggio_Audace" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -66,7 +66,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ji-Io-XR9">
-                        <rect key="frame" x="8" y="21" width="12" height="20"/>
+                        <rect key="frame" x="8" y="21" width="12" height="19.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="12" id="EDA-6g-vlH"/>
                         </constraints>
@@ -83,7 +83,7 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="84Z-iY-HSr" firstAttribute="top" secondItem="9wr-pi-xB5" secondAttribute="topMargin" constant="17" id="1ce-X2-4iu"/>
                 <constraint firstItem="6ji-Io-XR9" firstAttribute="top" secondItem="9wr-pi-xB5" secondAttribute="top" constant="21" id="3EA-bS-Z5L"/>
@@ -104,7 +104,14 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="dT3-cV-yn7"/>
             <size key="customSize" width="320" height="60"/>
-            <point key="canvasLocation" x="165" y="-30"/>
+            <connections>
+                <outlet property="img_Team" destination="3ON-xO-fKM" id="BME-jf-85h"/>
+                <outlet property="lbl_DesTeam" destination="84Z-iY-HSr" id="Vpv-1G-rkC"/>
+                <outlet property="lbl_NUmMatches" destination="84Z-iY-HSr" id="y1G-Oz-xrx"/>
+                <outlet property="lbl_NUmPoints" destination="rVL-45-XhS" id="cbp-Z1-Ney"/>
+                <outlet property="lbl_NUmRow" destination="6ji-Io-XR9" id="26Y-so-bcN"/>
+            </connections>
+            <point key="canvasLocation" x="-188" y="-67"/>
         </collectionViewCell>
     </objects>
 </document>

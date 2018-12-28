@@ -8,6 +8,11 @@
 
 import UIKit
 
-class CvcRankingItem: CvcBase {
-    
+class CvcRankingItem: CvcBase
+{
+    @IBOutlet weak var lbl_NUmRow:UILabel!
+    @IBOutlet weak var img_Team:UIImageView!
+    @IBOutlet weak var lbl_DesTeam:UILabel!
+    @IBOutlet weak var lbl_NUmMatches:UILabel!
+    @IBOutlet weak var lbl_NUmPoints:UILabel!
 }

@@ -76,7 +76,8 @@ class VcrPosts: VcrBase,ProPostObs
         return 1
     }
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
         // #warning Incomplete implementation, return the number of items
         return POSTS.count
     }

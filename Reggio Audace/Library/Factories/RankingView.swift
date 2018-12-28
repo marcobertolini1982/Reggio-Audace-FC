@@ -9,6 +9,12 @@
 import Foundation
 class RankingView
 {
+    final func SetOnRakingLOad(_ prorankingobs:ProRankingObs)
+    {
+        // Raise Ranking event
+        self.PRORANKINGOBSS.append(prorankingobs)
+    }
+    // Declarations
     private var PRORANKINGOBSS:[ProRankingObs] = [ProRankingObs]()
     final func RaiseRankingLOaded(_ ranking:[RankingItem])
     {
@@ -17,6 +23,7 @@ class RankingView
             l_prorankingobs.RankingLOaded(ranking)
         }
     }
+    
     
     final func LoadRanking(prg_season:Int64 = 1)
     {
@@ -50,9 +57,12 @@ class RankingView
             {
                 print(e.localizedDescription)
             }
+            
+            // Raise event
             self.RaiseRankingLOaded(l_RankingItems)
         }
         l_DataTask.resume()
     }
+   
 }
 

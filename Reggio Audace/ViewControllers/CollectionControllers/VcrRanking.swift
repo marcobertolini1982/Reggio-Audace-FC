@@ -8,7 +8,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
 class VcrRankingCollectionViewController: VcrBase,ProRankingObs
 {
@@ -25,13 +24,19 @@ class VcrRankingCollectionViewController: VcrBase,ProRankingObs
     func RankingLOaded(_ ranking: [RankingItem])
     {
         self.RANKING = ranking
+        self.BindData()
+    }
+    
+    open override func Init() {
+        super.Init()
+        self.SetLayoutVertical(heigth: 300)
     }
     
     var RANKING:[RankingItem] = [RankingItem]()
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        self.Init()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,52 +58,36 @@ class VcrRankingCollectionViewController: VcrBase,ProRankingObs
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return self.RANKING.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let l_Index:Int = indexPath.row
+        let l_RankingItem:RankingItem = self.RANKING[l_Index]
+      guard  let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcRankingItem
+        else
+      {
+        return UICollectionViewCell()
+      }
+        l_Cell.lbl_NUmRow.text = String(l_RankingItem.num_row!)
+        l_Cell.lbl_DesTeam.text = l_RankingItem.des_team
+        l_Cell.lbl_NUmMatches.text = String(l_RankingItem.num_matches!)
+        l_Cell.lbl_NUmPoints.text = String(l_RankingItem.num_points!)
+    return l_Cell
     }
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    private final func LoadRecord()
+    {
+        let l_Rankingview:RankingView = RankingView()
+        l_Rankingview.SetOnRakingLOad(self)
+        l_Rankingview.LoadRanking()
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }
