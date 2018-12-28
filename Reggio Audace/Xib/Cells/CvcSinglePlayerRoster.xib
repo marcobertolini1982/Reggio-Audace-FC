@@ -12,18 +12,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="Rosa" selectionStyle="none" indentationWidth="10" reuseIdentifier="Rosa" rowHeight="100" id="KGk-i7-Jjw" customClass="SingoloCalciatoreTableViewCell" customModule="Reggio_Audace" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dcF-h1-elT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HSM-EL-vug">
-                        <rect key="frame" x="5" y="5" width="90" height="90"/>
+                        <rect key="frame" x="5" y="5" width="90" height="90.5"/>
                         <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="90" id="Q8h-UK-2NB"/>
                             <constraint firstAttribute="width" constant="90" id="t76-OA-MG6"/>
                         </constraints>
                     </imageView>
@@ -91,7 +90,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbx-kf-Vfi">
-                        <rect key="frame" x="100" y="74" width="215" height="21"/>
+                        <rect key="frame" x="100" y="74.5" width="215" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="aer-L1-4Bz"/>
                         </constraints>
@@ -106,7 +105,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNT-9c-1qU">
-                        <rect key="frame" x="185" y="70" width="119" height="22"/>
+                        <rect key="frame" x="185" y="70.5" width="119" height="22"/>
                         <attributedString key="attributedText">
                             <fragment content="LUOGO DI NASCITA">
                                 <attributes>
@@ -119,35 +118,37 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="HSM-EL-vug" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="1Zz-Bc-iqg"/>
-                    <constraint firstAttribute="trailing" secondItem="mbx-kf-Vfi" secondAttribute="trailing" constant="5" id="1mL-Km-G8j"/>
-                    <constraint firstItem="ai6-8P-1xN" firstAttribute="top" secondItem="Rcv-pT-s56" secondAttribute="bottom" constant="13.5" id="2W4-Ws-3kc"/>
-                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="baseline" secondItem="yNT-9c-1qU" secondAttribute="baseline" constant="3" id="3kL-LY-EJ8"/>
-                    <constraint firstAttribute="trailing" secondItem="mbx-kf-Vfi" secondAttribute="trailing" constant="5" id="3zh-TZ-u0v"/>
-                    <constraint firstItem="Rcv-pT-s56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="A3n-We-0ES"/>
-                    <constraint firstAttribute="bottom" secondItem="HSM-EL-vug" secondAttribute="bottom" constant="4.5" id="FGb-X4-3eB"/>
-                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="trailing" secondItem="yNT-9c-1qU" secondAttribute="trailing" constant="11" id="Gno-NA-uz7"/>
-                    <constraint firstAttribute="trailing" secondItem="Rcv-pT-s56" secondAttribute="trailing" constant="5" id="H0l-74-pRL"/>
-                    <constraint firstItem="yNT-9c-1qU" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="SJl-aF-QnH"/>
-                    <constraint firstItem="ai6-8P-1xN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="84" id="Sz8-W9-7Qf"/>
-                    <constraint firstItem="qep-pF-A1C" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="Vor-gK-IP1"/>
-                    <constraint firstItem="ai6-8P-1xN" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Xa3-NQ-Zjw"/>
-                    <constraint firstAttribute="trailing" secondItem="Rcv-pT-s56" secondAttribute="trailing" constant="5" id="Xf1-iT-MYR"/>
-                    <constraint firstItem="HSM-EL-vug" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="bPG-sr-Wvp"/>
-                    <constraint firstItem="Rcv-pT-s56" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="5" id="e8O-I8-ndj"/>
-                    <constraint firstAttribute="bottom" secondItem="mbx-kf-Vfi" secondAttribute="bottom" constant="4.5" id="hE6-h1-93o"/>
-                    <constraint firstItem="Rcv-pT-s56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="j4p-By-Qw3"/>
-                    <constraint firstItem="qep-pF-A1C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="j79-Dp-ZMH"/>
-                    <constraint firstItem="qep-pF-A1C" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="lks-dD-dVg"/>
-                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="firstBaseline" secondItem="yNT-9c-1qU" secondAttribute="firstBaseline" constant="4" id="mET-vg-il7"/>
-                    <constraint firstItem="mbx-kf-Vfi" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="5" id="n4T-Vy-4Nt"/>
-                    <constraint firstAttribute="trailing" secondItem="qep-pF-A1C" secondAttribute="trailing" constant="5" id="p0p-Q3-Rdi"/>
-                    <constraint firstAttribute="bottom" secondItem="mbx-kf-Vfi" secondAttribute="bottom" constant="4.5" id="vXc-EN-qXJ"/>
-                </constraints>
-            </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="-41.25" y="-268.3098591549296"/>
-        </tableViewCell>
+            </view>
+            <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+            <constraints>
+                <constraint firstItem="mbx-kf-Vfi" firstAttribute="baseline" secondItem="yNT-9c-1qU" secondAttribute="baseline" constant="3" id="40i-JD-7QY"/>
+                <constraint firstAttribute="trailing" secondItem="mbx-kf-Vfi" secondAttribute="trailing" constant="5" id="8iG-kD-qGK"/>
+                <constraint firstItem="Rcv-pT-s56" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="5" id="8pJ-4L-nEA"/>
+                <constraint firstItem="Rcv-pT-s56" firstAttribute="top" secondItem="dcF-h1-elT" secondAttribute="top" constant="5" id="9YH-Yv-dks"/>
+                <constraint firstAttribute="trailing" secondItem="Rcv-pT-s56" secondAttribute="trailing" constant="5" id="9kU-54-d7N"/>
+                <constraint firstItem="HSM-EL-vug" firstAttribute="top" secondItem="dcF-h1-elT" secondAttribute="top" constant="5" id="BHz-EN-vXu"/>
+                <constraint firstAttribute="trailing" secondItem="mbx-kf-Vfi" secondAttribute="trailing" constant="5" id="Epo-mc-TOd"/>
+                <constraint firstAttribute="trailing" secondItem="qep-pF-A1C" secondAttribute="trailing" constant="5" id="GPG-3A-EdL"/>
+                <constraint firstItem="ai6-8P-1xN" firstAttribute="trailing" secondItem="dcF-h1-elT" secondAttribute="trailingMargin" id="JJ6-6t-uVA"/>
+                <constraint firstItem="mbx-kf-Vfi" firstAttribute="trailing" secondItem="yNT-9c-1qU" secondAttribute="trailing" constant="11" id="Mgu-qF-3yy"/>
+                <constraint firstItem="yNT-9c-1qU" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="NJ8-V2-F5J"/>
+                <constraint firstItem="ai6-8P-1xN" firstAttribute="leading" secondItem="dcF-h1-elT" secondAttribute="leadingMargin" constant="84" id="NJe-Zw-dIj"/>
+                <constraint firstItem="HSM-EL-vug" firstAttribute="leading" secondItem="dcF-h1-elT" secondAttribute="leading" constant="5" id="OIu-Lb-obS"/>
+                <constraint firstItem="mbx-kf-Vfi" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="5" id="QIC-B2-5A1"/>
+                <constraint firstItem="qep-pF-A1C" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="RBf-UQ-Sdr"/>
+                <constraint firstAttribute="bottom" secondItem="HSM-EL-vug" secondAttribute="bottom" constant="4.5" id="St6-ss-srr"/>
+                <constraint firstAttribute="bottom" secondItem="mbx-kf-Vfi" secondAttribute="bottom" constant="4.5" id="ToS-G8-sbr"/>
+                <constraint firstItem="mbx-kf-Vfi" firstAttribute="firstBaseline" secondItem="yNT-9c-1qU" secondAttribute="firstBaseline" constant="4" id="Wgl-kF-4vA"/>
+                <constraint firstAttribute="trailing" secondItem="Rcv-pT-s56" secondAttribute="trailing" constant="5" id="XUq-fo-5jT"/>
+                <constraint firstAttribute="bottom" secondItem="mbx-kf-Vfi" secondAttribute="bottom" constant="4.5" id="YK0-D7-ywq"/>
+                <constraint firstItem="Rcv-pT-s56" firstAttribute="top" secondItem="dcF-h1-elT" secondAttribute="top" constant="5" id="YOx-9a-p5R"/>
+                <constraint firstItem="qep-pF-A1C" firstAttribute="top" secondItem="dcF-h1-elT" secondAttribute="top" constant="5" id="aYv-PW-WZI"/>
+                <constraint firstItem="ai6-8P-1xN" firstAttribute="top" secondItem="Rcv-pT-s56" secondAttribute="bottom" constant="13.5" id="d6h-gG-S8z"/>
+                <constraint firstItem="qep-pF-A1C" firstAttribute="leading" secondItem="HSM-EL-vug" secondAttribute="trailing" constant="90" id="yzM-YX-nUI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="854-Mg-oH9"/>
+            <size key="customSize" width="320" height="100"/>
+            <point key="canvasLocation" x="-30" y="-88"/>
+        </collectionViewCell>
     </objects>
 </document>
