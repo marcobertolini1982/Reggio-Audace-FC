@@ -8,10 +8,17 @@
 
 import UIKit
 
- let CHATID = "ChatCell"
 
 class VcrChats: VcrBase,ProChatObs
 {
+    open override var NibNabe: String
+    {
+        return "CvcChat"
+    }
+    open override var reuseIdentifier: String
+    {
+        return "ChatCell"
+    }
     //Declarations
     var  CHATS:[Chat] = [Chat]()
     
@@ -35,10 +42,9 @@ class VcrChats: VcrBase,ProChatObs
         }
     }
     
-    func Init()
+   open override func Init()
     {
-        let nib:UINib = UINib(nibName:"CvcChat", bundle: nil)
-        self.collectionView?.register(nib, forCellWithReuseIdentifier: CHATID)
+       super.Init()
         self.SetLayoutVertical(heigth: 100)
     }
 
@@ -82,7 +88,7 @@ class VcrChats: VcrBase,ProChatObs
     {
         //Declarations
         let l_Index:Int = indexPath.row
-       guard let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: CHATID, for: indexPath) as? CvcChat
+       guard let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcChat
        else
        {
          return UICollectionViewCell()

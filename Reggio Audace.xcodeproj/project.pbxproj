@@ -12,7 +12,7 @@
 		5255726321BFBB9400087A14 /* ViewButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5255726221BFBB9400087A14 /* ViewButton.xib */; };
 		526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ABD4021B1564B004177CB /* GoogleService-Info.plist */; };
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
-		526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */; };
+		526BF73221B0452400465AD7 /* CvcSingleTeam.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeam.xib */; };
 		5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279757D21B97DCC00923473 /* RoundImageView.swift */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
@@ -96,7 +96,7 @@
 		5255726221BFBB9400087A14 /* ViewButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewButton.xib; sourceTree = "<group>"; };
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
-		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
+		526BF73121B0452400465AD7 /* CvcSingleTeam.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeam.xib; sourceTree = "<group>"; };
 		5279757D21B97DCC00923473 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 				D174232621AED6BA009AAEFC /* CvcNews.xib */,
 				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
 				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
-				526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */,
+				526BF73121B0452400465AD7 /* CvcSingleTeam.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -529,7 +529,7 @@
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				5232497C21BEB9A300174439 /* (null) in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
-				526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */,
+				526BF73221B0452400465AD7 /* CvcSingleTeam.xib in Resources */,
 				5293A15021B576E90081E805 /* ViePost.xib in Resources */,
 				52E7168721BED3F6002E1BA1 /* CvcSeasonMenu.xib in Resources */,
 				D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */,

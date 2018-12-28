@@ -8,9 +8,16 @@
 
 import UIKit
 
-private let reuseIdentifier = "PostCell"
 class VcrPosts: VcrBase,ProPostObs
 {
+    open override var NibNabe: String
+    {
+        return "CvcNews"
+    }
+    open override var reuseIdentifier: String
+    {
+        return "PostCell"
+    }
     
     // Declarations
     var POSTS:[Post] = [Post]()
@@ -23,11 +30,10 @@ class VcrPosts: VcrBase,ProPostObs
         
     }
    
-    func Init() {
-        
-        // Register control
-        self.collectionView?.register(UINib(nibName: "CvcNews", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        
+   open override func Init()
+   {
+    
+        super.Init()
         // Set layout
         self.SetLayoutVertical(heigth: 300)
         
