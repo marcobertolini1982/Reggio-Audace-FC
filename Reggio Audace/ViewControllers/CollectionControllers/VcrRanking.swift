@@ -12,12 +12,22 @@ private let reuseIdentifier = "Cell"
 
 class VcrRankingCollectionViewController: VcrBase,ProRankingObs
 {
-    func RankingLOaded(_ ranking: [RankingItem])
+    open override var reuseIdentifier: String
     {
-        self.RANKINGITEMS = ranking
+        return "Ranking"
     }
     
-    var RANKINGITEMS:[RankingItem] = [RankingItem]()
+    open override var NibNabe: String
+    {
+        return "CvcRankingItem"
+    }
+    
+    func RankingLOaded(_ ranking: [RankingItem])
+    {
+        self.RANKING = ranking
+    }
+    
+    var RANKING:[RankingItem] = [RankingItem]()
     override func viewDidLoad()
     {
         super.viewDidLoad()

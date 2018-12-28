@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CvcChat: UICollectionViewCell
+class CvcChat: CvcBase
 {
     @IBOutlet weak var img_prg_file:UIImageView!
     @IBOutlet weak var lbl_desuser:UILabel!

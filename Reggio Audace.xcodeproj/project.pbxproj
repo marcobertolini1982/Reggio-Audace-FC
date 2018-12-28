@@ -12,7 +12,7 @@
 		5255726321BFBB9400087A14 /* ViewButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5255726221BFBB9400087A14 /* ViewButton.xib */; };
 		526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ABD4021B1564B004177CB /* GoogleService-Info.plist */; };
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
-		526BF73221B0452400465AD7 /* CvcSingleTeam.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeam.xib */; };
+		526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcRankingItem.xib */; };
 		5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279757D21B97DCC00923473 /* RoundImageView.swift */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
@@ -78,6 +78,8 @@
 		D19B3E1121D62CE300BD5F15 /* RankingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1021D62CE300BD5F15 /* RankingItem.swift */; };
 		D19B3E1321D6557B00BD5F15 /* ProRankingObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */; };
 		D19B3E1521D65A6300BD5F15 /* VcrRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */; };
+		D19B3E1921D66FC700BD5F15 /* CvcBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1821D66FC700BD5F15 /* CvcBase.swift */; };
+		D19B3E1B21D6705500BD5F15 /* CvcRankingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */; };
 		D19F62FD21B830A000726165 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FC21B830A000726165 /* ChannelView.swift */; };
 		D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FE21B8312900726165 /* ProChannelObs.swift */; };
 		D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D6621AD60D800114084 /* AppDelegate.swift */; };
@@ -96,7 +98,7 @@
 		5255726221BFBB9400087A14 /* ViewButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewButton.xib; sourceTree = "<group>"; };
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
-		526BF73121B0452400465AD7 /* CvcSingleTeam.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeam.xib; sourceTree = "<group>"; };
+		526BF73121B0452400465AD7 /* CvcRankingItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcRankingItem.xib; sourceTree = "<group>"; };
 		5279757D21B97DCC00923473 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
@@ -164,6 +166,8 @@
 		D19B3E1021D62CE300BD5F15 /* RankingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingItem.swift; sourceTree = "<group>"; };
 		D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProRankingObs.swift; sourceTree = "<group>"; };
 		D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrRanking.swift; sourceTree = "<group>"; };
+		D19B3E1821D66FC700BD5F15 /* CvcBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcBase.swift; sourceTree = "<group>"; };
+		D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcRankingItem.swift; sourceTree = "<group>"; };
 		D19F62FC21B830A000726165 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		D19F62FE21B8312900726165 /* ProChannelObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProChannelObs.swift; sourceTree = "<group>"; };
 		D1BE6D6321AD60D800114084 /* Reggio Audace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reggio Audace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -330,6 +334,8 @@
 				D174232721AED6BF009AAEFC /* CvcNews.swift */,
 				D1633DD821B02B1700D5CE2F /* CvcChat.swift */,
 				D1EDE77221BEBCE100FDA751 /* CvcSeasonMenu.swift */,
+				D19B3E1821D66FC700BD5F15 /* CvcBase.swift */,
+				D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -350,7 +356,7 @@
 				D174232621AED6BA009AAEFC /* CvcNews.xib */,
 				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
 				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
-				526BF73121B0452400465AD7 /* CvcSingleTeam.xib */,
+				526BF73121B0452400465AD7 /* CvcRankingItem.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -529,7 +535,7 @@
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				5232497C21BEB9A300174439 /* (null) in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
-				526BF73221B0452400465AD7 /* CvcSingleTeam.xib in Resources */,
+				526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */,
 				5293A15021B576E90081E805 /* ViePost.xib in Resources */,
 				52E7168721BED3F6002E1BA1 /* CvcSeasonMenu.xib in Resources */,
 				D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */,
@@ -705,6 +711,8 @@
 				D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */,
 				D19F62FD21B830A000726165 /* ChannelView.swift in Sources */,
 				D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */,
+				D19B3E1921D66FC700BD5F15 /* CvcBase.swift in Sources */,
+				D19B3E1B21D6705500BD5F15 /* CvcRankingItem.swift in Sources */,
 				D15EBBE821B698D900835C0B /* LabIndicator.swift in Sources */,
 				D16BBFA821C160AC008AF36E /* User.swift in Sources */,
 				D160DC5521B531B700DAEF67 /* CtlUserLogin.swift in Sources */,
