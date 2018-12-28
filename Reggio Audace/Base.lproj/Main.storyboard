@@ -858,6 +858,7 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="OnResetPasswordClick:" destination="qqv-dV-hdx" eventType="touchUpInside" id="F6x-X9-W0S"/>
                                     <action selector="OnSingInButtonClick:" destination="yys-1z-Oat" eventType="touchUpInside" id="b4R-i5-jU5"/>
                                 </connections>
                             </button>
@@ -910,6 +911,8 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
                     </view>
                     <connections>
                         <outlet property="btn_LogOut" destination="oly-ke-QZk" id="3OZ-Ef-e6I"/>
+                        <outlet property="btn_ResetPassword" destination="K60-Ra-Hmt" id="2wd-me-o1H"/>
+                        <outlet property="txt_Email" destination="ATo-OO-yRk" id="bu5-sl-Cnl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgw-L2-qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -938,11 +941,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dk5-dW-tet"/>
