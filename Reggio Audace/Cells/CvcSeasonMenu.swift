@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CvcSeasonMenu: UICollectionViewCell
+class CvcSeasonMenu: CvcBase
 {
     @IBOutlet var MENUS:[UIButton]!
 }

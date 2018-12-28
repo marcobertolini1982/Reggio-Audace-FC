@@ -28,21 +28,21 @@ class SeasonView
     func LoadSeason()
     {
         //Declarations
-        let l_Season:Season = Season()
-       var l_Seasons:[Season] = [Season]()
+        //let l_Season:Season = Season()
+       //var l_Seasons:[Season] = [Season]()
         let l_JsonData:[String:Any] = ["prg_season":1]
-        guard let l_url:URL = URL(string: "http://portal.lensolution.it:8080/wRegia/GetSeason") else{return}
+        guard let l_url:URL = URL(string:UrlUtils.URL_GETSEASON) else{return}
         var l_request:URLRequest = URLRequest(url: l_url)
         guard let l_data:Data = try? JSONSerialization.data(withJSONObject: l_JsonData, options: [])   else{return}
         l_request.httpMethod  = "POST"
         l_request.httpBody    = l_data
         let l_DaatTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_request){(data:Data?,response:URLResponse?,error:Error?)in
             
-            if error == nil && data != nil, let l_ResponseJson:[String:Any] = try! JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any]
+            if error == nil && data != nil, let l_ResponseString:String = String(data: data!, encoding: String.Encoding.utf8)
             {
                 //Init
-              
-                l_Season.prg_lastuser = l_ResponseJson["prg_lastuser"] as? Int64
+              print(l_ResponseString)
+               /* l_Season.prg_lastuser = l_ResponseJson["prg_lastuser"] as? Int64
                 l_Season.dat_lastmodified = l_ResponseJson["dat_lastmodified"] as? String
                 
                 l_Season.prg_season = l_ResponseJson["prg_season"] as? Int64
@@ -64,10 +64,10 @@ class SeasonView
                 l_Season.dat_freefield2  = l_ResponseJson["dat_freefield2"] as? String
                 l_Season.flg_freefield1  =  l_ResponseJson["flg_freefield1"] as? Bool
                  l_Season.flg_freefield2 = l_ResponseJson["flg_freefield2"] as? Bool
-                 l_Season.IsEditing      = l_ResponseJson["flg_freefield3"] as? Bool
-                l_Seasons.append(l_Season)
+                 l_Season.IsEditing      = l_ResponseJson["flg_freefield3"] as? Bool*/
+                //l_Seasons.append(l_Season)
             }
-            self.RaiseOnSeasonLoaded(seasons:l_Seasons)
+            //self.RaiseOnSeasonLoaded(seasons:l_Seasons)
             
         }
         l_DaatTask.resume()

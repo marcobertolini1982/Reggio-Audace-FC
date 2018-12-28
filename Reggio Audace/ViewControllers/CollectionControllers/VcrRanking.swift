@@ -1,62 +1,40 @@
 //
-//  VcrChatCollectionViewController.swift
+//  VcrRankingCollectionViewController.swift
 //  Reggio Audace
 //
-//  Created by Michele on 29/11/18.
+//  Created by Michele on 28/12/18.
 //  Copyright © 2018 LEN Solution. All rights reserved.
 //
 
 import UIKit
 
+private let reuseIdentifier = "Cell"
 
-class VcrChats: VcrBase,ProChatObs
+class VcrRankingCollectionViewController: VcrBase,ProRankingObs
 {
-    open override var NibNabe: String
-    {
-        return "CvcChat"
-    }
     open override var reuseIdentifier: String
     {
-        return "ChatCell"
+        return "Ranking"
     }
-    //Declarations
-    var  CHATS:[Chat] = [Chat]()
     
-    func ChatLoaded(chats: [Chat])
+    open override var NibNabe: String
     {
-        self.CHATS = chats
-        self.BindData()
+        return "CvcRankingItem"
     }
     
-   
-    
-    func LoadRecord()
+    func RankingLOaded(_ ranking: [RankingItem])
     {
-        //Declarations
-        let l_ChatView:ChatView = ChatView()
-        //Add event
-        l_ChatView.SetOnChatsLoaded(proChatObss: self)
-        if let l_CodUser:String = AuthUtils.Uid
-        {
-            l_ChatView.LoadChat(cod_user: l_CodUser)
-        }
+        self.RANKING = ranking
     }
     
-   open override func Init()
+    var RANKING:[RankingItem] = [RankingItem]()
+    override func viewDidLoad()
     {
-       super.Init()
-        self.SetLayoutVertical(heigth: 100)
-    }
-
-    override func viewDidLoad() {
         super.viewDidLoad()
-        self.Init()
-        self.LoadRecord()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-     
 
         // Do any additional setup after loading the view.
     }
@@ -75,28 +53,21 @@ class VcrChats: VcrBase,ProChatObs
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return self.CHATS.count
+        return 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
-        //Declarations
-        let l_Index:Int = indexPath.row
-       guard let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcChat
-       else
-       {
-         return UICollectionViewCell()
-       }
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         // Configure the cell
-       l_Cell.lbl_desuser.text = self.CHATS[l_Index].des_user
-        return l_Cell
+    
+        return cell
     }
 
     // MARK: UICollectionViewDelegate

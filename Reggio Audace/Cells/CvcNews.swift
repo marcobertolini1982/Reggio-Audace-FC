@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class CvcNews: UICollectionViewCell,ProFileObs,ProChannelObs
+class CvcNews: CvcBase,ProFileObs,ProChannelObs
 {
     func ChannelLoaded(data: Data) {
         DispatchQueue.main.async {

@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate
         FirebaseApp.configure()
         // Set Firebase Messaging delegate
         Messaging.messaging().delegate = self
-
+        let l_RankingView:RankingView = RankingView()
+        l_RankingView.LoadRanking()
         // Return
         return true
         

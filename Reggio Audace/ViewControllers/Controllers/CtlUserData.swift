@@ -104,16 +104,7 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     }
     
     
-    open override func viewWillAppear(_ animated: Bool)
-    {
-        // Call super method
-        super.viewWillAppear(animated)
-        // Disable text fields
-        self.SetUserInfoEnabled(false)
-        // Show edit button
-        self.SetEditButton()
-      
-    }
+   
     
     open override func viewDidLoad()
     {
@@ -121,6 +112,21 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
         self.SetUserData()
     }
     
+    
+    open override func viewWillAppear(_ animated: Bool)
+    {
+        // Call super method
+        super.viewWillAppear(animated)
+        // Disable text fields
+        self.SetUserInfoEnabled(false)
+        // Show edit button
+    }
+    
+    open override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        self.SetEditButton()
+    }
     
     open override func viewDidDisappear(_ animated: Bool)
     {

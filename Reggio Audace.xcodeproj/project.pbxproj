@@ -12,7 +12,7 @@
 		5255726321BFBB9400087A14 /* ViewButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5255726221BFBB9400087A14 /* ViewButton.xib */; };
 		526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ABD4021B1564B004177CB /* GoogleService-Info.plist */; };
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
-		526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */; };
+		526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcRankingItem.xib */; };
 		5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279757D21B97DCC00923473 /* RoundImageView.swift */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
@@ -74,6 +74,12 @@
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
 		D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D195F6B521CD1F0D001B10CB /* AppUtils.swift */; };
+		D19B3E0F21D625F600BD5F15 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E0E21D625F600BD5F15 /* RankingView.swift */; };
+		D19B3E1121D62CE300BD5F15 /* RankingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1021D62CE300BD5F15 /* RankingItem.swift */; };
+		D19B3E1321D6557B00BD5F15 /* ProRankingObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */; };
+		D19B3E1521D65A6300BD5F15 /* VcrRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */; };
+		D19B3E1921D66FC700BD5F15 /* CvcBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1821D66FC700BD5F15 /* CvcBase.swift */; };
+		D19B3E1B21D6705500BD5F15 /* CvcRankingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */; };
 		D19F62FD21B830A000726165 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FC21B830A000726165 /* ChannelView.swift */; };
 		D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F62FE21B8312900726165 /* ProChannelObs.swift */; };
 		D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE6D6621AD60D800114084 /* AppDelegate.swift */; };
@@ -92,14 +98,14 @@
 		5255726221BFBB9400087A14 /* ViewButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewButton.xib; sourceTree = "<group>"; };
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
-		526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSingleTeamStanding.xib; sourceTree = "<group>"; };
+		526BF73121B0452400465AD7 /* CvcRankingItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcRankingItem.xib; sourceTree = "<group>"; };
 		5279757D21B97DCC00923473 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
 		52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieCalendar.xib; sourceTree = "<group>"; };
 		52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieClubGranataSingleSponsor.xib; sourceTree = "<group>"; };
-		52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSeasonMenu.xib; sourceTree = "<group>"; };
+		52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CvcSeasonMenu.xib; path = ../../CvcSeasonMenu.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
 		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Bold.ttf"; sourceTree = "<group>"; };
@@ -156,6 +162,12 @@
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
 		D195F6B521CD1F0D001B10CB /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		D19B3E0E21D625F600BD5F15 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		D19B3E1021D62CE300BD5F15 /* RankingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingItem.swift; sourceTree = "<group>"; };
+		D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProRankingObs.swift; sourceTree = "<group>"; };
+		D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrRanking.swift; sourceTree = "<group>"; };
+		D19B3E1821D66FC700BD5F15 /* CvcBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcBase.swift; sourceTree = "<group>"; };
+		D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcRankingItem.swift; sourceTree = "<group>"; };
 		D19F62FC21B830A000726165 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		D19F62FE21B8312900726165 /* ProChannelObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProChannelObs.swift; sourceTree = "<group>"; };
 		D1BE6D6321AD60D800114084 /* Reggio Audace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reggio Audace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +233,7 @@
 				D174232221AEAE68009AAEFC /* VcrPosts.swift */,
 				D15ABDB721B9202E00C980EE /* VcrMedia.swift */,
 				D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */,
+				D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */,
 			);
 			path = CollectionControllers;
 			sourceTree = "<group>";
@@ -287,6 +300,7 @@
 				D174231B21AE93AC009AAEFC /* PostView.swift */,
 				D17963FA21B1509D005311A8 /* SeasonView.swift */,
 				D16BBFA921C161FC008AF36E /* UserView.swift */,
+				D19B3E0E21D625F600BD5F15 /* RankingView.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -300,6 +314,7 @@
 				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
 				D19F62FE21B8312900726165 /* ProChannelObs.swift */,
 				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
+				D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -319,6 +334,8 @@
 				D174232721AED6BF009AAEFC /* CvcNews.swift */,
 				D1633DD821B02B1700D5CE2F /* CvcChat.swift */,
 				D1EDE77221BEBCE100FDA751 /* CvcSeasonMenu.swift */,
+				D19B3E1821D66FC700BD5F15 /* CvcBase.swift */,
+				D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -335,10 +352,11 @@
 		D174232C21AED7D4009AAEFC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D174232621AED6BA009AAEFC /* CvcNews.xib */,
 				D1633DD521B0276500D5CE2F /* CvcChat.xib */,
+				D174232621AED6BA009AAEFC /* CvcNews.xib */,
+				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
 				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
-				526BF73121B0452400465AD7 /* CvcSingleTeamStanding.xib */,
+				526BF73121B0452400465AD7 /* CvcRankingItem.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -376,7 +394,6 @@
 				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D174232A21AED728009AAEFC /* Cells */,
-				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
 				52F650C221B0576200CBD2BE /* Font */,
 				526ABD4021B1564B004177CB /* GoogleService-Info.plist */,
 				527E94F421B06A7B00A8CAD0 /* Info.plist */,
@@ -418,6 +435,7 @@
 				D17963FE21B15773005311A8 /* Season.swift */,
 				D160DC5021B529A800DAEF67 /* SeasonDay.swift */,
 				D16BBFA721C160AC008AF36E /* User.swift */,
+				D19B3E1021D62CE300BD5F15 /* RankingItem.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -517,7 +535,7 @@
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				5232497C21BEB9A300174439 /* (null) in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
-				526BF73221B0452400465AD7 /* CvcSingleTeamStanding.xib in Resources */,
+				526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */,
 				5293A15021B576E90081E805 /* ViePost.xib in Resources */,
 				52E7168721BED3F6002E1BA1 /* CvcSeasonMenu.xib in Resources */,
 				D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */,
@@ -646,6 +664,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19B3E1321D6557B00BD5F15 /* ProRankingObs.swift in Sources */,
 				D160DC5A21B5375200DAEF67 /* PagLogin.swift in Sources */,
 				D17963F921B14779005311A8 /* VcrChannels.swift in Sources */,
 				D1633DD221B0135100D5CE2F /* Chat.swift in Sources */,
@@ -670,6 +689,7 @@
 				D15EBBF021B6A08C00835C0B /* VieBase.swift in Sources */,
 				D1EDE77121BEBBB300FDA751 /* VcrSeasonMenu.swift in Sources */,
 				D17963FD21B151EB005311A8 /* ProSeasonObs.swift in Sources */,
+				D19B3E1521D65A6300BD5F15 /* VcrRanking.swift in Sources */,
 				D16BBFAA21C161FC008AF36E /* UserView.swift in Sources */,
 				D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */,
 				D174232921AED6C1009AAEFC /* CvcNews.swift in Sources */,
@@ -678,10 +698,12 @@
 				D1EDE77321BEBCE100FDA751 /* CvcSeasonMenu.swift in Sources */,
 				D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */,
 				D11B714E21AF0A6600887D2A /* FileView.swift in Sources */,
+				D19B3E0F21D625F600BD5F15 /* RankingView.swift in Sources */,
 				D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */,
 				D171970721BAABD7008D786B /* PagPost.swift in Sources */,
 				D160DC5821B5333D00DAEF67 /* TabMain.swift in Sources */,
 				D17963FF21B15773005311A8 /* Season.swift in Sources */,
+				D19B3E1121D62CE300BD5F15 /* RankingItem.swift in Sources */,
 				D17963F721B146EF005311A8 /* VcrUsers.swift in Sources */,
 				D171970B21BAB550008D786B /* CtlPost.swift in Sources */,
 				D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */,
@@ -689,6 +711,8 @@
 				D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */,
 				D19F62FD21B830A000726165 /* ChannelView.swift in Sources */,
 				D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */,
+				D19B3E1921D66FC700BD5F15 /* CvcBase.swift in Sources */,
+				D19B3E1B21D6705500BD5F15 /* CvcRankingItem.swift in Sources */,
 				D15EBBE821B698D900835C0B /* LabIndicator.swift in Sources */,
 				D16BBFA821C160AC008AF36E /* User.swift in Sources */,
 				D160DC5521B531B700DAEF67 /* CtlUserLogin.swift in Sources */,

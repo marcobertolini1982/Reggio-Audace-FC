@@ -9,6 +9,23 @@
 import UIKit
 class VcrBase: UICollectionViewController,UITextFieldDelegate
 {
+   
+    open var reuseIdentifier:String
+    {
+        return String()
+    }
+    
+    open var NibNabe:String
+    {
+        return String()
+    }
+    
+    open func Init()
+    {
+        // Register control
+        self.collectionView?.register(UINib(nibName: self.NibNabe, bundle: nil), forCellWithReuseIdentifier: self.reuseIdentifier)
+    }
+    
     open override func viewDidLoad()
     {
         super.viewDidLoad()
