@@ -48,7 +48,7 @@
                             </vibrancyEffect>
                         </visualEffectView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9Q-H2-owN">
-                            <rect key="frame" x="6" y="249" width="308" height="35"/>
+                            <rect key="frame" x="6" y="249" width="308" height="32.5"/>
                             <attributedString key="attributedText">
                                 <fragment content="TITOLO">
                                     <attributes>
@@ -61,7 +61,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-KX-6In">
-                            <rect key="frame" x="6" y="292" width="308" height="17"/>
+                            <rect key="frame" x="6" y="289.5" width="308" height="17"/>
                             <attributedString key="attributedText">
                                 <fragment content="DATA E ORA">
                                     <attributes>
@@ -74,7 +74,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
-                            <rect key="frame" x="4" y="317" width="312" height="34"/>
+                            <rect key="frame" x="4" y="314.5" width="312" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <attributedString key="attributedText">
                                 <fragment content="testo">
@@ -88,14 +88,6 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes"/>
                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                         </textView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPz-r3-icK">
-                            <rect key="frame" x="224" y="217" width="24" height="24"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="24" id="g1a-L8-mpN"/>
-                                <constraint firstAttribute="width" constant="24" id="hyU-wt-Xse"/>
-                            </constraints>
-                            <state key="normal" image="Comment"/>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avt-tk-dyt">
                             <rect key="frame" x="288" y="210" width="24" height="24"/>
                             <constraints>
@@ -104,7 +96,7 @@
                             <state key="normal" image="share"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqX-ul-3bb">
-                            <rect key="frame" x="256" y="210" width="24" height="24"/>
+                            <rect key="frame" x="234" y="210" width="24" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="BVi-wM-nbD"/>
                                 <constraint firstAttribute="width" constant="24" id="OKg-F0-d0V"/>
@@ -123,15 +115,13 @@
                         <constraint firstItem="ehj-lV-4qd" firstAttribute="leading" secondItem="SKo-bW-ua8" secondAttribute="leading" constant="4" id="HpN-qX-bCD"/>
                         <constraint firstItem="g9Q-H2-owN" firstAttribute="leading" secondItem="g2q-KX-6In" secondAttribute="leading" id="InD-uW-oPT"/>
                         <constraint firstItem="awQ-GB-qOL" firstAttribute="leading" secondItem="SKo-bW-ua8" secondAttribute="leading" id="J58-0L-kI6"/>
-                        <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="FPz-r3-icK" secondAttribute="bottom" constant="8" symbolic="YES" id="KHL-2I-ZmT"/>
                         <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="awQ-GB-qOL" secondAttribute="bottom" constant="8" symbolic="YES" id="KPj-kJ-PGR"/>
+                        <constraint firstItem="avt-tk-dyt" firstAttribute="leading" secondItem="WqX-ul-3bb" secondAttribute="trailing" constant="30" id="LQd-AB-KI3"/>
                         <constraint firstItem="m2z-Nn-jbJ" firstAttribute="top" secondItem="SKo-bW-ua8" secondAttribute="top" constant="8" id="NSA-AF-qiS"/>
                         <constraint firstItem="g2q-KX-6In" firstAttribute="leading" secondItem="SKo-bW-ua8" secondAttribute="leading" constant="6" id="PCw-Lv-ou6"/>
-                        <constraint firstItem="WqX-ul-3bb" firstAttribute="leading" secondItem="FPz-r3-icK" secondAttribute="trailing" constant="8" symbolic="YES" id="UKM-rk-Pam"/>
                         <constraint firstAttribute="trailing" secondItem="g9Q-H2-owN" secondAttribute="trailing" constant="6" id="Vgk-1g-TQz"/>
                         <constraint firstItem="ehj-lV-4qd" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" symbolic="YES" id="X1P-56-sF3"/>
                         <constraint firstItem="ehj-lV-4qd" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" id="Xc4-lP-yOd"/>
-                        <constraint firstItem="avt-tk-dyt" firstAttribute="leading" secondItem="WqX-ul-3bb" secondAttribute="trailing" constant="8" symbolic="YES" id="XzZ-iU-dsx"/>
                         <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="awQ-GB-qOL" secondAttribute="bottom" constant="8" id="Y6i-8W-GZw"/>
                         <constraint firstAttribute="trailing" secondItem="awQ-GB-qOL" secondAttribute="trailing" id="Z8w-v7-y1l"/>
                         <constraint firstItem="avt-tk-dyt" firstAttribute="trailing" secondItem="SKo-bW-ua8" secondAttribute="trailingMargin" id="ZHh-Cj-1pC"/>
@@ -170,8 +160,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Comment" width="32" height="32"/>
-        <image name="Like" width="32" height="32"/>
-        <image name="share" width="32" height="32"/>
+        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>
