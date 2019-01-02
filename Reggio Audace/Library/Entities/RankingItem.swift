@@ -11,6 +11,6 @@ struct RankingItem
 {
     var num_row:Int64?
     var des_team:String?
-    var num_matches:Int64?
+    var num_matchs:Int64?
     var num_points:Int64?
 }

@@ -8,9 +8,15 @@
 
 import UIKit
 
-class CtlPost: CtlBase
+class CtlPost: CtlBase,ProSinglePostObs
 {
-   
+    func SinglePostLoaded(singlepost: Post)
+    {
+        
+    }
+    
+    private var POST:Post = Post()
+    
  
     //Decvlarations
     let VIEPOST:ViePost = ViePost()
@@ -20,15 +26,14 @@ class CtlPost: CtlBase
         self.VIEPOST.frame = self.view.bounds
         super.viewDidLoad()
         self.view.addSubview(self.VIEPOST)
-
-    }
-
-    open override func awakeFromNib() {
-        super.awakeFromNib()
         
     }
     
-   
-    
-
+    func BIndData()
+    {
+        DispatchQueue.main.async
+        {
+            self.VIEPOST.lbl_Title.text = self.POST.des_title
+        }
+    }
 }

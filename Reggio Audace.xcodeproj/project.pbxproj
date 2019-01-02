@@ -60,8 +60,7 @@
 		D171970921BAB152008D786B /* ViePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970821BAB152008D786B /* ViePost.swift */; };
 		D171970B21BAB550008D786B /* CtlPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970A21BAB550008D786B /* CtlPost.swift */; };
 		D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173431721CBCAEA00D8E75E /* PathUtils.swift */; };
-		D174231C21AE93AC009AAEFC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231B21AE93AC009AAEFC /* PostView.swift */; };
-		D174231F21AEA99B009AAEFC /* ProPostObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231E21AEA99B009AAEFC /* ProPostObs.swift */; };
+		D174231C21AE93AC009AAEFC /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231B21AE93AC009AAEFC /* PostsView.swift */; };
 		D174232321AEAE68009AAEFC /* VcrPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174232221AEAE68009AAEFC /* VcrPosts.swift */; };
 		D174232821AED6C1009AAEFC /* CvcNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = D174232621AED6BA009AAEFC /* CvcNews.xib */; };
 		D174232921AED6C1009AAEFC /* CvcNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174232721AED6BF009AAEFC /* CvcNews.swift */; };
@@ -73,6 +72,10 @@
 		D179640121B184CE005311A8 /* PagBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640021B184CE005311A8 /* PagBase.swift */; };
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
+		D192985721DCF96800850DF2 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985621DCF96800850DF2 /* DeviceUtils.swift */; };
+		D192985921DD04D200850DF2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985821DD04D200850DF2 /* DateUtils.swift */; };
+		D192985B21DD1A6600850DF2 /* ProPostsObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985A21DD1A6600850DF2 /* ProPostsObs.swift */; };
+		D192985D21DD1DEB00850DF2 /* ProSinglePostObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */; };
 		D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D195F6B521CD1F0D001B10CB /* AppUtils.swift */; };
 		D19B3E0F21D625F600BD5F15 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E0E21D625F600BD5F15 /* RankingView.swift */; };
 		D19B3E1121D62CE300BD5F15 /* RankingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19B3E1021D62CE300BD5F15 /* RankingItem.swift */; };
@@ -148,8 +151,7 @@
 		D171970821BAB152008D786B /* ViePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePost.swift; sourceTree = "<group>"; };
 		D171970A21BAB550008D786B /* CtlPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtlPost.swift; sourceTree = "<group>"; };
 		D173431721CBCAEA00D8E75E /* PathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathUtils.swift; sourceTree = "<group>"; };
-		D174231B21AE93AC009AAEFC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		D174231E21AEA99B009AAEFC /* ProPostObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostObs.swift; sourceTree = "<group>"; };
+		D174231B21AE93AC009AAEFC /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		D174232221AEAE68009AAEFC /* VcrPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrPosts.swift; sourceTree = "<group>"; };
 		D174232621AED6BA009AAEFC /* CvcNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcNews.xib; sourceTree = "<group>"; };
 		D174232721AED6BF009AAEFC /* CvcNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CvcNews.swift; sourceTree = "<group>"; };
@@ -161,6 +163,10 @@
 		D179640021B184CE005311A8 /* PagBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagBase.swift; sourceTree = "<group>"; };
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
+		D192985621DCF96800850DF2 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
+		D192985821DD04D200850DF2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		D192985A21DD1A6600850DF2 /* ProPostsObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostsObs.swift; sourceTree = "<group>"; };
+		D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProSinglePostObs.swift; sourceTree = "<group>"; };
 		D195F6B521CD1F0D001B10CB /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		D19B3E0E21D625F600BD5F15 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		D19B3E1021D62CE300BD5F15 /* RankingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingItem.swift; sourceTree = "<group>"; };
@@ -267,6 +273,8 @@
 				D15EBBF321B6C64100835C0B /* ColorUtils.swift */,
 				D173431721CBCAEA00D8E75E /* PathUtils.swift */,
 				D195F6B521CD1F0D001B10CB /* AppUtils.swift */,
+				D192985621DCF96800850DF2 /* DeviceUtils.swift */,
+				D192985821DD04D200850DF2 /* DateUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -297,7 +305,7 @@
 				D19F62FC21B830A000726165 /* ChannelView.swift */,
 				D1633DCF21B0008A00D5CE2F /* ChatView.swift */,
 				D11B714D21AF0A6600887D2A /* FileView.swift */,
-				D174231B21AE93AC009AAEFC /* PostView.swift */,
+				D174231B21AE93AC009AAEFC /* PostsView.swift */,
 				D17963FA21B1509D005311A8 /* SeasonView.swift */,
 				D16BBFA921C161FC008AF36E /* UserView.swift */,
 				D19B3E0E21D625F600BD5F15 /* RankingView.swift */,
@@ -308,13 +316,14 @@
 		D174231D21AEA802009AAEFC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				D174231E21AEA99B009AAEFC /* ProPostObs.swift */,
 				D11B714F21AF0F3600887D2A /* ProFileObs.swift */,
 				D1633DCD21B0000000D5CE2F /* ProChatObs.swift */,
 				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
 				D19F62FE21B8312900726165 /* ProChannelObs.swift */,
 				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
 				D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */,
+				D192985A21DD1A6600850DF2 /* ProPostsObs.swift */,
+				D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -673,12 +682,14 @@
 				D15ABDB221B915C700C980EE /* CtlUserDataReset.swift in Sources */,
 				D171970921BAB152008D786B /* ViePost.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
+				D192985921DD04D200850DF2 /* DateUtils.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
 				D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
 				D1633DD421B01E9600D5CE2F /* VcrChats.swift in Sources */,
 				D15EBBF221B6C1C400835C0B /* LabBase.swift in Sources */,
+				D192985D21DD1DEB00850DF2 /* ProSinglePostObs.swift in Sources */,
 				5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */,
 				D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */,
 				D174232321AEAE68009AAEFC /* VcrPosts.swift in Sources */,
@@ -704,9 +715,11 @@
 				D160DC5821B5333D00DAEF67 /* TabMain.swift in Sources */,
 				D17963FF21B15773005311A8 /* Season.swift in Sources */,
 				D19B3E1121D62CE300BD5F15 /* RankingItem.swift in Sources */,
+				D192985B21DD1A6600850DF2 /* ProPostsObs.swift in Sources */,
 				D17963F721B146EF005311A8 /* VcrUsers.swift in Sources */,
 				D171970B21BAB550008D786B /* CtlPost.swift in Sources */,
 				D1633DC821AFEB7B00D5CE2F /* VcrBase.swift in Sources */,
+				D192985721DCF96800850DF2 /* DeviceUtils.swift in Sources */,
 				D15ABDB621B91C8800C980EE /* CtlBase.swift in Sources */,
 				D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */,
 				D19F62FD21B830A000726165 /* ChannelView.swift in Sources */,
@@ -718,10 +731,9 @@
 				D160DC5521B531B700DAEF67 /* CtlUserLogin.swift in Sources */,
 				D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */,
 				D179640321B18660005311A8 /* PagAccount.swift in Sources */,
-				D174231F21AEA99B009AAEFC /* ProPostObs.swift in Sources */,
 				D1633DCE21B0000000D5CE2F /* ProChatObs.swift in Sources */,
 				D15EBBEA21B69A1600835C0B /* SelectorUtils.swift in Sources */,
-				D174231C21AE93AC009AAEFC /* PostView.swift in Sources */,
+				D174231C21AE93AC009AAEFC /* PostsView.swift in Sources */,
 				D1633DCB21AFFDE300D5CE2F /* PagChat.swift in Sources */,
 				D16BBFA621C15F74008AF36E /* Device.swift in Sources */,
 			);

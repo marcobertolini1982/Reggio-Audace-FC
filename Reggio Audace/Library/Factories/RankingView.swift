@@ -9,24 +9,27 @@
 import Foundation
 class RankingView
 {
-    final func SetOnRakingLOad(_ prorankingobs:ProRankingObs)
+    final func SetOnRakingLoaded(_ prorankingobs:ProRankingObs)
     {
         // Raise Ranking event
         self.PRORANKINGOBSS.append(prorankingobs)
     }
     // Declarations
     private var PRORANKINGOBSS:[ProRankingObs] = [ProRankingObs]()
-    final func RaiseRankingLOaded(_ ranking:[RankingItem])
+
+
+    final func RaiseRankingLoaded(_ ranking:[RankingItem])
     {
         for l_prorankingobs in PRORANKINGOBSS
         {
-            l_prorankingobs.RankingLOaded(ranking)
+            l_prorankingobs.RankingLoaded(ranking:ranking)
         }
     }
     
     
     final func LoadRanking(prg_season:Int64 = 1)
     {
+        // Declarations
         var l_RankingItems:[RankingItem] = [RankingItem]()
         let l_Json:[String:Any] = ["prg_season":prg_season]
         guard let l_Url:URL = URL(string: UrlUtils.URL_GETRANKING) else{return}
@@ -37,18 +40,24 @@ class RankingView
         let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request){(data:Data?,reponse:URLResponse?,error:Error?)in
             do
             {
+                // Eval if no error exists and data is valid
+                guard error == nil && data != nil else{return}
+                // Try to get response json
                 guard let l_JsonResponse:[[String:Any]] = try JSONSerialization.jsonObject(with:data!, options:[]) as? [[String:Any]]
+
                 else
                 {
+                    // Return
                     return
                     
                 }
+               
                 for l_JsonObject in l_JsonResponse
                 {
                     var l_RankingItem:RankingItem = RankingItem()
                     l_RankingItem.num_row = l_JsonObject["num_row"] as? Int64
                     l_RankingItem.des_team = l_JsonObject["des_team"] as? String
-                    l_RankingItem.num_matches = l_JsonObject["num_matches"] as? Int64
+                    l_RankingItem.num_matchs = l_JsonObject["num_matchs"] as? Int64
                     l_RankingItem.num_points = l_JsonObject["num_points"] as? Int64
                     l_RankingItems.append(l_RankingItem)
                 }
@@ -59,7 +68,7 @@ class RankingView
             }
             
             // Raise event
-            self.RaiseRankingLOaded(l_RankingItems)
+            self.RaiseRankingLoaded(l_RankingItems)
         }
         l_DataTask.resume()
     }

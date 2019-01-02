@@ -23,16 +23,15 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         return TransitionStyle.scroll
     }
     
-    private var VIEWCONTROLLERS:[UIViewController]?
+    private var VIEWCONTROLLERS:[UIViewController] = [UIViewController]()
     private var PAGEINDICATOR:ViePageIndicator?
     public var ViewControllers:[UIViewController]
     {
         get
         {
-            // Declarations
-            guard let l_ViewControllers:[UIViewController] = self.VIEWCONTROLLERS else{return [UIViewController]()}
+            
             // Return
-            return l_ViewControllers
+            return self.VIEWCONTROLLERS
         }
         set
         {
@@ -54,18 +53,16 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         //Add page indicator
         self.view.addSubview(self.PAGEINDICATOR!)
         self.view.bringSubviewToFront(self.PAGEINDICATOR!)
-        if self.VIEWCONTROLLERS != nil
-        {
             // Set Initial controller
             self.setViewControllers([self.ViewControllers[0]], direction: NavigationDirection.forward, animated: true)
-        }
+        
         self.dataSource = self
         self.delegate = self
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
     {
-        guard let l_Index:Int = self.ViewControllers.index(of:viewController), l_Index > 0  else{return nil}
+        guard let l_Index:Int = self.ViewControllers.index(of:viewController), l_Index > 0   else{return nil}
         
         return self.ViewControllers[l_Index - 1]
     }
