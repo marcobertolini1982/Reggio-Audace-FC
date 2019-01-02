@@ -88,9 +88,6 @@
                     <tabBarItem key="tabBarItem" title="News" image="News" selectedImage="News" id="f4m-wr-F2h">
                         <color key="badgeColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
-                    <connections>
-                        <segue destination="E4L-6f-D60" kind="show" identifier="PostSegue" id="QSN-3t-TVi"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afA-VT-m3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

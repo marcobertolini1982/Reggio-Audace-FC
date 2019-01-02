@@ -12,7 +12,8 @@ class CtlPost: CtlBase,ProSinglePostObs
 {
     func SinglePostLoaded(singlepost: Post)
     {
-        
+        self.POST = singlepost
+        self.BIndData()
     }
     
     private var POST:Post = Post()
@@ -37,5 +38,18 @@ class CtlPost: CtlBase,ProSinglePostObs
             self.VIEPOST.lbl_Date.text = self.POST.dat_post
             self.VIEPOST.txt_Article.text = self.POST.des_post
         }
+    }
+    
+    func LoadPoastContent()
+    {
+        let l_PostView:PostsView = PostsView()
+       l_PostView.SetSinglePOstLoaded(proSinglePostObs: self)
+        l_PostView.LoadPost(prg_post: self.POST.prg_post)
+    }
+    
+    open override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.LoadPoastContent()
     }
 }

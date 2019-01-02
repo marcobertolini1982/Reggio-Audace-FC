@@ -110,7 +110,8 @@ class VcrPosts: VcrBase,ProPostsObs
     open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         //Declarations
-       
+        let l_PostPage:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "PagPost")
+        self.tabBarController?.navigationController?.pushViewController(l_PostPage, animated: true)
         
     }
     
