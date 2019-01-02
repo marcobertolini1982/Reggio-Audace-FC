@@ -110,9 +110,22 @@ class VcrPosts: VcrBase,ProPostsObs
     open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         //Declarations
-        let l_PostPage:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "PagPost")
-        self.tabBarController?.navigationController?.pushViewController(l_PostPage, animated: true)
+        let l_Index:Int = indexPath.row
+        let l_PrgPost:Int64? = self.POSTS[l_Index].prg_post
+       self.performSegue(withIdentifier: "PostSegue", sender: l_PrgPost)
         
     }
-    
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        super.prepare(for: segue, sender: sender)
+        guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost
+        else
+        {
+            return
+            
+        }
+        let l_PrgPost:Int64? = sender as? Int64
+        l_PagPost.PostDettail?.LoadPoastContent(prg_post: l_PrgPost)
+        
+    }
 }

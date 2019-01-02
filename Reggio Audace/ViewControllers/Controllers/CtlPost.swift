@@ -40,16 +40,12 @@ class CtlPost: CtlBase,ProSinglePostObs
         }
     }
     
-    func LoadPoastContent()
+    func LoadPoastContent(prg_post:Int64?)
     {
         let l_PostView:PostsView = PostsView()
        l_PostView.SetSinglePOstLoaded(proSinglePostObs: self)
-        l_PostView.LoadPost(prg_post: self.POST.prg_post)
+        l_PostView.LoadPost(prg_post: prg_post)
     }
     
-    open override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-        self.LoadPoastContent()
-    }
+   
 }
