@@ -34,6 +34,8 @@ class CtlPost: CtlBase,ProSinglePostObs
         DispatchQueue.main.async
         {
             self.VIEPOST.lbl_Title.text = self.POST.des_title
+            self.VIEPOST.lbl_Date.text = self.POST.dat_post
+            self.VIEPOST.txt_Article.text = self.POST.des_post
         }
     }
 }
