@@ -11,8 +11,8 @@ import UIKit
 public class PostsView
 {
 
-    private var ProPostsObss:[ProPostsObs] = [ProPostsObs]()
-    private var ProSinglePOstObss:[ProSinglePostObs] = [ProSinglePostObs]()
+    private lazy  var ProPostsObss:[ProPostsObs] = [ProPostsObs]()
+    private lazy var ProSinglePOstObss:[ProSinglePostObs] = [ProSinglePostObs]()
     
     func SetOnPostsLoaded(proPostsObs:ProPostsObs)
     {
@@ -75,12 +75,13 @@ public class PostsView
                 // Declarations
                 var l_Post:Post
                 
+                
                 for dict in l_JsonResponse {
                     
                     // Init
                     l_Post = Post()
                     
-                    // Set data
+                    // Get response data
                     l_Post.prg_post = dict["prg_post"] as? Int64
                     l_Post.dat_post = dict["dat_post"] as? String
                     DateUtils.FormatStringDate(&l_Post.dat_post)
@@ -88,6 +89,8 @@ public class PostsView
                     l_Post.des_post = dict["des_post"] as? String
                     l_Post.des_channel = dict["des_channel"] as? String
                     l_Post.prg_file = dict["prg_file"] as? Int64
+                    l_Post.num_reactions = dict["num_reactions"] as? Int64
+                    l_Post.num_postmessages = dict["num_postmessages"] as? Int64
                     l_Post.num_files = dict["num_files"] as? Int64
                     l_Post.num_poll = dict["num_postpolls"] as? Int64
                     
@@ -126,14 +129,18 @@ public class PostsView
             do
             {
                 guard let l_JsonResponse:[String:Any] = try JSONSerialization.jsonObject(with: data!, options:[]) as? [String:Any] else{return}
-               l_Post.prg_post = l_JsonResponse["prg_post"] as? Int64
-                l_Post.prg_file = l_JsonResponse["prg_file"] as? Int64
+                // Get response data
+                l_Post.prg_post = l_JsonResponse["prg_post"] as? Int64
+                l_Post.dat_post = l_JsonResponse["dat_post"] as? String
+                DateUtils.FormatStringDate(&l_Post.dat_post)
                 l_Post.des_title = l_JsonResponse["des_title"] as? String
                 l_Post.des_post = l_JsonResponse["des_post"] as? String
                 l_Post.des_channel = l_JsonResponse["des_channel"] as? String
+                l_Post.prg_file = l_JsonResponse["prg_file"] as? Int64
+                l_Post.num_reactions = l_JsonResponse["num_reactions"] as? Int64
+                l_Post.num_postmessages = l_JsonResponse["num_postmessages"] as? Int64
+                l_Post.num_files = l_JsonResponse["num_files"] as? Int64
                 l_Post.num_poll = l_JsonResponse["num_postpolls"] as? Int64
-                l_Post.dat_post = l_JsonResponse["dat_post"] as? String
-                DateUtils.FormatStringDate(&l_Post.dat_post)
                 
             }
             catch let e as NSError

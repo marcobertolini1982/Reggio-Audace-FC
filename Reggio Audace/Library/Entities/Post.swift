@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class Post:NSObject
+class Post
 {
     
     var prg_post: Int64?
@@ -16,7 +16,9 @@ class Post:NSObject
     var des_post:String?
     var des_channel:String?
     var prg_file:Int64?
-    var des_file:String?
+    var num_reactions:Int64?
+    var num_postmessages:Int64?
+    var des_file:String? 
     var num_files:Int64?
     var num_poll:Int64?
     

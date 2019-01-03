@@ -11,7 +11,7 @@ import Foundation
 class SeasonView
 {
     //Declarations
-    var proSeasonObss:[ProSeasonObs] = [ProSeasonObs]()
+    private lazy var proSeasonObss:[ProSeasonObs] = [ProSeasonObs]()
     func RaiseOnSeasonLoaded(seasons:[Season])
     {
         for l_ProSeasonObs in self.proSeasonObss

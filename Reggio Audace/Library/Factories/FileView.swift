@@ -11,7 +11,7 @@ import UIKit
 class FileView
 {
     
-    private var ProFileObss = [ProFileObs]()
+    private lazy var ProFileObss = [ProFileObs]()
     
     func SetOnFileLoaded(proFileObs:ProFileObs)
     {

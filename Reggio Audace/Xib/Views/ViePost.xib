@@ -14,7 +14,9 @@
             <connections>
                 <outlet property="CONTENTVIEW" destination="iN0-l3-epB" id="MTN-1S-uHt"/>
                 <outlet property="img_Post" destination="awQ-GB-qOL" id="S13-aE-fFE"/>
+                <outlet property="lbl_Comment" destination="c9c-BE-VCg" id="60U-3o-psz"/>
                 <outlet property="lbl_Date" destination="g2q-KX-6In" id="TIo-lk-Hbe"/>
+                <outlet property="lbl_Reactions" destination="jli-v7-TTU" id="ikr-qI-Q0F"/>
                 <outlet property="lbl_Title" destination="g9Q-H2-owN" id="MKF-z2-3cF"/>
                 <outlet property="txt_Article" destination="ehj-lV-4qd" id="ste-Du-voz"/>
             </connections>
@@ -203,12 +205,12 @@
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="zNf-dV-MnO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-191.25" y="314.78873239436621"/>
+            <point key="canvasLocation" x="-574" y="303"/>
         </view>
     </objects>
     <resources>
-        <image name="Comment" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Comment" width="32" height="32"/>
+        <image name="Like" width="32" height="32"/>
+        <image name="share" width="32" height="32"/>
     </resources>
 </document>

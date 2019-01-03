@@ -16,7 +16,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
     }
     
     // Declarations
-    private var POST:Post = Post()
+   lazy private var POST:Post = Post()
     
     func SinglePostLoaded(singlepost: Post)
     {
@@ -47,6 +47,8 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
             self.VIEPOST.lbl_Title.text = self.POST.des_title
             self.VIEPOST.lbl_Date.text = self.POST.dat_post
             self.VIEPOST.txt_Article.text = self.POST.des_post
+            self.VIEPOST.lbl_Comment.text = "\(self.POST.num_postmessages ?? 0)"
+            self.VIEPOST.lbl_Reactions.text = "\(self.POST.num_reactions ?? 0)"
         }
         
     }

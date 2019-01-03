@@ -11,7 +11,7 @@ import Foundation
 class ChatView
 {
     //Declarations
-    private var proChatObss:[ProChatObs] = [ProChatObs]()
+    private lazy var proChatObss:[ProChatObs] = [ProChatObs]()
     
 
     func SetOnChatsLoaded(proChatObss:ProChatObs)

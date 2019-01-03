@@ -12,7 +12,7 @@ class UserView
     
     
     // Declarations
-    private var proUserObss:[ProUserObs] = [ProUserObs]()
+    private lazy var proUserObss:[ProUserObs] = [ProUserObs]()
     
     open func AddUserObs(prouserobs:ProUserObs)
     {

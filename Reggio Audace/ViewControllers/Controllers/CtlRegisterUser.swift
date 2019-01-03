@@ -12,7 +12,7 @@ import FirebaseInstanceID
 class CtlRegisterUser: CtlBase
 {
     // Declarations
-    @IBOutlet weak var txt_User:UITextField!
+    @IBOutlet weak  var txt_User:UITextField!
     @IBOutlet weak var txt_Password:UITextField!
     @IBOutlet weak var txt_password_confirm:UITextField!
     @IBOutlet weak var btn_Register:UIButton!

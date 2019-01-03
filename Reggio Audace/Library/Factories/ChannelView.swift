@@ -10,7 +10,7 @@ import Foundation
 
 class ChannelView
 {
-    private var ProChannelObss:[ProChannelObs] = [ProChannelObs]()
+    private lazy var ProChannelObss:[ProChannelObs] = [ProChannelObs]()
     public func SetOnChannelLoaded(proChannelObs:ProChannelObs)
     {
        self.ProChannelObss.append(proChannelObs)

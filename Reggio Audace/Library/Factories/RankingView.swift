@@ -9,13 +9,15 @@
 import Foundation
 class RankingView
 {
+    // Declarations
+    private lazy var PRORANKINGOBSS:[ProRankingObs] = [ProRankingObs]()
+    
     final func SetOnRakingLoaded(_ prorankingobs:ProRankingObs)
     {
         // Raise Ranking event
         self.PRORANKINGOBSS.append(prorankingobs)
     }
-    // Declarations
-    private var PRORANKINGOBSS:[ProRankingObs] = [ProRankingObs]()
+   
 
 
     final func RaiseRankingLoaded(_ ranking:[RankingItem])
