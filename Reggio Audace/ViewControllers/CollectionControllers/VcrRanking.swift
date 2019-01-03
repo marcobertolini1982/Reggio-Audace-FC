@@ -8,97 +8,92 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
-class VcrRankingCollectionViewController: VcrBase,ProRankingObs
+class VcrRanking: VcrBase,ProRankingObs
 {
+      // Declarations
+     var RANKING:[RankingItem] = [RankingItem]()
+    
+    
     open override var reuseIdentifier: String
     {
+        // Return
         return "Ranking"
     }
     
     open override var NibNabe: String
     {
+        // Return
         return "CvcRankingItem"
     }
     
-    func RankingLOaded(_ ranking: [RankingItem])
+    func RankingLoaded(ranking: [RankingItem])
     {
+        // Set property
         self.RANKING = ranking
+        self.BindData()
     }
     
-    var RANKING:[RankingItem] = [RankingItem]()
+    open override func Init()
+    {
+        super.Init()
+        self.SetLayoutVertical(heigth: 60)
+    }
+
+    private final func LoadRecord()
+    {
+        // Declarations
+        let l_Rankingview:RankingView = RankingView()
+        // Add ranking observer
+        l_Rankingview.SetOnRakingLoaded(self)
+        //
+        l_Rankingview.LoadRanking()
+    }
+    
     override func viewDidLoad()
     {
+        // Call super class method
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-
-        // Do any additional setup after loading the view.
+        // Init
+        self.Init()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    open override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.LoadRecord()
     }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
-    
-        return cell
+    override func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
+        // Return
+        return 1
     }
 
-    // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        // Return
+        return self.RANKING.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        // Declarations
+        let l_Index:Int = indexPath.row
+        let l_RankingItem:RankingItem = self.RANKING[l_Index]
+        guard  let l_Cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcRankingItem
+        else
+      {
+        return UICollectionViewCell()
+      }
+        
+        l_Cell.lbl_NUmRow.text = String(l_RankingItem.num_row!)
+        l_Cell.lbl_DesTeam.text = l_RankingItem.des_team
+        l_Cell.lbl_NUmMatches.text = String(l_RankingItem.num_matchs!)
+        l_Cell.lbl_NUmPoints.text = String(l_RankingItem.num_points!)
+        return l_Cell
     }
 
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }

@@ -89,7 +89,7 @@
                         <color key="badgeColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
-                        <segue destination="E4L-6f-D60" kind="show" identifier="PostSegue" id="QSN-3t-TVi"/>
+                        <segue destination="E4L-6f-D60" kind="show" identifier="PostSegue" id="guE-cA-0Mt"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afA-VT-m3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,6 +105,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TW-0H-HyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2026" y="725"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="KBf-64-ofQ">
+            <objects>
+                <collectionViewController id="LDx-Wu-beU" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bfg-7g-Wk1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dad-xx-5zR">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eL9-Va-EUE">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="LDx-Wu-beU" id="MrM-bY-JXA"/>
+                            <outlet property="delegate" destination="LDx-Wu-beU" id="DzA-Wy-W3l"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5t3-ss-jNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1234" y="726"/>
         </scene>
         <!--Vcr Chats-->
         <scene sceneID="LQR-u9-GmY">
@@ -234,10 +268,35 @@
             </objects>
             <point key="canvasLocation" x="-2044" y="3090"/>
         </scene>
+        <!--Vcr Ranking-->
+        <scene sceneID="vve-fy-w0Y">
+            <objects>
+                <collectionViewController storyboardIdentifier="VcrRanking" id="J1x-Rl-sQP" customClass="VcrRanking" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="G43-ke-Egt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0oZ-Oe-iqm">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="J1x-Rl-sQP" id="Eqw-Cq-NMk"/>
+                            <outlet property="delegate" destination="J1x-Rl-sQP" id="uHJ-zW-aWZ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pI-3U-iGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1971" y="3847"/>
+        </scene>
         <!--Stagione-->
         <scene sceneID="iFe-Mr-wtn">
             <objects>
-                <collectionViewController id="8TC-GE-GRC" customClass="VcrSeasonMenu" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="VcrSeasonMenu" id="8TC-GE-GRC" customClass="VcrSeasonMenu" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" id="vGl-7q-8Q5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

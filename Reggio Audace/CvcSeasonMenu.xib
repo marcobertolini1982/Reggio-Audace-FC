@@ -170,15 +170,23 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="mC5-Zp-wYs"/>
             <size key="customSize" width="352" height="538"/>
-            <point key="canvasLocation" x="495" y="-1046.8309859154929"/>
+            <connections>
+                <outletCollection property="MENUS" destination="fNw-ey-ZhX" collectionClass="NSMutableArray" id="UP0-mn-LvZ"/>
+                <outletCollection property="MENUS" destination="Eql-5V-XbQ" collectionClass="NSMutableArray" id="stP-fO-Egc"/>
+                <outletCollection property="MENUS" destination="aMh-bj-iMc" collectionClass="NSMutableArray" id="49F-Cn-PBl"/>
+                <outletCollection property="MENUS" destination="hul-nw-VVe" collectionClass="NSMutableArray" id="2sP-bc-U7m"/>
+                <outletCollection property="MENUS" destination="Z5L-o1-zd4" collectionClass="NSMutableArray" id="obD-HI-uts"/>
+                <outletCollection property="MENUS" destination="l2F-1s-GLf" collectionClass="NSMutableArray" id="Qb2-mC-T8d"/>
+            </connections>
+            <point key="canvasLocation" x="159" y="-1058"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Image Button 1" width="960" height="640"/>
-        <image name="Image Button 2" width="960" height="640"/>
-        <image name="Image Button 3" width="960" height="640"/>
-        <image name="Image Button 4" width="960" height="640"/>
-        <image name="Image Button 5" width="960" height="640"/>
-        <image name="Image Button 6" width="960" height="640"/>
+        <image name="Image Button 1" width="480" height="320"/>
+        <image name="Image Button 2" width="480" height="320"/>
+        <image name="Image Button 3" width="480" height="320"/>
+        <image name="Image Button 4" width="480" height="320"/>
+        <image name="Image Button 5" width="480" height="320"/>
+        <image name="Image Button 6" width="480" height="320"/>
     </resources>
 </document>

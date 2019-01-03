@@ -16,9 +16,13 @@ class UrlUtils
         return "http://portal.lensolution.it:8080/wRegia"
     }
     //Post
-    public static var  URL_GETPOSTS:String
+    public static var  URL_LOADPOSTS:String
     {
-        return URL_WEBAPP + "/GetPosts"
+        return URL_WEBAPP + "/LoadPosts"
+    }
+    public static var  URL_LOADPOST:String
+    {
+        return URL_WEBAPP + "/LoadPost"
     }
     
     public static var URL_GETFILES:String

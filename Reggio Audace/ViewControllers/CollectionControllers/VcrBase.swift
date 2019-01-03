@@ -33,7 +33,8 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate
         self.SetTextFieldsDelegate()
         
     }
-    func SetLayoutVertical(heigth: CGFloat) {
+    func SetLayoutVertical(heigth: CGFloat)
+    {
         
         // Declarations
         let l_Layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()

@@ -9,5 +9,5 @@
 import Foundation
 protocol ProRankingObs
 {
-    func RankingLOaded(_ ranking:[RankingItem])
+    func RankingLoaded(ranking:[RankingItem])
 }

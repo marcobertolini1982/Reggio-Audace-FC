@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VcrPosts: VcrBase,ProPostObs
+class VcrPosts: VcrBase,ProPostsObs
 {
     open override var NibNabe: String
     {
@@ -21,6 +21,7 @@ class VcrPosts: VcrBase,ProPostObs
     
     // Declarations
     var POSTS:[Post] = [Post]()
+    
     func PostsLoaded(posts:[Post])
     {
         
@@ -41,16 +42,17 @@ class VcrPosts: VcrBase,ProPostObs
     
     
     
-    func LoadRecord() {
-        
+    func LoadRecord()
+    {
         // Declarations
-        let l_PostView : PostView = PostView()
+        let l_PostsView : PostsView = PostsView()
         
         // Add event
-        l_PostView.SetOnPostsLoaded(proPostObs: self)
+        l_PostsView.SetOnPostsLoaded(proPostsObs: self)
         
         // Load file
-        l_PostView.LoadPosts()
+        l_PostsView.LoadPosts(cod_device:DeviceUtils.CodDevice)
+        
         
         
     }
@@ -76,7 +78,8 @@ class VcrPosts: VcrBase,ProPostObs
         return 1
     }
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
         // #warning Incomplete implementation, return the number of items
         return POSTS.count
     }
@@ -88,7 +91,7 @@ class VcrPosts: VcrBase,ProPostObs
         let l_Index:Int = indexPath.row
         
         // Eval registration cell
-        guard let l_Cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CvcNews
+        guard let l_Cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcNews
         else {
             return UICollectionViewCell()
         }
@@ -107,31 +110,22 @@ class VcrPosts: VcrBase,ProPostObs
     open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         //Declarations
-       
-        let l_index:Int = indexPath.row
+        let l_Index:Int = indexPath.row
+        let l_PrgPost:Int64? = self.POSTS[l_Index].prg_post
+       self.performSegue(withIdentifier: "PostSegue", sender: l_PrgPost)
         
-        self.performSegue(withIdentifier: "PostSegue", sender:l_index)
     }
-    
-    
-    
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        guard let l_index :Int = sender as? Int else{return}
-        let l_IndexPath:IndexPath = IndexPath(row: l_index, section: 0)
-        guard let l_Cell:CvcNews = self.collectionView.cellForItem(at: l_IndexPath) as? CvcNews else{return}
-        let l_Post:Post = self.POSTS[l_index]
-        switch segue.identifier {
-        case "PostSegue":
-            guard let l_PagPost:PagPost = segue.destination as? PagPost, let l_CtlPost:CtlPost = l_PagPost.PostDettail else{return}
+        super.prepare(for: segue, sender: sender)
+        guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost
+        else
+        {
+            return
             
-            l_CtlPost.VIEPOST.lbl_Title.text      = l_Post.des_title
-            l_CtlPost.VIEPOST.txt_Article.text    = l_Post.des_post
-            l_CtlPost.VIEPOST.lbl_Date.text       = l_Post.dat_post
-            l_CtlPost.VIEPOST.img_Post.image      = l_Cell.img_prg_file.image
-            
-        default:
-            break
         }
+        let l_PrgPost:Int64? = sender as? Int64
+        l_PagPost.PostDettail?.LoadPoastContent(prg_post: l_PrgPost)
+        
     }
 }

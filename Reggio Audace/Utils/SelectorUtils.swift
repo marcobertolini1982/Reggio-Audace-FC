@@ -11,11 +11,15 @@ class SelectorUtils
 {
     public static var EditSelector:Selector
     {
-        return #selector(CtlUserData.OnEditClick(_:))
+        return #selector(CtlUserData.OnEditClick)
     }
     
     public static var DoneSelector:Selector
     {
-        return #selector(CtlUserData.OnDoneClick(_:))
+        return #selector(CtlUserData.OnDoneClick)
+    }
+    public static var RankingClickSelector:Selector
+    {
+        return #selector(VcrSeasonMenu.OnRanking_Click)
     }
 }
