@@ -81,7 +81,7 @@
                         <state key="normal" image="share"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P20-O0-nWo">
-                        <rect key="frame" x="249" y="269" width="36" height="20"/>
+                        <rect key="frame" x="251" y="269" width="34" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="OwA-Gp-lCX"/>
                         </constraints>
@@ -89,14 +89,14 @@
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="15" name="Hind-SemiBold"/>
+                                    <font key="NSFont" size="15" name="Hind-Light"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPX-N5-ihO">
-                        <rect key="frame" x="227" y="269" width="20" height="20"/>
+                        <rect key="frame" x="229" y="269" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="boZ-oK-Z8G"/>
                             <constraint firstAttribute="height" constant="20" id="fRU-HQ-e6h"/>
@@ -104,7 +104,7 @@
                         <state key="normal" image="Like"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-fb-dNa">
-                        <rect key="frame" x="162" y="273" width="20" height="20"/>
+                        <rect key="frame" x="166" y="273" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="ECE-ZY-b0G"/>
                             <constraint firstAttribute="height" constant="20" id="pvk-6z-Mdi"/>
@@ -112,7 +112,7 @@
                         <state key="normal" image="Comment"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIH-Cg-Xhr">
-                        <rect key="frame" x="185" y="269" width="36" height="20"/>
+                        <rect key="frame" x="189" y="269" width="34" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="gcW-Zy-IdC"/>
                         </constraints>
@@ -120,7 +120,7 @@
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="15" name="Hind-SemiBold"/>
+                                    <font key="NSFont" size="15" name="Hind-Light"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
