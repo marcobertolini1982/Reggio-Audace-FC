@@ -10,7 +10,7 @@ import UIKit
 
 class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate
 {
-    private var WILLTRANSITIONTO:UIViewController?
+    private  var WILLTRANSITIONTO:UIViewController?
     // Declarations
     
     open var IndicatorsText:[String]
