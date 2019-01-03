@@ -8,24 +8,34 @@
 
 import UIKit
 
-class CtlPost: CtlBase,ProSinglePostObs
+class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
 {
+    func FileLoaded(data: Data)
+    {
+        self.BindImageData(data: data)
+    }
+    
+    // Declarations
+    private var POST:Post = Post()
+    
     func SinglePostLoaded(singlepost: Post)
     {
         self.POST = singlepost
         self.BIndData()
+        guard let l_PrgFile:Int64 = self.POST.prg_file else{return}
+       self.LoadPostImage(prg_file: l_PrgFile)
     }
     
-    private var POST:Post = Post()
-    
+  
  
     //Decvlarations
     let VIEPOST:ViePost = ViePost()
    
     override func viewDidLoad()
     {
-        self.VIEPOST.frame = self.view.bounds
+       
         super.viewDidLoad()
+        self.VIEPOST.frame = self.view.bounds
         self.view.addSubview(self.VIEPOST)
         
     }
@@ -38,6 +48,7 @@ class CtlPost: CtlBase,ProSinglePostObs
             self.VIEPOST.lbl_Date.text = self.POST.dat_post
             self.VIEPOST.txt_Article.text = self.POST.des_post
         }
+        
     }
     
     func LoadPoastContent(prg_post:Int64?)
@@ -45,7 +56,24 @@ class CtlPost: CtlBase,ProSinglePostObs
         let l_PostView:PostsView = PostsView()
        l_PostView.SetSinglePOstLoaded(proSinglePostObs: self)
         l_PostView.LoadPost(prg_post: prg_post)
+        
     }
     
-   
+    
+
+    final private func BindImageData(data:Data)
+    {
+        DispatchQueue.main.async
+        {
+            self.VIEPOST.img_Post.image = UIImage(data:data)
+        }
+    }
+    
+    private final func LoadPostImage(prg_file:Int64)
+    {
+        let l_FileView:FileView = FileView()
+        l_FileView.SetOnFileLoaded(proFileObs: self)
+        l_FileView.LoadFile(prg_file: prg_file)
+        
+    }
 }

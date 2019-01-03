@@ -10,6 +10,8 @@ import UIKit
 
 class VcrPosts: VcrBase,ProPostsObs
 {
+    // Declarations
+    var POSTS:[Post] = [Post]()
     open override var NibNabe: String
     {
         return "CvcNews"
@@ -19,8 +21,7 @@ class VcrPosts: VcrBase,ProPostsObs
         return "PostCell"
     }
     
-    // Declarations
-    var POSTS:[Post] = [Post]()
+   
     
     func PostsLoaded(posts:[Post])
     {
@@ -117,15 +118,11 @@ class VcrPosts: VcrBase,ProPostsObs
     }
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        super.prepare(for: segue, sender: sender)
-        guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost
-        else
-        {
-            return
-            
-        }
+       
+        // Eval
+        guard let l_PagPost:PagPost = segue.destination as? PagPost else{return}
+        // Declarations
         let l_PrgPost:Int64? = sender as? Int64
         l_PagPost.PostDettail?.LoadPoastContent(prg_post: l_PrgPost)
-        
     }
 }

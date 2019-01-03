@@ -113,6 +113,7 @@ public class PostsView
    
     func LoadPost(prg_post:Int64?)
     {
+        // Declarations
         let l_Post:Post = Post()
         let l_Json:[String:Any?] = ["prg_post":prg_post]
         guard let l_Url:URL = URL(string: UrlUtils.URL_LOADPOST) else{return}
