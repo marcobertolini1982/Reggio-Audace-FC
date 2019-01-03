@@ -80,15 +80,67 @@
                         </constraints>
                         <state key="normal" image="share"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P20-O0-nWo">
+                        <rect key="frame" x="251" y="269" width="34" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="OwA-Gp-lCX"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="15" name="Hind-Light"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPX-N5-ihO">
+                        <rect key="frame" x="229" y="269" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="boZ-oK-Z8G"/>
+                            <constraint firstAttribute="height" constant="20" id="fRU-HQ-e6h"/>
+                        </constraints>
+                        <state key="normal" image="Like"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-fb-dNa">
+                        <rect key="frame" x="166" y="273" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="ECE-ZY-b0G"/>
+                            <constraint firstAttribute="height" constant="20" id="pvk-6z-Mdi"/>
+                        </constraints>
+                        <state key="normal" image="Comment"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIH-Cg-Xhr">
+                        <rect key="frame" x="189" y="269" width="34" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="gcW-Zy-IdC"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="15" name="Hind-Light"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="bNn-Uy-n5D" firstAttribute="top" secondItem="Lpb-Xd-BMo" secondAttribute="top" id="3sX-ih-2E5"/>
+                <constraint firstItem="zbN-9d-rx5" firstAttribute="leading" secondItem="P20-O0-nWo" secondAttribute="trailing" constant="5" id="4nS-7c-iCF"/>
+                <constraint firstAttribute="bottom" secondItem="DIH-Cg-Xhr" secondAttribute="bottom" constant="10" id="7mQ-jX-sEy"/>
+                <constraint firstItem="P20-O0-nWo" firstAttribute="leading" secondItem="fPX-N5-ihO" secondAttribute="trailing" constant="2" id="9F8-yg-OpV"/>
                 <constraint firstItem="zbN-9d-rx5" firstAttribute="leading" secondItem="uZq-8g-PfD" secondAttribute="trailing" constant="10" id="HIT-JU-uV3"/>
+                <constraint firstAttribute="bottom" secondItem="fPX-N5-ihO" secondAttribute="bottom" constant="10" id="HLd-dt-SsT"/>
                 <constraint firstAttribute="trailing" secondItem="tTj-4Z-Tbs" secondAttribute="trailing" constant="10" id="Ici-JW-zhg"/>
                 <constraint firstAttribute="trailing" secondItem="IU2-Eq-ywo" secondAttribute="trailing" id="Iq0-Wm-c5v"/>
                 <constraint firstItem="IU2-Eq-ywo" firstAttribute="leading" secondItem="Lpb-Xd-BMo" secondAttribute="leading" id="KBg-z1-sGC"/>
+                <constraint firstItem="DIH-Cg-Xhr" firstAttribute="leading" secondItem="lIT-fb-dNa" secondAttribute="trailing" constant="3" id="NyS-L3-Ju9"/>
+                <constraint firstAttribute="bottom" secondItem="P20-O0-nWo" secondAttribute="bottom" constant="10" id="SOq-58-SXY"/>
                 <constraint firstItem="uZq-8g-PfD" firstAttribute="top" secondItem="IU2-Eq-ywo" secondAttribute="bottom" constant="10" id="Sco-vU-ov4"/>
                 <constraint firstItem="zbN-9d-rx5" firstAttribute="top" secondItem="IU2-Eq-ywo" secondAttribute="bottom" constant="10" id="VnN-LZ-3Mm"/>
                 <constraint firstItem="IU2-Eq-ywo" firstAttribute="top" secondItem="Lpb-Xd-BMo" secondAttribute="top" id="X3W-gr-7pc"/>
@@ -102,7 +154,9 @@
                 <constraint firstItem="uZq-8g-PfD" firstAttribute="leading" secondItem="Lpb-Xd-BMo" secondAttribute="leading" constant="10" id="iOY-2v-iRp"/>
                 <constraint firstItem="eba-yU-F5O" firstAttribute="leading" secondItem="Lpb-Xd-BMo" secondAttribute="leading" constant="10" id="rOd-yh-Gm1"/>
                 <constraint firstAttribute="trailing" secondItem="bNn-Uy-n5D" secondAttribute="trailing" id="tGu-Yc-ckB"/>
+                <constraint firstItem="fPX-N5-ihO" firstAttribute="leading" secondItem="DIH-Cg-Xhr" secondAttribute="trailing" constant="6" id="uZj-AD-por"/>
                 <constraint firstAttribute="bottom" secondItem="bNn-Uy-n5D" secondAttribute="bottom" constant="40" id="wDl-ys-2mF"/>
+                <constraint firstAttribute="bottom" secondItem="lIT-fb-dNa" secondAttribute="bottom" constant="6" id="xX8-FQ-062"/>
                 <constraint firstItem="tTj-4Z-Tbs" firstAttribute="top" secondItem="Lpb-Xd-BMo" secondAttribute="top" constant="10" id="ym9-HN-R4h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="79Z-5h-3dA"/>
@@ -118,6 +172,8 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="Comment" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
         <image name="share" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>
