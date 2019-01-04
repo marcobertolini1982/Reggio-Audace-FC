@@ -13,6 +13,20 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     // Declarations
     private lazy var WILLTRANSITIONTO:UIViewController = UIViewController()
     
+    func Init()
+    {
+        let l_WIDTH:CGFloat  = self.view.bounds.width
+        let l_RECT:CGRect    = CGRect(x: 0, y: 0, width: l_WIDTH, height:21)
+        self.PAGEINDICATOR = ViePageIndicator(frame:l_RECT)
+        self.SetIndicatorLabels()
+        //Add page indicator
+        self.view.addSubview(self.PAGEINDICATOR!)
+        self.view.bringSubviewToFront(self.PAGEINDICATOR!)
+        // Set Initial controller
+        self.SetSelectedIndex(index:0)
+        self.dataSource = self
+        self.delegate = self
+    }
     public final var WillTransitionTo:UIViewController
     {
         return self.WILLTRANSITIONTO
@@ -51,18 +65,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     {
         // Call base class method
         super.viewDidLoad()
-        let l_WIDTH:CGFloat  = self.view.bounds.width
-        let l_RECT:CGRect    = CGRect(x: 0, y: 0, width: l_WIDTH, height:21)
-        self.PAGEINDICATOR = ViePageIndicator(frame:l_RECT)
-        self.SetIndicatorLabels()
-        //Add page indicator
-        self.view.addSubview(self.PAGEINDICATOR!)
-        self.view.bringSubviewToFront(self.PAGEINDICATOR!)
-            // Set Initial controller
-            self.setViewControllers([self.ViewControllers[0]], direction: NavigationDirection.forward, animated: true)
-        
-        self.dataSource = self
-        self.delegate = self
+        self.Init()
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
@@ -96,14 +99,14 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         
         if completed
         {
-            self.PAGEINDICATOR![l_PreviousIndex].textColor = UIColor.black
-            self.PAGEINDICATOR![l_NextIndex].textColor = GARNETCOLOR
+           self.SetActiveIndicator(activeindex: l_NextIndex)
+           self.SetPreviousIndex(previousindex: l_PreviousIndex)
         }
         
         else
         {
-             self.PAGEINDICATOR![l_PreviousIndex].textColor = GARNETCOLOR
-             self.PAGEINDICATOR![l_NextIndex].textColor     = UIColor.black
+          self.SetActiveIndicator(activeindex:l_PreviousIndex)
+          self.SetPreviousIndex(previousindex:l_NextIndex)
         }
     }
     
@@ -118,5 +121,29 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         }
     }
     
-    func Set
+    func SetActiveIndicator(activeindex:Int)
+    {
+        self.PAGEINDICATOR![activeindex].textColor =  GARNETCOLOR
+        
+    }
+    
+    func SetPreviousIndex(previousindex:Int)
+    {
+        self.PAGEINDICATOR![previousindex].textColor = UIColor.black
+    }
+    
+    func SetSelectedIndex(index:Int)
+    {
+        self.setViewControllers([self.VIEWCONTROLLERS[index]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
+        self.SetActiveIndicator(activeindex: index)
+        let l_CurrentIndicator:LabIndicator = self.PAGEINDICATOR![index]
+        for l_Indicator in self.PAGEINDICATOR!.INDICATORS
+        {
+            if l_Indicator == l_CurrentIndicator
+            {
+                continue
+            }
+            l_Indicator.textColor = UIColor.black
+        }
+    }
 }

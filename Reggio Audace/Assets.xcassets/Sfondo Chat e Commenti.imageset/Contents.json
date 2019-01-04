@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Sfondo Marmorizzato.png",
+      "filename" : "Sfondo Chat con un tono di grigio piu tenue.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Sfondo Marmorizzato-1.png",
+      "filename" : "Sfondo Chat con un tono di grigio piu tenue-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Sfondo Marmorizzato-2.png",
+      "filename" : "Sfondo Chat con un tono di grigio piu tenue-2.png",
       "scale" : "3x"
     }
   ],
