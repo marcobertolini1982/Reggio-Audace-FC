@@ -72,6 +72,7 @@
 		D179640121B184CE005311A8 /* PagBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640021B184CE005311A8 /* PagBase.swift */; };
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
+		D1855E3521DF56F600F812C0 /* VcrPostImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3421DF56F600F812C0 /* VcrPostImages.swift */; };
 		D192985721DCF96800850DF2 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985621DCF96800850DF2 /* DeviceUtils.swift */; };
 		D192985921DD04D200850DF2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985821DD04D200850DF2 /* DateUtils.swift */; };
 		D192985B21DD1A6600850DF2 /* ProPostsObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985A21DD1A6600850DF2 /* ProPostsObs.swift */; };
@@ -163,6 +164,7 @@
 		D179640021B184CE005311A8 /* PagBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagBase.swift; sourceTree = "<group>"; };
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
+		D1855E3421DF56F600F812C0 /* VcrPostImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrPostImages.swift; sourceTree = "<group>"; };
 		D192985621DCF96800850DF2 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		D192985821DD04D200850DF2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D192985A21DD1A6600850DF2 /* ProPostsObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostsObs.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				D15ABDB721B9202E00C980EE /* VcrMedia.swift */,
 				D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */,
 				D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */,
+				D1855E3421DF56F600F812C0 /* VcrPostImages.swift */,
 			);
 			path = CollectionControllers;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */,
 				D174232321AEAE68009AAEFC /* VcrPosts.swift in Sources */,
 				D179640121B184CE005311A8 /* PagBase.swift in Sources */,
+				D1855E3521DF56F600F812C0 /* VcrPostImages.swift in Sources */,
 				D1BE6D9721AD7D6100114084 /* Post.swift in Sources */,
 				D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */,
 				D15ABDBC21B9353D00C980EE /* CtlUserData.swift in Sources */,
