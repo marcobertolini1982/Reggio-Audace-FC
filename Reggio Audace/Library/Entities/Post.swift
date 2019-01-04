@@ -9,7 +9,7 @@ import UIKit
 
 class Post
 {
-    
+    // Declarations
     var prg_post: Int64?
     var dat_post:String?
     var des_title: String?

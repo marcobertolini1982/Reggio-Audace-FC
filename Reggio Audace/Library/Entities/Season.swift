@@ -10,6 +10,7 @@ import Foundation
 
 class Season
 {
+    // Declarations
     var prg_lastuser:Int64?
     var dat_lastmodified:String?
     var prg_season:Int64?

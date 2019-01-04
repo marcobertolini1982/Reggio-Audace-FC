@@ -64,15 +64,17 @@ class VcrPosts: VcrBase,ProPostsObs
         
         // Super
         super.viewDidLoad()
-        
-        // Init
-        self.Init()
-        
         // Load record
-        self.LoadRecord()
+        
         
     }
-
+    
+    open override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.LoadRecord()
+    }
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int
     {
         // #warning Incomplete implementation, return the number of sections
@@ -101,8 +103,8 @@ class VcrPosts: VcrBase,ProPostsObs
         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
         // Set data
         l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
-        l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
-        l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
+        l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? Int64())"
+        l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? Int64())"
         // Return
         return l_Cell
         

@@ -9,6 +9,7 @@
 import Foundation
 class Chat
 {
+    // Declarations
     var prg_chat: Int64?
     var prg_user:Int64?
     var des_user: String?

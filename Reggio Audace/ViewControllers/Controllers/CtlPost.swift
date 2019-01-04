@@ -10,13 +10,19 @@ import UIKit
 
 class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
 {
+    // Declarations
+    private lazy var POST:Post = Post
+    
+    public final var Post:Post
+    {
+        return self.POST
+    }
     func FileLoaded(data: Data)
     {
         self.BindImageData(data: data)
     }
     
-    // Declarations
-   lazy private var POST:Post = Post()
+   
     
     func SinglePostLoaded(singlepost: Post)
     {
@@ -28,7 +34,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
     
   
  
-    //Decvlarations
+    //Declarations
     let VIEPOST:ViePost = ViePost()
    
     override func viewDidLoad()

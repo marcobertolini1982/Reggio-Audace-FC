@@ -10,9 +10,10 @@ import UIKit
 
 public class PostsView
 {
-
+    //Declarations
     private lazy  var ProPostsObss:[ProPostsObs] = [ProPostsObs]()
     private lazy var ProSinglePOstObss:[ProSinglePostObs] = [ProSinglePostObs]()
+    private lazy var ProPostFilesObss:[ProPostFilesObs] = [ProPostFilesObs]()
     
     func SetOnPostsLoaded(proPostsObs:ProPostsObs)
     {
@@ -40,6 +41,19 @@ public class PostsView
             l_ProSinglePostObs.SinglePostLoaded(singlepost: post)
         }
     }
+    func RaisePoastFilesLoaded(postfiles:[File])
+    {
+        for proPostFilesObs in self.ProPostFilesObss
+        {
+            proPostFilesObs.PostFilesLoaded(postfiles: postfiles)
+        }
+    }
+    
+    func SetOnPostFilesLoaded(proPostFilesObs:ProPostFilesObs)
+    {
+        self.ProPostFilesObss.append(proPostFilesObs)
+    }
+    
     func LoadPosts(cod_device:String?)
     {
         
@@ -152,4 +166,51 @@ public class PostsView
         l_DataTask.resume()
     }
     
+    
+    final func GetPostsFiles(prg_post:Int64?)
+    {
+        var l_Files:[File] = [File]()
+        // Declarations
+        let l_Json:[String:Any?] = ["prg_post":prg_post]
+        // Eval
+        guard let l_Url:URL = URL(string:UrlUtils.URL_GETPOSTFILES) else {return}
+        guard let l_Data:Data = try? JSONSerialization.data(withJSONObject:l_Json, options:[]) else{return}
+        // Declarations
+        var l_Request:URLRequest = URLRequest(url:l_Url)
+        // Set Properties
+        l_Request.httpMethod = "POST"
+        l_Request.httpBody = l_Data
+        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request){(data:Data?,response:URLResponse?,error:Error?)in
+            guard error == nil && data != nil else{return}
+            
+            do
+            {
+                // Try to convert data to json
+                guard let l_JsonResponse:[[String:Any]] = try JSONSerialization.jsonObject(with:data!, options:[]) as? [[String:Any]]
+                else
+                {
+                    // Return
+                    return
+                    
+                }
+                // Declarations
+                var  l_File:File
+                for l_JsonObj in l_JsonResponse
+                {
+                    // Declarations
+                    l_File = File()
+                    // Get data
+                    l_File.prg_file = l_JsonObj["prg_file"] as? Int64
+                    l_File.des_file = l_JsonObj["des_file"] as? String
+                    l_Files.append(l_File)
+                }
+            }
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
+            self.RaisePoastFilesLoaded(postfiles: l_Files)
+        }
+        l_DataTask.resume()
+    }
 }

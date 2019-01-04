@@ -24,6 +24,10 @@ class UrlUtils
     {
         return URL_WEBAPP + "/LoadPost"
     }
+    public static var  URL_GETPOSTFILES:String
+    {
+        return URL_WEBAPP + "/GetPostFiles"
+    }
     
     public static var URL_GETFILES:String
     {

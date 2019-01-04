@@ -14,7 +14,8 @@ class PagPost: PagBase
     {
         super.init(coder: coder)
         self.ViewControllers = [
-                                    MainStoryboard.instantiateViewController(withIdentifier:"CtlPost")
+                                MainStoryboard.instantiateViewController(withIdentifier:"CtlPost"),
+                                MainStoryboard.instantiateViewController(withIdentifier:"VcrPostImages")
                                ]
     }
 open override var IndicatorsText: [String]
@@ -33,15 +34,17 @@ open override var IndicatorsText: [String]
        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    open override func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo willTrasitionTo: [UIViewController])
+    {
+        
+        super.pageViewController(pageViewController, willTransitionTo: willTrasitionTo)
+        guard self.WillTransitionTo is VcrPostImages
+        else
+        {
+            return
+        }
+        
+        (self.WillTransitionTo as? VcrPostImages)?.LoadRecord(prg_post: self.PostDettail?.Post.prg_post)
     }
-    */
 
 }

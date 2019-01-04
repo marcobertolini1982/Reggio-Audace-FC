@@ -10,8 +10,13 @@ import UIKit
 
 class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate
 {
-    private  var WILLTRANSITIONTO:UIViewController?
     // Declarations
+    private lazy var WILLTRANSITIONTO:UIViewController = UIViewController()
+    
+    public final var WillTransitionTo:UIViewController
+    {
+        return self.WILLTRANSITIONTO
+    }
     
     open var IndicatorsText:[String]
     {
@@ -83,7 +88,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     
     open func pageViewController(_ pageViewController:UIPageViewController,didFinishAnimating finished:Bool,previousViewControllers:[UIViewController],transitionCompleted completed:Bool)
     {
-        guard  let l_PreviousIndex:Int = self.ViewControllers.index(of:previousViewControllers[0]), let l_NextIndex = self.ViewControllers.index(of:self.WILLTRANSITIONTO!)
+        guard  let l_PreviousIndex:Int = self.ViewControllers.index(of:previousViewControllers[0]), let l_NextIndex = self.ViewControllers.index(of:self.WILLTRANSITIONTO)
         else
         {
             return
@@ -112,4 +117,6 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
             i += 1
         }
     }
+    
+    func Set
 }

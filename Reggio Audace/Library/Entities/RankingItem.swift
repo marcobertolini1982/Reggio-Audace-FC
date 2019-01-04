@@ -9,6 +9,7 @@
 import Foundation
 struct RankingItem
 {
+    // Declarations
     var num_row:Int64?
     var des_team:String?
     var num_matchs:Int64?

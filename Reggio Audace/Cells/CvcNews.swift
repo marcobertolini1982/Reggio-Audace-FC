@@ -9,7 +9,8 @@
 import UIKit
 class CvcNews: CvcBase,ProFileObs,ProChannelObs
 {
-    func ChannelLoaded(data: Data) {
+    func ChannelLoaded(data: Data)
+    {
         DispatchQueue.main.async {
             self.img_prg_channel.image = UIImage(data: data)
         }
@@ -20,7 +21,8 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
     {
         
         // Set image
-        DispatchQueue.main.async {
+        DispatchQueue.main.async
+        {
             self.img_prg_file.image = UIImage(data: data)
         }
         

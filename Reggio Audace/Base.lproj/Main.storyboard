@@ -180,6 +180,31 @@
             </objects>
             <point key="canvasLocation" x="-3744" y="2224"/>
         </scene>
+        <!--Vcr Post Images-->
+        <scene sceneID="7za-9c-MiM">
+            <objects>
+                <collectionViewController storyboardIdentifier="VcrPostImages" id="6VT-Wl-HX6" customClass="VcrPostImages" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YXm-Uq-u31">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fOl-oi-2u7">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="6VT-Wl-HX6" id="shR-Pe-v5n"/>
+                            <outlet property="delegate" destination="6VT-Wl-HX6" id="2BY-FN-GpR"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="skN-My-5mT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3744" y="2891"/>
+        </scene>
         <!--Pag Post-->
         <scene sceneID="hOq-S0-hT4">
             <objects>
@@ -187,36 +212,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GZ-nW-Lom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3744" y="1515"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="U7A-1b-RBB">
-            <objects>
-                <viewController id="VLz-oK-ITJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sXR-BW-Kwk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="4QQ-aQ-U8B"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DZ4-UV-Xxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3769" y="2945"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="dBK-mo-Qvx">
-            <objects>
-                <viewController id="RWf-Sd-Sfu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L4c-67-7du">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Hzv-eb-yaB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nzN-y2-eGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3767" y="3626"/>
         </scene>
         <!--Vcr Users-->
         <scene sceneID="YAU-xa-sbm">
@@ -1000,11 +995,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dk5-dW-tet"/>

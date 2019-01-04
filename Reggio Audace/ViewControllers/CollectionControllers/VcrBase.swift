@@ -29,6 +29,7 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate
     open override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.Init()
         self.SetKeyBoardDismissable()
         self.SetTextFieldsDelegate()
         
