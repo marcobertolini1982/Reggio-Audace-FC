@@ -14,6 +14,7 @@
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
 		526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcRankingItem.xib */; };
 		5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279757D21B97DCC00923473 /* RoundImageView.swift */; };
+		52797B2A21DF566900350D7D /* CvcRankingHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52797B2921DF566900350D7D /* CvcRankingHeader.xib */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
 		527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C521B0603600CBD2BE /* Hind-Light.ttf */; };
@@ -103,6 +104,7 @@
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcRankingItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcRankingItem.xib; sourceTree = "<group>"; };
 		5279757D21B97DCC00923473 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		52797B2921DF566900350D7D /* CvcRankingHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcRankingHeader.xib; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
 				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
 				526BF73121B0452400465AD7 /* CvcRankingItem.xib */,
+				52797B2921DF566900350D7D /* CvcRankingHeader.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */,
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
+				52797B2A21DF566900350D7D /* CvcRankingHeader.xib in Resources */,
 				5232497C21BEB9A300174439 /* (null) in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
 				526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */,

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nQr-4E-I8d">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM8-GM-MFy">
+                        <rect key="frame" x="291" y="17" width="21" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="21" id="EDA-s5-x2L"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="PT">
+                                <attributes>
+                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name="BigNoodleTitling"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csq-8O-BKT">
+                        <rect key="frame" x="265" y="17" width="21" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="21" id="Knc-qn-fFs"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="PG">
+                                <attributes>
+                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name="BigNoodleTitling"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTO-wB-sIO">
+                        <rect key="frame" x="86" y="17" width="197" height="28"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name="BigNoodleTitling"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shG-HJ-IaW">
+                        <rect key="frame" x="8" y="21" width="12" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="ucq-Iv-OQf"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="P">
+                                <attributes>
+                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name="BigNoodleTitling"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PTO-wB-sIO" firstAttribute="leading" secondItem="shG-HJ-IaW" secondAttribute="trailing" constant="66" id="4FF-HB-JhE"/>
+                <constraint firstAttribute="bottom" secondItem="PTO-wB-sIO" secondAttribute="bottom" constant="15" id="8Fw-nt-SCd"/>
+                <constraint firstAttribute="trailing" secondItem="sM8-GM-MFy" secondAttribute="trailing" constant="8" id="AHW-5z-jPl"/>
+                <constraint firstItem="PTO-wB-sIO" firstAttribute="baseline" secondItem="csq-8O-BKT" secondAttribute="baseline" id="FRJ-oS-Gts"/>
+                <constraint firstItem="csq-8O-BKT" firstAttribute="leading" secondItem="PTO-wB-sIO" secondAttribute="trailing" constant="-18" id="Kfs-mD-8be"/>
+                <constraint firstItem="shG-HJ-IaW" firstAttribute="top" secondItem="nQr-4E-I8d" secondAttribute="top" constant="21" id="NhI-Gt-KjU"/>
+                <constraint firstItem="sM8-GM-MFy" firstAttribute="leading" secondItem="csq-8O-BKT" secondAttribute="trailing" constant="5" id="TB5-D8-Y6b"/>
+                <constraint firstItem="PTO-wB-sIO" firstAttribute="firstBaseline" secondItem="csq-8O-BKT" secondAttribute="firstBaseline" id="WWG-hm-fsF"/>
+                <constraint firstItem="shG-HJ-IaW" firstAttribute="centerY" secondItem="PTO-wB-sIO" secondAttribute="centerY" id="ZJx-qW-eKn"/>
+                <constraint firstItem="PTO-wB-sIO" firstAttribute="top" secondItem="nQr-4E-I8d" secondAttribute="top" constant="17" id="k02-tl-DxI"/>
+                <constraint firstItem="csq-8O-BKT" firstAttribute="firstBaseline" secondItem="sM8-GM-MFy" secondAttribute="firstBaseline" id="q9k-qe-uKG"/>
+                <constraint firstItem="shG-HJ-IaW" firstAttribute="leading" secondItem="nQr-4E-I8d" secondAttribute="leading" constant="8" id="x8r-AV-Vps"/>
+                <constraint firstItem="csq-8O-BKT" firstAttribute="baseline" secondItem="sM8-GM-MFy" secondAttribute="baseline" id="zIZ-gC-vUA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="kwR-zU-Ad1"/>
+            <size key="customSize" width="320" height="60"/>
+            <point key="canvasLocation" x="0.0" y="2.6986506746626691"/>
+        </collectionViewCell>
+    </objects>
+</document>
