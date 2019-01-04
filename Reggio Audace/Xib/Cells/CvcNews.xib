@@ -165,6 +165,8 @@
                 <outlet property="btn_share" destination="zbN-9d-rx5" id="99m-qt-iEO"/>
                 <outlet property="img_prg_channel" destination="tTj-4Z-Tbs" id="iBj-6j-zhK"/>
                 <outlet property="img_prg_file" destination="IU2-Eq-ywo" id="bhp-pK-98F"/>
+                <outlet property="lbl_Comments" destination="DIH-Cg-Xhr" id="LKp-EY-jYo"/>
+                <outlet property="lbl_Reactions" destination="P20-O0-nWo" id="sVn-Jc-OXR"/>
                 <outlet property="lbl_dat_post" destination="uZq-8g-PfD" id="MfJ-Lq-iur"/>
                 <outlet property="lbl_des_title" destination="eba-yU-F5O" id="2wY-rd-mHm"/>
             </connections>
@@ -172,8 +174,8 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Comment" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Comment" width="32" height="32"/>
+        <image name="Like" width="32" height="32"/>
+        <image name="share" width="32" height="32"/>
     </resources>
 </document>

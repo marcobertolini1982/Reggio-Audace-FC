@@ -10,6 +10,8 @@ import UIKit
 
 class VcrPosts: VcrBase,ProPostsObs
 {
+    // Declarations
+   lazy var POSTS:[Post] = [Post]()
     open override var NibNabe: String
     {
         return "CvcNews"
@@ -19,8 +21,7 @@ class VcrPosts: VcrBase,ProPostsObs
         return "PostCell"
     }
     
-    // Declarations
-    var POSTS:[Post] = [Post]()
+   
     
     func PostsLoaded(posts:[Post])
     {
@@ -98,10 +99,10 @@ class VcrPosts: VcrBase,ProPostsObs
         l_Cell.lbl_dat_post.text = POSTS[l_Index].dat_post
         // Set image
         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
-        l_Cell.des_post = POSTS[l_Index].des_post
         // Set data
         l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
-
+        l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
+        l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
         // Return
         return l_Cell
         
@@ -117,15 +118,11 @@ class VcrPosts: VcrBase,ProPostsObs
     }
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        super.prepare(for: segue, sender: sender)
-        guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost
-        else
-        {
-            return
-            
-        }
+       
+        // Eval
+        guard let l_PagPost:PagPost = segue.destination as? PagPost else{return}
+        // Declarations
         let l_PrgPost:Int64? = sender as? Int64
         l_PagPost.PostDettail?.LoadPoastContent(prg_post: l_PrgPost)
-        
     }
 }

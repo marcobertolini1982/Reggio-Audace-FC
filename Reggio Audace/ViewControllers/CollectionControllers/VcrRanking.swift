@@ -12,7 +12,7 @@ import UIKit
 class VcrRanking: VcrBase,ProRankingObs
 {
       // Declarations
-     var RANKING:[RankingItem] = [RankingItem]()
+     lazy var RANKING:[RankingItem] = [RankingItem]()
     
     
     open override var reuseIdentifier: String
@@ -88,10 +88,10 @@ class VcrRanking: VcrBase,ProRankingObs
         return UICollectionViewCell()
       }
         
-        l_Cell.lbl_NUmRow.text = String(l_RankingItem.num_row!)
+        l_Cell.lbl_NUmRow.text = "\(l_RankingItem.num_row ?? 0)"
         l_Cell.lbl_DesTeam.text = l_RankingItem.des_team
-        l_Cell.lbl_NUmMatches.text = String(l_RankingItem.num_matchs!)
-        l_Cell.lbl_NUmPoints.text = String(l_RankingItem.num_points!)
+        l_Cell.lbl_NUmMatches.text = "\(l_RankingItem.num_matchs ?? 0)"
+        l_Cell.lbl_NUmPoints.text = "\(l_RankingItem.num_points ?? 0)"
         return l_Cell
     }
 

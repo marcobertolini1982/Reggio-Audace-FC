@@ -119,7 +119,7 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="mbx-kf-Vfi" firstAttribute="baseline" secondItem="yNT-9c-1qU" secondAttribute="baseline" constant="3" id="40i-JD-7QY"/>
                 <constraint firstAttribute="trailing" secondItem="mbx-kf-Vfi" secondAttribute="trailing" constant="5" id="8iG-kD-qGK"/>
