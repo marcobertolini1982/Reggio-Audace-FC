@@ -90,6 +90,7 @@
                     </tabBarItem>
                     <connections>
                         <segue destination="E4L-6f-D60" kind="show" identifier="PostSegue" id="guE-cA-0Mt"/>
+                        <segue destination="E4L-6f-D60" kind="show" identifier="CommentsSegue" id="5Qu-Vw-Ybh"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afA-VT-m3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UvR-Aw-cxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3744" y="2224"/>
+            <point key="canvasLocation" x="-4146" y="2357"/>
         </scene>
         <!--Vcr Post Images-->
         <scene sceneID="7za-9c-MiM">
@@ -203,7 +204,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skN-My-5mT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3744" y="2891"/>
+            <point key="canvasLocation" x="-4148" y="3090"/>
         </scene>
         <!--Pag Post-->
         <scene sceneID="hOq-S0-hT4">
@@ -211,7 +212,7 @@
                 <pageViewController storyboardIdentifier="PagPost" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="E4L-6f-D60" customClass="PagPost" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GZ-nW-Lom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3744" y="1515"/>
+            <point key="canvasLocation" x="-4114" y="1614"/>
         </scene>
         <!--Vcr Users-->
         <scene sceneID="YAU-xa-sbm">
@@ -1003,5 +1004,6 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dk5-dW-tet"/>
+        <segue reference="5Qu-Vw-Ybh"/>
     </inferredMetricsTieBreakers>
 </document>
