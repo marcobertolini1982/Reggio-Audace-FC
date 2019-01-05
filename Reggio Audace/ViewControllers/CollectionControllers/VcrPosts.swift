@@ -121,10 +121,17 @@ class VcrPosts: VcrBase,ProPostsObs
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
        
-        // Eval
-        guard let l_PagPost:PagPost = segue.destination as? PagPost else{return}
-        // Declarations
-        let l_PrgPost:Int64? = sender as? Int64
-        l_PagPost.PostDettail?.LoadPoastContent(prg_post: l_PrgPost)
+        
+        switch segue.identifier
+        {
+        case "PostSegue":
+              // Eval
+            guard let l_PagPost:PagPost = segue.destination as? PagPost else{return}
+            // Declarations
+            let l_PrgPost:Int64? = sender as? Int64
+            l_PagPost.PostDettail?.LoadPoastContent(prg_post: l_PrgPost)
+        default:
+            break
+        }
     }
 }
