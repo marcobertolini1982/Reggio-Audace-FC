@@ -28,9 +28,14 @@ open override var IndicatorsText: [String]
 {
     return ["Post","Media","Commenti"]
 }
-    open var PostDettail:CtlPost?
+    public final var PostDettail:CtlPost?
     {
     return self.ViewControllers[0] as? CtlPost
+    }
+    
+    public final var PostMedia:VcrPostImages?
+    {
+        return self.ViewControllers[1] as? VcrPostImages
     }
     override func viewDidLoad()
     {
@@ -58,5 +63,6 @@ open override var IndicatorsText: [String]
     {
         super.viewWillAppear(animated)
         self.PostDettail?.LoadPoastContent(prg_post: self.PRGPOST)
+        self.PostMedia?.LoadRecord(prg_post: self.PRGPOST)
     }
 }
