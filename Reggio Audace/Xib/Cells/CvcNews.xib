@@ -162,6 +162,7 @@
             <viewLayoutGuide key="safeArea" id="79Z-5h-3dA"/>
             <size key="customSize" width="320" height="299"/>
             <connections>
+                <outlet property="btn_Comments" destination="lIT-fb-dNa" id="IqP-ru-Tcf"/>
                 <outlet property="btn_share" destination="zbN-9d-rx5" id="99m-qt-iEO"/>
                 <outlet property="img_prg_channel" destination="tTj-4Z-Tbs" id="iBj-6j-zhK"/>
                 <outlet property="img_prg_file" destination="IU2-Eq-ywo" id="bhp-pK-98F"/>
@@ -170,7 +171,7 @@
                 <outlet property="lbl_dat_post" destination="uZq-8g-PfD" id="MfJ-Lq-iur"/>
                 <outlet property="lbl_des_title" destination="eba-yU-F5O" id="2wY-rd-mHm"/>
             </connections>
-            <point key="canvasLocation" x="-3489.375" y="-661.79577464788736"/>
+            <point key="canvasLocation" x="-4233.75" y="-631.16197183098598"/>
         </collectionViewCell>
     </objects>
     <resources>

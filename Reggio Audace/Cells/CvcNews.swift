@@ -36,15 +36,17 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
     @IBOutlet weak var btn_share : UIButton!
     @IBOutlet weak var lbl_Comments: UILabel!
     @IBOutlet weak var lbl_Reactions: UILabel!
+    @IBOutlet weak var btn_Comments: UIButton!
     // Raised when the xib merge is execute
     override func awakeFromNib()
     {
         
         // Self
         super.awakeFromNib()
-        
         // Set word wrap for the label
         self.lbl_des_title.lineBreakMode = NSLineBreakMode.byWordWrapping
+        let l_ViewControler:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "VcrPosts")
+        self.btn_Comments.addTarget(l_ViewControler, action: SelectorUtils.BtnCommentsSeelctor, for: UIControl.Event.touchUpInside)
         
     }
     
@@ -72,6 +74,4 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         // Load file
         //l_ChannelView.LoadChannel(prg_file: prg_file)
     }
-    
-   
 }

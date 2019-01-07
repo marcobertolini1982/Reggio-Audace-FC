@@ -115,7 +115,11 @@ class VcrPosts: VcrBase,ProPostsObs
         //Declarations
         let l_Index:Int = indexPath.row
         let l_PrgPost:Int64? = self.POSTS[l_Index].prg_post
-       self.performSegue(withIdentifier: "PostSegue", sender: l_PrgPost)
+        // Launch new view controller
+        guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost else{return}
+        l_PagPost.PrgPost = l_PrgPost
+        self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
+        l_PagPost.SetSelectedIndex(index: 1)
         
     }
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -129,9 +133,21 @@ class VcrPosts: VcrBase,ProPostsObs
             guard let l_PagPost:PagPost = segue.destination as? PagPost else{return}
             // Declarations
             let l_PrgPost:Int64? = sender as? Int64
-            l_PagPost.PostDettail?.LoadPoastContent(prg_post: l_PrgPost)
+            l_PagPost.PrgPost = l_PrgPost
+           
+            
         default:
             break
         }
+      
     }
+    
+    @objc
+    func OnBtnCoommentClikc(_ sender:UIButton)
+    {
+        self.performSegue(withIdentifier: "CommentsSegue", sender: nil)
+        
+        
+    }
+    
 }

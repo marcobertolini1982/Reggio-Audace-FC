@@ -11,9 +11,9 @@ import UIKit
 class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
 {
     // Declarations
-    private lazy var POST:Post = Post
-    
-    public final var Post:Post
+    private  var POST:Post?
+
+    public final var Post:Post?
     {
         return self.POST
     }
@@ -28,7 +28,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
     {
         self.POST = singlepost
         self.BIndData()
-        guard let l_PrgFile:Int64 = self.POST.prg_file else{return}
+        guard let l_PrgFile:Int64 = self.POST?.prg_file else{return}
        self.LoadPostImage(prg_file: l_PrgFile)
     }
     
@@ -50,11 +50,11 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
     {
         DispatchQueue.main.async
         {
-            self.VIEPOST.lbl_Title.text = self.POST.des_title
-            self.VIEPOST.lbl_Date.text = self.POST.dat_post
-            self.VIEPOST.txt_Article.text = self.POST.des_post
-            self.VIEPOST.lbl_Comment.text = "\(self.POST.num_postmessages ?? 0)"
-            self.VIEPOST.lbl_Reactions.text = "\(self.POST.num_reactions ?? 0)"
+            self.VIEPOST.lbl_Title.text = self.POST?.des_title
+            self.VIEPOST.lbl_Date.text = self.POST?.dat_post
+            self.VIEPOST.txt_Article.text = self.POST?.des_post
+            self.VIEPOST.lbl_Comment.text = "\(self.POST?.num_postmessages ?? Int64())"
+            self.VIEPOST.lbl_Reactions.text = "\(self.POST?.num_reactions ?? Int64())"
         }
         
     }
@@ -83,5 +83,13 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
         l_FileView.SetOnFileLoaded(proFileObs: self)
         l_FileView.LoadFile(prg_file: prg_file)
         
+    }
+    open override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        if self.POST != nil
+        {
+            self.LoadPoastContent(prg_post: self.POST?.prg_post)
+        }
     }
 }

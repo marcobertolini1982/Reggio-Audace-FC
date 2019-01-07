@@ -23,7 +23,6 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         self.view.addSubview(self.PAGEINDICATOR!)
         self.view.bringSubviewToFront(self.PAGEINDICATOR!)
         // Set Initial controller
-        self.SetSelectedIndex(index:0)
         self.dataSource = self
         self.delegate = self
     }
@@ -135,15 +134,6 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     func SetSelectedIndex(index:Int)
     {
         self.setViewControllers([self.VIEWCONTROLLERS[index]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
-        self.SetActiveIndicator(activeindex: index)
-        let l_CurrentIndicator:LabIndicator = self.PAGEINDICATOR![index]
-        for l_Indicator in self.PAGEINDICATOR!.INDICATORS
-        {
-            if l_Indicator == l_CurrentIndicator
-            {
-                continue
-            }
-            l_Indicator.textColor = UIColor.black
-        }
+        
     }
 }
