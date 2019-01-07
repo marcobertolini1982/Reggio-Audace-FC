@@ -134,6 +134,19 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     func SetSelectedIndex(index:Int)
     {
         self.setViewControllers([self.VIEWCONTROLLERS[index]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
-        
+        guard let l_IndexesCount:Int = PAGEINDICATOR?.INDICATORS?.count else{return}
+        var  l_index:Int = 0
+        while l_index < l_IndexesCount
+        {
+            if l_index == index
+            {
+                self.SetActiveIndicator(activeindex: l_index)
+            }
+            else
+            {
+                self.SetPreviousIndex(previousindex: l_index)
+            }
+            l_index += 1
+        }
     }
 }
