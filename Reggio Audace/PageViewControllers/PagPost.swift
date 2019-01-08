@@ -10,6 +10,12 @@ import UIKit
 
 class PagPost: PagBase
 {
+    private var PRGPOST:Int64?
+    public final var PrgPost:Int64?
+    {
+        get{return self.PRGPOST}
+        set{self.PRGPOST = newValue}
+    }
     public required init?(coder: NSCoder)
     {
         super.init(coder: coder)
@@ -22,9 +28,14 @@ open override var IndicatorsText: [String]
 {
     return ["Post","Media","Commenti"]
 }
-    open var PostDettail:CtlPost?
+    public final var PostDettail:CtlPost?
     {
     return self.ViewControllers[0] as? CtlPost
+    }
+    
+    public final var PostMedia:VcrPostImages?
+    {
+        return self.ViewControllers[1] as? VcrPostImages
     }
     override func viewDidLoad()
     {
@@ -38,13 +49,20 @@ open override var IndicatorsText: [String]
     {
         
         super.pageViewController(pageViewController, willTransitionTo: willTrasitionTo)
-        guard self.WillTransitionTo is VcrPostImages
-        else
-        {
-            return
-        }
-        
-        (self.WillTransitionTo as? VcrPostImages)?.LoadRecord(prg_post: self.PostDettail?.Post.prg_post)
+    guard self.WillTransitionTo is VcrPostImages
+    else
+    {
+        return
     }
-
+    (self.WillTransitionTo as? VcrPostImages)?.LoadRecord(prg_post: self.PostDettail?.Post?.prg_post)
+        
+        
+        
+    }
+    open override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.PostDettail?.LoadPoastContent(prg_post: self.PRGPOST)
+        self.PostMedia?.LoadRecord(prg_post: self.PRGPOST)
+    }
 }
