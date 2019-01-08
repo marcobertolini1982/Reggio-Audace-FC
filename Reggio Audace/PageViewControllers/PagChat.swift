@@ -10,6 +10,12 @@ import UIKit
 
 class PagChat: PagBase
 {
+    
+    override func Init()
+    {
+        super.Init()
+        self.SetSelectedIndex(index:0)
+    }
    
     open override var IndicatorsText: [String]
     {

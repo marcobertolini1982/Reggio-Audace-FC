@@ -12,37 +12,8 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
 {
     // Declarations
     private lazy var WILLTRANSITIONTO:UIViewController = UIViewController()
-    
-    func Init()
-    {
-        let l_WIDTH:CGFloat  = self.view.bounds.width
-        let l_RECT:CGRect    = CGRect(x: 0, y: 0, width: l_WIDTH, height:21)
-        self.PAGEINDICATOR = ViePageIndicator(frame:l_RECT)
-        self.SetIndicatorLabels()
-        //Add page indicator
-        self.view.addSubview(self.PAGEINDICATOR!)
-        self.view.bringSubviewToFront(self.PAGEINDICATOR!)
-        // Set Initial controller
-        self.dataSource = self
-        self.delegate = self
-    }
-    public final var WillTransitionTo:UIViewController
-    {
-        return self.WILLTRANSITIONTO
-    }
-    
-    open var IndicatorsText:[String]
-    {
-        return [String]()
-    }
-    
-    override var transitionStyle: TransitionStyle
-    {
-        return TransitionStyle.scroll
-    }
-    
-    private var VIEWCONTROLLERS:[UIViewController] = [UIViewController]()
-    private var PAGEINDICATOR:ViePageIndicator?
+    private lazy var VIEWCONTROLLERS:[UIViewController] = [UIViewController]()
+    private lazy var PAGEINDICATOR:ViePageIndicator = ViePageIndicator()
     public var ViewControllers:[UIViewController]
     {
         get
@@ -57,6 +28,37 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
             self.VIEWCONTROLLERS = newValue
         }
     }
+    
+    func Init()
+    {
+        let l_WIDTH:CGFloat  = self.view.bounds.width
+        let l_RECT:CGRect    = CGRect(x:0, y:0, width:l_WIDTH, height:21)
+        self.PAGEINDICATOR = ViePageIndicator(frame:l_RECT)
+        self.SetIndicatorLabels()
+        //Add page indicator
+        self.view.addSubview(self.PAGEINDICATOR)
+        self.view.bringSubviewToFront(self.PAGEINDICATOR)
+        // Set Initial controller
+        self.dataSource = self
+        self.delegate = self
+    }
+    public final var WillTransitionTo:UIViewController
+    {
+        get{return self.WILLTRANSITIONTO}
+        set{self.WILLTRANSITIONTO = newValue}
+    }
+    
+    open var IndicatorsText:[String]
+    {
+        return [String]()
+    }
+    
+    override var transitionStyle: TransitionStyle
+    {
+        return TransitionStyle.scroll
+    }
+    
+   
    
     
     // Override viewDidLoad
@@ -115,38 +117,42 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         var i:Int = 0
         while i < self.IndicatorsText.count
         {
-           self.PAGEINDICATOR![i].text = self.IndicatorsText[i]
+           self.PAGEINDICATOR[i].text = self.IndicatorsText[i]
             i += 1
         }
     }
     
     func SetActiveIndicator(activeindex:Int)
     {
-        self.PAGEINDICATOR![activeindex].textColor =  GARNETCOLOR
+        self.PAGEINDICATOR[activeindex].textColor =  GARNETCOLOR
         
     }
     
     func SetPreviousIndex(previousindex:Int)
     {
-        self.PAGEINDICATOR![previousindex].textColor = UIColor.black
+        self.PAGEINDICATOR[previousindex].textColor = UIColor.black
     }
     
     func SetSelectedIndex(index:Int)
     {
         self.setViewControllers([self.VIEWCONTROLLERS[index]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
-        guard let l_IndexesCount:Int = PAGEINDICATOR?.INDICATORS?.count else{return}
-        var  l_index:Int = 0
-        while l_index < l_IndexesCount
+        self.WillTransitionTo = self.VIEWCONTROLLERS[index]
+    }
+    
+    open override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        guard let l_Index:Int = self.ViewControllers.index(of:self.WillTransitionTo) else{return}
+        self.SetActiveIndicator(activeindex: l_Index)
+        var i:Int = 0
+        while i < self.PAGEINDICATOR.INDICATORS.count
         {
-            if l_index == index
+            if i != l_Index
             {
-                self.SetActiveIndicator(activeindex: l_index)
+                self.SetPreviousIndex(previousindex: i)
             }
-            else
-            {
-                self.SetPreviousIndex(previousindex: l_index)
-            }
-            l_index += 1
+            i += 1
         }
     }
+
 }
