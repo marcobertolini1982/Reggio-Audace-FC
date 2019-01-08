@@ -22,8 +22,4 @@ class SelectorUtils
     {
         return #selector(VcrSeasonMenu.OnRanking_Click)
     }
-    public static var BtnCommentsSeelctor:Selector
-    {
-        return #selector(VcrPosts.OnBtnCoommentClikc)
-    }
 }

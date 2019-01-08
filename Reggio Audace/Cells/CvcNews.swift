@@ -37,6 +37,19 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
     @IBOutlet weak var lbl_Comments: UILabel!
     @IBOutlet weak var lbl_Reactions: UILabel!
     @IBOutlet weak var btn_Comments: UIButton!
+    private var BTNCOMMENTSEVENT:((_ cell:UICollectionViewCell)-> Void)?
+    public final var BtnCommentsEvent:((_ cell:UICollectionViewCell)->Void)?
+        
+        {
+        get{return self.BTNCOMMENTSEVENT}
+        set{self.BTNCOMMENTSEVENT = newValue}
+    }
+    @IBAction func OnBtnComemntsClick(_ sender: UIButton)
+    {
+        guard self.BTNCOMMENTSEVENT != nil else{return}
+        self.BTNCOMMENTSEVENT!(self)
+    }
+   
     // Raised when the xib merge is execute
     override func awakeFromNib()
     {
@@ -45,9 +58,6 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         super.awakeFromNib()
         // Set word wrap for the label
         self.lbl_des_title.lineBreakMode = NSLineBreakMode.byWordWrapping
-        let l_ViewControler:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "VcrPosts")
-        self.btn_Comments.addTarget(l_ViewControler, action: SelectorUtils.BtnCommentsSeelctor, for: UIControl.Event.touchUpInside)
-        
     }
     
     func SetUiImageFile(prg_file: Int64) {

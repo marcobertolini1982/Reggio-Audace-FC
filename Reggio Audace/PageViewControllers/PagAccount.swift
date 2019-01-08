@@ -10,7 +10,11 @@ import UIKit
 
 class PagAccount: PagBase
 {
-  
+    override func Init()
+    {
+        super.Init()
+        self.SetSelectedIndex(index:0)
+    }
 
     override func viewDidLoad()
     {

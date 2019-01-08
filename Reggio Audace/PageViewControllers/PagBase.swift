@@ -136,7 +136,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     func SetSelectedIndex(index:Int)
     {
         self.setViewControllers([self.VIEWCONTROLLERS[index]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
-        
+        self.WillTransitionTo = self.VIEWCONTROLLERS[index]
     }
     
     open override func viewWillAppear(_ animated: Bool)

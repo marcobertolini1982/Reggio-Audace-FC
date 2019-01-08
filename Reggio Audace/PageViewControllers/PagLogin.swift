@@ -10,6 +10,12 @@ import UIKit
 
 class PagLogin: PagBase
 {
+    override func Init()
+    {
+        super.Init()
+        self.SetSelectedIndex(index:0)
+    }
+    
     open override var IndicatorsText: [String]
     {
         return ["Accedi","Registrati","Reset"]

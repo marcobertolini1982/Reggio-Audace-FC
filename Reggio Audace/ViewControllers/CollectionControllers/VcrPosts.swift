@@ -98,13 +98,14 @@ class VcrPosts: VcrBase,ProPostsObs
         else {
             return UICollectionViewCell()
         }
+        l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
         l_Cell.lbl_dat_post.text = POSTS[l_Index].dat_post
         // Set image
         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
         // Set data
         l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
-        l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? Int64())"
-        l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? Int64())"
+        l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
+        l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
         // Return
         return l_Cell
         
@@ -115,9 +116,9 @@ class VcrPosts: VcrBase,ProPostsObs
         //Declarations
         let l_Index:Int = indexPath.row
         let l_PrgPost:Int64? = self.POSTS[l_Index].prg_post
-        // Launch new view controller
+        // Eval
         guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost else{return}
-        l_PagPost.WillTransitionTo = l_PagPost.ViewControllers[0]
+        // Set selected index in page view controller
         l_PagPost.SetSelectedIndex(index:0)
         l_PagPost.PrgPost = l_PrgPost
         self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
@@ -144,12 +145,13 @@ class VcrPosts: VcrBase,ProPostsObs
       
     }
     
-    @objc
-    func OnBtnCoommentClikc(_ sender:UIButton)
+    func OnBtnCommentsclick(_ cell:UICollectionViewCell)
     {
-        self.performSegue(withIdentifier: "CommentsSegue", sender: nil)
-        
-        
+        guard let l_IndexPath = self.collectionView.indexPath(for: cell) else{return}
+        let l_Index:Int = l_IndexPath.item
+        guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost else{return}
+        l_PagPost.PrgPost = self.POSTS[l_Index].prg_post
+        l_PagPost.SetSelectedIndex(index:2)
+        self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
     }
-    
 }
