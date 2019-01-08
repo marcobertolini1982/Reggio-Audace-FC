@@ -11,7 +11,7 @@ import UIKit
 class VcrPosts: VcrBase,ProPostsObs
 {
     // Declarations
-   lazy var POSTS:[Post] = [Post]()
+    var POSTS:[Post] = [Post]()
     open override var NibNabe: String
     {
         return "CvcNews"
@@ -117,9 +117,11 @@ class VcrPosts: VcrBase,ProPostsObs
         let l_PrgPost:Int64? = self.POSTS[l_Index].prg_post
         // Launch new view controller
         guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost else{return}
+        l_PagPost.WillTransitionTo = l_PagPost.ViewControllers[0]
+        l_PagPost.SetSelectedIndex(index:0)
         l_PagPost.PrgPost = l_PrgPost
         self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
-        l_PagPost.SetSelectedIndex(index: 1)
+        
         
     }
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
