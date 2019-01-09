@@ -46,24 +46,5 @@ open override var IndicatorsText: [String]
        
     }
     
-    open override func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo willTrasitionTo: [UIViewController])
-    {
-        
-        super.pageViewController(pageViewController, willTransitionTo: willTrasitionTo)
-    guard self.WillTransitionTo is VcrPostImages
-    else
-    {
-        return
-    }
-    (self.WillTransitionTo as? VcrPostImages)?.LoadRecord(prg_post: self.PostDettail?.Post?.prg_post)
-        
-        
-        
-    }
-    open override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-        self.PostDettail?.LoadPoastContent(prg_post: self.PRGPOST)
-        self.PostMedia?.LoadRecord(prg_post: self.PRGPOST)
-    }
+   
 }

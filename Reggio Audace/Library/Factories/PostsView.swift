@@ -11,10 +11,10 @@ import UIKit
 public class PostsView
 {
     //Declarations
-    private lazy  var ProPostsObss:[ProPostsObs] = [ProPostsObs]()
-    private lazy var ProSinglePOstObss:[ProSinglePostObs] = [ProSinglePostObs]()
-    private lazy var ProPostFilesObss:[ProPostFilesObs] = [ProPostFilesObs]()
-    
+    private var ProPostsObss:[ProPostsObs] = [ProPostsObs]()
+    private var ProSinglePOstObss:[ProSinglePostObs] = [ProSinglePostObs]()
+    private var ProPostFilesObss:[ProPostFilesObs] = [ProPostFilesObs]()
+    private var ProPostMessageObss:[ProPostMessageObs] = [ProPostMessageObs]()
     func SetOnPostsLoaded(proPostsObs:ProPostsObs)
     {
         self.ProPostsObss.append(proPostsObs)
@@ -52,6 +52,20 @@ public class PostsView
     func SetOnPostFilesLoaded(proPostFilesObs:ProPostFilesObs)
     {
         self.ProPostFilesObss.append(proPostFilesObs)
+    }
+    
+   final func SetOnProPostMessageLoadded(propostMessageobs:ProPostMessageObs)
+    {
+        self.ProPostMessageObss.append(propostMessageobs)
+    }
+    
+    final func RaisePostMessagesLoaded(postmessages:[PostMessage])
+    {
+        for propostmessageobs in self.ProPostMessageObss
+        {
+            propostmessageobs.PostMessagesLoaded(postmessages: postmessages)
+            
+        }
     }
     
     func LoadPosts(cod_device:String?)
@@ -213,4 +227,48 @@ public class PostsView
         }
         l_DataTask.resume()
     }
-}
+    
+    final func LoadPostMessages(prg_post:Int64?)
+    {
+        
+        let l_Json:[String:Any?] = ["prg_post":prg_post]
+        guard let l_Data:Data = try? JSONSerialization.data(withJSONObject: l_Json, options:[]) else{return}
+        guard let l_Url:URL = URL(string: UrlUtils.URL_LOADPOSTMESSAGES) else{return}
+        var l_Request:URLRequest = URLRequest(url:l_Url)
+        l_Request.httpMethod = "POST"
+        l_Request.httpBody = l_Data
+        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request){(data:Data?,repsonse:URLResponse?,error:Error?)in
+            var l_PostMessages:[PostMessage] = [PostMessage]()
+            var l_PostMessage:PostMessage
+            
+            guard error == nil && data != nil else{return}
+                 l_PostMessage = PostMessage()
+                do
+                {
+                    l_PostMessage = PostMessage()
+                    guard let l_JsonArray:[[String:Any]] = try JSONSerialization.jsonObject(with: data!, options:[]) as? [[String:Any]] else{return}
+                    for l_JsonResponse in l_JsonArray
+                    {
+                    l_PostMessage.prg_postmessage = l_JsonResponse["prg_postmessage"] as? Int64
+                    l_PostMessage.prg_user = l_JsonResponse["prg_user"] as? Int64
+                    l_PostMessage.prg_post = l_JsonResponse["prg_post"] as? Int64
+                    l_PostMessage.cod_user = l_JsonResponse["cod_user"] as? String
+                    l_PostMessage.des_user = l_JsonResponse["des_user"] as? String
+                    l_PostMessage.dat_message = l_JsonResponse["dat_message"] as? String
+                    DateUtils.FormatStringDateForPostMessage(&l_PostMessage.dat_message)
+                    l_PostMessage.des_message = l_JsonResponse["des_message"] as?String
+                    l_PostMessage.prg_file = l_JsonResponse["prg_file"] as? Int64
+                    l_PostMessages.append(l_PostMessage)
+                    }
+                }
+                catch let e as NSError
+                {
+                    print(e.localizedDescription)
+                }
+            self.RaisePostMessagesLoaded(postmessages: l_PostMessages)
+            }
+          l_DataTask.resume()
+        }
+    
+    }
+

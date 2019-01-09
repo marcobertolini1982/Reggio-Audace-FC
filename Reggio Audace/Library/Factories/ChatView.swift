@@ -27,10 +27,10 @@ class ChatView
             l_proChatObs.ChatLoaded(chats: chats)
         }
     }
-    func LoadChat(cod_user:String)
+    func LoadChat(cod_user:String?)
     {
         var l_Chats:[Chat] = [Chat]()
-        let l_Json : [String: String] = ["cod_user":cod_user]
+        let l_Json : [String: Any?] = ["cod_user":cod_user]
         let l_JsonData = try? JSONSerialization.data(withJSONObject: l_Json)
         
         // Create Chat request
@@ -48,9 +48,13 @@ class ChatView
             guard let dataResponse = data, error == nil else { return }
             
             // Decode json
-            if let l_JsonResponse = try! JSONSerialization.jsonObject(with: dataResponse, options: .allowFragments) as? [[String: Any]]
+            do
             {
-                
+                guard let l_JsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: .allowFragments) as? [[String: Any]]
+                else
+                {
+                    return
+                }
                 // Declarations
                 var l_Chat:Chat
                 
@@ -72,7 +76,10 @@ class ChatView
                 }
                 
             }
-            
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
             // Raise event
             self.RaiseChatLoaded(chats:l_Chats)
             
