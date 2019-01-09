@@ -238,7 +238,7 @@
         <!--Vcr Users-->
         <scene sceneID="YAU-xa-sbm">
             <objects>
-                <collectionViewController storyboardIdentifier="VcrUsers" id="S4w-Hh-rdV" customClass="VcrUsers" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="VcrUsers" automaticallyAdjustsScrollViewInsets="NO" id="S4w-Hh-rdV" customClass="VcrUsers" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oeY-uq-Uet">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
