@@ -108,7 +108,12 @@ class VcrPosts: VcrBase,ProPostsObs
         l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
         l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
         l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
+         if l_Cell.img_prg_file.image != nil
+         {
+            l_Cell.img_prg_file.image = nil
+        }
         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
+        
         // Return
         return l_Cell
         
@@ -130,25 +135,6 @@ class VcrPosts: VcrBase,ProPostsObs
         
         
     }
-    open override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-       
-        
-        switch segue.identifier
-        {
-        case "PostSegue":
-              // Eval
-            guard let l_PagPost:PagPost = segue.destination as? PagPost else{return}
-            // Declarations
-            let l_PrgPost:Int64? = sender as? Int64
-            l_PagPost.PrgPost = l_PrgPost
-           
-            
-        default:
-            break
-        }
-      
-    }
     
     func OnBtnCommentsclick(_ cell:UICollectionViewCell)
     {
@@ -159,4 +145,5 @@ class VcrPosts: VcrBase,ProPostsObs
         l_PagPost.SetSelectedIndex(index:2)
         self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
     }
+    
 }

@@ -27,8 +27,7 @@ class PagChat: PagBase
     override func viewDidLoad()
     {
         self.ViewControllers = [MainStoryboard.instantiateViewController(withIdentifier: "VcrChats"),
-                                MainStoryboard.instantiateViewController(withIdentifier: "VcrUsers"),
-                                MainStoryboard.instantiateViewController(withIdentifier: "VcrChannels")
+                                
                                ]
         
         super.viewDidLoad()

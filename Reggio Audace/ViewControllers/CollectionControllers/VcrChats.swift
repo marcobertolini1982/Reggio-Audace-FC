@@ -36,10 +36,8 @@ class VcrChats: VcrBase,ProChatObs
         let l_ChatView:ChatView = ChatView()
         //Add event
         l_ChatView.SetOnChatsLoaded(proChatObss: self)
-        if let l_CodUser:String = AuthUtils.Uid
-        {
-            l_ChatView.LoadChat(cod_user: l_CodUser)
-        }
+        l_ChatView.LoadChat(cod_user: AuthUtils.Uid)
+        
     }
     
    open override func Init()
@@ -52,13 +50,6 @@ class VcrChats: VcrBase,ProChatObs
         super.viewDidLoad()
         self.Init()
         self.LoadRecord()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-     
-
-        // Do any additional setup after loading the view.
     }
 
     /*
@@ -96,6 +87,7 @@ class VcrChats: VcrBase,ProChatObs
     
         // Configure the cell
        l_Cell.lbl_desuser.text = self.CHATS[l_Index].des_user
+        
         return l_Cell
     }
 

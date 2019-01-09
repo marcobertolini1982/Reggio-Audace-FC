@@ -108,5 +108,10 @@ class VcrPostImages: VcrBase, ProPostFilesObs
     
     }
     */
-
+    open override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        guard let l_Parent:PagPost = self.parent as? PagPost else{return}
+        self.LoadRecord(prg_post: l_Parent.PrgPost)
+    }
 }

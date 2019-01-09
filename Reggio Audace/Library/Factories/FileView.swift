@@ -16,7 +16,6 @@ class FileView
     func SetOnFileLoaded(proFileObs:ProFileObs)
     {
         ProFileObss.append(proFileObs)
-        print(self.ProFileObss.count)
     }
     
     func RaiseFileLoaded(data:Data)
@@ -27,21 +26,16 @@ class FileView
         }
     }
     
-    func RemoveProFileObs(index:Int)
-    {
-        self.ProFileObss.remove(at:index)
-    }
     func LoadFile(prg_file:Int64)
     {
         
         
         // Create post request
         let l_Url = URL(string: "http://portal.lensolution.it:8080/wRegia/GetFile?prg_file=\(prg_file)")!
-        
         // Set properties
         
         // Set task
-        let l_Task = URLSession.shared.dataTask(with: l_Url) { data, response, error in
+        let l_Task:URLSessionDataTask = URLSession.shared.dataTask(with:l_Url) { data, response, error in
             
             // Eval
             guard data != nil && error == nil  else { return }

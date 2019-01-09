@@ -11,7 +11,8 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
 {
     func ChannelLoaded(data: Data)
     {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async
+        {
             self.img_prg_channel.image = UIImage(data: data)
         }
     }
@@ -23,6 +24,7 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         // Set image
         DispatchQueue.main.async
         {
+            
             self.img_prg_file.image = UIImage(data: data)
         }
         
@@ -60,8 +62,9 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         self.lbl_des_title.lineBreakMode = NSLineBreakMode.byWordWrapping
     }
     
-    func SetUiImageFile(prg_file: Int64) {
-        
+    func SetUiImageFile(prg_file: Int64)
+    {
+       
         // Declarations
         let l_FileView : FileView = FileView()
         
@@ -82,5 +85,11 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         
         // Load file
         //l_ChannelView.LoadChannel(prg_file: prg_file)
+    }
+    
+    open override func prepareForReuse()
+    {
+        super.prepareForReuse()
+        self.img_prg_file.image = UIImage()
     }
 }

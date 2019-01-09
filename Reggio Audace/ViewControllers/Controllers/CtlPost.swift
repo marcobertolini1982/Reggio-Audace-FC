@@ -86,10 +86,10 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
     }
     open override func viewWillAppear(_ animated: Bool)
     {
+       
         super.viewWillAppear(animated)
-        if self.POST != nil
-        {
-            self.LoadPoastContent(prg_post: self.POST?.prg_post)
-        }
+         guard let l_Parent:PagPost = self.parent as? PagPost else{return}
+         self.LoadPoastContent(prg_post: l_Parent.PrgPost)
+       
     }
 }
