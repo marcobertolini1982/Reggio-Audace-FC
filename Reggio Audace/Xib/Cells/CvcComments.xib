@@ -13,14 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Comments" id="yVs-JL-cRs" customClass="CvcComments" customModule="Reggio_Audace" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rE3-ay-e2n">
-                        <rect key="frame" x="76" y="8" width="291" height="74"/>
+                        <rect key="frame" x="76" y="8" width="291" height="94"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gD-pf-nVd">
                                 <rect key="frame" x="8" y="8" width="40.5" height="27.5"/>
@@ -82,11 +82,11 @@
                 <constraint firstAttribute="trailing" secondItem="rE3-ay-e2n" secondAttribute="trailing" constant="8" id="QNT-Gb-c0h"/>
                 <constraint firstItem="rE3-ay-e2n" firstAttribute="leading" secondItem="ayv-pE-WyO" secondAttribute="trailing" constant="7" id="bJ5-6J-0s8"/>
                 <constraint firstItem="ayv-pE-WyO" firstAttribute="leading" secondItem="yVs-JL-cRs" secondAttribute="leading" constant="9" id="iXE-Ch-FFv"/>
+                <constraint firstItem="rE3-ay-e2n" firstAttribute="centerY" secondItem="yVs-JL-cRs" secondAttribute="centerY" id="pcZ-HI-Dw5"/>
                 <constraint firstItem="rE3-ay-e2n" firstAttribute="top" secondItem="yVs-JL-cRs" secondAttribute="top" constant="8" id="xZg-7c-N2n"/>
-                <constraint firstAttribute="bottom" secondItem="rE3-ay-e2n" secondAttribute="bottom" constant="20" id="zfJ-W4-YW5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="kNz-0E-VNO"/>
-            <size key="customSize" width="375" height="102"/>
+            <size key="customSize" width="375" height="110"/>
             <connections>
                 <outlet property="Vie_Content" destination="rE3-ay-e2n" id="lxw-Gw-v1Y"/>
                 <outlet property="img_User" destination="ayv-pE-WyO" id="R0V-nm-bGh"/>
@@ -94,7 +94,7 @@
                 <outlet property="lbl_Date" destination="pxr-hP-7zq" id="5tH-PN-dyk"/>
                 <outlet property="lbl_DesUser" destination="4gD-pf-nVd" id="HYX-Ox-bNd"/>
             </connections>
-            <point key="canvasLocation" x="-132" y="-398.50074962518744"/>
+            <point key="canvasLocation" x="-132" y="-394.90254872563719"/>
         </collectionViewCell>
     </objects>
 </document>
