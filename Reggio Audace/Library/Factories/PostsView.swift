@@ -245,10 +245,11 @@ public class PostsView
                  l_PostMessage = PostMessage()
                 do
                 {
-                    l_PostMessage = PostMessage()
+                   
                     guard let l_JsonArray:[[String:Any]] = try JSONSerialization.jsonObject(with: data!, options:[]) as? [[String:Any]] else{return}
                     for l_JsonResponse in l_JsonArray
                     {
+                         l_PostMessage = PostMessage()
                     l_PostMessage.prg_postmessage = l_JsonResponse["prg_postmessage"] as? Int64
                     l_PostMessage.prg_user = l_JsonResponse["prg_user"] as? Int64
                     l_PostMessage.prg_post = l_JsonResponse["prg_post"] as? Int64
