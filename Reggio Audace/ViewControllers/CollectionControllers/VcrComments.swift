@@ -31,6 +31,7 @@ class VcrComments: VcrBase,ProPostMessageObs
         super.Init()
         let l_FlowLayout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         l_FlowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        self.collectionView.collectionViewLayout = l_FlowLayout
         
     }
     
