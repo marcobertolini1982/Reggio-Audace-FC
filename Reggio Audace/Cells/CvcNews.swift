@@ -67,7 +67,6 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         
         // Add event
         l_FileView.SetOnFileLoaded(proFileObs: self)
-        
         // Load file
         l_FileView.LoadFile(prg_file: prg_file)
         

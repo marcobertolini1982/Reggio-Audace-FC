@@ -12,6 +12,7 @@ class VcrPosts: VcrBase,ProPostsObs
 {
     // Declarations
     var POSTS:[Post] = [Post]()
+    
     open override var NibNabe: String
     {
         return "CvcNews"
@@ -64,15 +65,17 @@ class VcrPosts: VcrBase,ProPostsObs
         
         // Super
         super.viewDidLoad()
-        // Load record
+        
         
         
     }
     
     open override func viewWillAppear(_ animated: Bool)
     {
-        super.viewWillAppear(animated)
+        // Load record
         self.LoadRecord()
+        super.viewWillAppear(animated)
+        
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int
@@ -89,53 +92,34 @@ class VcrPosts: VcrBase,ProPostsObs
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-      //let l_Index:Int = indexPath.item
-        // Eval registration cell
-       guard let l_Cell:CvcNews = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcNews
+        // Declarations
+        let l_Index:Int = indexPath.row
+        // Set Image
+        guard let l_Cell:CvcNews = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcNews
         else
         {
             return UICollectionViewCell()
         }
-       
+        // Set image
+        
+        // Set textual data
+        l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
+        l_Cell.lbl_dat_post.text = POSTS[l_Index].dat_post
+        l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
+        l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
+        l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
+        l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
         // Return
         return l_Cell
         
     }
     
-    open override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
-    {
-        let l_Index:Int = indexPath.item
-        guard let l_Cell:CvcNews = cell as? CvcNews else{return}
-         l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
-        l_Cell.lbl_dat_post.text = POSTS[l_Index].dat_post
-        // Set image
-         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
-        // Set data
-        l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
-        l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
-        l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
-        
-        
-    }
-    
-    open override func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
-    {
-        guard let l_Cell:CvcNews = cell as? CvcNews else{return}
-        l_Cell.BtnCommentsEvent = nil
-        l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
-        l_Cell.lbl_dat_post.text = nil
-        // Set image
-        l_Cell.img_prg_file.image = nil
-        // Set data
-        l_Cell.lbl_des_title.text = nil
-        l_Cell.lbl_Comments.text = nil
-        l_Cell.lbl_Reactions.text = nil
-    }
+   
     
     open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         //Declarations
-        let l_Index:Int = indexPath.item
+        let l_Index:Int = indexPath.row
         let l_PrgPost:Int64? = self.POSTS[l_Index].prg_post
         // Eval
         guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost else{return}

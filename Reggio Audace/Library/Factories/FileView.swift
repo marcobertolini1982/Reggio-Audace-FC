@@ -11,11 +11,12 @@ import UIKit
 class FileView
 {
     
-    private lazy var ProFileObss = [ProFileObs]()
+    private  var ProFileObss = [ProFileObs]()
     
     func SetOnFileLoaded(proFileObs:ProFileObs)
     {
         ProFileObss.append(proFileObs)
+        print(self.ProFileObss.count)
     }
     
     func RaiseFileLoaded(data:Data)
@@ -26,6 +27,10 @@ class FileView
         }
     }
     
+    func RemoveProFileObs(index:Int)
+    {
+        self.ProFileObss.remove(at:index)
+    }
     func LoadFile(prg_file:Int64)
     {
         
@@ -39,10 +44,10 @@ class FileView
         let l_Task = URLSession.shared.dataTask(with: l_Url) { data, response, error in
             
             // Eval
-            guard let dataResponse = data, error == nil else { return }
+            guard data != nil && error == nil  else { return }
 
                 // Raise event
-                self.RaiseFileLoaded(data:dataResponse)
+                self.RaiseFileLoaded(data:data!)
             
         }
         
