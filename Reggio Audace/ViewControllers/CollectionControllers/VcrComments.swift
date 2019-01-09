@@ -29,7 +29,7 @@ class VcrComments: VcrBase,ProPostMessageObs
     override func Init()
     {
         super.Init()
-        self.SetLayoutVertical(heigth: 150)
+        self.SetLayoutVertical(heigth: )
     }
     
     override func viewDidLoad()
