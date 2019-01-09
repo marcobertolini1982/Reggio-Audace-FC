@@ -205,7 +205,7 @@
         <!--Vcr Comments-->
         <scene sceneID="VnR-Pd-VuZ">
             <objects>
-                <collectionViewController storyboardIdentifier="VcrComments" id="Alz-cQ-rl9" customClass="VcrComments" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="VcrComments" automaticallyAdjustsScrollViewInsets="NO" id="Alz-cQ-rl9" customClass="VcrComments" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="iv8-Ve-1Bs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
