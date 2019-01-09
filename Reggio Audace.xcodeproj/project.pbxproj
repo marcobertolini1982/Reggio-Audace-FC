@@ -73,8 +73,8 @@
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
 		D185534D21E605B700C2DE62 /* ProPostMessageObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */; };
-		D185534F21E6066D00C2DE62 /* PostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185534E21E6066D00C2DE62 /* PostMessage.swift */; };
 		D185535121E617B200C2DE62 /* VcrComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535021E617B200C2DE62 /* VcrComments.swift */; };
+		D185535321E64A8B00C2DE62 /* PostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535221E64A8B00C2DE62 /* PostMessage.swift */; };
 		D1855E3521DF56F600F812C0 /* VcrPostImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3421DF56F600F812C0 /* VcrPostImages.swift */; };
 		D1855E3721DF70A700F812C0 /* ProPostFilesObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */; };
 		D1855E3921DF712900F812C0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3821DF712900F812C0 /* File.swift */; };
@@ -174,8 +174,8 @@
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
 		D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostMessageObs.swift; sourceTree = "<group>"; };
-		D185534E21E6066D00C2DE62 /* PostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMessage.swift; sourceTree = "<group>"; };
 		D185535021E617B200C2DE62 /* VcrComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrComments.swift; sourceTree = "<group>"; };
+		D185535221E64A8B00C2DE62 /* PostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMessage.swift; sourceTree = "<group>"; };
 		D1855E3421DF56F600F812C0 /* VcrPostImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrPostImages.swift; sourceTree = "<group>"; };
 		D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostFilesObs.swift; sourceTree = "<group>"; };
 		D1855E3821DF712900F812C0 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
@@ -474,7 +474,7 @@
 				D16BBFA721C160AC008AF36E /* User.swift */,
 				D19B3E1021D62CE300BD5F15 /* RankingItem.swift */,
 				D1855E3821DF712900F812C0 /* File.swift */,
-				D185534E21E6066D00C2DE62 /* PostMessage.swift */,
+				D185535221E64A8B00C2DE62 /* PostMessage.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -706,7 +706,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19B3E1321D6557B00BD5F15 /* ProRankingObs.swift in Sources */,
-				D185534F21E6066D00C2DE62 /* PostMessage.swift in Sources */,
 				D160DC5A21B5375200DAEF67 /* PagLogin.swift in Sources */,
 				D17963F921B14779005311A8 /* VcrChannels.swift in Sources */,
 				D1633DD221B0135100D5CE2F /* Chat.swift in Sources */,
@@ -773,6 +772,7 @@
 				D179640321B18660005311A8 /* PagAccount.swift in Sources */,
 				D1633DCE21B0000000D5CE2F /* ProChatObs.swift in Sources */,
 				D15EBBEA21B69A1600835C0B /* SelectorUtils.swift in Sources */,
+				D185535321E64A8B00C2DE62 /* PostMessage.swift in Sources */,
 				D174231C21AE93AC009AAEFC /* PostsView.swift in Sources */,
 				D1633DCB21AFFDE300D5CE2F /* PagChat.swift in Sources */,
 				D16BBFA621C15F74008AF36E /* Device.swift in Sources */,
