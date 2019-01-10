@@ -29,7 +29,10 @@ class VcrComments: VcrBase,ProPostMessageObs
     override func Init()
     {
         super.Init()
-        self.SetLayoutVertical(heigth: 150)
+        let l_FlowLayout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        l_FlowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        self.collectionView.collectionViewLayout = l_FlowLayout
+        
     }
     
     override func viewDidLoad()
