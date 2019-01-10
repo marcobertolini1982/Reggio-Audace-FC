@@ -10,6 +10,8 @@ import UIKit
 
 class VcrPosts: VcrBase,ProPostsObs
 {
+    
+    
     // Declarations
     var POSTS:[Post] = [Post]()
     
@@ -65,9 +67,6 @@ class VcrPosts: VcrBase,ProPostsObs
         
         // Super
         super.viewDidLoad()
-        
-        
-        
     }
     
     open override func viewWillAppear(_ animated: Bool)
@@ -108,10 +107,6 @@ class VcrPosts: VcrBase,ProPostsObs
         l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
         l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
         l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
-         if l_Cell.img_prg_file.image != nil
-         {
-            l_Cell.img_prg_file.image = nil
-        }
         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
         
         // Return
@@ -146,4 +141,9 @@ class VcrPosts: VcrBase,ProPostsObs
         self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
     }
     
+    
+    func colleectionView(_ collectionView:UICollectionView,prefetchItemsAt indexPaths:[IndexPath])
+    {
+        
+    }
 }

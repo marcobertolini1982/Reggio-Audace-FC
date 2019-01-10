@@ -26,6 +26,7 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         {
             
             self.img_prg_file.image = UIImage(data: data)
+            self.DownloadIndicator.stopAnimating()
         }
         
     }
@@ -42,10 +43,12 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
     private var BTNCOMMENTSEVENT:((_ cell:UICollectionViewCell)-> Void)?
     public final var BtnCommentsEvent:((_ cell:UICollectionViewCell)->Void)?
         
-        {
+        
+    {
         get{return self.BTNCOMMENTSEVENT}
         set{self.BTNCOMMENTSEVENT = newValue}
     }
+    @IBOutlet weak var DownloadIndicator: UIActivityIndicatorView!
     @IBAction func OnBtnComemntsClick(_ sender: UIButton)
     {
         guard self.BTNCOMMENTSEVENT != nil else{return}
@@ -60,10 +63,13 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         super.awakeFromNib()
         // Set word wrap for the label
         self.lbl_des_title.lineBreakMode = NSLineBreakMode.byWordWrapping
+        
     }
     
     func SetUiImageFile(prg_file: Int64)
     {
+    
+        self.DownloadIndicator.startAnimating()
        
         // Declarations
         let l_FileView : FileView = FileView()
@@ -86,10 +92,10 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         // Load file
         //l_ChannelView.LoadChannel(prg_file: prg_file)
     }
-    
     open override func prepareForReuse()
     {
         super.prepareForReuse()
-        self.img_prg_file.image = UIImage()
+        self.img_prg_file.image = nil
     }
+    
 }

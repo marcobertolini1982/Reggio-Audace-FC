@@ -72,6 +72,9 @@
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="yxp-OO-oMf"/>
                         </constraints>
                     </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1qo-wT-xP1">
+                        <rect key="frame" x="141.5" y="131" width="37" height="37"/>
+                    </activityIndicatorView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbN-9d-rx5">
                         <rect key="frame" x="290" y="269" width="20" height="20"/>
                         <constraints>
@@ -139,6 +142,7 @@
                 <constraint firstItem="P20-O0-nWo" firstAttribute="leading" secondItem="fPX-N5-ihO" secondAttribute="trailing" constant="2" id="9F8-yg-OpV"/>
                 <constraint firstItem="zbN-9d-rx5" firstAttribute="leading" secondItem="uZq-8g-PfD" secondAttribute="trailing" constant="10" id="HIT-JU-uV3"/>
                 <constraint firstAttribute="bottom" secondItem="fPX-N5-ihO" secondAttribute="bottom" constant="10" id="HLd-dt-SsT"/>
+                <constraint firstItem="1qo-wT-xP1" firstAttribute="centerX" secondItem="Lpb-Xd-BMo" secondAttribute="centerX" id="Hy3-Fc-TjT"/>
                 <constraint firstAttribute="trailing" secondItem="tTj-4Z-Tbs" secondAttribute="trailing" constant="10" id="Ici-JW-zhg"/>
                 <constraint firstAttribute="trailing" secondItem="IU2-Eq-ywo" secondAttribute="trailing" id="Iq0-Wm-c5v"/>
                 <constraint firstItem="IU2-Eq-ywo" firstAttribute="leading" secondItem="Lpb-Xd-BMo" secondAttribute="leading" id="KBg-z1-sGC"/>
@@ -154,6 +158,7 @@
                 <constraint firstAttribute="trailing" secondItem="eba-yU-F5O" secondAttribute="trailing" constant="10" id="em4-Oe-Ibc"/>
                 <constraint firstAttribute="bottom" secondItem="IU2-Eq-ywo" secondAttribute="bottom" constant="40" id="f22-bX-Ufm"/>
                 <constraint firstAttribute="trailing" secondItem="zbN-9d-rx5" secondAttribute="trailing" constant="10" id="fWF-ez-06B"/>
+                <constraint firstItem="1qo-wT-xP1" firstAttribute="centerY" secondItem="Lpb-Xd-BMo" secondAttribute="centerY" id="g7a-wF-L8I"/>
                 <constraint firstItem="uZq-8g-PfD" firstAttribute="leading" secondItem="Lpb-Xd-BMo" secondAttribute="leading" constant="10" id="iOY-2v-iRp"/>
                 <constraint firstItem="eba-yU-F5O" firstAttribute="leading" secondItem="Lpb-Xd-BMo" secondAttribute="leading" constant="10" id="rOd-yh-Gm1"/>
                 <constraint firstAttribute="trailing" secondItem="bNn-Uy-n5D" secondAttribute="trailing" id="tGu-Yc-ckB"/>
@@ -165,6 +170,7 @@
             <viewLayoutGuide key="safeArea" id="79Z-5h-3dA"/>
             <size key="customSize" width="320" height="299"/>
             <connections>
+                <outlet property="DownloadIndicator" destination="1qo-wT-xP1" id="k6R-uk-rN2"/>
                 <outlet property="btn_Comments" destination="lIT-fb-dNa" id="IqP-ru-Tcf"/>
                 <outlet property="btn_share" destination="zbN-9d-rx5" id="99m-qt-iEO"/>
                 <outlet property="img_prg_channel" destination="tTj-4Z-Tbs" id="iBj-6j-zhK"/>
@@ -174,7 +180,7 @@
                 <outlet property="lbl_dat_post" destination="uZq-8g-PfD" id="MfJ-Lq-iur"/>
                 <outlet property="lbl_des_title" destination="eba-yU-F5O" id="2wY-rd-mHm"/>
             </connections>
-            <point key="canvasLocation" x="-4661" y="-633"/>
+            <point key="canvasLocation" x="-5734" y="-855"/>
         </collectionViewCell>
     </objects>
     <resources>
