@@ -10,7 +10,7 @@ import UIKit
 
 class FileView
 {
-    
+  
     private  var ProFileObss = [ProFileObs]()
     
     func SetOnFileLoaded(proFileObs:ProFileObs)
