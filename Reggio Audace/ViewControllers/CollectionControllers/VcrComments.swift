@@ -9,7 +9,7 @@
 import UIKit
 
 
-class VcrComments: VcrBase,ProPostMessageObs
+class VcrComments: VcrBase,ProPostMessageObs, UICollectionViewDelegateFlowLayout
 {
     func PostMessagesLoaded(postmessages: [PostMessage])
     {
@@ -29,20 +29,22 @@ class VcrComments: VcrBase,ProPostMessageObs
     override func Init()
     {
         super.Init()
-        guard let l_Layout:UICollectionViewFlowLayout = self.collectionViewLayout as? UICollectionViewFlowLayout
-        else
-        {
-            return
-            
-        }
-      l_Layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
-     self.collectionView.collectionViewLayout = l_Layout
+        //self.SetLayoutVertical(heigth: 300)
       
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        guard let l_FlowLayout:UICollectionViewFlowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else{return}
+        l_FlowLayout.scrollDirection = .horizontal
+        l_FlowLayout.itemSize.width = self.collectionView.bounds.width
+        
+        l_FlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        
+    
+    
     }
 
     /*
@@ -77,9 +79,10 @@ class VcrComments: VcrBase,ProPostMessageObs
         return UICollectionViewCell()
         
         }
-        l_Cell.lbl_Comment.text = self.POSTMESSAGES[l_Index].des_message
-        l_Cell.lbl_Date.text = self.POSTMESSAGES[l_Index].dat_message
-        l_Cell.lbl_DesUser.text = self.POSTMESSAGES[l_Index].des_user
+        let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
+        l_Cell.lbl_des_message.text = l_PostMessage.des_message
+        l_Cell.lbl_dat_message.text = l_PostMessage.dat_message
+       
     
         return l_Cell
     }
@@ -97,4 +100,6 @@ class VcrComments: VcrBase,ProPostMessageObs
         super.viewWillAppear(animated)
         self.LoadRecord()
     }
+    
+   
 }

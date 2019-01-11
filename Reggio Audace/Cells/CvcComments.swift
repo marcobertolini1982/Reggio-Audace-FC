@@ -11,15 +11,13 @@ import UIKit
 class CvcComments: CvcBase
 {
     
-    @IBOutlet weak var Vie_Content: UIView!
-    @IBOutlet weak var lbl_DesUser: UILabel!
-    @IBOutlet weak var lbl_Date: UILabel!
-    @IBOutlet weak var lbl_Comment: UILabel!
-    @IBOutlet weak var img_User: UIImageView!
-    
+ 
+    @IBOutlet weak var lbl_des_message: UILabel!
+    @IBOutlet weak var lbl_dat_message: UILabel!
     open override func awakeFromNib()
     {
         super.awakeFromNib()
-        self.Vie_Content.layer.borderColor = GARNETCOLOR.cgColor
+
+        
     }
 }

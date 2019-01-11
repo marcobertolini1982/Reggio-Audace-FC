@@ -102,9 +102,9 @@ public class PostsView
               }
                 // Declarations
                 var l_Post:Post
-                
-                
-                for dict in l_JsonResponse {
+
+                for dict in l_JsonResponse
+                {
                     
                     // Init
                     l_Post = Post()
@@ -141,6 +141,8 @@ public class PostsView
         l_Task.resume()
         
     }
+    
+    
    
     func LoadPost(prg_post:Int64?)
     {
