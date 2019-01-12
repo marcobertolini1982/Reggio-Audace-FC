@@ -9,47 +9,33 @@
 import Foundation
 class DateUtils
 {
-   public static func FormatStringDate(_ date: inout String?)
+    public static func StringToDate(stringdate:String?)-> Date?
     {
-        //Declarations
-        let l_DateFormatter:DateFormatter = DateFormatter()
-        //Set Properties
-        l_DateFormatter.dateFormat = "YYYY-MM-DD'T'HH:mm:ss"
-        //Eval parameter
-        guard date != nil else{return}
-        
-        l_DateFormatter.locale   = Locale.current
-        l_DateFormatter.timeZone = TimeZone.current
-        //Eval date format
-        if let l_Date:Date = l_DateFormatter.date(from: date!)
+        if stringdate != nil
         {
-            let l_Hourformat:String = DateFormatter.dateFormat(fromTemplate: "jj", options: 0, locale:l_DateFormatter.locale)!
-            l_DateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "YYYY/MM/dd'T'\(l_Hourformat):mm", options: 0, locale:l_DateFormatter.locale)
-            date = l_DateFormatter.string(from:l_Date)
-            
-            
+            let l_DateFormatter:DateFormatter = DateFormatter()
+            l_DateFormatter.dateFormat = "YYYY-MM-DD'T'HH:mm:ss"
+
+        return l_DateFormatter.date(from:stringdate!)
         }
+        return nil
     }
     
-    public static func FormatStringDateForPostMessage(_ date: inout String?)
+   public static func DateToString(date:Date?) ->String?
     {
-        //Declarations
+        guard date != nil else{return nil}
+       
         let l_DateFormatter:DateFormatter = DateFormatter()
-        //Set Properties
-        l_DateFormatter.dateFormat = "YYYY-MM-DD'T'HH:mm:ss.SSS"
-        //Eval parameter
-        guard date != nil else{return}
-        
-        l_DateFormatter.locale   = Locale.current
-        l_DateFormatter.timeZone = TimeZone.current
-        //Eval date format
-        if let l_Date:Date = l_DateFormatter.date(from: date!)
+        l_DateFormatter.locale = Locale.current
+        guard let l_Hour:String = DateFormatter.dateFormat(fromTemplate: "jj", options: 0, locale:l_DateFormatter.locale)
+        else
         {
-            let l_Hourformat:String = DateFormatter.dateFormat(fromTemplate: "jj", options: 0, locale:l_DateFormatter.locale)!
-            l_DateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "YYYY/MM/dd'T'\(l_Hourformat):mm", options: 0, locale:l_DateFormatter.locale)
-            date = l_DateFormatter.string(from:l_Date)
-            
+            return nil
             
         }
+        
+        l_DateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "YYYY/MM/dd'T'\(l_Hour):mm", options: 0, locale: l_DateFormatter.locale)
+        return l_DateFormatter.string(from:date!)
     }
+    
 }

@@ -103,7 +103,7 @@ class VcrPosts: VcrBase,ProPostsObs
         
         // Set textual data
         l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
-        l_Cell.lbl_dat_post.text = POSTS[l_Index].dat_post
+        l_Cell.lbl_dat_post.text = DateUtils.DateToString(date:POSTS[l_Index].dat_post)
         l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
         l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
         l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
