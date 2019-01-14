@@ -9,12 +9,21 @@
 import Foundation
 class DateUtils
 {
-    public static func StringToDate(stringdate:String?)-> Date?
+    enum STRINGDATEFORMAT:String
+    {
+        case FORMAT_FULL_WITH_MILLISECONDS = "YYYY-MM-DD'T'HH:mm:ss.SSS"
+        case FORMAT_FULL = "YYYY-MM-DD'T'HH:mm:ss"
+        case FORMAT_DEFAULT = "YYYY-MM-DD'T'HH:mm"
+        case FORMAT_ONLYDATE = "YYYY-MM-DD"
+        case FORMAT_ONLYTIME = "HH:mm"
+    }
+  
+    public static func StringToDate(_ stringdate:String?, _ stringdateformat:   STRINGDATEFORMAT)-> Date?
     {
         if stringdate != nil
         {
             let l_DateFormatter:DateFormatter = DateFormatter()
-            l_DateFormatter.dateFormat = "YYYY-MM-DD'T'HH:mm:ss"
+            l_DateFormatter.dateFormat = stringdateformat.rawValue
 
         return l_DateFormatter.date(from:stringdate!)
         }
