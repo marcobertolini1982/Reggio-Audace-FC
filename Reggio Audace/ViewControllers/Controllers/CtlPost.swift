@@ -51,7 +51,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
         DispatchQueue.main.async
         {
             self.VIEPOST.lbl_Title.text = self.POST?.des_title
-            self.VIEPOST.lbl_Date.text = self.POST?.dat_post
+            self.VIEPOST.lbl_Date.text = DateUtils.DateToString(date:self.POST?.dat_post)
             self.VIEPOST.txt_Article.text = self.POST?.des_post
             self.VIEPOST.lbl_Comment.text = "\(self.POST?.num_postmessages ?? Int64())"
             self.VIEPOST.lbl_Reactions.text = "\(self.POST?.num_reactions ?? Int64())"

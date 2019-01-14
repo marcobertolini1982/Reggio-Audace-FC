@@ -11,7 +11,7 @@ class Post
 {
     // Declarations
     var prg_post: Int64?
-    var dat_post:String?
+    var dat_post:Date?
     var des_title: String?
     var des_post:String?
     var des_channel:String?

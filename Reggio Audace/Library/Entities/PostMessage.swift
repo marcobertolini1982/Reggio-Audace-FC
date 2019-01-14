@@ -14,7 +14,7 @@ class PostMessage
     var prg_user:Int64?
     var cod_user:String?
     var des_user:String?
-    var dat_message:String?
+    var dat_message:Date?
     var des_message:String?
     var prg_file:Int64?
     

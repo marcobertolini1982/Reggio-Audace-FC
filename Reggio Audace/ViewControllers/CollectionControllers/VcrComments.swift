@@ -81,7 +81,7 @@ class VcrComments: VcrBase,ProPostMessageObs, UICollectionViewDelegateFlowLayout
         }
         let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
         l_Cell.lbl_des_message.text = l_PostMessage.des_message
-        l_Cell.lbl_dat_message.text = l_PostMessage.dat_message
+        l_Cell.lbl_dat_message.text = DateUtils.DateToString(date:l_PostMessage.dat_message)
        
     
         return l_Cell
