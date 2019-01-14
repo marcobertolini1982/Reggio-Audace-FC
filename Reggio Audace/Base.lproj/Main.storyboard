@@ -746,7 +746,7 @@
         <!--Privacy Policy-->
         <scene sceneID="tZc-Wh-aRs">
             <objects>
-                <viewController storyboardIdentifier="VcrPrivacy" title="Privacy Policy" id="XuD-l0-bts" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VcrPrivacy" title="Privacy Policy" automaticallyAdjustsScrollViewInsets="NO" id="XuD-l0-bts" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qiN-Cz-6je">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1017,11 +1017,11 @@ Ultimo aggiornamento: 1 ottobre 2018</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Chat" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="IconaAccount" width="50" height="50"/>
-        <image name="News" width="50" height="50"/>
-        <image name="Tabellino" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="football-game" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Chat" width="32" height="32"/>
+        <image name="IconaAccount" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Tabellino" width="32" height="32"/>
+        <image name="football-game" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dk5-dW-tet"/>

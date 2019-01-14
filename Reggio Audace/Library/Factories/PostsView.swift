@@ -102,17 +102,16 @@ public class PostsView
               }
                 // Declarations
                 var l_Post:Post
-                
-                
-                for dict in l_JsonResponse {
+
+                for dict in l_JsonResponse
+                {
                     
                     // Init
                     l_Post = Post()
                     
                     // Get response data
                     l_Post.prg_post = dict["prg_post"] as? Int64
-                    l_Post.dat_post = dict["dat_post"] as? String
-                    DateUtils.FormatStringDate(&l_Post.dat_post)
+                    l_Post.dat_post = DateUtils.StringToDate(dict["dat_post"]as? String,DateUtils.STRINGDATEFORMAT.FORMAT_FULL)
                     l_Post.des_title = dict["des_title"] as? String
                     l_Post.des_post = dict["des_post"] as? String
                     l_Post.des_channel = dict["des_channel"] as? String
@@ -141,6 +140,8 @@ public class PostsView
         l_Task.resume()
         
     }
+    
+    
    
     func LoadPost(prg_post:Int64?)
     {
@@ -159,8 +160,7 @@ public class PostsView
                 guard let l_JsonResponse:[String:Any] = try JSONSerialization.jsonObject(with: data!, options:[]) as? [String:Any] else{return}
                 // Get response data
                 l_Post.prg_post = l_JsonResponse["prg_post"] as? Int64
-                l_Post.dat_post = l_JsonResponse["dat_post"] as? String
-                DateUtils.FormatStringDate(&l_Post.dat_post)
+                l_Post.dat_post = DateUtils.StringToDate( l_JsonResponse["dat_post"]as? String,DateUtils.STRINGDATEFORMAT.FORMAT_FULL)
                 l_Post.des_title = l_JsonResponse["des_title"] as? String
                 l_Post.des_post = l_JsonResponse["des_post"] as? String
                 l_Post.des_channel = l_JsonResponse["des_channel"] as? String
@@ -255,8 +255,7 @@ public class PostsView
                     l_PostMessage.prg_post = l_JsonResponse["prg_post"] as? Int64
                     l_PostMessage.cod_user = l_JsonResponse["cod_user"] as? String
                     l_PostMessage.des_user = l_JsonResponse["des_user"] as? String
-                    l_PostMessage.dat_message = l_JsonResponse["dat_message"] as? String
-                    DateUtils.FormatStringDateForPostMessage(&l_PostMessage.dat_message)
+                    l_PostMessage.dat_message = DateUtils.StringToDate(l_JsonResponse["dat_message"] as?String,DateUtils.STRINGDATEFORMAT.FORMAT_FULL_WITH_MILLISECONDS)
                     l_PostMessage.des_message = l_JsonResponse["des_message"] as?String
                     l_PostMessage.prg_file = l_JsonResponse["prg_file"] as? Int64
                     l_PostMessages.append(l_PostMessage)
