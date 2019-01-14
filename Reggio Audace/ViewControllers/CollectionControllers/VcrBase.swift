@@ -24,6 +24,7 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate
     {
         // Register control
         self.collectionView?.register(UINib(nibName: self.NibNabe, bundle: nil), forCellWithReuseIdentifier: self.reuseIdentifier)
+        self.collectionView.contentInset = self.EdgeInset
     }
     
     open override func viewDidLoad()
@@ -98,4 +99,9 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate
         textField.endEditing(true)
         return true
     }
+    
+    open var EdgeInset:UIEdgeInsets
+        {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
 }

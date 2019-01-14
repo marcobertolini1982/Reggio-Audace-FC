@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CvcComments: CvcBase
+class CvcComments: UITableViewCell
 {
     
  
@@ -17,7 +17,5 @@ class CvcComments: CvcBase
     open override func awakeFromNib()
     {
         super.awakeFromNib()
-
-        
     }
 }
