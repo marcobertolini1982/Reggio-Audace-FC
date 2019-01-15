@@ -31,7 +31,7 @@
                             <constraint firstAttribute="width" constant="30" id="vJD-SE-K3N"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnK-8i-Nm0">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnK-8i-Nm0" customClass="LabPostMessage" customModule="Reggio_Audace" customModuleProvider="target">
                         <rect key="frame" x="54" y="8" width="346" height="83.5"/>
                         <fontDescription key="fontDescription" name="Hind-Light" family="Hind" pointSize="15"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
