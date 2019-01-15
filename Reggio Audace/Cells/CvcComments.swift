@@ -12,8 +12,8 @@ class CvcComments: UITableViewCell
 {
     
  
-    @IBOutlet weak var lbl_des_message: UILabel!
-    @IBOutlet weak var lbl_dat_message: UILabel!
+  
+    @IBOutlet weak var lbl_message: UILabel!
     open override func awakeFromNib()
     {
         super.awakeFromNib()

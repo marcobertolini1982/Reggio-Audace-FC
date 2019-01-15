@@ -75,7 +75,12 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
         // Declarations
         let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
         // Set porperties
-        l_Cell.lbl_dat_message.text = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
+        let l_MessageText:String = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
+        let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)
+        let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostMessage.des_user!)
+        l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
+        l_Cell.lbl_message.attributedText = l_AttributedText
+        
         // Return
      
         return l_Cell

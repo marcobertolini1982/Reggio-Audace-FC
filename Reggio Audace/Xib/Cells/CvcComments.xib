@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Hind-Regular.ttf">
-            <string>Hind-Regular</string>
+        <array key="Hind-Light.ttf">
+            <string>Hind-Light</string>
         </array>
     </customFonts>
     <objects>
@@ -24,33 +24,34 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="5YV-r5-PC4">
-                        <rect key="frame" x="8" y="0.0" width="30" height="30"/>
+                        <rect key="frame" x="8" y="8" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="gtK-Vx-Xc8"/>
-                            <constraint firstAttribute="width" secondItem="5YV-r5-PC4" secondAttribute="height" multiplier="1:1" id="wkK-nW-FCx"/>
-                            <constraint firstAttribute="width" constant="30" id="zTa-cz-eZk"/>
+                            <constraint firstAttribute="height" constant="30" id="PoR-BF-VwT"/>
+                            <constraint firstAttribute="width" secondItem="5YV-r5-PC4" secondAttribute="height" multiplier="1:1" id="Zjn-Cr-EYQ"/>
+                            <constraint firstAttribute="width" constant="30" id="vJD-SE-K3N"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnK-8i-Nm0">
-                        <rect key="frame" x="46" y="0.0" width="400" height="91.5"/>
-                        <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnK-8i-Nm0">
+                        <rect key="frame" x="54" y="8" width="346" height="83.5"/>
+                        <fontDescription key="fontDescription" name="Hind-Light" family="Hind" pointSize="15"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="MnK-8i-Nm0" firstAttribute="height" secondItem="1rw-2M-zIj" secondAttribute="height" id="Ast-MC-xpg"/>
-                    <constraint firstItem="MnK-8i-Nm0" firstAttribute="top" secondItem="1rw-2M-zIj" secondAttribute="top" id="Dt3-Hl-cYu"/>
-                    <constraint firstItem="5YV-r5-PC4" firstAttribute="top" secondItem="1rw-2M-zIj" secondAttribute="top" id="M1g-z2-bIH"/>
-                    <constraint firstItem="MnK-8i-Nm0" firstAttribute="leading" secondItem="5YV-r5-PC4" secondAttribute="trailing" constant="8" id="Tom-hq-Tep"/>
-                    <constraint firstItem="5YV-r5-PC4" firstAttribute="leading" secondItem="1rw-2M-zIj" secondAttribute="leading" constant="8" id="VeU-GQ-Hz9"/>
-                    <constraint firstItem="MnK-8i-Nm0" firstAttribute="width" secondItem="1rw-2M-zIj" secondAttribute="width" id="sRc-Qz-cM3"/>
+                    <constraint firstItem="MnK-8i-Nm0" firstAttribute="leading" secondItem="5YV-r5-PC4" secondAttribute="trailing" constant="16" id="5ii-XJ-oQA"/>
+                    <constraint firstItem="5YV-r5-PC4" firstAttribute="leading" secondItem="1rw-2M-zIj" secondAttribute="leading" constant="8" id="NhU-fl-XD4"/>
+                    <constraint firstItem="MnK-8i-Nm0" firstAttribute="top" secondItem="1rw-2M-zIj" secondAttribute="top" constant="8" id="b6V-Lj-8d0"/>
+                    <constraint firstItem="5YV-r5-PC4" firstAttribute="top" secondItem="1rw-2M-zIj" secondAttribute="top" constant="8" id="hvP-m6-4ih"/>
+                    <constraint firstAttribute="trailing" secondItem="MnK-8i-Nm0" secondAttribute="trailing" id="jvt-cu-Byc"/>
+                    <constraint firstAttribute="bottom" secondItem="MnK-8i-Nm0" secondAttribute="bottom" id="xP6-nH-Gw8"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="lbl_dat_message" destination="MnK-8i-Nm0" id="9lY-qI-Wzk"/>
+                <outlet property="lbl_message" destination="MnK-8i-Nm0" id="M5A-W9-h5n"/>
             </connections>
-            <point key="canvasLocation" x="-1355.2" y="-179.91004497751126"/>
+            <point key="canvasLocation" x="-1195.2" y="-172.71364317841082"/>
         </tableViewCell>
     </objects>
     <resources>
