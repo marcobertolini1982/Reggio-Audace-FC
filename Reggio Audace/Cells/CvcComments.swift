@@ -10,14 +10,15 @@ import UIKit
 
 class CvcComments: UITableViewCell
 {
+    @IBOutlet weak var txt_message: UITextView!
     
  
   
-    @IBOutlet weak var lbl_message: UILabel!
+    
     open override func awakeFromNib()
     {
         super.awakeFromNib()
-        self.lbl_message.layer.borderWidth = 1.0
-        self.lbl_message.layer.borderColor = GARNETCOLOR.cgColor
+        self.txt_message.layer.borderWidth = 1.0
+        self.txt_message.layer.borderColor = GARNETCOLOR.cgColor
     }
 }
