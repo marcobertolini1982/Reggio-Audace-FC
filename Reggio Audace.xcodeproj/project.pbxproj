@@ -72,6 +72,7 @@
 		D179640121B184CE005311A8 /* PagBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640021B184CE005311A8 /* PagBase.swift */; };
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
+		D17DA94321EE228100E933C4 /* LabPostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DA94221EE228100E933C4 /* LabPostMessage.swift */; };
 		D17F14A121ECD39E00A422EF /* TblBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17F14A021ECD39E00A422EF /* TblBase.swift */; };
 		D185534D21E605B700C2DE62 /* ProPostMessageObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */; };
 		D185535121E617B200C2DE62 /* TblPostMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535021E617B200C2DE62 /* TblPostMessages.swift */; };
@@ -174,6 +175,7 @@
 		D179640021B184CE005311A8 /* PagBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagBase.swift; sourceTree = "<group>"; };
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
+		D17DA94221EE228100E933C4 /* LabPostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabPostMessage.swift; sourceTree = "<group>"; };
 		D17F14A021ECD39E00A422EF /* TblBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TblBase.swift; sourceTree = "<group>"; };
 		D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostMessageObs.swift; sourceTree = "<group>"; };
 		D185535021E617B200C2DE62 /* TblPostMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TblPostMessages.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			children = (
 				D15EBBF121B6C1C400835C0B /* LabBase.swift */,
 				D15EBBE721B698D900835C0B /* LabIndicator.swift */,
+				D17DA94221EE228100E933C4 /* LabPostMessage.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				D19B3E0F21D625F600BD5F15 /* RankingView.swift in Sources */,
 				D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */,
 				D171970721BAABD7008D786B /* PagPost.swift in Sources */,
+				D17DA94321EE228100E933C4 /* LabPostMessage.swift in Sources */,
 				D160DC5821B5333D00DAEF67 /* TabMain.swift in Sources */,
 				D17963FF21B15773005311A8 /* Season.swift in Sources */,
 				D19B3E1121D62CE300BD5F15 /* RankingItem.swift in Sources */,
