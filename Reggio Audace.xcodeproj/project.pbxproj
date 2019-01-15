@@ -72,8 +72,9 @@
 		D179640121B184CE005311A8 /* PagBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640021B184CE005311A8 /* PagBase.swift */; };
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
+		D17F14A121ECD39E00A422EF /* TblBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17F14A021ECD39E00A422EF /* TblBase.swift */; };
 		D185534D21E605B700C2DE62 /* ProPostMessageObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */; };
-		D185535121E617B200C2DE62 /* VcrComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535021E617B200C2DE62 /* VcrComments.swift */; };
+		D185535121E617B200C2DE62 /* TblPostMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535021E617B200C2DE62 /* TblPostMessages.swift */; };
 		D185535321E64A8B00C2DE62 /* PostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535221E64A8B00C2DE62 /* PostMessage.swift */; };
 		D1855E3521DF56F600F812C0 /* VcrPostImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3421DF56F600F812C0 /* VcrPostImages.swift */; };
 		D1855E3721DF70A700F812C0 /* ProPostFilesObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */; };
@@ -173,8 +174,9 @@
 		D179640021B184CE005311A8 /* PagBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagBase.swift; sourceTree = "<group>"; };
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
+		D17F14A021ECD39E00A422EF /* TblBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TblBase.swift; sourceTree = "<group>"; };
 		D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostMessageObs.swift; sourceTree = "<group>"; };
-		D185535021E617B200C2DE62 /* VcrComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrComments.swift; sourceTree = "<group>"; };
+		D185535021E617B200C2DE62 /* TblPostMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TblPostMessages.swift; sourceTree = "<group>"; };
 		D185535221E64A8B00C2DE62 /* PostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMessage.swift; sourceTree = "<group>"; };
 		D1855E3421DF56F600F812C0 /* VcrPostImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrPostImages.swift; sourceTree = "<group>"; };
 		D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostFilesObs.swift; sourceTree = "<group>"; };
@@ -255,7 +257,6 @@
 				D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */,
 				D17963F821B14779005311A8 /* VcrChannels.swift */,
 				D1633DD321B01E9600D5CE2F /* VcrChats.swift */,
-				D185535021E617B200C2DE62 /* VcrComments.swift */,
 				D15ABDB721B9202E00C980EE /* VcrMedia.swift */,
 				D1855E3421DF56F600F812C0 /* VcrPostImages.swift */,
 				D174232221AEAE68009AAEFC /* VcrPosts.swift */,
@@ -355,6 +356,7 @@
 		D174232021AEAE10009AAEFC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17F149F21ECD30500A422EF /* TableControllers */,
 				D1EDE76A21BE865F00FDA751 /* Controllers */,
 				D15ABDB321B919B800C980EE /* CollectionControllers */,
 			);
@@ -397,6 +399,15 @@
 				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D17F149F21ECD30500A422EF /* TableControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D17F14A021ECD39E00A422EF /* TblBase.swift */,
+				D185535021E617B200C2DE62 /* TblPostMessages.swift */,
+			);
+			path = TableControllers;
 			sourceTree = "<group>";
 		};
 		D19F62FB21B7DFD000726165 /* Views */ = {
@@ -716,7 +727,7 @@
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
 				D192985921DD04D200850DF2 /* DateUtils.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
-				D185535121E617B200C2DE62 /* VcrComments.swift in Sources */,
+				D185535121E617B200C2DE62 /* TblPostMessages.swift in Sources */,
 				D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D1855E3721DF70A700F812C0 /* ProPostFilesObs.swift in Sources */,
@@ -767,6 +778,7 @@
 				D19B3E1B21D6705500BD5F15 /* CvcRankingItem.swift in Sources */,
 				D15EBBE821B698D900835C0B /* LabIndicator.swift in Sources */,
 				D16BBFA821C160AC008AF36E /* User.swift in Sources */,
+				D17F14A121ECD39E00A422EF /* TblBase.swift in Sources */,
 				D160DC5521B531B700DAEF67 /* CtlUserLogin.swift in Sources */,
 				D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */,
 				D179640321B18660005311A8 /* PagAccount.swift in Sources */,

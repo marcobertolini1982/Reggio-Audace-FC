@@ -35,14 +35,14 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>BigNoodleTitling</string>
-		<string>Hind-Light</string>
-		<string>Hind-Medium</string>
-		<string>Hind-Regular</string>
-		<string>Hind-Bold</string>
-		<string>Hind-SemiBold</string>
+		<string>Hind-Light.ttf</string>
+		<string>Hind-Medium.ttf</string>
+		<string>Hind-Regular.ttf</string>
+		<string>Hind-Bold.ttf</string>
+		<string>Hind-SemiBold.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>LaunchScreen.ttf</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

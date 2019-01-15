@@ -202,30 +202,23 @@
             </objects>
             <point key="canvasLocation" x="-4148" y="3090"/>
         </scene>
-        <!--Vcr Comments-->
-        <scene sceneID="VnR-Pd-VuZ">
+        <!--Tbl Post Messages-->
+        <scene sceneID="npn-9J-VVs">
             <objects>
-                <collectionViewController storyboardIdentifier="VcrComments" automaticallyAdjustsScrollViewInsets="NO" id="Alz-cQ-rl9" customClass="VcrComments" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="iv8-Ve-1Bs">
+                <tableViewController storyboardIdentifier="TblPostMessages" id="BbZ-3d-Rv6" customClass="TblPostMessages" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QLd-3O-oyj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zwt-VM-2tk">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
                         <connections>
-                            <outlet property="dataSource" destination="Alz-cQ-rl9" id="LeM-n9-AgM"/>
-                            <outlet property="delegate" destination="Alz-cQ-rl9" id="JNa-kE-THf"/>
+                            <outlet property="dataSource" destination="BbZ-3d-Rv6" id="Usd-iG-jnp"/>
+                            <outlet property="delegate" destination="BbZ-3d-Rv6" id="nTb-2T-Gvd"/>
                         </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fyd-Kq-idP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wus-fd-gtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4163" y="3848"/>
+            <point key="canvasLocation" x="-4131" y="3760"/>
         </scene>
         <!--Pag Post-->
         <scene sceneID="hOq-S0-hT4">

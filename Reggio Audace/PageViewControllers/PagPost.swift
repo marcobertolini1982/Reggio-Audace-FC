@@ -22,7 +22,7 @@ class PagPost: PagBase
         self.ViewControllers = [
                                 MainStoryboard.instantiateViewController(withIdentifier:"CtlPost"),
                                 MainStoryboard.instantiateViewController(withIdentifier:"VcrPostImages"),
-                                MainStoryboard.instantiateViewController(withIdentifier:"VcrComments")
+                                MainStoryboard.instantiateViewController(withIdentifier:"TblPostMessages")
                                ]
     }
 open override var IndicatorsText: [String]
