@@ -38,7 +38,7 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
     override func Init()
     {
         super.Init()
-        self.view.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename:"Sfondo Chat e Commenti")
+        self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename:"Sfondo Chat e Commenti")
         
     }
     

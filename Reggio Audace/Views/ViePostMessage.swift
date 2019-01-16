@@ -13,6 +13,10 @@ class ViePostMessage: VieBase
     // Properties
     @IBOutlet weak var txt_des_message: UITextView!
     @IBOutlet weak var btn_send: UIButton!
+    override var NIBNAME: String
+    {
+        return "ViePostMessage"
+    }
     override func Init()
     {
         super.Init()
