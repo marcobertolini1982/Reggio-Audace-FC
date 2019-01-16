@@ -14,6 +14,7 @@
 		526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcRankingItem.xib */; };
 		5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279757D21B97DCC00923473 /* RoundImageView.swift */; };
 		52797B2A21DF566900350D7D /* CvcRankingHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52797B2921DF566900350D7D /* CvcRankingHeader.xib */; };
+		527CE4CB21EF372500DA63E4 /* TextEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527CE4CA21EF372500DA63E4 /* TextEditor.xib */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
 		527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C521B0603600CBD2BE /* Hind-Light.ttf */; };
@@ -115,6 +116,7 @@
 		526BF73121B0452400465AD7 /* CvcRankingItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcRankingItem.xib; sourceTree = "<group>"; };
 		5279757D21B97DCC00923473 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		52797B2921DF566900350D7D /* CvcRankingHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcRankingHeader.xib; sourceTree = "<group>"; };
+		527CE4CA21EF372500DA63E4 /* TextEditor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextEditor.xib; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 			children = (
 				5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */,
 				5293A14F21B576E90081E805 /* ViePost.xib */,
+				527CE4CA21EF372500DA63E4 /* TextEditor.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				527E94F121B0648900A8CAD0 /* Hind-Medium.ttf in Resources */,
 				527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */,
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
+				527CE4CB21EF372500DA63E4 /* TextEditor.xib in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */,
