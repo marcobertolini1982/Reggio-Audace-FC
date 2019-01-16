@@ -21,4 +21,6 @@ class CvcComments: UITableViewCell
         self.txt_message.layer.borderWidth = 1.0
         self.txt_message.layer.borderColor = GARNETCOLOR.cgColor
     }
+    
+
 }
