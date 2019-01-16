@@ -12,12 +12,26 @@ class CvcComments: UITableViewCell,ProFileObs
 {
     func FileLoaded(data: Data)
     {
+        DispatchQueue.main.async
+            {
+                self.img_prg_file.image = UIImage(data: data)
+            }
+    }
+    // Declarations
+    @IBOutlet weak var txt_message: UITextView!
+    @IBOutlet weak var img_prg_file: UIImageView!
+    func SetUiImageFile(prg_file: Int64)
+    {
+        
+        // Declarations
+        let l_FileView : FileView = FileView()
+        
+        // Add event
+        l_FileView.SetOnFileLoaded(proFileObs: self)
+        // Load file
+        l_FileView.LoadFile(prg_file: prg_file)
         
     }
-    
-    @IBOutlet weak var txt_message: UITextView!
-    
- 
   
     
     open override func awakeFromNib()

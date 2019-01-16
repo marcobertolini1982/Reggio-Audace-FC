@@ -80,9 +80,12 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
         let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostMessage.des_user!)
         l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
         l_Cell.txt_message.attributedText = l_AttributedText
+        if l_PostMessage.prg_file != nil
+        {
+            l_Cell.SetUiImageFile(prg_file: l_PostMessage.prg_file!)
+        }
         
         // Return
-     
         return l_Cell
     }
     
