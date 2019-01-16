@@ -8,8 +8,13 @@
 
 import UIKit
 
-class CvcComments: UITableViewCell
+class CvcComments: UITableViewCell,ProFileObs
 {
+    func FileLoaded(data: Data)
+    {
+        
+    }
+    
     @IBOutlet weak var txt_message: UITextView!
     
  
@@ -21,4 +26,6 @@ class CvcComments: UITableViewCell
         self.txt_message.layer.borderWidth = 1.0
         self.txt_message.layer.borderColor = GARNETCOLOR.cgColor
     }
+    
+
 }

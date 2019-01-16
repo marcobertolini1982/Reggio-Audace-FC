@@ -20,6 +20,11 @@ class TblBase: UITableViewController,UITextFieldDelegate
     {
         return String()
     }
+    
+    open var EdgeInset:UIEdgeInsets
+    {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
 
     override func viewDidLoad()
     {
@@ -102,7 +107,7 @@ class TblBase: UITableViewController,UITextFieldDelegate
         // Register control
        self.tableView.register(UINib(nibName: self.NibNabe, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
        self.tableView.contentInset = self.EdgeInset
-        
+    
     }
     
     func BindData()
@@ -120,10 +125,7 @@ class TblBase: UITableViewController,UITextFieldDelegate
     
   
     
-    open var EdgeInset:UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
+   
     
     open func SetTextFieldsDelegate()
     {
