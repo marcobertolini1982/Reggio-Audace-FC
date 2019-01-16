@@ -8,8 +8,13 @@
 
 import UIKit
 
-class CvcComments: UITableViewCell
+class CvcComments: UITableViewCell,ProFileObs
 {
+    func FileLoaded(data: Data)
+    {
+        
+    }
+    
     @IBOutlet weak var txt_message: UITextView!
     
  
