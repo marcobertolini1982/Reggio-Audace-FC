@@ -11,7 +11,7 @@ import UIKit
 
 class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowLayout
 {
-    // Declarations
+    // Properties
     private var POSTMESSAGES:   [PostMessage] = [PostMessage]()
     
     
@@ -21,10 +21,10 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
     }
     override var NibNabe: String
     {
-        return "CvcComments"
+        return "TvcPostMessage"
     }
     
-    open override var EdgeInset: UIEdgeInsets
+    override var EdgeInset: UIEdgeInsets
     {
       return UIEdgeInsets(top: 21.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
@@ -35,8 +35,12 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
         self.BindData()
     }
     
-
-  
+    override func Init()
+    {
+        super.Init()
+        self.view.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename:"Sfondo Chat e Commenti")
+        
+    }
     
     override func viewDidLoad()
     {
@@ -66,7 +70,7 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
         // Declarations
         let l_Index:Int = indexPath.row
         // Eval
-        guard  let l_Cell:CvcComments = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? CvcComments
+        guard  let l_Cell:TvcPostMessage = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TvcPostMessage
         else
        {
         return UITableViewCell()
@@ -80,9 +84,12 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
         let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostMessage.des_user!)
         l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
         l_Cell.txt_message.attributedText = l_AttributedText
+        if l_PostMessage.prg_file != nil
+        {
+            l_Cell.SetUiImageFile(prg_file: l_PostMessage.prg_file!)
+        }
         
         // Return
-     
         return l_Cell
     }
     

@@ -83,8 +83,8 @@
 		D1855E3921DF712900F812C0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3821DF712900F812C0 /* File.swift */; };
 		D1855E3B21DF798000F812C0 /* CvcPostImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3A21DF798000F812C0 /* CvcPostImage.swift */; };
 		D1855E3D21DF7AD900F812C0 /* CvcPostImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */; };
-		D1855E3F21DFB78B00F812C0 /* CvcComments.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3E21DFB78B00F812C0 /* CvcComments.xib */; };
-		D1855E4121DFBC4300F812C0 /* CvcComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E4021DFBC4300F812C0 /* CvcComments.swift */; };
+		D1855E3F21DFB78B00F812C0 /* TvcPostMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */; };
+		D1855E4121DFBC4300F812C0 /* TvcPostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E4021DFBC4300F812C0 /* TvcPostMessage.swift */; };
 		D192985721DCF96800850DF2 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985621DCF96800850DF2 /* DeviceUtils.swift */; };
 		D192985921DD04D200850DF2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985821DD04D200850DF2 /* DateUtils.swift */; };
 		D192985B21DD1A6600850DF2 /* ProPostsObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985A21DD1A6600850DF2 /* ProPostsObs.swift */; };
@@ -187,8 +187,8 @@
 		D1855E3821DF712900F812C0 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		D1855E3A21DF798000F812C0 /* CvcPostImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcPostImage.swift; sourceTree = "<group>"; };
 		D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcPostImage.xib; sourceTree = "<group>"; };
-		D1855E3E21DFB78B00F812C0 /* CvcComments.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcComments.xib; sourceTree = "<group>"; };
-		D1855E4021DFBC4300F812C0 /* CvcComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcComments.swift; sourceTree = "<group>"; };
+		D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TvcPostMessage.xib; sourceTree = "<group>"; };
+		D1855E4021DFBC4300F812C0 /* TvcPostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvcPostMessage.swift; sourceTree = "<group>"; };
 		D192985621DCF96800850DF2 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		D192985821DD04D200850DF2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D192985A21DD1A6600850DF2 /* ProPostsObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostsObs.swift; sourceTree = "<group>"; };
@@ -372,7 +372,7 @@
 			children = (
 				D19B3E1821D66FC700BD5F15 /* CvcBase.swift */,
 				D1633DD821B02B1700D5CE2F /* CvcChat.swift */,
-				D1855E4021DFBC4300F812C0 /* CvcComments.swift */,
+				D1855E4021DFBC4300F812C0 /* TvcPostMessage.swift */,
 				D174232721AED6BF009AAEFC /* CvcNews.swift */,
 				D1855E3A21DF798000F812C0 /* CvcPostImage.swift */,
 				D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */,
@@ -394,8 +394,8 @@
 		D174232C21AED7D4009AAEFC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D17BB20521EF4AA90089ED7E /* TableViewCells */,
 				D1633DD521B0276500D5CE2F /* CvcChat.xib */,
-				D1855E3E21DFB78B00F812C0 /* CvcComments.xib */,
 				D174232621AED6BA009AAEFC /* CvcNews.xib */,
 				52797B2921DF566900350D7D /* CvcRankingHeader.xib */,
 				526BF73121B0452400465AD7 /* CvcRankingItem.xib */,
@@ -403,6 +403,14 @@
 				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D17BB20521EF4AA90089ED7E /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		D17F149F21ECD30500A422EF /* TableControllers */ = {
@@ -590,7 +598,7 @@
 				52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */,
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
 				52797B2A21DF566900350D7D /* CvcRankingHeader.xib in Resources */,
-				D1855E3F21DFB78B00F812C0 /* CvcComments.xib in Resources */,
+				D1855E3F21DFB78B00F812C0 /* TvcPostMessage.xib in Resources */,
 				5232497C21BEB9A300174439 /* (null) in Resources */,
 				526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */,
 				526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */,
@@ -738,7 +746,7 @@
 				D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D1855E3721DF70A700F812C0 /* ProPostFilesObs.swift in Sources */,
-				D1855E4121DFBC4300F812C0 /* CvcComments.swift in Sources */,
+				D1855E4121DFBC4300F812C0 /* TvcPostMessage.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
 				D1633DD421B01E9600D5CE2F /* VcrChats.swift in Sources */,
 				D15EBBF221B6C1C400835C0B /* LabBase.swift in Sources */,
