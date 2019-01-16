@@ -16,22 +16,39 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJU-SV-5Q2">
-                    <rect key="frame" x="16" y="639" width="291" height="28"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="lJU-SV-5Q2">
+                    <rect key="frame" x="16" y="639" width="307" height="28"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="dbv-k1-2Vx"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1j-6X-V2F">
-                    <rect key="frame" x="321" y="637" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1j-6X-V2F">
+                    <rect key="frame" x="331" y="639" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="E1j-6X-V2F" secondAttribute="height" multiplier="1:1" id="Oy4-dH-shs"/>
+                        <constraint firstAttribute="width" constant="28" id="Z0k-Mm-ldo"/>
+                        <constraint firstAttribute="height" constant="28" id="prI-xx-k1n"/>
+                    </constraints>
+                    <state key="normal" image="SendText"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lJU-SV-5Q2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="EPa-8t-xLe"/>
+                <constraint firstItem="lJU-SV-5Q2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="jVV-Yu-hv6"/>
+                <constraint firstItem="E1j-6X-V2F" firstAttribute="leading" secondItem="lJU-SV-5Q2" secondAttribute="trailing" constant="8" id="mCY-yc-rfB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="E1j-6X-V2F" secondAttribute="trailing" constant="16" id="mu9-i3-JOa"/>
+                <constraint firstItem="E1j-6X-V2F" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vDr-N2-FTC"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="55.200000000000003" y="48.125937031484263"/>
         </view>
     </objects>
+    <resources>
+        <image name="SendText" width="24" height="24"/>
+    </resources>
 </document>
