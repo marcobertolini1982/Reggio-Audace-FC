@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CvcComments: UITableViewCell,ProFileObs
+class TvcPostMessage: UITableViewCell,ProFileObs
 {
     func FileLoaded(data: Data)
     {
@@ -39,6 +39,7 @@ class CvcComments: UITableViewCell,ProFileObs
         super.awakeFromNib()
         self.txt_message.layer.borderWidth = 1.0
         self.txt_message.layer.borderColor = GARNETCOLOR.cgColor
+        self.contentView.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
     }
     

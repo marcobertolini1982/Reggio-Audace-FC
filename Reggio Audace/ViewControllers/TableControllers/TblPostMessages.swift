@@ -21,7 +21,7 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
     }
     override var NibNabe: String
     {
-        return "CvcComments"
+        return "TvcPostMessage"
     }
     
     override var EdgeInset: UIEdgeInsets
@@ -38,7 +38,7 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
     override func Init()
     {
         super.Init()
-        self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename:"Sfondo Chat e Commenti")
+        self.view.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename:"Sfondo Chat e Commenti")
         
     }
     
@@ -70,7 +70,7 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
         // Declarations
         let l_Index:Int = indexPath.row
         // Eval
-        guard  let l_Cell:CvcComments = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? CvcComments
+        guard  let l_Cell:TvcPostMessage = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TvcPostMessage
         else
        {
         return UITableViewCell()
