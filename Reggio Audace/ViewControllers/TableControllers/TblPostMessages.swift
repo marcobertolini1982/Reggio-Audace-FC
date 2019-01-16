@@ -11,7 +11,7 @@ import UIKit
 
 class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowLayout
 {
-    // Declarations
+    // Properties
     private var POSTMESSAGES:   [PostMessage] = [PostMessage]()
     
     
@@ -24,7 +24,7 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
         return "CvcComments"
     }
     
-    open override var EdgeInset: UIEdgeInsets
+    override var EdgeInset: UIEdgeInsets
     {
       return UIEdgeInsets(top: 21.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
@@ -35,8 +35,12 @@ class TblPostMessages: TblBase,ProPostMessageObs , UICollectionViewDelegateFlowL
         self.BindData()
     }
     
-
-  
+    override func Init()
+    {
+        super.Init()
+        self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename:"Sfondo Chat e Commenti")
+        
+    }
     
     override func viewDidLoad()
     {
