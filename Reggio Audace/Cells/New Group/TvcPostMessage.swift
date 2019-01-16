@@ -15,6 +15,7 @@ class TvcPostMessage: UITableViewCell,ProFileObs
         DispatchQueue.main.async
             {
                 self.img_prg_file.image = UIImage(data: data)
+                
             }
     }
     // Declarations

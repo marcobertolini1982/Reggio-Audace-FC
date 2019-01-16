@@ -10,10 +10,13 @@ import UIKit
 
 class CtlBase: UIViewController,UITextFieldDelegate
 {
-
+   open func Init()
+   {
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.Init()
         self.SetKeyBoardDismissable()
         self.SetTextFieldsDelegate()
         // Do any additional setup after loading the view.

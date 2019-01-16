@@ -73,6 +73,11 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
         }
     }
     
+    override func Init()
+    {
+        self.img_User.layer.cornerRadius = self.img_User.bounds.width/2
+    }
+    
     func UserLoaded(user: User)
     {
         

@@ -21,15 +21,15 @@ class VieBase: UIView
     public required init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-        self.ConfigView()
+        self.Init()
     }
     public override init(frame: CGRect)
     {
         super.init(frame: frame)
-        self.ConfigView()
+        self.Init()
     }
     
-    open func ConfigView()
+    open func Init()
     {
         Bundle.main.loadNibNamed(self.NIBNAME, owner: self, options: nil)
         self.CONTENTVIEW.frame = self.bounds

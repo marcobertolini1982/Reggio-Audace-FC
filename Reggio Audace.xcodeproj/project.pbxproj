@@ -14,7 +14,7 @@
 		526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcRankingItem.xib */; };
 		5279757E21B97DCD00923473 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279757D21B97DCC00923473 /* RoundImageView.swift */; };
 		52797B2A21DF566900350D7D /* CvcRankingHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52797B2921DF566900350D7D /* CvcRankingHeader.xib */; };
-		527CE4CB21EF372500DA63E4 /* TextEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527CE4CA21EF372500DA63E4 /* TextEditor.xib */; };
+		527CE4CB21EF372500DA63E4 /* ViePostMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527CE4CA21EF372500DA63E4 /* ViePostMessage.xib */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
 		527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C521B0603600CBD2BE /* Hind-Light.ttf */; };
@@ -85,6 +85,7 @@
 		D1855E3D21DF7AD900F812C0 /* CvcPostImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */; };
 		D1855E3F21DFB78B00F812C0 /* TvcPostMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */; };
 		D1855E4121DFBC4300F812C0 /* TvcPostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E4021DFBC4300F812C0 /* TvcPostMessage.swift */; };
+		D18AC9E421EF699800362523 /* ViePostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AC9E321EF699800362523 /* ViePostMessage.swift */; };
 		D192985721DCF96800850DF2 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985621DCF96800850DF2 /* DeviceUtils.swift */; };
 		D192985921DD04D200850DF2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985821DD04D200850DF2 /* DateUtils.swift */; };
 		D192985B21DD1A6600850DF2 /* ProPostsObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985A21DD1A6600850DF2 /* ProPostsObs.swift */; };
@@ -116,13 +117,13 @@
 		526BF73121B0452400465AD7 /* CvcRankingItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcRankingItem.xib; sourceTree = "<group>"; };
 		5279757D21B97DCC00923473 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		52797B2921DF566900350D7D /* CvcRankingHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcRankingHeader.xib; sourceTree = "<group>"; };
-		527CE4CA21EF372500DA63E4 /* TextEditor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextEditor.xib; sourceTree = "<group>"; };
+		527CE4CA21EF372500DA63E4 /* ViePostMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePostMessage.xib; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
 		52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieCalendar.xib; sourceTree = "<group>"; };
 		52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieClubGranataSingleSponsor.xib; sourceTree = "<group>"; };
-		52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CvcSeasonMenu.xib; path = ../../CvcSeasonMenu.xib; sourceTree = "<group>"; };
+		52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSeasonMenu.xib; sourceTree = "<group>"; };
 		52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		52F650C321B0603600CBD2BE /* Hind-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Regular.ttf"; sourceTree = "<group>"; };
 		52F650C421B0603600CBD2BE /* Hind-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Bold.ttf"; sourceTree = "<group>"; };
@@ -188,7 +189,8 @@
 		D1855E3A21DF798000F812C0 /* CvcPostImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcPostImage.swift; sourceTree = "<group>"; };
 		D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcPostImage.xib; sourceTree = "<group>"; };
 		D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TvcPostMessage.xib; sourceTree = "<group>"; };
-		D1855E4021DFBC4300F812C0 /* TvcPostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvcPostMessage.swift; sourceTree = "<group>"; };
+		D1855E4021DFBC4300F812C0 /* TvcPostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TvcPostMessage.swift; path = "../New Group/TvcPostMessage.swift"; sourceTree = "<group>"; };
+		D18AC9E321EF699800362523 /* ViePostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePostMessage.swift; sourceTree = "<group>"; };
 		D192985621DCF96800850DF2 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		D192985821DD04D200850DF2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D192985A21DD1A6600850DF2 /* ProPostsObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostsObs.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		D15ABDB321B919B800C980EE /* CollectionControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D174232221AEAE68009AAEFC /* VcrPosts.swift */,
 				D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */,
 				D17963F821B14779005311A8 /* VcrChannels.swift */,
 				D1633DD321B01E9600D5CE2F /* VcrChats.swift */,
@@ -276,6 +279,7 @@
 				D171970821BAB152008D786B /* ViePost.swift */,
 				D15EBBEF21B6A08C00835C0B /* VieBase.swift */,
 				D15EBBEB21B69B1A00835C0B /* ViePageIndicator.swift */,
+				D18AC9E321EF699800362523 /* ViePostMessage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,12 +310,12 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		D160DC5621B532FF00DAEF67 /* TabBars */ = {
+		D160DC5621B532FF00DAEF67 /* TabBarControllers */ = {
 			isa = PBXGroup;
 			children = (
 				D160DC5721B5333D00DAEF67 /* TabMain.swift */,
 			);
-			path = TabBars;
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 		D1633DD721B0298C00D5CE2F /* PageViewControllers */ = {
@@ -360,6 +364,7 @@
 		D174232021AEAE10009AAEFC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D160DC5621B532FF00DAEF67 /* TabBarControllers */,
 				D17F149F21ECD30500A422EF /* TableControllers */,
 				D1EDE76A21BE865F00FDA751 /* Controllers */,
 				D15ABDB321B919B800C980EE /* CollectionControllers */,
@@ -370,9 +375,9 @@
 		D174232A21AED728009AAEFC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D18AC9E521EF72DA00362523 /* TableViewCells */,
 				D19B3E1821D66FC700BD5F15 /* CvcBase.swift */,
 				D1633DD821B02B1700D5CE2F /* CvcChat.swift */,
-				D1855E4021DFBC4300F812C0 /* TvcPostMessage.swift */,
 				D174232721AED6BF009AAEFC /* CvcNews.swift */,
 				D1855E3A21DF798000F812C0 /* CvcPostImage.swift */,
 				D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */,
@@ -386,7 +391,6 @@
 			children = (
 				D19F62FB21B7DFD000726165 /* Views */,
 				D174232C21AED7D4009AAEFC /* Cells */,
-				D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -394,13 +398,8 @@
 		D174232C21AED7D4009AAEFC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D18AC9E221EF643E00362523 /* CollectionViewCells */,
 				D17BB20521EF4AA90089ED7E /* TableViewCells */,
-				D1633DD521B0276500D5CE2F /* CvcChat.xib */,
-				D174232621AED6BA009AAEFC /* CvcNews.xib */,
-				52797B2921DF566900350D7D /* CvcRankingHeader.xib */,
-				526BF73121B0452400465AD7 /* CvcRankingItem.xib */,
-				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
-				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -422,12 +421,34 @@
 			path = TableControllers;
 			sourceTree = "<group>";
 		};
+		D18AC9E221EF643E00362523 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D1633DD521B0276500D5CE2F /* CvcChat.xib */,
+				D174232621AED6BA009AAEFC /* CvcNews.xib */,
+				52797B2921DF566900350D7D /* CvcRankingHeader.xib */,
+				526BF73121B0452400465AD7 /* CvcRankingItem.xib */,
+				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
+				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
+				D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D18AC9E521EF72DA00362523 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D1855E4021DFBC4300F812C0 /* TvcPostMessage.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		D19F62FB21B7DFD000726165 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */,
 				5293A14F21B576E90081E805 /* ViePost.xib */,
-				527CE4CA21EF372500DA63E4 /* TextEditor.xib */,
+				527CE4CA21EF372500DA63E4 /* ViePostMessage.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -467,10 +488,8 @@
 				D174231D21AEA802009AAEFC /* Protocols */,
 				52127B2E21B5882E006CE2AB /* Reggio Audace.entitlements */,
 				5279757D21B97DCC00923473 /* RoundImageView.swift */,
-				D160DC5621B532FF00DAEF67 /* TabBars */,
 				D160DC4921B521C900DAEF67 /* Utils */,
 				52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */,
-				D174232221AEAE68009AAEFC /* VcrPosts.swift */,
 				52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */,
 				D174232021AEAE10009AAEFC /* ViewControllers */,
 				D15EBBE421B68F7B00835C0B /* Views */,
@@ -592,7 +611,7 @@
 				527E94F121B0648900A8CAD0 /* Hind-Medium.ttf in Resources */,
 				527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */,
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
-				527CE4CB21EF372500DA63E4 /* TextEditor.xib in Resources */,
+				527CE4CB21EF372500DA63E4 /* ViePostMessage.xib in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */,
@@ -745,6 +764,7 @@
 				D185535121E617B200C2DE62 /* TblPostMessages.swift in Sources */,
 				D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
+				D18AC9E421EF699800362523 /* ViePostMessage.swift in Sources */,
 				D1855E3721DF70A700F812C0 /* ProPostFilesObs.swift in Sources */,
 				D1855E4121DFBC4300F812C0 /* TvcPostMessage.swift in Sources */,
 				D1BE6D6721AD60D800114084 /* AppDelegate.swift in Sources */,
