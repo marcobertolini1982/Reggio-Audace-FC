@@ -100,6 +100,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         if l_PostMessage.prg_file != nil
         {
             l_Cell.SetUiImageFile(prg_file: l_PostMessage.prg_file!)
+            
         }
         
         // Return

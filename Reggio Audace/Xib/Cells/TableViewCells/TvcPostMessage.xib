@@ -48,10 +48,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="img_prg_file" destination="5YV-r5-PC4" id="wsK-sQ-B0s"/>
-                <outlet property="txt_message" destination="rM2-vZ-SvM" id="lno-W6-M2w"/>
+                <outlet property="img_prg_file" destination="5YV-r5-PC4" id="f6C-wG-SDT"/>
+                <outlet property="txt_message" destination="rM2-vZ-SvM" id="Cqf-Z5-2B0"/>
             </connections>
-            <point key="canvasLocation" x="-973" y="-166"/>
+            <point key="canvasLocation" x="-827" y="-127"/>
         </tableViewCell>
     </objects>
 </document>

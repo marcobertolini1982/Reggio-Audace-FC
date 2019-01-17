@@ -28,7 +28,7 @@ class CtlBase: UIViewController,UITextFieldDelegate
     
    open func Init()
    {
-    }
+   }
     override func viewDidLoad()
     {
         super.viewDidLoad()
