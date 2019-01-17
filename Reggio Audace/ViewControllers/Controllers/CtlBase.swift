@@ -10,6 +10,22 @@ import UIKit
 
 class CtlBase: UIViewController,UITextFieldDelegate
 {
+    
+    var reuseIdentifier: String
+    {
+        return String()
+    }
+    
+    var NibName: String
+    {
+        return String()
+    }
+    
+    var EdgeInset: UIEdgeInsets
+    {
+        return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
    open func Init()
    {
     }
@@ -56,5 +72,10 @@ class CtlBase: UIViewController,UITextFieldDelegate
         // Dismiss KeyBoard
         textField.endEditing(true)
         return true
+    }
+    
+    func BindData()
+    {
+        
     }
 }

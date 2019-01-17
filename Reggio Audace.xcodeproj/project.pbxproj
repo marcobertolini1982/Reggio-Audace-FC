@@ -74,9 +74,8 @@
 		D179640321B18660005311A8 /* PagAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179640221B18660005311A8 /* PagAccount.swift */; };
 		D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D2D2921C942FE002A7178 /* ProUserObs.swift */; };
 		D17DA94321EE228100E933C4 /* LabPostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DA94221EE228100E933C4 /* LabPostMessage.swift */; };
-		D17F14A121ECD39E00A422EF /* TblBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17F14A021ECD39E00A422EF /* TblBase.swift */; };
 		D185534D21E605B700C2DE62 /* ProPostMessageObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */; };
-		D185535121E617B200C2DE62 /* TblPostMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535021E617B200C2DE62 /* TblPostMessages.swift */; };
+		D185535121E617B200C2DE62 /* CtlPostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535021E617B200C2DE62 /* CtlPostMessage.swift */; };
 		D185535321E64A8B00C2DE62 /* PostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185535221E64A8B00C2DE62 /* PostMessage.swift */; };
 		D1855E3521DF56F600F812C0 /* VcrPostImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3421DF56F600F812C0 /* VcrPostImages.swift */; };
 		D1855E3721DF70A700F812C0 /* ProPostFilesObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */; };
@@ -179,9 +178,8 @@
 		D179640221B18660005311A8 /* PagAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagAccount.swift; sourceTree = "<group>"; };
 		D17D2D2921C942FE002A7178 /* ProUserObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserObs.swift; sourceTree = "<group>"; };
 		D17DA94221EE228100E933C4 /* LabPostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabPostMessage.swift; sourceTree = "<group>"; };
-		D17F14A021ECD39E00A422EF /* TblBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TblBase.swift; sourceTree = "<group>"; };
 		D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostMessageObs.swift; sourceTree = "<group>"; };
-		D185535021E617B200C2DE62 /* TblPostMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TblPostMessages.swift; sourceTree = "<group>"; };
+		D185535021E617B200C2DE62 /* CtlPostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtlPostMessage.swift; sourceTree = "<group>"; };
 		D185535221E64A8B00C2DE62 /* PostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMessage.swift; sourceTree = "<group>"; };
 		D1855E3421DF56F600F812C0 /* VcrPostImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrPostImages.swift; sourceTree = "<group>"; };
 		D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostFilesObs.swift; sourceTree = "<group>"; };
@@ -365,7 +363,6 @@
 			isa = PBXGroup;
 			children = (
 				D160DC5621B532FF00DAEF67 /* TabBarControllers */,
-				D17F149F21ECD30500A422EF /* TableControllers */,
 				D1EDE76A21BE865F00FDA751 /* Controllers */,
 				D15ABDB321B919B800C980EE /* CollectionControllers */,
 			);
@@ -410,15 +407,6 @@
 				D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */,
 			);
 			path = TableViewCells;
-			sourceTree = "<group>";
-		};
-		D17F149F21ECD30500A422EF /* TableControllers */ = {
-			isa = PBXGroup;
-			children = (
-				D17F14A021ECD39E00A422EF /* TblBase.swift */,
-				D185535021E617B200C2DE62 /* TblPostMessages.swift */,
-			);
-			path = TableControllers;
 			sourceTree = "<group>";
 		};
 		D18AC9E221EF643E00362523 /* CollectionViewCells */ = {
@@ -526,6 +514,7 @@
 		D1EDE76A21BE865F00FDA751 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D185535021E617B200C2DE62 /* CtlPostMessage.swift */,
 				D160DC5B21B568BD00DAEF67 /* CtlRegisterUser.swift */,
 				D160DC5421B531B700DAEF67 /* CtlUserLogin.swift */,
 				D15ABDB121B915C700C980EE /* CtlUserDataReset.swift */,
@@ -761,7 +750,7 @@
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
 				D192985921DD04D200850DF2 /* DateUtils.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,
-				D185535121E617B200C2DE62 /* TblPostMessages.swift in Sources */,
+				D185535121E617B200C2DE62 /* CtlPostMessage.swift in Sources */,
 				D195F6B621CD1F0D001B10CB /* AppUtils.swift in Sources */,
 				D15ABDB821B9202E00C980EE /* VcrMedia.swift in Sources */,
 				D18AC9E421EF699800362523 /* ViePostMessage.swift in Sources */,
@@ -814,7 +803,6 @@
 				D19B3E1B21D6705500BD5F15 /* CvcRankingItem.swift in Sources */,
 				D15EBBE821B698D900835C0B /* LabIndicator.swift in Sources */,
 				D16BBFA821C160AC008AF36E /* User.swift in Sources */,
-				D17F14A121ECD39E00A422EF /* TblBase.swift in Sources */,
 				D160DC5521B531B700DAEF67 /* CtlUserLogin.swift in Sources */,
 				D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */,
 				D179640321B18660005311A8 /* PagAccount.swift in Sources */,

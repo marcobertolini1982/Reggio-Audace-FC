@@ -9,13 +9,20 @@
 import UIKit
 
 
-class CtllPostMessages: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostMessageObs , UICollectionViewDelegateFlowLayout
+class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostMessageObs
 {
     // Properties
     
     @IBOutlet weak var tableView:UITableView!
     private var POSTMESSAGES:   [PostMessage] = [PostMessage]()
     
+    
+    override func Init()
+    {
+        self.tableView.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
+        self.tableView.contentInset = self.EdgeInset
+        self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
+    }
     
     override var reuseIdentifier: String
     {
@@ -37,12 +44,6 @@ class CtllPostMessages: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPos
         self.BindData()
     }
     
-    override func Init()
-    {
-        super.Init()
-        self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename:"Sfondo Chat e Commenti")
-        
-    }
     
     override func viewDidLoad()
     {

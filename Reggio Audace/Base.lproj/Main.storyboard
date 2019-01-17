@@ -202,23 +202,39 @@
             </objects>
             <point key="canvasLocation" x="-4148" y="3090"/>
         </scene>
-        <!--Tbl Post Messages-->
-        <scene sceneID="npn-9J-VVs">
+        <!--Ctl Post Message-->
+        <scene sceneID="35v-GI-TPr">
             <objects>
-                <tableViewController storyboardIdentifier="TblPostMessages" id="BbZ-3d-Rv6" customClass="TblPostMessages" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QLd-3O-oyj">
+                <viewController storyboardIdentifier="CtlPostMessage" id="fNm-Ea-j1s" customClass="CtlPostMessage" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rjw-58-gYF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-vH-Hyh">
+                                <rect key="frame" x="0.0" y="20" width="320" height="488"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fNm-Ea-j1s" id="qha-zu-ukh"/>
+                                    <outlet property="delegate" destination="fNm-Ea-j1s" id="QH7-M8-40S"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <connections>
-                            <outlet property="dataSource" destination="BbZ-3d-Rv6" id="Usd-iG-jnp"/>
-                            <outlet property="delegate" destination="BbZ-3d-Rv6" id="nTb-2T-Gvd"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wus-fd-gtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="ELx-vH-Hyh" firstAttribute="leading" secondItem="Rjw-58-gYF" secondAttribute="leading" id="G5U-GV-kOt"/>
+                            <constraint firstItem="ELx-vH-Hyh" firstAttribute="top" secondItem="bkj-ls-f1V" secondAttribute="top" id="Gaz-E7-Na2"/>
+                            <constraint firstItem="bkj-ls-f1V" firstAttribute="bottom" secondItem="ELx-vH-Hyh" secondAttribute="bottom" constant="60" id="eR2-DV-h3X"/>
+                            <constraint firstAttribute="trailing" secondItem="ELx-vH-Hyh" secondAttribute="trailing" id="yfx-9t-fE9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bkj-ls-f1V"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ELx-vH-Hyh" id="thK-DX-vHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hiw-1N-TkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4131" y="3760"/>
+            <point key="canvasLocation" x="-4149.375" y="3772.1830985915494"/>
         </scene>
         <!--Pag Post-->
         <scene sceneID="hOq-S0-hT4">

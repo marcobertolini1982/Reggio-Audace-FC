@@ -40,9 +40,12 @@ class TvcPostMessage: UITableViewCell,ProFileObs
         super.awakeFromNib()
         self.txt_message.layer.borderWidth = 1.0
         self.txt_message.layer.borderColor = GARNETCOLOR.cgColor
-        self.contentView.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
     }
-    
+    override func prepareForReuse()
+    {
+        super.prepareForReuse()
+        self.img_prg_file.image = nil
+    }
 
 }
