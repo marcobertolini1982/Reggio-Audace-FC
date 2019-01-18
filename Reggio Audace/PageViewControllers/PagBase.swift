@@ -136,5 +136,11 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         self.SetActiveIndicator(activeindex: l_Index)
        
     }
+    
+    func OnItemSelected(_ indexPath:IndexPath)
+    {
+        let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexPath) as? CvcHeader
+        l_Cell?.lbl_title.textColor = GARNETCOLOR
+    }
 
 }

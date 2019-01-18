@@ -12,7 +12,7 @@ class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDeleg
 {
    
     // Declarations
-    @IBOutlet weak var Cvi_Headcers: UICollectionView!
+    @IBOutlet weak var Cvi_Headcers: CviHeader!
      private var TITLES:[String] = [String]()
     convenience init(frame: CGRect,headertitles:[String])
     {
@@ -23,6 +23,7 @@ class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDeleg
         self.Cvi_Headcers.delegate = self
         self.TITLES.append(contentsOf:headertitles)
         self.Cvi_Headcers.register(UINib(nibName: "CvcHeader", bundle: nil), forCellWithReuseIdentifier: "Header")
+        self.Cvi_Headcers.SelectedEvent = self.OnItemSelected
     }
     
    
@@ -74,5 +75,10 @@ class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDeleg
         return "ViePageIndicator"
     }
     
+    func OnItemSelected(_ indexPath:IndexPath)
+    {
+        let l_Cell:CvcHeader? = self.Cvi_Headcers.cellForItem(at: indexPath) as? CvcHeader
+        l_Cell?.lbl_title.textColor = GARNETCOLOR
+    }
     
 }
