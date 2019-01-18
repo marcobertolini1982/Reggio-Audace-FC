@@ -10,19 +10,20 @@ import UIKit
 
 class CviHeader: UICollectionView
 {
+    private var SELECTEDEVENT:((IndexPath?)->Void)?
+    private var DESELECTEDEVENT:((IndexPath)->Void)?
 
     override func selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition)
     {
         super.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
-        guard indexPath != nil else{return}
-        self.delegate?.collectionView?(self, didSelectItemAt: indexPath!)
+        self.SELECTEDEVENT?(indexPath)
       
     }
     
     override func deselectItem(at indexPath: IndexPath, animated: Bool)
     {
         super.deselectItem(at: indexPath, animated: animated)
-        self.delegate?.collectionView?(self, didDeselectItemAt: indexPath)
+        self.DESELECTEDEVENT?(indexPath)
     }
 
 }

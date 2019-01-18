@@ -10,6 +10,7 @@ import UIKit
 
 class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
+   
     // Declarations
     @IBOutlet weak var Cvi_Headcers: UICollectionView!
      private var TITLES:[String] = [String]()

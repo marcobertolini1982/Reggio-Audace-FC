@@ -10,6 +10,7 @@ import UIKit
 
 class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate
 {
+    
     // Declarations
     private lazy var WILLTRANSITIONTO:UIViewController = UIViewController()
     private lazy var VIEWCONTROLLERS:[UIViewController] = [UIViewController]()
