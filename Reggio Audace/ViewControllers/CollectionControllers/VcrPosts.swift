@@ -119,7 +119,7 @@ class VcrPosts: VcrBase,ProPostsObs
     open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         //Declarations
-        let l_Index:Int = indexPath.row
+        let l_Index:Int = indexPath.item
         let l_PrgPost:Int64? = self.POSTS[l_Index].prg_post
         // Eval
         guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost else{return}
@@ -141,9 +141,4 @@ class VcrPosts: VcrBase,ProPostsObs
         self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
     }
     
-    
-    func colleectionView(_ collectionView:UICollectionView,prefetchItemsAt indexPaths:[IndexPath])
-    {
-        
-    }
 }
