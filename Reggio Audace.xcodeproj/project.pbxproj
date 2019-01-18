@@ -23,6 +23,8 @@
 		527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */; };
 		5293A15021B576E90081E805 /* ViePost.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A14F21B576E90081E805 /* ViePost.xib */; };
 		5293A15221B57E5B0081E805 /* ViiePageIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */; };
+		52A78B2821F1C353000E197E /* ViewPageIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A78B2721F1C353000E197E /* ViewPageIndicator.xib */; };
+		52A78B2A21F1C3EA000E197E /* ViewPageIndicatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A78B2921F1C3EA000E197E /* ViewPageIndicatorCell.xib */; };
 		52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */; };
 		52E7168521BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */; };
 		52E7168721BED3F6002E1BA1 /* CvcSeasonMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */; };
@@ -120,6 +122,8 @@
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
 		5293A15121B57E5B0081E805 /* ViiePageIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViiePageIndicator.xib; sourceTree = "<group>"; };
+		52A78B2721F1C353000E197E /* ViewPageIndicator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewPageIndicator.xib; sourceTree = "<group>"; };
+		52A78B2921F1C3EA000E197E /* ViewPageIndicatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewPageIndicatorCell.xib; sourceTree = "<group>"; };
 		52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieCalendar.xib; sourceTree = "<group>"; };
 		52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieClubGranataSingleSponsor.xib; sourceTree = "<group>"; };
 		52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSeasonMenu.xib; sourceTree = "<group>"; };
@@ -419,6 +423,8 @@
 				52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */,
 				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
 				D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */,
+				52A78B2721F1C353000E197E /* ViewPageIndicator.xib */,
+				52A78B2921F1C3EA000E197E /* ViewPageIndicatorCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -602,6 +608,7 @@
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
 				527CE4CB21EF372500DA63E4 /* ViePostMessage.xib in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
+				52A78B2821F1C353000E197E /* ViewPageIndicator.xib in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */,
 				527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */,
@@ -613,6 +620,7 @@
 				5293A15021B576E90081E805 /* ViePost.xib in Resources */,
 				52E7168721BED3F6002E1BA1 /* CvcSeasonMenu.xib in Resources */,
 				D1BE6D6C21AD60D800114084 /* Main.storyboard in Resources */,
+				52A78B2A21F1C3EA000E197E /* ViewPageIndicatorCell.xib in Resources */,
 				526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */,
 				D1855E3D21DF7AD900F812C0 /* CvcPostImage.xib in Resources */,
 				5293A15221B57E5B0081E805 /* ViiePageIndicator.xib in Resources */,
