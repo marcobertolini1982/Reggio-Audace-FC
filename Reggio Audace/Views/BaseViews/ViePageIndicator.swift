@@ -39,8 +39,8 @@ class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDeleg
         let l_Insets:UIEdgeInsets = l_FloewLayout.sectionInset
         let l_Spacing:CGFloat = l_FloewLayout.minimumInteritemSpacing * CGFloat(self.TITLES.count - 1)
         let l_Space:CGFloat = l_Insets.left + l_Insets.right + l_Spacing
-        let l_Size:CGFloat = (self.Cvi_Headcers.bounds.width - l_Space)/CGFloat(self.TITLES.count)
-        return CGSize(width: l_Size, height: l_Size)
+        let l_Size:Int = Int((self.Cvi_Headcers.bounds.width - l_Space)/CGFloat(self.TITLES.count))
+        return CGSize(width: l_Size, height:l_Size)
         
     }
     
