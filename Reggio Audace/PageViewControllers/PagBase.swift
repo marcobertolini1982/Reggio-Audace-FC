@@ -8,12 +8,19 @@
 
 import UIKit
 
-class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate
+class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate,ProCviHeader
 {
+    func Item_Selected(indexpath: IndexPath)
+    {
+        let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexpath) as? CvcHeader
+        l_Cell?.lbl_title.textColor = GARNETCOLOR
+        self.setViewControllers([self.VIEWCONTROLLERS[indexpath.item]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
+    }
+    
     
     // Declarations
-    private lazy var WILLTRANSITIONTO:UIViewController = UIViewController()
-    private lazy var VIEWCONTROLLERS:[UIViewController] = [UIViewController]()
+    private  var WILLTRANSITIONTO:UIViewController = UIViewController()
+    private  var VIEWCONTROLLERS:[UIViewController] = [UIViewController]()
     private  var PAGEINDICATOR:ViePageIndicator!
     public var ViewControllers:[UIViewController]
     {
@@ -33,8 +40,9 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     func Init()
     {
         let l_WIDTH:CGFloat  = self.view.bounds.width
-        let l_RECT:CGRect    = CGRect(x:0, y:0, width:l_WIDTH, height:18)
+        let l_RECT:CGRect    = CGRect(x:0, y:0, width:l_WIDTH, height:30)
         self.PAGEINDICATOR = ViePageIndicator(frame:l_RECT,headertitles:self.IndicatorsText)
+        self.PAGEINDICATOR.Cvi_Headcers.proCviHeader = self
         //Add page indicator
         self.view.addSubview(self.PAGEINDICATOR)
         // Set Initial controller
@@ -142,5 +150,10 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexPath) as? CvcHeader
         l_Cell?.lbl_title.textColor = GARNETCOLOR
     }
-
+    private final func OnSelectedItem(indexPath:IndexPath)
+    {
+        let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexPath) as? CvcHeader
+        l_Cell?.lbl_title.textColor = GARNETCOLOR
+        self.setViewControllers([self.VIEWCONTROLLERS[indexPath.item]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
+    }
 }

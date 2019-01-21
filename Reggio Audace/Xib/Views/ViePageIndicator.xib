@@ -22,11 +22,8 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aIQ-7C-ymf" customClass="CviHeader" customModule="Reggio_Audace" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="20" width="375" height="36"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="36" id="5In-b6-VJf"/>
-                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zwW-6E-QA2">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -37,12 +34,13 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="aIQ-7C-ymf" firstAttribute="leading" secondItem="7U8-KV-ZiQ" secondAttribute="leading" id="7aZ-iH-jHq"/>
-                <constraint firstItem="aIQ-7C-ymf" firstAttribute="top" secondItem="7U8-KV-ZiQ" secondAttribute="top" id="XcU-pI-X3k"/>
-                <constraint firstItem="7U8-KV-ZiQ" firstAttribute="trailing" secondItem="aIQ-7C-ymf" secondAttribute="trailing" id="gkU-zh-ziD"/>
+                <constraint firstItem="aIQ-7C-ymf" firstAttribute="leading" secondItem="7U8-KV-ZiQ" secondAttribute="leading" id="887-HR-MCp"/>
+                <constraint firstItem="aIQ-7C-ymf" firstAttribute="top" secondItem="7U8-KV-ZiQ" secondAttribute="top" id="8LR-mF-nCn"/>
+                <constraint firstItem="7U8-KV-ZiQ" firstAttribute="trailing" secondItem="aIQ-7C-ymf" secondAttribute="trailing" id="Ecc-AM-WdC"/>
+                <constraint firstItem="7U8-KV-ZiQ" firstAttribute="bottom" secondItem="aIQ-7C-ymf" secondAttribute="bottom" id="FqW-xf-mnH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="7U8-KV-ZiQ"/>
-            <point key="canvasLocation" x="-238" y="-439"/>
+            <point key="canvasLocation" x="-2002" y="-948"/>
         </view>
     </objects>
 </document>

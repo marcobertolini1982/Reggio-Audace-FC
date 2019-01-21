@@ -85,6 +85,7 @@
 		D1855E3D21DF7AD900F812C0 /* CvcPostImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */; };
 		D1855E3F21DFB78B00F812C0 /* TvcPostMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */; };
 		D18AC9E421EF699800362523 /* ViePostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AC9E321EF699800362523 /* ViePostMessage.swift */; };
+		D18B8B7121F621350096941B /* ProCviHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B8B7021F621350096941B /* ProCviHeader.swift */; };
 		D192985721DCF96800850DF2 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985621DCF96800850DF2 /* DeviceUtils.swift */; };
 		D192985921DD04D200850DF2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985821DD04D200850DF2 /* DateUtils.swift */; };
 		D192985B21DD1A6600850DF2 /* ProPostsObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985A21DD1A6600850DF2 /* ProPostsObs.swift */; };
@@ -190,6 +191,7 @@
 		D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcPostImage.xib; sourceTree = "<group>"; };
 		D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TvcPostMessage.xib; sourceTree = "<group>"; };
 		D18AC9E321EF699800362523 /* ViePostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePostMessage.swift; sourceTree = "<group>"; };
+		D18B8B7021F621350096941B /* ProCviHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCviHeader.swift; sourceTree = "<group>"; };
 		D192985621DCF96800850DF2 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		D192985821DD04D200850DF2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D192985A21DD1A6600850DF2 /* ProPostsObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostsObs.swift; sourceTree = "<group>"; };
@@ -378,16 +380,8 @@
 		D174231D21AEA802009AAEFC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				D11B714F21AF0F3600887D2A /* ProFileObs.swift */,
-				D1633DCD21B0000000D5CE2F /* ProChatObs.swift */,
-				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
-				D19F62FE21B8312900726165 /* ProChannelObs.swift */,
-				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
-				D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */,
-				D192985A21DD1A6600850DF2 /* ProPostsObs.swift */,
-				D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */,
-				D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */,
-				D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */,
+				D18B8B6F21F621080096941B /* ViewProtocols */,
+				D18B8B6E21F620DA0096941B /* LibraryProtocols */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -450,6 +444,31 @@
 				52A78B2921F1C3EA000E197E /* CvcHeader.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D18B8B6E21F620DA0096941B /* LibraryProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D11B714F21AF0F3600887D2A /* ProFileObs.swift */,
+				D1633DCD21B0000000D5CE2F /* ProChatObs.swift */,
+				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
+				D19F62FE21B8312900726165 /* ProChannelObs.swift */,
+				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
+				D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */,
+				D192985A21DD1A6600850DF2 /* ProPostsObs.swift */,
+				D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */,
+				D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */,
+				D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */,
+			);
+			path = LibraryProtocols;
+			sourceTree = "<group>";
+		};
+		D18B8B6F21F621080096941B /* ViewProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D18B8B7021F621350096941B /* ProCviHeader.swift */,
+			);
+			path = ViewProtocols;
 			sourceTree = "<group>";
 		};
 		D19F62FB21B7DFD000726165 /* Views */ = {
@@ -825,6 +844,7 @@
 				D192985721DCF96800850DF2 /* DeviceUtils.swift in Sources */,
 				D15ABDB621B91C8800C980EE /* CtlBase.swift in Sources */,
 				D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */,
+				D18B8B7121F621350096941B /* ProCviHeader.swift in Sources */,
 				D19F62FD21B830A000726165 /* ChannelView.swift in Sources */,
 				D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */,
 				D19B3E1921D66FC700BD5F15 /* CvcBase.swift in Sources */,
