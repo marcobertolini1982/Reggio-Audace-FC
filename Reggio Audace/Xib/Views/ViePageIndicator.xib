@@ -10,13 +10,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViePageIndicator" customModule="Reggio_Audace" customModuleProvider="target">
+            <connections>
+                <outlet property="CONTENTVIEW" destination="W7P-hc-aX2" id="3dc-AR-CcQ"/>
+                <outlet property="Cvi_Headcers" destination="aIQ-7C-ymf" id="1RB-uI-Was"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="W7P-hc-aX2">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aIQ-7C-ymf">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aIQ-7C-ymf" customClass="CviHeader" customModule="Reggio_Audace" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="20" width="375" height="36"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -37,7 +42,7 @@
                 <constraint firstItem="7U8-KV-ZiQ" firstAttribute="trailing" secondItem="aIQ-7C-ymf" secondAttribute="trailing" id="gkU-zh-ziD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="7U8-KV-ZiQ"/>
-            <point key="canvasLocation" x="366" y="-207"/>
+            <point key="canvasLocation" x="-238" y="-439"/>
         </view>
     </objects>
 </document>
