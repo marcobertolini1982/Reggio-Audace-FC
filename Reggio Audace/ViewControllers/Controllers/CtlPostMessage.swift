@@ -12,11 +12,9 @@ import UIKit
 class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostMessageObs
 {
     // Properties
-    
     @IBOutlet weak var tableView:UITableView!
-    private var POSTMESSAGES:   [PostMessage] = [PostMessage]()
     
-    
+    private var POSTMESSAGES:[PostMessage] = [PostMessage]()
     override func Init()
     {
         self.tableView.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
@@ -109,8 +107,8 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     
     func LoadRecord()
     {
-        guard let  l_Parent:PagPost = self.parent as? PagPost else{return}
-        let l_PrgPost:Int64? = l_Parent.PrgPost
+       
+        let l_PrgPost:Int64? = self.Parent?.PrgPost
         let l_Postview:PostsView = PostsView()
         l_Postview.SetOnProPostMessageLoadded(propostMessageobs: self)
         l_Postview.LoadPostMessages(prg_post: l_PrgPost)
@@ -128,4 +126,5 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         return UITableView.automaticDimension
     }
    
+    
 }

@@ -13,9 +13,9 @@ class AppUtils
     static func SetDeviceForLoginLogout()
     {
         // Declarations
-        let l_UserView:UserView = UserView()
+        let l_DeviceView:DeviceView = DeviceView()
         guard let l_CodDevice:String = UIDevice.current.identifierForVendor?.uuidString else{return}
         guard let l_DesDevice:String = InstanceID.instanceID().token() else{return}
-        l_UserView.SetDevice(cod_device: l_CodDevice, des_device: l_DesDevice, cod_user: AuthUtils.Uid)
+        l_DeviceView.SetDevice(cod_device: l_CodDevice, des_device: l_DesDevice, cod_user: AuthUtils.Uid)
     }
 }

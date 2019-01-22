@@ -8,14 +8,19 @@
 
 import UIKit
 
-class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
+class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs
 {
-    // Declarations
+    // Properties
     private  var POST:Post?
-
+    private var POSTPOLLS:[PostPoll] = [PostPoll]()
     public final var Post:Post?
     {
         return self.POST
+    }
+    
+    func PostPollsLoaded(postpolls: [PostPoll])
+    {
+        self.POSTPOLLS = postpolls
     }
     func FileLoaded(data: Data)
     {
@@ -27,7 +32,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
     func SinglePostLoaded(singlepost: Post)
     {
         self.POST = singlepost
-        self.BIndData()
+        self.BindData()
         guard let l_PrgFile:Int64 = self.POST?.prg_file else{return}
        self.LoadPostImage(prg_file: l_PrgFile)
     }
@@ -46,7 +51,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
         
     }
     
-    func BIndData()
+    override func BindData()
     {
         DispatchQueue.main.async
         {
@@ -90,6 +95,14 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs
         super.viewWillAppear(animated)
          guard let l_Parent:PagPost = self.parent as? PagPost else{return}
          self.LoadPoastContent(prg_post: l_Parent.PrgPost)
-       
+         self.LoadPostPolls()
+         print(POSTPOLLS.count)
+    }
+    
+    private final func LoadPostPolls()
+    {
+        let l_PostPollView:PostPollsView = PostPollsView()
+        l_PostPollView.SetPostPollsLoaded(propostpollsobs: self)
+        l_PostPollView.LoadPostPolls(prg_post: self.Parent?.PrgPost)
     }
 }

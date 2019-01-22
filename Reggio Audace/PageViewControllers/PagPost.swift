@@ -8,9 +8,16 @@
 
 import UIKit
 
-class PagPost: PagBase
+class PagPost: PagBase,ProPostPollObs
 {
+    private var POSTPOLLS:[PostPoll] = [PostPoll]()
+    func PostPollsLoaded(postpolls: [PostPoll])
+    {
+        self.POSTPOLLS = postpolls
+    }
+    
     private var PRGPOST:Int64?
+    
     public final var PrgPost:Int64?
     {
         get{return self.PRGPOST}
@@ -45,6 +52,6 @@ open override var IndicatorsText: [String]
 
        
     }
-    
+   
    
 }
