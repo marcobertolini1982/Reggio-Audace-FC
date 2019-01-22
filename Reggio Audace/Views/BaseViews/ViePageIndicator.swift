@@ -17,22 +17,31 @@ class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDeleg
     convenience init(frame: CGRect,headertitles:[String])
     {
         self.init(frame: frame)
-        self.Cvi_Headcers.frame = self.CONTENTVIEW.bounds
+        
         (self.Cvi_Headcers.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = UICollectionView.ScrollDirection.horizontal
         self.Cvi_Headcers.dataSource = self
         self.Cvi_Headcers.delegate = self
         self.TITLES.append(contentsOf:headertitles)
         self.Cvi_Headcers.register(UINib(nibName: "CvcHeader", bundle: nil), forCellWithReuseIdentifier: "Header")
-        self.Cvi_Headcers.SelectedEvent = self.OnItemSelected
     }
     
    
     
     func collectionView(_ collectionView:UICollectionView,layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let l_Width:CGFloat = self.Cvi_Headcers.bounds.width/CGFloat(self.TITLES.count)
-        let l_Height:CGFloat = self.Cvi_Headcers.bounds.height
-        return CGSize(width: l_Width, height: l_Height)
+        guard let l_FloewLayout:UICollectionViewFlowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        else
+        {
+            return CGSize(width: 0.0, height:0.0)
+        }
+        
+    
+        let l_Insets:UIEdgeInsets = l_FloewLayout.sectionInset
+        let l_Spacing:CGFloat = l_FloewLayout.minimumInteritemSpacing * CGFloat(self.TITLES.count - 1)
+        let l_Space:CGFloat = l_Insets.left + l_Insets.right + l_Spacing
+        let l_Size:Int = Int((self.Cvi_Headcers.bounds.width - l_Space)/CGFloat(self.TITLES.count))
+        return CGSize(width: l_Size, height:l_Size)
+        
     }
     
     
@@ -62,6 +71,9 @@ class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDeleg
     {
         let l_Cell:CvcHeader? = Cvi_Headcers.cellForItem(at:indexPath) as? CvcHeader
         l_Cell?.lbl_title.textColor = GARNETCOLOR
+        self.Cvi_Headcers.proCviHeader?.Item_Selected(indexpath: indexPath)
+       
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath)
@@ -75,10 +87,6 @@ class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDeleg
         return "ViePageIndicator"
     }
     
-    func OnItemSelected(_ indexPath:IndexPath)
-    {
-        let l_Cell:CvcHeader? = self.Cvi_Headcers.cellForItem(at: indexPath) as? CvcHeader
-        l_Cell?.lbl_title.textColor = GARNETCOLOR
-    }
+    
     
 }

@@ -10,31 +10,27 @@ import UIKit
 
 class CviHeader: UICollectionView
 {
-    private var SELECTEDEVENT:((IndexPath?)->Void)?
-    private var DESELECTEDEVENT:((IndexPath)->Void)?
-    
-    public final var SelectedEvent:((IndexPath?)->Void)?
+    private var PROCVIHEADER:ProCviHeader?
+    public var proCviHeader:ProCviHeader?
     {
-        get{return self.SELECTEDEVENT}
-        set{self.SELECTEDEVENT = newValue}
+        get{return self.PROCVIHEADER}
+        set{self.PROCVIHEADER = newValue}
     }
-    
-    public final var DeselectedEvent:((IndexPath)->Void)?
-    {
-        get{return self.DESELECTEDEVENT}
-        set{self.DESELECTEDEVENT = newValue}
-    }
+
     override func selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition)
     {
         super.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
-        self.SELECTEDEVENT?(indexPath)
+        guard indexPath != nil else{return}
+        let l_Cell:CvcHeader? = self.cellForItem(at:indexPath!) as? CvcHeader
+        l_Cell?.lbl_title.textColor = GARNETCOLOR
       
     }
     
     override func deselectItem(at indexPath: IndexPath, animated: Bool)
     {
         super.deselectItem(at: indexPath, animated: animated)
-        self.DESELECTEDEVENT?(indexPath)
+        let l_Cell:CvcHeader? = self.cellForItem(at:indexPath) as? CvcHeader
+        l_Cell?.lbl_title.textColor = ColorUtils.black
     }
 
 }

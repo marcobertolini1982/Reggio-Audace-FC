@@ -9,38 +9,39 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Hind-Regular.ttf">
-            <string>Hind-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="Eo3-43-bNl" customClass="CvcHeader" customModule="Reggio_Audace" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="126" height="113"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="126" height="113"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-aW-BIZ">
-                        <rect key="frame" x="1" y="8" width="48.5" height="34"/>
-                        <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="21"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-aW-BIZ">
+                        <rect key="frame" x="20" y="30" width="28" height="19.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <font key="NSFont" size="12" name="Hind-Regular"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="mvW-aW-BIZ" firstAttribute="centerY" secondItem="Eo3-43-bNl" secondAttribute="centerY" id="LWd-7J-TZg"/>
-                <constraint firstItem="mvW-aW-BIZ" firstAttribute="centerX" secondItem="Eo3-43-bNl" secondAttribute="centerX" id="W53-2c-BxK"/>
+                <constraint firstItem="mvW-aW-BIZ" firstAttribute="top" secondItem="Eo3-43-bNl" secondAttribute="top" constant="30" id="3NA-jy-Syw"/>
+                <constraint firstItem="mvW-aW-BIZ" firstAttribute="leading" secondItem="Eo3-43-bNl" secondAttribute="leading" constant="20" id="KDX-Dp-Uid"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="oEw-LH-6I7"/>
+            <size key="customSize" width="126" height="113"/>
             <connections>
                 <outlet property="lbl_title" destination="mvW-aW-BIZ" id="zma-lL-GwL"/>
             </connections>
-            <point key="canvasLocation" x="-163.19999999999999" y="-47.676161919040482"/>
+            <point key="canvasLocation" x="-102.40000000000001" y="-30.134932533733135"/>
         </collectionViewCell>
     </objects>
 </document>

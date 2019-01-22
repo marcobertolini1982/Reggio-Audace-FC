@@ -27,7 +27,7 @@ class PagPost: PagBase
     }
 open override var IndicatorsText: [String]
 {
-    return ["Post","Media","Commenti"]
+    return ["Post","Media","Commenti","Reazioni"]
 }
     public final var PostDettail:CtlPost?
     {
