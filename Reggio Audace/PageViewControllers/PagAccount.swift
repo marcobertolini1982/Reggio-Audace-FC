@@ -40,5 +40,8 @@ class PagAccount: PagBase
         // Pass the selected object to the new view controller.
     }
     */
-  
+    override var IndicatorsText: [String]
+    {
+        return ["Account","Media","Impostazioni"]
+    }
 }

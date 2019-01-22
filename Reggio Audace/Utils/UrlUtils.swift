@@ -15,6 +15,8 @@ class UrlUtils
     {
         return "http://portal.lensolution.it:8080/wRegia"
     }
+    
+    
     //Post
     public static var  URL_LOADPOSTS:String
     {
@@ -36,6 +38,15 @@ class UrlUtils
     {
         return URL_WEBAPP + "/GetFiles"
     }
+    public static var URL_LOADREACTIONS:String
+    {
+        return URL_WEBAPP + "/LoadReactions"
+    }
+    
+    public static var URL_LOADPOSTPOLLS:String
+    {
+        return URL_WEBAPP + "/LoadPostPolls"
+    }
     
     public static  var URL_GETFILE :String
 {
@@ -54,6 +65,7 @@ class UrlUtils
         return URL_WEBAPP + "/SetDevice"
     }
     
+    // User
     public static  var URL_GETUSERS:String
     {
         return URL_WEBAPP + "/GetUsers"
@@ -85,6 +97,7 @@ class UrlUtils
         return URL_WEBAPP + "/GetUser"
     }
     
+    // Chat
     public static  var URL_SENDMESSAGE:String
     {
         return URL_WEBAPP + "/SendMessage"
@@ -100,6 +113,7 @@ class UrlUtils
         return URL_WEBAPP + "/GetChats"
     }
     
+    // Seasdon
     public static  var  URL_GETSEASON:String
     {
         return URL_WEBAPP  + "/GetSeason"
@@ -121,7 +135,7 @@ class UrlUtils
     
     public static  var  URL_GETRANKING:String
     {
-return URL_WEBAPP +  "/GetRanking"
+        return URL_WEBAPP +  "/GetRanking"
     }
     
     public static  var  URL_GETTEAMACTORS:String
@@ -132,12 +146,15 @@ return URL_WEBAPP +  "/GetRanking"
     public static  var  URL_GETLIVE:String
     
         {
-        return "/GetLive"
+        return URL_WEBAPP + "/GetLive"
     }
     public static  var  URL_GETCHANNEL:String
     {
-        return "/GetChannels"
+        return URL_WEBAPP + "/GetChannels"
     }
+    
+    
+   
 }
 
 

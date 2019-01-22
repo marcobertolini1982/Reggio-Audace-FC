@@ -169,6 +169,7 @@ public class PostsView
                 l_Post.num_postmessages = l_JsonResponse["num_postmessages"] as? Int64
                 l_Post.num_files = l_JsonResponse["num_files"] as? Int64
                 l_Post.num_poll = l_JsonResponse["num_postpolls"] as? Int64
+        
                 
             }
             catch let e as NSError
@@ -270,5 +271,7 @@ public class PostsView
           l_DataTask.resume()
         }
     
+    
+   
     }
 

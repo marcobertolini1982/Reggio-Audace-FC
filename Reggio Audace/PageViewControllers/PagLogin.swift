@@ -16,7 +16,7 @@ class PagLogin: PagBase
         self.SetSelectedIndex(index:0)
     }
     
-    open override var IndicatorsText: [String]
+    override var IndicatorsText: [String]
     {
         return ["Accedi","Registrati","Reset"]
     }

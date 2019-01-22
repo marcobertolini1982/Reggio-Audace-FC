@@ -10,6 +10,10 @@ import UIKit
 
 class CtlBase: UIViewController,UITextFieldDelegate
 {
+    open var Parent:PagPost?
+    {
+        return self.parent as? PagPost
+    }
     
     var reuseIdentifier: String
     {
