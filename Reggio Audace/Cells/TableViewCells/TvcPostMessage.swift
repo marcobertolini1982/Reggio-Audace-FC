@@ -14,6 +14,7 @@ class TvcPostMessage: TvcBase,ProFileObs
     @IBOutlet weak var img_prg_file: UIImageView!
     
     @IBOutlet weak var txt_message: UITextView!
+    
  
     override func Init()
     {

@@ -55,7 +55,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         self.delegate = self
         for l_viewcontrller in self.VIEWCONTROLLERS
         {
-            l_viewcontrller.additionalSafeAreaInsets = UIEdgeInsets(top:21.0, left: 0.0, bottom: 0.0, right: 0.0)
+            l_viewcontrller.additionalSafeAreaInsets = UIEdgeInsets(top:42.0, left: 0.0, bottom: 0.0, right: 0.0)
         }
     }
     public final var WillTransitionTo:UIViewController

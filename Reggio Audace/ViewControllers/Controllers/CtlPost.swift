@@ -32,10 +32,13 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     // Methods
     func PostPollCellSelected(cell: UITableViewCell)
     {
-        for l_Cell in self.VIEPOST.tbv_PostPolls.visibleCells
-        {
-            (l_Cell as? TvcPostPoll)?.btn_PostPoll.backgroundColor = l_Cell == cell ? GARNETCOLOR : ColorUtils.clear
-        }
+       
+        guard let l_IndexPath:IndexPath = self.VIEPOST.tbv_PostPolls.indexPath(for: cell) else{return}
+        
+                (cell as? TvcPostPoll)?.btn_PostPoll.backgroundColor = GARNETCOLOR
+                self.VIEPOST.tbv_PostPolls.selectRow(at: l_IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
+       
+        
     }
     
     override func Init()
@@ -74,6 +77,13 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         }
         l_Cell.lbl_PostPoll.text = self.POSTPOLLS[indexPath.row].des_poll
         return l_Cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let l_cell:TvcPostPoll? = tableView.cellForRow(at: indexPath) as? TvcPostPoll
+        l_cell?.btn_PostPoll.backgroundColor = GARNETCOLOR
+       
     }
     
     func PostPollsLoaded(postpolls: [PostPoll])
@@ -152,6 +162,14 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         l_PostPollView.LoadPostPolls(prg_post: self.Parent?.PrgPost)
     }
     
+    func tableView(_ tableView:UITableView,willDisplay cell:UITableViewCell, forRowAt indexPath:IndexPath)
+    {
+        (cell as? TvcPostPoll)?.proPostPollCellObs = self
+       
+    }
     
-    
+    func tableView(_ tableView:UITableView,didEndDisplaying cell:UITableViewCell, forRowAt indexPath:IndexPath)
+    {
+        (cell as? TvcPostPoll)?.proPostPollCellObs = nil
+    }
 }

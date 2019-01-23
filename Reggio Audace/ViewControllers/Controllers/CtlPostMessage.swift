@@ -19,7 +19,6 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         super.Init()
         self.tableView.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
-        self.tableView.contentInset = self.EdgeInset
         self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
     }
     
@@ -31,11 +30,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         return "TvcPostMessage"
     }
-    
-   var EdgeInset: UIEdgeInsets
-    {
-      return UIEdgeInsets(top: 21.0, left: 0.0, bottom: 0.0, right: 0.0)
-    }
+
     
     func PostMessagesLoaded(postmessages: [PostMessage])
     {
