@@ -45,7 +45,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     func Init()
     {
         let l_WIDTH:CGFloat  = self.view.bounds.width
-        let l_RECT:CGRect    = CGRect(x:0, y:0, width:l_WIDTH, height:21)
+        let l_RECT:CGRect    = CGRect(x:0, y:0, width:l_WIDTH, height:42)
         self.PAGEINDICATOR = ViePageIndicator(frame:l_RECT,headertitles:self.IndicatorsText)
         self.PAGEINDICATOR.Cvi_Headcers.proCviHeader = self
         //Add page indicator
