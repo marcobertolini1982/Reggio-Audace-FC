@@ -10,7 +10,7 @@ import UIKit
 
 class ViePost: VieBase
 {
-    //Declarations
+    // Properties
     @IBOutlet weak var lbl_Title:UILabel!
     @IBOutlet weak var lbl_Date:UILabel!
     @IBOutlet weak var txt_Article:UITextView!
@@ -19,8 +19,13 @@ class ViePost: VieBase
     @IBOutlet weak var lbl_Reactions: UILabel!
     @IBOutlet weak var tbv_PostPolls: UITableView!
     open override var NIBNAME: String
-        {
-            return "ViePost"
-        }
+    {
+        return "ViePost"
+    }
+   
+    
+    
+    
+   
 
 }

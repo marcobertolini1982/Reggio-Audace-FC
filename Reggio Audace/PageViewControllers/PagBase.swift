@@ -35,7 +35,8 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         l_Cell?.lbl_title.textColor = GARNETCOLOR
         let l_Index:Int? = self.VIEWCONTROLLERS.index(of:self.WILLTRANSITIONTO)
         let l_Direction:UIPageViewController.NavigationDirection =  (l_Index != nil && l_Index! < indexpath.item) ? .forward : .reverse
-        self.setViewControllers([self.VIEWCONTROLLERS[indexpath.item]], direction: l_Direction, animated: true)
+        self.WILLTRANSITIONTO = self.VIEWCONTROLLERS[indexpath.item]
+        self.setViewControllers([self.WILLTRANSITIONTO], direction: l_Direction, animated: true)
     }
     
     
@@ -52,7 +53,10 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         // Set Initial controller
         self.dataSource = self
         self.delegate = self
-        self.VIEWCONTROLLERS[0].additionalSafeAreaInsets = UIEdgeInsets(top:21.0, left: 0.0, bottom: 0.0, right: 0.0)
+        for l_viewcontrller in self.VIEWCONTROLLERS
+        {
+            l_viewcontrller.additionalSafeAreaInsets = UIEdgeInsets(top:21.0, left: 0.0, bottom: 0.0, right: 0.0)
+        }
     }
     public final var WillTransitionTo:UIViewController
     {

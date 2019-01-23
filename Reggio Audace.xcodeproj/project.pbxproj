@@ -57,6 +57,7 @@
 		D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD821B02B1700D5CE2F /* CvcChat.swift */; };
 		D166B87A21F86C9A00B9FD78 /* TvcPostPoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166B87921F86C9A00B9FD78 /* TvcPostPoll.swift */; };
 		D166B87C21F86CDC00B9FD78 /* TvcBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166B87B21F86CDC00B9FD78 /* TvcBase.swift */; };
+		D166B87F21F89F9800B9FD78 /* ProPostPollCellObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166B87E21F89F9800B9FD78 /* ProPostPollCellObs.swift */; };
 		D16BBFA621C15F74008AF36E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA521C15F74008AF36E /* Device.swift */; };
 		D16BBFA821C160AC008AF36E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA721C160AC008AF36E /* User.swift */; };
 		D16BBFAA21C161FC008AF36E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16BBFA921C161FC008AF36E /* UserView.swift */; };
@@ -171,6 +172,7 @@
 		D1633DD821B02B1700D5CE2F /* CvcChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcChat.swift; sourceTree = "<group>"; };
 		D166B87921F86C9A00B9FD78 /* TvcPostPoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvcPostPoll.swift; sourceTree = "<group>"; };
 		D166B87B21F86CDC00B9FD78 /* TvcBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvcBase.swift; sourceTree = "<group>"; };
+		D166B87E21F89F9800B9FD78 /* ProPostPollCellObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostPollCellObs.swift; sourceTree = "<group>"; };
 		D16BBFA521C15F74008AF36E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D16BBFA721C160AC008AF36E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D16BBFA921C161FC008AF36E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -365,6 +367,14 @@
 			path = PageViewControllers;
 			sourceTree = "<group>";
 		};
+		D166B87D21F89F4300B9FD78 /* CellsProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D166B87E21F89F9800B9FD78 /* ProPostPollCellObs.swift */,
+			);
+			path = CellsProtocols;
+			sourceTree = "<group>";
+		};
 		D16DEB8621F1D7120055D8DC /* CollectionviewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +409,7 @@
 		D174231D21AEA802009AAEFC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D166B87D21F89F4300B9FD78 /* CellsProtocols */,
 				D18B8B6F21F621080096941B /* ViewProtocols */,
 				D18B8B6E21F620DA0096941B /* LibraryProtocols */,
 			);
@@ -885,6 +896,7 @@
 				D16BBFA821C160AC008AF36E /* User.swift in Sources */,
 				D160DC5521B531B700DAEF67 /* CtlUserLogin.swift in Sources */,
 				D19F62FF21B8312900726165 /* ProChannelObs.swift in Sources */,
+				D166B87F21F89F9800B9FD78 /* ProPostPollCellObs.swift in Sources */,
 				D179640321B18660005311A8 /* PagAccount.swift in Sources */,
 				D1633DCE21B0000000D5CE2F /* ProChatObs.swift in Sources */,
 				D15EBBEA21B69A1600835C0B /* SelectorUtils.swift in Sources */,

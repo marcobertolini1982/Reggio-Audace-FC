@@ -17,6 +17,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     private var POSTMESSAGES:[PostMessage] = [PostMessage]()
     override func Init()
     {
+        super.Init()
         self.tableView.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
         self.tableView.contentInset = self.EdgeInset
         self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")

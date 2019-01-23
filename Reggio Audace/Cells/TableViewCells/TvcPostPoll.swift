@@ -16,7 +16,7 @@ class TvcPostPoll: TvcBase
     public final var IsSelected:Bool
     {
         get{return self.ISSELECTED}
-        
+        set{self.ISSELECTED = newValue}
     }
     
   override func Init()
@@ -25,5 +25,12 @@ class TvcPostPoll: TvcBase
     self.btn_PostPoll.layer.borderColor = GARNETCOLOR.cgColor
     self.btn_PostPoll.layer.borderWidth = 1.0
     self.btn_PostPoll.layer.cornerRadius = self.btn_PostPoll.bounds.width/2
+    self.btn_PostPoll.backgroundColor = self.ISSELECTED ? GARNETCOLOR : ColorUtils.clear
    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool)
+    {
+        
+        self.backgroundColor = self.backgroundColor
+    }
 }

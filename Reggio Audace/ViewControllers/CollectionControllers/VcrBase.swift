@@ -9,7 +9,14 @@
 import UIKit
 class VcrBase: UICollectionViewController,UITextFieldDelegate
 {
-   
+   open  var LayoutInsets:UIEdgeInsets
+    {
+     return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    open  var LayoutLineSpacing:CGFloat
+    {
+        return 0.0
+    }
     open var reuseIdentifier:String
     {
         return String()
@@ -43,8 +50,8 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate
         
         // Set layout properties
         l_Layout.itemSize = CGSize(width: collectionView.bounds.width, height: heigth)
-        l_Layout.minimumLineSpacing = 0
-        
+        l_Layout.sectionInset = self.LayoutInsets
+        l_Layout.minimumLineSpacing = self.LayoutLineSpacing
         // Set layout
         self.collectionView.collectionViewLayout = l_Layout
         
