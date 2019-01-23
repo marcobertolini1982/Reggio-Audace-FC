@@ -32,10 +32,11 @@ class CtlBase: UIViewController,UITextFieldDelegate
     
    open func Init()
    {
+    super.viewDidLoad()
    }
     override func viewDidLoad()
     {
-        super.viewDidLoad()
+        
         self.Init()
         self.SetKeyBoardDismissable()
         self.SetTextFieldsDelegate()
