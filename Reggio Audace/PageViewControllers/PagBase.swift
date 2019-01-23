@@ -10,14 +10,6 @@ import UIKit
 
 class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate,ProCviHeader
 {
-    func Item_Selected(indexpath: IndexPath)
-    {
-        let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexpath) as? CvcHeader
-        l_Cell?.lbl_title.textColor = GARNETCOLOR
-        self.setViewControllers([self.VIEWCONTROLLERS[indexpath.item]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
-    }
-    
-    
     // Declarations
     private  var WILLTRANSITIONTO:UIViewController = UIViewController()
     private  var VIEWCONTROLLERS:[UIViewController] = [UIViewController]()
@@ -37,10 +29,22 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         }
     }
     
+    func Item_Selected(indexpath: IndexPath)
+    {
+        let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexpath) as? CvcHeader
+        l_Cell?.lbl_title.textColor = GARNETCOLOR
+        let l_Index:Int? = self.VIEWCONTROLLERS.index(of:self.WILLTRANSITIONTO)
+        let l_Direction:UIPageViewController.NavigationDirection =  (l_Index != nil && l_Index! < indexpath.item) ? .forward : .reverse
+        self.setViewControllers([self.VIEWCONTROLLERS[indexpath.item]], direction: l_Direction, animated: true)
+    }
+    
+    
+  
+    
     func Init()
     {
         let l_WIDTH:CGFloat  = self.view.bounds.width
-        let l_RECT:CGRect    = CGRect(x:0, y:0, width:l_WIDTH, height:30)
+        let l_RECT:CGRect    = CGRect(x:0, y:0, width:l_WIDTH, height:21)
         self.PAGEINDICATOR = ViePageIndicator(frame:l_RECT,headertitles:self.IndicatorsText)
         self.PAGEINDICATOR.Cvi_Headcers.proCviHeader = self
         //Add page indicator
@@ -48,6 +52,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         // Set Initial controller
         self.dataSource = self
         self.delegate = self
+        self.VIEWCONTROLLERS[0].additionalSafeAreaInsets = UIEdgeInsets(top:21.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
     public final var WillTransitionTo:UIViewController
     {

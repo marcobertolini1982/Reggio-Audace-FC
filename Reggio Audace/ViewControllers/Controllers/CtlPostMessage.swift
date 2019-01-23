@@ -31,9 +31,9 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         return "TvcPostMessage"
     }
     
-    override var EdgeInset: UIEdgeInsets
+   var EdgeInset: UIEdgeInsets
     {
-      return UIEdgeInsets(top: 25.0, left: 0.0, bottom: 0.0, right: 0.0)
+      return UIEdgeInsets(top: 21.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
     
     func PostMessagesLoaded(postmessages: [PostMessage])
