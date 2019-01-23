@@ -75,6 +75,10 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DpJ-aC-pJO">
+                            <rect key="frame" x="4" y="314.5" width="312" height="34.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
                             <rect key="frame" x="4" y="314.5" width="312" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,6 +152,7 @@
                         </button>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="DpJ-aC-pJO" firstAttribute="centerX" secondItem="SKo-bW-ua8" secondAttribute="centerX" id="00p-Gc-Isi"/>
                         <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="c9c-BE-VCg" secondAttribute="bottom" constant="15" id="0rw-mu-jAe"/>
                         <constraint firstItem="g2q-KX-6In" firstAttribute="top" secondItem="g9Q-H2-owN" secondAttribute="bottom" constant="8" id="4Km-8u-57x"/>
                         <constraint firstItem="m2z-Nn-jbJ" firstAttribute="height" secondItem="awQ-GB-qOL" secondAttribute="height" id="53B-qS-Rrx"/>
@@ -161,11 +166,13 @@
                         <constraint firstItem="g9Q-H2-owN" firstAttribute="leading" secondItem="g2q-KX-6In" secondAttribute="leading" id="InD-uW-oPT"/>
                         <constraint firstItem="awQ-GB-qOL" firstAttribute="leading" secondItem="SKo-bW-ua8" secondAttribute="leading" id="J58-0L-kI6"/>
                         <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="awQ-GB-qOL" secondAttribute="bottom" constant="8" symbolic="YES" id="KPj-kJ-PGR"/>
+                        <constraint firstAttribute="trailing" secondItem="DpJ-aC-pJO" secondAttribute="trailing" constant="4" id="LZr-RE-yZJ"/>
                         <constraint firstItem="avt-tk-dyt" firstAttribute="leading" secondItem="jli-v7-TTU" secondAttribute="trailing" constant="8" id="Lcn-WW-GbH"/>
                         <constraint firstItem="m2z-Nn-jbJ" firstAttribute="top" secondItem="SKo-bW-ua8" secondAttribute="top" constant="8" id="NSA-AF-qiS"/>
                         <constraint firstItem="g2q-KX-6In" firstAttribute="leading" secondItem="SKo-bW-ua8" secondAttribute="leading" constant="6" id="PCw-Lv-ou6"/>
                         <constraint firstAttribute="trailing" secondItem="g9Q-H2-owN" secondAttribute="trailing" constant="6" id="Vgk-1g-TQz"/>
                         <constraint firstItem="ehj-lV-4qd" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" symbolic="YES" id="X1P-56-sF3"/>
+                        <constraint firstItem="DpJ-aC-pJO" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" id="XZ9-gN-IJt"/>
                         <constraint firstItem="ehj-lV-4qd" firstAttribute="top" secondItem="g2q-KX-6In" secondAttribute="bottom" constant="8" id="Xc4-lP-yOd"/>
                         <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="awQ-GB-qOL" secondAttribute="bottom" constant="8" id="Y6i-8W-GZw"/>
                         <constraint firstAttribute="trailing" secondItem="awQ-GB-qOL" secondAttribute="trailing" id="Z8w-v7-y1l"/>
@@ -187,7 +194,9 @@
                         <constraint firstItem="m2z-Nn-jbJ" firstAttribute="width" secondItem="awQ-GB-qOL" secondAttribute="width" id="odn-7B-dKD"/>
                         <constraint firstItem="awQ-GB-qOL" firstAttribute="leading" secondItem="SKo-bW-ua8" secondAttribute="leading" id="ofE-iL-scc"/>
                         <constraint firstItem="g9Q-H2-owN" firstAttribute="top" secondItem="jli-v7-TTU" secondAttribute="bottom" constant="15" id="qS1-EM-zrS"/>
+                        <constraint firstAttribute="bottom" secondItem="DpJ-aC-pJO" secondAttribute="bottom" constant="188" id="r7M-pH-7by"/>
                         <constraint firstItem="g2q-KX-6In" firstAttribute="centerX" secondItem="ehj-lV-4qd" secondAttribute="centerX" id="tJP-Sg-F8O"/>
+                        <constraint firstItem="DpJ-aC-pJO" firstAttribute="leading" secondItem="SKo-bW-ua8" secondAttribute="leading" constant="4" id="tXi-cW-cxV"/>
                         <constraint firstItem="g2q-KX-6In" firstAttribute="top" secondItem="g9Q-H2-owN" secondAttribute="bottom" constant="8" symbolic="YES" id="wue-t6-U6q"/>
                         <constraint firstAttribute="trailing" secondItem="avt-tk-dyt" secondAttribute="trailing" constant="8" id="xiS-HN-v0E"/>
                     </constraints>
@@ -208,8 +217,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Comment" width="32" height="32"/>
-        <image name="Like" width="32" height="32"/>
-        <image name="share" width="32" height="32"/>
+        <image name="Comment" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>
