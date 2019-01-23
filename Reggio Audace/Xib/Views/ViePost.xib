@@ -28,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKo-bW-ua8">
-                    <rect key="frame" x="0.0" y="31" width="320" height="537"/>
+                    <rect key="frame" x="0.0" y="42" width="320" height="537"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="awQ-GB-qOL">
                             <rect key="frame" x="0.0" y="8" width="320" height="233"/>
@@ -205,21 +205,21 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="5Y0-1A-VVJ"/>
+                <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="22" id="5Y0-1A-VVJ"/>
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Guq-Zr-M6f"/>
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="JT4-VT-RiO"/>
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hEP-Af-Ona"/>
                 <constraint firstAttribute="trailing" secondItem="SKo-bW-ua8" secondAttribute="trailing" id="onq-6H-DIo"/>
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-31" id="pBI-fd-gOA"/>
-                <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="zNf-dV-MnO"/>
+                <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="22" id="zNf-dV-MnO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-1614" y="165"/>
         </view>
     </objects>
     <resources>
-        <image name="Comment" width="32" height="32"/>
-        <image name="Like" width="32" height="32"/>
-        <image name="share" width="32" height="32"/>
+        <image name="Comment" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>
