@@ -10,6 +10,15 @@ import UIKit
 
 class VcrPostImages: VcrBase, ProPostFilesObs
 {
+    override var LayoutInsets: UIEdgeInsets
+    {
+        return UIEdgeInsets(top: 21.0, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
+    override var LayoutLineSpacing: CGFloat
+    {
+        return 2.0
+    }
     // Declarations
     private lazy var FILES:[File] = [File]()
     

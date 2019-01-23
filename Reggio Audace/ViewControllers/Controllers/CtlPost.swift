@@ -8,14 +8,34 @@
 
 import UIKit
 
-class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDelegate,UITableViewDataSource
+class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDelegate,UITableViewDataSource,ProPostPollCellObs
 {
+    
     // Properties
+    let VIEPOST:ViePost = ViePost()
     private  var POST:Post?
     private var POSTPOLLS:[PostPoll] = [PostPoll]()
     public final var Post:Post?
     {
         return self.POST
+    }
+    
+    override var reuseIdentifier: String
+    {
+        return "PostPoll"
+    }
+    
+    override var NibName: String
+    {
+        return "TvcPostPoll"
+    }
+    // Methods
+    func PostPollCellSelected(cell: UITableViewCell)
+    {
+        for l_Cell in self.VIEPOST.tbv_PostPolls.visibleCells
+        {
+            (l_Cell as? TvcPostPoll)?.btn_PostPoll.backgroundColor = l_Cell == cell ? GARNETCOLOR : ColorUtils.clear
+        }
     }
     
     override func Init()
@@ -28,6 +48,9 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         self.VIEPOST.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         self.VIEPOST.widthAnchor.constraint(equalTo:self.view.widthAnchor).isActive = true
         self.VIEPOST.heightAnchor.constraint(equalTo:self.view.heightAnchor).isActive = true
+        self.VIEPOST.tbv_PostPolls.delegate = self
+        self.VIEPOST.tbv_PostPolls.dataSource = self
+        self.VIEPOST.tbv_PostPolls.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
     }
     
     // Methods
@@ -38,13 +61,18 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+     
       return self.POSTPOLLS.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let l_Cell:UITableViewCell = UITableViewCell()
-        l_Cell.backgroundColor = GARNETCOLOR
+       guard let l_Cell:TvcPostPoll = self.VIEPOST.tbv_PostPolls.dequeueReusableCell(withIdentifier: self.reuseIdentifier) as? TvcPostPoll
+        else
+       {
+        return UITableViewCell()
+        }
+        l_Cell.lbl_PostPoll.text = self.POSTPOLLS[indexPath.row].des_poll
         return l_Cell
     }
     
@@ -66,13 +94,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         guard let l_PrgFile:Int64 = self.POST?.prg_file else{return}
        self.LoadPostImage(prg_file: l_PrgFile)
     }
-    
-  
- 
-    //Declarations
-    let VIEPOST:ViePost = ViePost()
 
-    
     override func BindData()
     {
         DispatchQueue.main.async
