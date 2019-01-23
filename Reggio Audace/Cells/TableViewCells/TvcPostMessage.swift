@@ -8,14 +8,16 @@
 
 import UIKit
 
-class TvcPostMessage: UITableViewCell,ProFileObs
+class TvcPostMessage: TvcBase,ProFileObs
 {
     
     @IBOutlet weak var img_prg_file: UIImageView!
     
     @IBOutlet weak var txt_message: UITextView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
+ 
+    override func Init()
+    {
+      super.Init()
         self.backgroundColor = ColorUtils.clear
         self.txt_message.layer.borderWidth = 1.0
         self.txt_message.layer.borderColor = GARNETCOLOR.cgColor

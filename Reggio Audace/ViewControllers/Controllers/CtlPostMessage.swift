@@ -42,13 +42,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         self.BindData()
     }
     
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-       
-    }
+   
 
 
     override func BindData()

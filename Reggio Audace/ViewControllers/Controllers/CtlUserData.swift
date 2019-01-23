@@ -75,7 +75,9 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     
     override func Init()
     {
+        super.Init()
         self.img_User.layer.cornerRadius = self.img_User.bounds.width/2
+         self.SetUserData()
     }
     
     func UserLoaded(user: User)
@@ -106,15 +108,6 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
                 self.lbl_email.text = self.lbl_email.text! + " " + user.des_email!
                 
             }
-    }
-    
-    
-   
-    
-    open override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        self.SetUserData()
     }
     
     

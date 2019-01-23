@@ -10,6 +10,28 @@ import UIKit
 
 class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDelegate,UITableViewDataSource
 {
+    // Properties
+    private  var POST:Post?
+    private var POSTPOLLS:[PostPoll] = [PostPoll]()
+    public final var Post:Post?
+    {
+        return self.POST
+    }
+    
+    override func Init()
+    {
+        super.Init()
+        self.VIEPOST.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.VIEPOST)
+        self.VIEPOST.topAnchor.constraint(equalTo:self.view.topAnchor).isActive = true
+        self.VIEPOST.leadingAnchor.constraint(equalTo:self.view.leadingAnchor).isActive = true
+        self.VIEPOST.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        self.VIEPOST.widthAnchor.constraint(equalTo:self.view.widthAnchor).isActive = true
+        self.VIEPOST.heightAnchor.constraint(equalTo:self.view.heightAnchor).isActive = true
+    }
+    
+    // Methods
+    
     func numberOfSections(in tableView: UITableView) -> Int
     {
        return 1
@@ -24,16 +46,6 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         let l_Cell:UITableViewCell = UITableViewCell()
         l_Cell.backgroundColor = GARNETCOLOR
         return l_Cell
-    }
-    
-   
-    
-    // Properties
-    private  var POST:Post?
-    private var POSTPOLLS:[PostPoll] = [PostPoll]()
-    public final var Post:Post?
-    {
-        return self.POST
     }
     
     func PostPollsLoaded(postpolls: [PostPoll])
@@ -59,29 +71,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
  
     //Declarations
     let VIEPOST:ViePost = ViePost()
-   
-    override func viewDidLoad()
-    {
-       
-        super.viewDidLoad()
-        //self.VIEPOST.frame = self.view.bounds
-       
-        //let l_Tableview:UITableView = UITableView(frame: CGRect(x:200.0,y:200.0,width:200.0,height:200.0))
-        //l_Tableview.backgroundColor = ColorUtils.red
-       // l_Tableview.delegate = self
-        //l_Tableview.dataSource = self
-        //self.view.sendSubviewToBack(l_Tableview)
-        //elf.view.addSubview(l_Tableview)
-        self.view.addSubview(self.VIEPOST)
-        self.VIEPOST.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0.0).isActive = true
-        self.VIEPOST.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0.0).isActive = true
-        self.VIEPOST.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0.0).isActive = true
-        self.VIEPOST.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant:0.0).isActive = true
-        
-       
-       
-        
-    }
+
     
     override func BindData()
     {

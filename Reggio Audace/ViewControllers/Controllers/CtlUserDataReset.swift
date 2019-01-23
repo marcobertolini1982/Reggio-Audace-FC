@@ -14,13 +14,6 @@ class CtlUserDataReset: CtlBase
     @IBOutlet weak var btn_ResetPassword:UIButton!
     @IBOutlet weak var txt_Email:UITextField!
     @IBOutlet private weak var btn_LogOut:UIButton!
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
     @IBAction func OnResetPasswordClick(_ senceer:UIButton)
     {
         Auth.auth().sendPasswordReset(withEmail: txt_Email.text!){(error:Error?)in
