@@ -213,7 +213,7 @@
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="zNf-dV-MnO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-575.625" y="302.11267605633805"/>
+            <point key="canvasLocation" x="-1343" y="219"/>
         </view>
     </objects>
     <resources>
