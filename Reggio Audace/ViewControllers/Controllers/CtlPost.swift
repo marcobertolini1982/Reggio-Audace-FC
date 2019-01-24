@@ -34,12 +34,18 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     {
        
         guard let l_IndexPath:IndexPath = self.VIEPOST.tbv_PostPolls.indexPath(for: cell) else{return}
-        
-                (cell as? TvcPostPoll)?.btn_PostPoll.backgroundColor = GARNETCOLOR
-                self.VIEPOST.tbv_PostPolls.selectRow(at: l_IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
-       
-        
+        guard let l_IndexPaths:[IndexPath] = self.VIEPOST.tbv_PostPolls.indexPathsForVisibleRows else{return}
+        for l_indexpath in l_IndexPaths
+        {
+            if l_indexpath != l_IndexPath
+            {
+                self.tableView(self.VIEPOST.tbv_PostPolls, didDeselectRowAt: l_indexpath)
+            }
+        }
+        self.VIEPOST.tbv_PostPolls.selectRow(at:l_IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
+        self.tableView(self.VIEPOST.tbv_PostPolls, didSelectRowAt: l_IndexPath)
     }
+    
     
     override func Init()
     {
@@ -85,6 +91,12 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         l_cell?.btn_PostPoll.backgroundColor = GARNETCOLOR
        
     }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)
+    {
+        let l_cell:TvcPostPoll? = tableView.cellForRow(at: indexPath) as? TvcPostPoll
+        l_cell?.btn_PostPoll.backgroundColor = ColorUtils.clear
+        
+    }
     
     func PostPollsLoaded(postpolls: [PostPoll])
     {
@@ -114,7 +126,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
             self.VIEPOST.txt_Article.text = self.POST?.des_post
             self.VIEPOST.lbl_Comment.text = "\(self.POST?.num_postmessages ?? Int64())"
             self.VIEPOST.lbl_Reactions.text = "\(self.POST?.num_reactions ?? Int64())"
-            
+            self.VIEPOST.tbv_PostPolls.reloadData()
         }
         
     }
