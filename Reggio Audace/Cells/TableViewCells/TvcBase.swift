@@ -11,6 +11,12 @@ import UIKit
 class TvcBase: UITableViewCell
 {
 
+    private var PROPOSTPOLLCELLOBS:ProPostPollCellObs?
+    public final var proPostPollCellObs:ProPostPollCellObs?
+    {
+        get{return self.PROPOSTPOLLCELLOBS}
+        set{self.PROPOSTPOLLCELLOBS = newValue}
+    }
     override func awakeFromNib()
     {
         self.Init()
@@ -20,8 +26,7 @@ class TvcBase: UITableViewCell
     override func setSelected(_ selected: Bool, animated: Bool)
     {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
    func Init()
    {
