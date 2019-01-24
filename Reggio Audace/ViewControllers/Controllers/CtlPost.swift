@@ -188,6 +188,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     func tableView(_ tableView:UITableView,willDisplay cell:UITableViewCell, forRowAt indexPath:IndexPath)
     {
         (cell as? TvcPostPoll)?.proPostPollCellObs = self
+        
        
     }
     
