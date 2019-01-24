@@ -16,7 +16,8 @@ class BtnRadio: BtnBase
         self.layer.borderWidth = 2.0
         self.layer.borderColor = GARNETCOLOR.cgColor
         self.layer.cornerRadius = self.bounds.width/2.0
+        self.layer.contentsRect = CGRect(x: 2.0, y: 2.0, width: 2.0, height: 2.0)
         self.contentMode = ContentMode.scaleAspectFit
-        //self.contentEdgeInsets = UIEdgeInsets(top: 7.5, left: 7.5, bottom: 7.5, right: 7.5)
+      
     }
 }

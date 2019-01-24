@@ -37,6 +37,7 @@ class PostPollsView
         let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request){(data:Data?,response:URLResponse?,error:Error?)in
             var l_PostPoll:PostPoll
             guard error == nil && data != nil else{return}
+             
             do
             {
                 guard let l_JsonResponse:[[String:Any]] = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String:Any]]
@@ -57,6 +58,7 @@ class PostPollsView
                     l_PostPolls.append(l_PostPoll)
                 }
             }
+                
             catch let e as NSError
             {
                 print(e.localizedDescription)

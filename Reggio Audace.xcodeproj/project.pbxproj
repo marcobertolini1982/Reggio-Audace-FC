@@ -41,6 +41,7 @@
 		D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBF321B6C64100835C0B /* ColorUtils.swift */; };
 		D1604EC621F9D46E004C7926 /* BtnBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC521F9D46E004C7926 /* BtnBase.swift */; };
 		D1604EC821F9D495004C7926 /* BtnRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC721F9D495004C7926 /* BtnRadio.swift */; };
+		D1604ECA21FA1D4B004C7926 /* PostPollUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */; };
 		D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4A21B521F000DAEF67 /* AuthUtils.swift */; };
 		D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */; };
 		D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4C21B521F000DAEF67 /* UrlUtils.swift */; };
@@ -158,6 +159,7 @@
 		D15EBBF321B6C64100835C0B /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		D1604EC521F9D46E004C7926 /* BtnBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnBase.swift; sourceTree = "<group>"; };
 		D1604EC721F9D495004C7926 /* BtnRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnRadio.swift; sourceTree = "<group>"; };
+		D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPollUserView.swift; sourceTree = "<group>"; };
 		D160DC4A21B521F000DAEF67 /* AuthUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthUtils.swift; sourceTree = "<group>"; };
 		D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardUtils.swift; sourceTree = "<group>"; };
 		D160DC4C21B521F000DAEF67 /* UrlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlUtils.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				D175884521F714AE00488CE6 /* DeviceView.swift */,
 				D175884721F71E3000488CE6 /* ReactionsView.swift */,
 				D175884921F7368100488CE6 /* PostPollsView.swift */,
+				D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				D160DC5C21B568BD00DAEF67 /* CtlRegisterUser.swift in Sources */,
 				D160DC5121B529A800DAEF67 /* SeasonDay.swift in Sources */,
 				D15ABDB221B915C700C980EE /* CtlUserDataReset.swift in Sources */,
+				D1604ECA21FA1D4B004C7926 /* PostPollUserView.swift in Sources */,
 				D171970921BAB152008D786B /* ViePost.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
 				D192985921DD04D200850DF2 /* DateUtils.swift in Sources */,

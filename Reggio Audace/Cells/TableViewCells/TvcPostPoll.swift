@@ -12,22 +12,29 @@ class TvcPostPoll: TvcBase
 {
     @IBOutlet weak var btn_PostPoll: BtnRadio!
     @IBOutlet weak var lbl_PostPoll: UILabel!
-    private var ISSELECTED:Bool = false
+    
     @IBAction func OnBtnPostPOllClick(_ sender: UIButton)
     {
         self.proPostPollCellObs?.PostPollCellSelected(cell: self)
       
     }
-    public final var IsSelected:Bool
+    public final var IsSelected:Bool?
     {
-        get{return self.ISSELECTED}
-        set{self.ISSELECTED = newValue}
+    
+        didSet
+        {
+            if self.IsSelected == nil || !self.IsSelected!
+            {
+                self.btn_PostPoll.backgroundColor = ColorUtils.clear
+            }
+                
+            else
+            {
+                self.btn_PostPoll.backgroundColor = GARNETCOLOR
+            }
+        }
+       
     }
-   
-  override func Init()
-   {
-    super.Init()
-    self.btn_PostPoll.backgroundColor = self.ISSELECTED ? GARNETCOLOR : ColorUtils.clear
-   }
+    
     
 }
