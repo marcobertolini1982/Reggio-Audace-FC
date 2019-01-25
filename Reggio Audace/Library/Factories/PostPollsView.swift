@@ -25,9 +25,10 @@ class PostPollsView
     final func LoadPostPolls(prg_post:Int64?)
     {
        
-        
+        // Declarations
         guard let l_Url:URL = URL(string:UrlUtils.URL_LOADPOSTPOLLS) else{return}
         var l_Request:URLRequest = URLRequest(url:l_Url)
+
         let l_Json:[String:Any?] = ["prg_post":prg_post,"cod_user":AuthUtils.Uid]
         let l_Data:Data? = try? JSONSerialization.data(withJSONObject: l_Json, options: [])
         l_Request.httpMethod = "POST"

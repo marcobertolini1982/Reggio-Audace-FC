@@ -58,7 +58,8 @@ class ChatView
                 // Declarations
                 var l_Chat:Chat
                 
-                for dict in l_JsonResponse {
+                for dict in l_JsonResponse
+                {
                     
                     // Init
                     l_Chat = Chat()

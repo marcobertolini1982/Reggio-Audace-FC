@@ -32,11 +32,16 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     // Methods
     func PostPollCellSelected(cell: UITableViewCell)
     {
-       
-        guard let l_IndexPath:IndexPath = self.VIEPOST.tbv_PostPolls.indexPath(for: cell) else{return}
-        
-       self.VIEPOST.tbv_PostPolls.selectRow(at: l_IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
-       
+        if AuthUtils.Uid == nil
+        {
+            self.SendToLogin()
+            return
+        }
+        else
+        {
+            guard let l_IndexPath:IndexPath = self.VIEPOST.tbv_PostPolls.indexPath(for: cell) else{return}
+            self.VIEPOST.tbv_PostPolls.selectRow(at: l_IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
+        }
     }
     
     
@@ -87,6 +92,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+      
         // Declarations
         let l_PostPollUserView:PostPollUserView = PostPollUserView()
         let l_PostPoll:PostPoll = self.POSTPOLLS[indexPath.row]
@@ -207,5 +213,25 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         (cell as? TvcPostPoll)?.proPostPollCellObs = nil
     }
     
-
+    private final func SendToLogin()
+    {
+        guard let l_ViewControllers:[UIViewController] = (self.view.window?.rootViewController as? UINavigationController)?.viewControllers
+        else
+        {
+            return
+        }
+        for l_Controller in l_ViewControllers
+        {
+            if !(l_Controller is TabMain)
+            {
+               continue
+            }
+            (l_Controller as? TabMain)?.selectedIndex = 4
+            break
+        }
+        self.navigationController?.popViewController(animated: true)
+        
+        
+    }
+   
 }
