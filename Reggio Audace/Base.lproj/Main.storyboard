@@ -218,7 +218,7 @@
                                     <outlet property="delegate" destination="fNm-Ea-j1s" id="QH7-M8-40S"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyY-7W-xqf" customClass="BtnCommentSender" customModule="Reggio_Audace" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyY-7W-xqf" customClass="BtnRadioBase" customModule="Reggio_Audace" customModuleProvider="target">
                                 <rect key="frame" x="282" y="536" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -227,6 +227,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="SendTextWhite"/>
+                                <connections>
+                                    <action selector="OnBtnSendMessageClick:" destination="fNm-Ea-j1s" eventType="touchUpInside" id="awR-jE-xdP"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-OP-KQc">
                                 <rect key="frame" x="8" y="536" width="270" height="30"/>
@@ -253,12 +256,14 @@
                         <viewLayoutGuide key="safeArea" id="bkj-ls-f1V"/>
                     </view>
                     <connections>
+                        <outlet property="btn_SendMessage" destination="LyY-7W-xqf" id="9xU-iu-zGM"/>
                         <outlet property="tableView" destination="ELx-vH-Hyh" id="thK-DX-vHw"/>
+                        <outlet property="txt_des_message" destination="6fk-OP-KQc" id="xoE-Bi-Y9x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiw-1N-TkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4149" y="3793"/>
+            <point key="canvasLocation" x="-4149.375" y="3792.2535211267605"/>
         </scene>
         <!--Pag Post-->
         <scene sceneID="hOq-S0-hT4">
@@ -668,7 +673,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-p2-zlS">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-p2-zlS">
                                 <rect key="frame" x="121.5" y="50" width="77" height="77"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>

@@ -9,5 +9,5 @@
 import Foundation
 protocol ProCviHeader
 {
-    func Item_Selected(indexpath:IndexPath)
+    func ItemSelected(indexpath:IndexPath)
 }

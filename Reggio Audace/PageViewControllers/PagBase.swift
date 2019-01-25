@@ -14,6 +14,10 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
     private  var WILLTRANSITIONTO:UIViewController = UIViewController()
     private  var VIEWCONTROLLERS:[UIViewController] = [UIViewController]()
     private  var PAGEINDICATOR:ViePageIndicator!
+    public final var PageIndicator:ViePageIndicator
+    {
+        return self.PAGEINDICATOR
+    }
     public var ViewControllers:[UIViewController]
     {
         get
@@ -29,7 +33,7 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         }
     }
     
-    func Item_Selected(indexpath: IndexPath)
+    func ItemSelected(indexpath: IndexPath)
     {
         let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexpath) as? CvcHeader
         l_Cell?.lbl_title.textColor = GARNETCOLOR
@@ -159,10 +163,5 @@ class PagBase: UIPageViewController, UIPageViewControllerDataSource,UIPageViewCo
         let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexPath) as? CvcHeader
         l_Cell?.lbl_title.textColor = GARNETCOLOR
     }
-    private final func OnSelectedItem(indexPath:IndexPath)
-    {
-        let l_Cell:CvcHeader? = self.PAGEINDICATOR.Cvi_Headcers.cellForItem(at: indexPath) as? CvcHeader
-        l_Cell?.lbl_title.textColor = GARNETCOLOR
-        self.setViewControllers([self.VIEWCONTROLLERS[indexPath.item]], direction: UIPageViewController.NavigationDirection.forward, animated: true)
-    }
+
 }

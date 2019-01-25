@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BtnRadio: BtnBase
+class BtnRadio: BtnRadioBase
 {
    override var BorderWidth: CGFloat
     {

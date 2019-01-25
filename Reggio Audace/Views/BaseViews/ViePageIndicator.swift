@@ -71,7 +71,7 @@ class ViePageIndicator: VieBase,UICollectionViewDataSource,UICollectionViewDeleg
     {
         let l_Cell:CvcHeader? = Cvi_Headcers.cellForItem(at:indexPath) as? CvcHeader
         l_Cell?.lbl_title.textColor = GARNETCOLOR
-        self.Cvi_Headcers.proCviHeader?.Item_Selected(indexpath: indexPath)
+        self.Cvi_Headcers.proCviHeader?.ItemSelected(indexpath: indexPath)
        
         
     }

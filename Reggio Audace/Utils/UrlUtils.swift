@@ -34,6 +34,11 @@ class UrlUtils
     {
         return URL_WEBAPP + "/LoadPostMessages"
     }
+    
+    public static var URL_SAVEPOSTMESSAGE:String
+    {
+        return URL_WEBAPP + "/SavePostMessage"
+    }
     public static var URL_GETFILES:String
     {
         return URL_WEBAPP + "/GetFiles"

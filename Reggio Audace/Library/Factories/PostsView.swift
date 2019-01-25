@@ -271,7 +271,16 @@ public class PostsView
           l_DataTask.resume()
         }
     
-    
+    func SavvePostMessage(prg_post:Int64?,des_message:String?)
+    {
+        guard let l_Url:URL = URL(string:UrlUtils.URL_SAVEPOSTMESSAGE) else{return}
+        var l_Request:URLRequest = URLRequest(url:l_Url)
+        let l_Json:[String:Any?] = ["prg_post":prg_post,"cod_user":AuthUtils.Uid,"des_message":des_message]
+        l_Request.httpMethod = "POST"
+        l_Request.httpBody = try? JSONSerialization.data(withJSONObject: l_Json, options: [])
+        let l_DataTasdk:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request)
+        l_DataTasdk.resume()
+    }
    
     }
 
