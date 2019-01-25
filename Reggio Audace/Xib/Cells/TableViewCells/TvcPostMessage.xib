@@ -32,15 +32,15 @@
                         </constraints>
                     </imageView>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rM2-vZ-SvM">
-                        <rect key="frame" x="46" y="0.0" width="354" height="83.5"/>
+                        <rect key="frame" x="46" y="0.0" width="350" height="83.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" name="Hind-Light" family="Hind" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="rM2-vZ-SvM" secondAttribute="trailing" id="2aw-MO-CDG"/>
                     <constraint firstItem="5YV-r5-PC4" firstAttribute="top" secondItem="1rw-2M-zIj" secondAttribute="top" constant="8" id="3mM-7d-sRe"/>
+                    <constraint firstAttribute="trailing" secondItem="rM2-vZ-SvM" secondAttribute="trailing" constant="4" id="B8z-xe-Chu"/>
                     <constraint firstItem="rM2-vZ-SvM" firstAttribute="leading" secondItem="5YV-r5-PC4" secondAttribute="trailing" constant="8" id="HoY-Jd-bIZ"/>
                     <constraint firstItem="5YV-r5-PC4" firstAttribute="leading" secondItem="1rw-2M-zIj" secondAttribute="leading" constant="8" id="NDD-QK-pD2"/>
                     <constraint firstAttribute="bottom" secondItem="rM2-vZ-SvM" secondAttribute="bottom" constant="8" id="UB6-6M-G6G"/>
