@@ -18,7 +18,7 @@
                 <outlet property="lbl_Date" destination="g2q-KX-6In" id="TIo-lk-Hbe"/>
                 <outlet property="lbl_Reactions" destination="jli-v7-TTU" id="ikr-qI-Q0F"/>
                 <outlet property="lbl_Title" destination="g9Q-H2-owN" id="MKF-z2-3cF"/>
-                <outlet property="tbv_PostPolls" destination="DpJ-aC-pJO" id="Zem-Av-y5o"/>
+                <outlet property="tbv_PostPolls" destination="DpJ-aC-pJO" id="tn4-L1-Pa9"/>
                 <outlet property="txt_Article" destination="ehj-lV-4qd" id="ste-Du-voz"/>
             </connections>
         </placeholder>
@@ -147,7 +147,7 @@
                             </constraints>
                             <state key="normal" image="Comment"/>
                         </button>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DpJ-aC-pJO">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DpJ-aC-pJO" customClass="TbvPostPolls" customModule="Reggio_Audace" customModuleProvider="target">
                             <rect key="frame" x="4" y="359" width="312" height="372.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
@@ -213,7 +213,7 @@
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zNf-dV-MnO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-1614.375" y="164.78873239436621"/>
+            <point key="canvasLocation" x="-2333" y="167"/>
         </view>
     </objects>
     <resources>

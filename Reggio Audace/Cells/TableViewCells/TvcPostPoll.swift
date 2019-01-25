@@ -25,17 +25,22 @@ class TvcPostPoll: TvcBase
         {
             if self.IsSelected == nil || !self.IsSelected!
             {
+                 self.isSelected = self.IsSelected!
                 self.btn_PostPoll.backgroundColor = ColorUtils.clear
                
             }
                 
             else
             {
+                self.isSelected = self.IsSelected!
                 self.btn_PostPoll.backgroundColor = GARNETCOLOR
             }
         }
        
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+       self.proPostPollCellObs?.PostPollCellSelected(cell: self)
+    }
 }
