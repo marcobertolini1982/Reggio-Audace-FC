@@ -60,6 +60,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         self.VIEPOST.tbv_PostPolls.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
         self.VIEPOST.tbv_PostPolls.delegate = self
         self.VIEPOST.tbv_PostPolls.dataSource = self
+        self.VIEPOST.btn_PostMessage.addTarget(self, action:#selector(self.OnBtnCommentsclick), for:UIControl.Event.touchUpInside)
     }
     
     // Methods
@@ -230,6 +231,14 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
             break
         }
         self.navigationController?.popViewController(animated: true)
+        
+        
+    }
+    
+    @objc func OnBtnCommentsclick(_ sender:UIButton)
+    {
+        let l_IndexPath:IndexPath = IndexPath(item:2, section: 0)
+        self.Parent?.PageIndicator.Cvi_Headcers.selectItem(at: l_IndexPath, animated: true, scrollPosition: UICollectionView.ScrollPosition.right)
         
         
     }

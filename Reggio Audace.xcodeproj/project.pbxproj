@@ -39,7 +39,7 @@
 		D15EBBF021B6A08C00835C0B /* VieBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBEF21B6A08C00835C0B /* VieBase.swift */; };
 		D15EBBF221B6C1C400835C0B /* LabBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBF121B6C1C400835C0B /* LabBase.swift */; };
 		D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBF321B6C64100835C0B /* ColorUtils.swift */; };
-		D1604EC621F9D46E004C7926 /* BtnBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC521F9D46E004C7926 /* BtnBase.swift */; };
+		D1604EC621F9D46E004C7926 /* BtnRadioBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC521F9D46E004C7926 /* BtnRadioBase.swift */; };
 		D1604EC821F9D495004C7926 /* BtnRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC721F9D495004C7926 /* BtnRadio.swift */; };
 		D1604ECA21FA1D4B004C7926 /* PostPollUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */; };
 		D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4A21B521F000DAEF67 /* AuthUtils.swift */; };
@@ -69,7 +69,6 @@
 		D171970921BAB152008D786B /* ViePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970821BAB152008D786B /* ViePost.swift */; };
 		D171970B21BAB550008D786B /* CtlPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970A21BAB550008D786B /* CtlPost.swift */; };
 		D171DB8421FB143F00E08480 /* TbvPostPolls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171DB8321FB143E00E08480 /* TbvPostPolls.swift */; };
-		D171DB8621FB1E3E00E08480 /* BtnCommentSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171DB8521FB1E3E00E08480 /* BtnCommentSender.swift */; };
 		D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173431721CBCAEA00D8E75E /* PathUtils.swift */; };
 		D174231C21AE93AC009AAEFC /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231B21AE93AC009AAEFC /* PostsView.swift */; };
 		D174232321AEAE68009AAEFC /* VcrPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174232221AEAE68009AAEFC /* VcrPosts.swift */; };
@@ -159,7 +158,7 @@
 		D15EBBEF21B6A08C00835C0B /* VieBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VieBase.swift; sourceTree = "<group>"; };
 		D15EBBF121B6C1C400835C0B /* LabBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBase.swift; sourceTree = "<group>"; };
 		D15EBBF321B6C64100835C0B /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
-		D1604EC521F9D46E004C7926 /* BtnBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnBase.swift; sourceTree = "<group>"; };
+		D1604EC521F9D46E004C7926 /* BtnRadioBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnRadioBase.swift; sourceTree = "<group>"; };
 		D1604EC721F9D495004C7926 /* BtnRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnRadio.swift; sourceTree = "<group>"; };
 		D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPollUserView.swift; sourceTree = "<group>"; };
 		D160DC4A21B521F000DAEF67 /* AuthUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthUtils.swift; sourceTree = "<group>"; };
@@ -189,7 +188,6 @@
 		D171970821BAB152008D786B /* ViePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePost.swift; sourceTree = "<group>"; };
 		D171970A21BAB550008D786B /* CtlPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtlPost.swift; sourceTree = "<group>"; };
 		D171DB8321FB143E00E08480 /* TbvPostPolls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbvPostPolls.swift; sourceTree = "<group>"; };
-		D171DB8521FB1E3E00E08480 /* BtnCommentSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnCommentSender.swift; sourceTree = "<group>"; };
 		D173431721CBCAEA00D8E75E /* PathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathUtils.swift; sourceTree = "<group>"; };
 		D174231B21AE93AC009AAEFC /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		D174232221AEAE68009AAEFC /* VcrPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrPosts.swift; sourceTree = "<group>"; };
@@ -419,9 +417,8 @@
 		D171DB8721FB1E8B00E08480 /* RoundShapedButtons */ = {
 			isa = PBXGroup;
 			children = (
-				D1604EC521F9D46E004C7926 /* BtnBase.swift */,
+				D1604EC521F9D46E004C7926 /* BtnRadioBase.swift */,
 				D1604EC721F9D495004C7926 /* BtnRadio.swift */,
-				D171DB8521FB1E3E00E08480 /* BtnCommentSender.swift */,
 			);
 			path = RoundShapedButtons;
 			sourceTree = "<group>";
@@ -571,9 +568,9 @@
 		D1BE6D6521AD60D800114084 /* Reggio Audace */ = {
 			isa = PBXGroup;
 			children = (
-				D1604EC421F9D436004C7926 /* Buttons */,
 				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
+				D1604EC421F9D436004C7926 /* Buttons */,
 				D174232A21AED728009AAEFC /* Cells */,
 				52F650C221B0576200CBD2BE /* Font */,
 				526ABD4021B1564B004177CB /* GoogleService-Info.plist */,
@@ -901,7 +898,7 @@
 				D17963FD21B151EB005311A8 /* ProSeasonObs.swift in Sources */,
 				D1EA26A021F0E51700A85B5F /* TvcPostMessage.swift in Sources */,
 				D19B3E1521D65A6300BD5F15 /* VcrRanking.swift in Sources */,
-				D1604EC621F9D46E004C7926 /* BtnBase.swift in Sources */,
+				D1604EC621F9D46E004C7926 /* BtnRadioBase.swift in Sources */,
 				D16BBFAA21C161FC008AF36E /* UserView.swift in Sources */,
 				D1855E3921DF712900F812C0 /* File.swift in Sources */,
 				D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */,
@@ -917,7 +914,6 @@
 				D175884E21F7433700488CE6 /* ProPostPollObs.swift in Sources */,
 				D17DA94321EE228100E933C4 /* LabPostMessage.swift in Sources */,
 				D171DB8421FB143F00E08480 /* TbvPostPolls.swift in Sources */,
-				D171DB8621FB1E3E00E08480 /* BtnCommentSender.swift in Sources */,
 				D160DC5821B5333D00DAEF67 /* TabMain.swift in Sources */,
 				D17963FF21B15773005311A8 /* Season.swift in Sources */,
 				D19B3E1121D62CE300BD5F15 /* RankingItem.swift in Sources */,

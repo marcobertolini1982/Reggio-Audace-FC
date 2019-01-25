@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BtnBase: UIButton
+class BtnRadioBase: UIButton
 {
     required init?(coder aDecoder: NSCoder)
     {
@@ -36,7 +36,7 @@ class BtnBase: UIButton
     {
         self.layer.borderWidth = self.BorderWidth
         self.layer.borderColor = self.BorderColor
-        self.layer.cornerRadius = self.bounds.width/2.0
-        self.contentMode = ContentMode.scaleAspectFit
+        self.layer.cornerRadius = self.frame.width/2.0
+        
     }
 }

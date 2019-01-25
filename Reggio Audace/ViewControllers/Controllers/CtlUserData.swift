@@ -76,7 +76,7 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     override func Init()
     {
         super.Init()
-        self.img_User.layer.cornerRadius = self.img_User.bounds.width/2
+        self.img_User.layer.cornerRadius = self.img_User.frame.width/2
          self.SetUserData()
     }
     
