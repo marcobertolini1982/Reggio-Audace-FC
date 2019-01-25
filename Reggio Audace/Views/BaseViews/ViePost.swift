@@ -17,7 +17,7 @@ class ViePost: VieBase
     @IBOutlet weak var img_Post:UIImageView!
     @IBOutlet weak var lbl_Comment: UILabel!
     @IBOutlet weak var lbl_Reactions: UILabel!
-    @IBOutlet weak var tbv_PostPolls: UITableView!
+    @IBOutlet weak var tbv_PostPolls: TbvPostPolls!
     open override var NIBNAME: String
     {
         return "ViePost"
