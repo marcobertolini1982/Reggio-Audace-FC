@@ -1,5 +1,5 @@
 //
-//  CtlArticleViewController.swift
+//  CtlPost.swift
 //  Reggio Audace
 //
 //  Created by Michele on 07/12/18.
@@ -35,11 +35,10 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
        
         guard let l_IndexPath:IndexPath = self.VIEPOST.tbv_PostPolls.indexPath(for: cell) else{return}
         
-                (cell as? TvcPostPoll)?.btn_PostPoll.backgroundColor = GARNETCOLOR
-                self.VIEPOST.tbv_PostPolls.selectRow(at: l_IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
+       self.SelectRow (at: l_IndexPath)
        
-        
     }
+    
     
     override func Init()
     {
@@ -70,25 +69,43 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
+        let l_Index:Int = indexPath.row
        guard let l_Cell:TvcPostPoll = self.VIEPOST.tbv_PostPolls.dequeueReusableCell(withIdentifier: self.reuseIdentifier) as? TvcPostPoll
         else
        {
         return UITableViewCell()
         }
-        l_Cell.lbl_PostPoll.text = self.POSTPOLLS[indexPath.row].des_poll
+        l_Cell.lbl_PostPoll.text = self.POSTPOLLS[l_Index].des_poll
         return l_Cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        // Declarations
+        let l_PostPollUserView:PostPollUserView = PostPollUserView()
+        let l_PostPoll:PostPoll = self.POSTPOLLS[indexPath.row]
         let l_cell:TvcPostPoll? = tableView.cellForRow(at: indexPath) as? TvcPostPoll
-        l_cell?.btn_PostPoll.backgroundColor = GARNETCOLOR
+        // Eval slection state
+        if l_cell?.IsSelected == true
+        {
+            return
+        }
+        l_cell?.IsSelected = true
+        l_PostPollUserView.Vote(prg_post: self.Parent?.PrgPost, prg_postpoll: l_PostPoll.prg_postpoll)
+        
        
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)
+    {
+        let l_cell:TvcPostPoll? = tableView.cellForRow(at: indexPath) as? TvcPostPoll
+        l_cell?.IsSelected = false
+        
     }
     
     func PostPollsLoaded(postpolls: [PostPoll])
     {
         self.POSTPOLLS = postpolls
+        self.BindPostPollsData()
     }
     func FileLoaded(data: Data)
     {
@@ -103,6 +120,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         self.BindData()
         guard let l_PrgFile:Int64 = self.POST?.prg_file else{return}
        self.LoadPostImage(prg_file: l_PrgFile)
+       self.LoadPostPolls()
     }
 
     override func BindData()
@@ -114,7 +132,6 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
             self.VIEPOST.txt_Article.text = self.POST?.des_post
             self.VIEPOST.lbl_Comment.text = "\(self.POST?.num_postmessages ?? Int64())"
             self.VIEPOST.lbl_Reactions.text = "\(self.POST?.num_reactions ?? Int64())"
-            
         }
         
     }
@@ -137,6 +154,14 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         }
     }
     
+    final func BindPostPollsData()
+    {
+        DispatchQueue.main.async
+        {
+            self.VIEPOST.tbv_PostPolls.reloadData()
+        }
+    }
+    
     private final func LoadPostImage(prg_file:Int64)
     {
         let l_FileView:FileView = FileView()
@@ -148,12 +173,12 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     {
        
         super.viewWillAppear(animated)
-         guard let l_Parent:PagPost = self.parent as? PagPost else{return}
-         self.LoadPoastContent(prg_post: l_Parent.PrgPost)
-         self.LoadPostPolls()
-       
+        self.LoadPoastContent(prg_post: self.Parent?.PrgPost)
+        print(self.POSTPOLLS.isEmpty)
         
     }
+    
+    
     
     private final func LoadPostPolls()
     {
@@ -165,11 +190,32 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     func tableView(_ tableView:UITableView,willDisplay cell:UITableViewCell, forRowAt indexPath:IndexPath)
     {
         (cell as? TvcPostPoll)?.proPostPollCellObs = self
+        
        
     }
     
     func tableView(_ tableView:UITableView,didEndDisplaying cell:UITableViewCell, forRowAt indexPath:IndexPath)
     {
         (cell as? TvcPostPoll)?.proPostPollCellObs = nil
+    }
+    
+    func SelectRow(at indexpath:IndexPath)
+    {
+         guard let l_IndexPaths:[IndexPath] = self.VIEPOST.tbv_PostPolls.indexPathsForRows(in: self.VIEPOST.tbv_PostPolls.bounds)
+         else
+         {
+            return
+            
+        }
+        for l_indexpath in l_IndexPaths
+        {
+            if l_indexpath != indexpath
+            {
+                self.tableView(self.VIEPOST.tbv_PostPolls, didDeselectRowAt: l_indexpath)
+            }
+        }
+        
+        self.VIEPOST.tbv_PostPolls.selectRow(at:indexpath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
+        self.tableView(self.VIEPOST.tbv_PostPolls, didSelectRowAt:indexpath)
     }
 }

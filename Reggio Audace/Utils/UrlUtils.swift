@@ -48,6 +48,11 @@ class UrlUtils
         return URL_WEBAPP + "/LoadPostPolls"
     }
     
+    public static var URL_POSTPOLLVOTE:String
+    {
+        return URL_WEBAPP + "/PostPollVote"
+    }
+    
     public static  var URL_GETFILE :String
 {
     return URL_WEBAPP + "/GetFile"

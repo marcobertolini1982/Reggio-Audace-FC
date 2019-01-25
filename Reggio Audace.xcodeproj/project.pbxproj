@@ -39,6 +39,9 @@
 		D15EBBF021B6A08C00835C0B /* VieBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBEF21B6A08C00835C0B /* VieBase.swift */; };
 		D15EBBF221B6C1C400835C0B /* LabBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBF121B6C1C400835C0B /* LabBase.swift */; };
 		D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15EBBF321B6C64100835C0B /* ColorUtils.swift */; };
+		D1604EC621F9D46E004C7926 /* BtnBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC521F9D46E004C7926 /* BtnBase.swift */; };
+		D1604EC821F9D495004C7926 /* BtnRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC721F9D495004C7926 /* BtnRadio.swift */; };
+		D1604ECA21FA1D4B004C7926 /* PostPollUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */; };
 		D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4A21B521F000DAEF67 /* AuthUtils.swift */; };
 		D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */; };
 		D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4C21B521F000DAEF67 /* UrlUtils.swift */; };
@@ -154,6 +157,9 @@
 		D15EBBEF21B6A08C00835C0B /* VieBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VieBase.swift; sourceTree = "<group>"; };
 		D15EBBF121B6C1C400835C0B /* LabBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBase.swift; sourceTree = "<group>"; };
 		D15EBBF321B6C64100835C0B /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		D1604EC521F9D46E004C7926 /* BtnBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnBase.swift; sourceTree = "<group>"; };
+		D1604EC721F9D495004C7926 /* BtnRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnRadio.swift; sourceTree = "<group>"; };
+		D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPollUserView.swift; sourceTree = "<group>"; };
 		D160DC4A21B521F000DAEF67 /* AuthUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthUtils.swift; sourceTree = "<group>"; };
 		D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardUtils.swift; sourceTree = "<group>"; };
 		D160DC4C21B521F000DAEF67 /* UrlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlUtils.swift; sourceTree = "<group>"; };
@@ -331,6 +337,15 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		D1604EC421F9D436004C7926 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D1604EC521F9D46E004C7926 /* BtnBase.swift */,
+				D1604EC721F9D495004C7926 /* BtnRadio.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		D160DC4921B521C900DAEF67 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +417,7 @@
 				D175884521F714AE00488CE6 /* DeviceView.swift */,
 				D175884721F71E3000488CE6 /* ReactionsView.swift */,
 				D175884921F7368100488CE6 /* PostPollsView.swift */,
+				D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -533,6 +549,7 @@
 		D1BE6D6521AD60D800114084 /* Reggio Audace */ = {
 			isa = PBXGroup;
 			children = (
+				D1604EC421F9D436004C7926 /* Buttons */,
 				D1BE6D6621AD60D800114084 /* AppDelegate.swift */,
 				D1BE6D6D21AD60EA00114084 /* Assets.xcassets */,
 				D174232A21AED728009AAEFC /* Cells */,
@@ -829,6 +846,7 @@
 				D160DC5C21B568BD00DAEF67 /* CtlRegisterUser.swift in Sources */,
 				D160DC5121B529A800DAEF67 /* SeasonDay.swift in Sources */,
 				D15ABDB221B915C700C980EE /* CtlUserDataReset.swift in Sources */,
+				D1604ECA21FA1D4B004C7926 /* PostPollUserView.swift in Sources */,
 				D171970921BAB152008D786B /* ViePost.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
 				D192985921DD04D200850DF2 /* DateUtils.swift in Sources */,
@@ -852,6 +870,7 @@
 				D166B87A21F86C9A00B9FD78 /* TvcPostPoll.swift in Sources */,
 				D1BE6D9721AD7D6100114084 /* Post.swift in Sources */,
 				D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */,
+				D1604EC821F9D495004C7926 /* BtnRadio.swift in Sources */,
 				D15ABDBC21B9353D00C980EE /* CtlUserData.swift in Sources */,
 				D15EBBF021B6A08C00835C0B /* VieBase.swift in Sources */,
 				D1EDE77121BEBBB300FDA751 /* VcrSeasonMenu.swift in Sources */,
@@ -860,6 +879,7 @@
 				D17963FD21B151EB005311A8 /* ProSeasonObs.swift in Sources */,
 				D1EA26A021F0E51700A85B5F /* TvcPostMessage.swift in Sources */,
 				D19B3E1521D65A6300BD5F15 /* VcrRanking.swift in Sources */,
+				D1604EC621F9D46E004C7926 /* BtnBase.swift in Sources */,
 				D16BBFAA21C161FC008AF36E /* UserView.swift in Sources */,
 				D1855E3921DF712900F812C0 /* File.swift in Sources */,
 				D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */,
