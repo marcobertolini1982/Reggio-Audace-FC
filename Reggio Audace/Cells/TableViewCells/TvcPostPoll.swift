@@ -26,6 +26,7 @@ class TvcPostPoll: TvcBase
             if self.IsSelected == nil || !self.IsSelected!
             {
                 self.btn_PostPoll.backgroundColor = ColorUtils.clear
+               
             }
                 
             else

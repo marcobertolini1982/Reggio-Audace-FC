@@ -81,14 +81,16 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        // Declarations
+        let l_PostPollUserView:PostPollUserView = PostPollUserView()
+        let l_PostPoll:PostPoll = self.POSTPOLLS[indexPath.row]
         let l_cell:TvcPostPoll? = tableView.cellForRow(at: indexPath) as? TvcPostPoll
+        // Eval slection state
         if l_cell?.IsSelected == true
         {
             return
         }
         l_cell?.IsSelected = true
-        let l_PostPollUserView:PostPollUserView = PostPollUserView()
-        let l_PostPoll:PostPoll = self.POSTPOLLS[indexPath.row]
         l_PostPollUserView.Vote(prg_post: self.Parent?.PrgPost, prg_postpoll: l_PostPoll.prg_postpoll)
         
        

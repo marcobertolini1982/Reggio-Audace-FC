@@ -22,6 +22,7 @@ class TvcPostMessage: TvcBase,ProFileObs
         self.backgroundColor = ColorUtils.clear
         self.txt_message.layer.borderWidth = 1.0
         self.txt_message.layer.borderColor = GARNETCOLOR.cgColor
+        self.txt_message.contentInset = UIEdgeInsets(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0)
     }
     
     func FileLoaded(data: Data)
