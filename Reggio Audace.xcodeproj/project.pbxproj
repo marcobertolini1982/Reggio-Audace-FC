@@ -69,6 +69,7 @@
 		D171970921BAB152008D786B /* ViePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970821BAB152008D786B /* ViePost.swift */; };
 		D171970B21BAB550008D786B /* CtlPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171970A21BAB550008D786B /* CtlPost.swift */; };
 		D171DB8421FB143F00E08480 /* TbvPostPolls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171DB8321FB143E00E08480 /* TbvPostPolls.swift */; };
+		D171DB8621FB1E3E00E08480 /* BtnCommentSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171DB8521FB1E3E00E08480 /* BtnCommentSender.swift */; };
 		D173431821CBCAEA00D8E75E /* PathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173431721CBCAEA00D8E75E /* PathUtils.swift */; };
 		D174231C21AE93AC009AAEFC /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174231B21AE93AC009AAEFC /* PostsView.swift */; };
 		D174232321AEAE68009AAEFC /* VcrPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174232221AEAE68009AAEFC /* VcrPosts.swift */; };
@@ -188,6 +189,7 @@
 		D171970821BAB152008D786B /* ViePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePost.swift; sourceTree = "<group>"; };
 		D171970A21BAB550008D786B /* CtlPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtlPost.swift; sourceTree = "<group>"; };
 		D171DB8321FB143E00E08480 /* TbvPostPolls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbvPostPolls.swift; sourceTree = "<group>"; };
+		D171DB8521FB1E3E00E08480 /* BtnCommentSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnCommentSender.swift; sourceTree = "<group>"; };
 		D173431721CBCAEA00D8E75E /* PathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathUtils.swift; sourceTree = "<group>"; };
 		D174231B21AE93AC009AAEFC /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		D174232221AEAE68009AAEFC /* VcrPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrPosts.swift; sourceTree = "<group>"; };
@@ -343,8 +345,7 @@
 		D1604EC421F9D436004C7926 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				D1604EC521F9D46E004C7926 /* BtnBase.swift */,
-				D1604EC721F9D495004C7926 /* BtnRadio.swift */,
+				D171DB8721FB1E8B00E08480 /* RoundShapedButtons */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -413,6 +414,16 @@
 				D171DB8321FB143E00E08480 /* TbvPostPolls.swift */,
 			);
 			path = TableViews;
+			sourceTree = "<group>";
+		};
+		D171DB8721FB1E8B00E08480 /* RoundShapedButtons */ = {
+			isa = PBXGroup;
+			children = (
+				D1604EC521F9D46E004C7926 /* BtnBase.swift */,
+				D1604EC721F9D495004C7926 /* BtnRadio.swift */,
+				D171DB8521FB1E3E00E08480 /* BtnCommentSender.swift */,
+			);
+			path = RoundShapedButtons;
 			sourceTree = "<group>";
 		};
 		D174231A21AE938F009AAEFC /* Factories */ = {
@@ -906,6 +917,7 @@
 				D175884E21F7433700488CE6 /* ProPostPollObs.swift in Sources */,
 				D17DA94321EE228100E933C4 /* LabPostMessage.swift in Sources */,
 				D171DB8421FB143F00E08480 /* TbvPostPolls.swift in Sources */,
+				D171DB8621FB1E3E00E08480 /* BtnCommentSender.swift in Sources */,
 				D160DC5821B5333D00DAEF67 /* TabMain.swift in Sources */,
 				D17963FF21B15773005311A8 /* Season.swift in Sources */,
 				D19B3E1121D62CE300BD5F15 /* RankingItem.swift in Sources */,
