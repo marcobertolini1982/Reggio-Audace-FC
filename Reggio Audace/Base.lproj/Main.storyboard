@@ -210,14 +210,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-vH-Hyh">
-                                <rect key="frame" x="0.0" y="20" width="320" height="514"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="fNm-Ea-j1s" id="qha-zu-ukh"/>
-                                    <outlet property="delegate" destination="fNm-Ea-j1s" id="QH7-M8-40S"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyY-7W-xqf" customClass="BtnRadioBase" customModule="Reggio_Audace" customModuleProvider="target">
                                 <rect key="frame" x="282" y="536" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -231,34 +223,39 @@
                                     <action selector="OnBtnSendMessageClick:" destination="fNm-Ea-j1s" eventType="touchUpInside" id="awR-jE-xdP"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-OP-KQc">
-                                <rect key="frame" x="8" y="536" width="270" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Zfp-HW-rQe"/>
-                                </constraints>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pTi-8q-1Yp">
+                                <rect key="frame" x="8" y="536" width="272" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-vH-Hyh">
+                                <rect key="frame" x="0.0" y="20" width="320" height="514"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fNm-Ea-j1s" id="qha-zu-ukh"/>
+                                    <outlet property="delegate" destination="fNm-Ea-j1s" id="QH7-M8-40S"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LyY-7W-xqf" firstAttribute="leading" secondItem="6fk-OP-KQc" secondAttribute="trailing" constant="4" id="Fq3-GK-m94"/>
+                            <constraint firstItem="LyY-7W-xqf" firstAttribute="leading" secondItem="pTi-8q-1Yp" secondAttribute="trailing" constant="2" id="3bH-2U-GKh"/>
                             <constraint firstItem="LyY-7W-xqf" firstAttribute="top" secondItem="ELx-vH-Hyh" secondAttribute="bottom" constant="2" id="JH0-1B-4dw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pTi-8q-1Yp" secondAttribute="bottom" constant="-96" id="KZ2-nW-uu6"/>
                             <constraint firstItem="bkj-ls-f1V" firstAttribute="bottom" secondItem="LyY-7W-xqf" secondAttribute="bottom" constant="2" id="TCr-zI-WAN"/>
+                            <constraint firstItem="pTi-8q-1Yp" firstAttribute="leading" secondItem="bkj-ls-f1V" secondAttribute="leading" constant="8" id="VhT-CQ-hDB"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="trailing" secondItem="bkj-ls-f1V" secondAttribute="trailing" id="WRa-3S-ErM"/>
-                            <constraint firstItem="bkj-ls-f1V" firstAttribute="bottom" secondItem="6fk-OP-KQc" secondAttribute="bottom" constant="2" id="ZmD-C7-73U"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="top" secondItem="bkj-ls-f1V" secondAttribute="top" id="jIQ-h6-t4o"/>
-                            <constraint firstItem="6fk-OP-KQc" firstAttribute="leading" secondItem="bkj-ls-f1V" secondAttribute="leading" constant="8" id="n76-AZ-EAp"/>
                             <constraint firstItem="bkj-ls-f1V" firstAttribute="trailing" secondItem="LyY-7W-xqf" secondAttribute="trailing" constant="8" id="sCf-aF-nzQ"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="leading" secondItem="bkj-ls-f1V" secondAttribute="leading" id="vpP-3z-qhw"/>
+                            <constraint firstItem="pTi-8q-1Yp" firstAttribute="top" secondItem="ELx-vH-Hyh" secondAttribute="bottom" constant="2" id="xt1-vI-NM5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bkj-ls-f1V"/>
                     </view>
                     <connections>
                         <outlet property="btn_SendMessage" destination="LyY-7W-xqf" id="9xU-iu-zGM"/>
                         <outlet property="tableView" destination="ELx-vH-Hyh" id="thK-DX-vHw"/>
-                        <outlet property="txt_des_message" destination="6fk-OP-KQc" id="xoE-Bi-Y9x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiw-1N-TkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -409,13 +406,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accedi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROt-dt-zeA">
-                                <rect key="frame" x="16" y="80" width="89.5" height="18.5"/>
+                                <rect key="frame" x="16" y="80" width="89.5" height="20"/>
                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OMt-N9-gMa">
-                                <rect key="frame" x="16" y="106.5" width="288" height="37"/>
+                                <rect key="frame" x="16" y="108" width="288" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="fdu-33-Any"/>
                                     <constraint firstAttribute="height" constant="37" id="zES-Lz-fVA"/>
@@ -425,7 +422,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="wpe-AB-VX3">
-                                <rect key="frame" x="16" y="151.5" width="288" height="37"/>
+                                <rect key="frame" x="16" y="153" width="288" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="WmY-3R-Q7S"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="X8W-VO-gxf"/>
@@ -435,7 +432,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imz-i7-pOD">
-                                <rect key="frame" x="98" y="196.5" width="120" height="31"/>
+                                <rect key="frame" x="98" y="198" width="120" height="32"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -447,7 +444,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-mf-dIP">
-                                <rect key="frame" x="129" y="254.5" width="62" height="23"/>
+                                <rect key="frame" x="129" y="257" width="62" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="Privacy Policy">
                                     <color key="titleColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
