@@ -14,12 +14,20 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     // Properties
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var btn_SendMessage: BtnRadioBase!
-    
     @IBOutlet weak var txt_des_message: UITextField!
+    func PostMessageSaved(postmessgae: PostMessage)
+    {
+        self.POSTMESSAGES.append(postmessgae)
+        self.BindData()
+    }
+    
+    
     @IBAction func OnBtnSendMessageClick(_ sender: UIButton)
     {
         let l_PostView:PostsView = PostsView()
+        l_PostView.SetOnProPostMessageLoadded(propostMessageobs: self)
         l_PostView.SavvePostMessage(prg_post: self.Parent?.PrgPost, des_message: txt_des_message.text)
+        self.txt_des_message.text = nil
         
     }
     private var POSTMESSAGES:[PostMessage] = [PostMessage]()

@@ -22,4 +22,9 @@ class SelectorUtils
     {
         return #selector(VcrSeasonMenu.OnRanking_Click)
     }
+    
+    public static var BtnPostMessageSelector:Selector
+    {
+        return #selector(CtlPost.OnBtnPostMessageClick)
+    }
 }

@@ -68,6 +68,15 @@ public class PostsView
         }
     }
     
+    final func RaisePostMessageSaved(postmessage:PostMessage)
+    {
+        for propostmessageobs in self.ProPostMessageObss
+        {
+           propostmessageobs.PostMessageSaved(postmessgae: postmessage)
+            
+        }
+    }
+    
     func LoadPosts(cod_device:String?)
     {
         
@@ -278,7 +287,29 @@ public class PostsView
         let l_Json:[String:Any?] = ["prg_post":prg_post,"cod_user":AuthUtils.Uid,"des_message":des_message]
         l_Request.httpMethod = "POST"
         l_Request.httpBody = try? JSONSerialization.data(withJSONObject: l_Json, options: [])
-        let l_DataTasdk:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request)
+        let l_DataTasdk:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request){(data:Data?,response:URLResponse?,error:Error?)in
+           let l_PostMessage:PostMessage = PostMessage()
+            guard   data != nil && error == nil else{return}
+            do
+            {
+                guard let l_JsonRepsonse:[String:Any] = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any] else{return}
+                l_PostMessage.cod_user = l_JsonRepsonse["cod_user"] as? String
+                l_PostMessage.dat_message = DateUtils.StringToDate(l_JsonRepsonse["dat_message"] as? String,DateUtils.STRINGDATEFORMAT.FORMAT_FULL_WITH_MILLISECONDS)
+                l_PostMessage.des_message = l_JsonRepsonse["des_message"] as? String
+                l_PostMessage.des_user = l_JsonRepsonse["des_user"] as? String
+                l_PostMessage.prg_file = l_JsonRepsonse["prg_file"] as? Int64
+                l_PostMessage.prg_postmessage = l_JsonRepsonse["prg_postmessage"] as? Int64
+                l_PostMessage.prg_user = l_JsonRepsonse["prg_user"] as? Int64
+                
+            }
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
+            
+            self.RaisePostMessageSaved(postmessage: l_PostMessage)
+        }
+        
         l_DataTasdk.resume()
     }
    
