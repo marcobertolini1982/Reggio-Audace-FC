@@ -10,6 +10,7 @@ import UIKit
 
 
 class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostMessageObs
+
 {
     // Properties
     @IBOutlet weak var tableView:UITableView!
@@ -17,10 +18,24 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     @IBOutlet weak var txt_des_message: UITextView!
     func PostMessageSaved(postmessgae: PostMessage)
     {
-        self.POSTMESSAGES.append(postmessgae)
-        self.BindData()
+    
+       self.POSTMESSAGES?.append(postmessgae)
+       self.BindData()
     }
     
+    enum ContentType
+    {
+        case PostMessage
+        case Reaction
+    }
+    
+    public var CONTENTYPE:ContentType?
+    {
+        didSet
+        {
+            self.txt_des_message.isHidden = (self.CONTENTYPE == ContentType.PostMessage)
+        }
+    }
     
     @IBAction func OnBtnSendMessageClick(_ sender: UIButton)
     {
@@ -30,7 +45,11 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         self.txt_des_message.text = nil
         
     }
-    private var POSTMESSAGES:[PostMessage] = [PostMessage]()
+    public var POSTMESSAGES:[PostMessage]?
+    {
+        get{return self.POSTMESSAGES}
+        set{self.POSTMESSAGES = newValue}
+    }
     
     override func Init()
     {
@@ -85,7 +104,8 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
      func tableView(_ tableview: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of items
-        return self.POSTMESSAGES.count
+        guard self.POSTMESSAGES != nil   else {return 0}
+        return self.POSTMESSAGES!.count
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -93,14 +113,15 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         // Declarations
         let l_Index:Int = indexPath.row
         // Eval
-        guard  let l_Cell:TvcPostMessage = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TvcPostMessage
+        guard  let l_Cell:TvcPostMessage = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TvcPostMessage, self.POSTMESSAGES  != nil
         else
        {
         return UITableViewCell()
         
         }
         // Declarations
-        let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
+       
+        let l_PostMessage:PostMessage = self.POSTMESSAGES![l_Index]
         // Set porperties
         let l_MessageText:String = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
         let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)

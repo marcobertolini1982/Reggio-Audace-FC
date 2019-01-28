@@ -256,6 +256,7 @@
                     <connections>
                         <outlet property="btn_SendMessage" destination="LyY-7W-xqf" id="9xU-iu-zGM"/>
                         <outlet property="tableView" destination="ELx-vH-Hyh" id="thK-DX-vHw"/>
+                        <outlet property="txt_des_message" destination="pTi-8q-1Yp" id="vxi-Lp-y5a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiw-1N-TkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
