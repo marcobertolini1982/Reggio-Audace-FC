@@ -14,7 +14,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     // Properties
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var btn_SendMessage: BtnRadioBase!
-    @IBOutlet weak var txt_des_message: UITextField!
+    @IBOutlet weak var txt_des_message: UITextView!
     func PostMessageSaved(postmessgae: PostMessage)
     {
         self.POSTMESSAGES.append(postmessgae)
@@ -31,11 +31,16 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         
     }
     private var POSTMESSAGES:[PostMessage] = [PostMessage]()
+    
     override func Init()
     {
         super.Init()
         self.tableView.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
         self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
+        self.txt_des_message.layer.borderWidth = 1.0
+        self.txt_des_message.layer.borderColor = GARNETCOLOR.cgColor
+        self.SetKeyBoardUnderTextView()
+     
         
     }
     
@@ -133,5 +138,21 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         return UITableView.automaticDimension
     }
    
+    private final func SetKeyBoardUnderTextView()
+    {
+        let l_NotificationCenter:NotificationCenter = NotificationCenter.default
+        l_NotificationCenter.addObserver(self, selector: #selector(OnKeyBoardShiwn), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+    }
     
+    @objc func OnKeyBoardShiwn(notification:Notification)
+    {
+        guard let l_UserInfo:[AnyHashable:Any] = notification.userInfo else{return}
+        guard let l_KeyboarScreenFrame:CGRect = (l_UserInfo[UIResponder.keyboardFrameEndUserInfoKey]as? NSValue)?.cgRectValue else{return}
+        let l_KeyboardFrame:CGRect = self.view.convert(l_KeyboarScreenFrame, from: self.view.window)
+        //self.txt_des_message.contentInset = UIEdgeInsets(top:42.0, left: 0.0, bottom:l_KeyboardFrame.height , right: 0.0)
+        self.additionalSafeAreaInsets = UIEdgeInsets(top:42, left: 0.0, bottom:l_KeyboardFrame.height, right: 0.0)
+       
+        
+    }
 }
