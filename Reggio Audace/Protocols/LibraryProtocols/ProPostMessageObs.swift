@@ -10,4 +10,5 @@ import Foundation
 protocol ProPostMessageObs
 {
    func PostMessagesLoaded(postmessages:[PostMessage])
+   func PostMessageSaved(postmessgae:PostMessage)
 }
