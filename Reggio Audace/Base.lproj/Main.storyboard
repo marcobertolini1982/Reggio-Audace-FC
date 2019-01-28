@@ -224,7 +224,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pTi-8q-1Yp">
-                                <rect key="frame" x="8" y="536" width="272" height="128"/>
+                                <rect key="frame" x="8" y="536" width="272" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -242,10 +242,10 @@
                         <constraints>
                             <constraint firstItem="LyY-7W-xqf" firstAttribute="leading" secondItem="pTi-8q-1Yp" secondAttribute="trailing" constant="2" id="3bH-2U-GKh"/>
                             <constraint firstItem="LyY-7W-xqf" firstAttribute="top" secondItem="ELx-vH-Hyh" secondAttribute="bottom" constant="2" id="JH0-1B-4dw"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="pTi-8q-1Yp" secondAttribute="bottom" constant="-96" id="KZ2-nW-uu6"/>
                             <constraint firstItem="bkj-ls-f1V" firstAttribute="bottom" secondItem="LyY-7W-xqf" secondAttribute="bottom" constant="2" id="TCr-zI-WAN"/>
                             <constraint firstItem="pTi-8q-1Yp" firstAttribute="leading" secondItem="bkj-ls-f1V" secondAttribute="leading" constant="8" id="VhT-CQ-hDB"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="trailing" secondItem="bkj-ls-f1V" secondAttribute="trailing" id="WRa-3S-ErM"/>
+                            <constraint firstAttribute="bottom" secondItem="pTi-8q-1Yp" secondAttribute="bottom" constant="2" id="dAv-mX-YHz"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="top" secondItem="bkj-ls-f1V" secondAttribute="top" id="jIQ-h6-t4o"/>
                             <constraint firstItem="bkj-ls-f1V" firstAttribute="trailing" secondItem="LyY-7W-xqf" secondAttribute="trailing" constant="8" id="sCf-aF-nzQ"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="leading" secondItem="bkj-ls-f1V" secondAttribute="leading" id="vpP-3z-qhw"/>
