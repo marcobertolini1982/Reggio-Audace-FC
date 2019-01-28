@@ -19,7 +19,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     func PostMessageSaved(postmessgae: PostMessage)
     {
     
-       self.POSTMESSAGES?.append(postmessgae)
+       self.POSTMESSAGES.append(postmessgae)
        self.BindData()
     }
     
@@ -39,17 +39,16 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     
     @IBAction func OnBtnSendMessageClick(_ sender: UIButton)
     {
-        let l_PostView:PostsView = PostsView()
-        l_PostView.SetOnProPostMessageLoadded(propostMessageobs: self)
-        l_PostView.SavvePostMessage(prg_post: self.Parent?.PrgPost, des_message: txt_des_message.text)
-        self.txt_des_message.text = nil
+        if self.txt_des_message.text != nil && !self.txt_des_message.text.isEmpty
+        {
+            let l_PostView:PostsView = PostsView()
+            l_PostView.SetOnProPostMessageLoadded(propostMessageobs: self)
+            l_PostView.SavvePostMessage(prg_post: self.Parent?.PrgPost, des_message: txt_des_message.text)
+            self.txt_des_message.text = nil
+      }
         
     }
-    public var POSTMESSAGES:[PostMessage]?
-    {
-        get{return self.POSTMESSAGES}
-        set{self.POSTMESSAGES = newValue}
-    }
+    private var  POSTMESSAGES:[PostMessage] = [PostMessage]()
     
     override func Init()
     {
@@ -58,7 +57,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
         self.txt_des_message.layer.borderWidth = 1.0
         self.txt_des_message.layer.borderColor = GARNETCOLOR.cgColor
-        self.SetKeyBoardUnderTextView()
+        //self.SetKeyBoardUnderTextView()
      
         
     }
@@ -104,8 +103,8 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
      func tableView(_ tableview: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of items
-        guard self.POSTMESSAGES != nil   else {return 0}
-        return self.POSTMESSAGES!.count
+        
+        return self.POSTMESSAGES.count
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -113,7 +112,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         // Declarations
         let l_Index:Int = indexPath.row
         // Eval
-        guard  let l_Cell:TvcPostMessage = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TvcPostMessage, self.POSTMESSAGES  != nil
+        guard  let l_Cell:TvcPostMessage = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TvcPostMessage
         else
        {
         return UITableViewCell()
@@ -121,7 +120,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         }
         // Declarations
        
-        let l_PostMessage:PostMessage = self.POSTMESSAGES![l_Index]
+        let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
         // Set porperties
         let l_MessageText:String = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
         let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)
