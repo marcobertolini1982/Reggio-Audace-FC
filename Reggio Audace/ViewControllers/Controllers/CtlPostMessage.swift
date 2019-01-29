@@ -9,14 +9,16 @@
 import UIKit
 
 
-class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostMessageObs
+class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostMessageObs,ProReactionObs
 
 {
+    
     // Properties
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var btn_SendMessage: BtnRadioBase!
     @IBOutlet weak var txt_des_message: UITextView!
     private var  POSTMESSAGES:[PostMessage] = [PostMessage]()
+    private var POSTREACTIONS:[Reaction] = [Reaction]()
     private var CONTENTTYPE:ContentType = ContentType.PostMessage
     // Methods
     func PostMessageSaved(postmessgae: PostMessage)
@@ -36,6 +38,15 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         get{return self.CONTENTTYPE}
         set{self.CONTENTTYPE = newValue}
+    }
+    
+    //Methods
+    
+    
+    func PostReactionsLoaded(reactions: [Reaction])
+    {
+        self.POSTREACTIONS = reactions
+        self.BindData()
     }
     
     @IBAction func OnBtnSendMessageClick(_ sender: UIButton)
@@ -60,7 +71,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         self.txt_des_message.layer.borderWidth = 1.0
         self.txt_des_message.layer.borderColor = ColorUtils.lightGray.cgColor
         self.SetKeyBoardUnderTextView()
-     
+      print(self.CONTENTTYPE)
         
     }
     
@@ -106,7 +117,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         // #warning Incomplete implementation, return the number of items
         
-        return self.POSTMESSAGES.count
+      return self.CONTENTTYPE == ContentType.PostMessage ? self.POSTMESSAGES.count : self.POSTREACTIONS.count
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -121,7 +132,8 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         
         }
         // Declarations
-       
+       if self.CONTENTTYPE == ContentType.PostMessage
+       {
         let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
         // Set porperties
         let l_MessageText:String = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
@@ -135,6 +147,25 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
             
         }
         
+        
+            
+        }
+       else
+       {
+            let l_PostReaction:Reaction = self.POSTREACTIONS[l_Index]
+            let l_des_usert:String = l_PostReaction.des_user ?? ""
+            let l_data_lastmodified:String  = DateUtils.DateToString(date:l_PostReaction.dat_lastmodified) ?? ""
+            let l_des_emoticon:String =  l_PostReaction.des_emoticon ?? ""
+            let l_des_reaction:String = l_PostReaction.des_reaction ?? ""
+            let l_MessageText:String = l_des_usert + " " + l_data_lastmodified + "\n" + l_des_emoticon + l_des_reaction
+            let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)
+            let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostReaction.des_user!)
+            l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
+            l_Cell.txt_message.attributedText = l_AttributedText
+            l_Cell.SetUiImageFile(prg_file: l_PostReaction.prg_file)
+        
+    }
+    
         // Return
         return l_Cell
     }
@@ -143,8 +174,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         if self.CONTENTTYPE == ContentType.PostMessage
         {
-            self.txt_des_message.isHidden = false
-            self.btn_SendMessage.isHidden = false
+            self.SetPostMessageControlsHidden(false)
             let l_PrgPost:Int64? = self.Parent?.PrgPost
             let l_Postview:PostsView = PostsView()
             l_Postview.SetOnProPostMessageLoadded(propostMessageobs: self)
@@ -153,8 +183,11 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         
         else
         {
-            self.txt_des_message.isHidden = true
-            self.btn_SendMessage.isHidden = true
+            self.SetPostMessageControlsHidden(true)
+            let l_ReactionView:ReactionsView = ReactionsView()
+            l_ReactionView.SetReactionsLOaded(proreactionobs: self)
+            l_ReactionView.LoadReactions(prg_post: self.Parent?.PrgPost)
+            self.SetPostMessageControlsHidden(true)
         }
         
     }
@@ -190,5 +223,12 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
        
         self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
+    
+    private final func SetPostMessageControlsHidden(_ hidden:Bool)
+    {
+        self.txt_des_message.isHidden = hidden
+        self.btn_SendMessage.isHidden = hidden
     }
 }

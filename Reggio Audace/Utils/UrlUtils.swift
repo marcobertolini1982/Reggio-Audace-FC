@@ -48,6 +48,11 @@ class UrlUtils
         return URL_WEBAPP + "/LoadReactions"
     }
     
+    public static var URL_LOADPOSTREACTIONS:String
+    {
+        return URL_WEBAPP + "/LoadPostReactions"
+    }
+    
     public static var URL_LOADPOSTPOLLS:String
     {
         return URL_WEBAPP + "/LoadPostPolls"

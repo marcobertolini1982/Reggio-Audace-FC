@@ -11,7 +11,7 @@ class DateUtils
 {
     enum STRINGDATEFORMAT:String
     {
-        case FORMAT_FULL_WITH_MILLISECONDS = "YYYY-MM-DD'T'HH:mm:ss.SSS"
+        case FULL_WITH_MILLISECONDS = "YYYY-MM-DD'T'HH:mm:ss.SSS"
         case FORMAT_FULL = "YYYY-MM-DD'T'HH:mm:ss"
         case FORMAT_DEFAULT = "YYYY-MM-DD'T'HH:mm"
         case FORMAT_ONLYDATE = "YYYY-MM-DD"
