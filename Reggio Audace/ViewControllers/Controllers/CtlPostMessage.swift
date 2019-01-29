@@ -16,6 +16,8 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var btn_SendMessage: BtnRadioBase!
     @IBOutlet weak var txt_des_message: UITextView!
+    private var CONTENTTYPE:ContentType = ContentType.PostMessage
+    // Methods
     func PostMessageSaved(postmessgae: PostMessage)
     {
     
@@ -29,12 +31,10 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         case Reaction
     }
     
-    public var CONTENTYPE:ContentType?
+    public final var contentType:ContentType
     {
-        didSet
-        {
-            self.txt_des_message.isHidden = (self.CONTENTYPE == ContentType.PostMessage)
-        }
+        get{return self.CONTENTTYPE}
+        set{self.CONTENTTYPE = newValue}
     }
     
     @IBAction func OnBtnSendMessageClick(_ sender: UIButton)
@@ -54,10 +54,11 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         super.Init()
         self.tableView.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
+        self.view.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
         self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
         self.txt_des_message.layer.borderWidth = 1.0
-        self.txt_des_message.layer.borderColor = GARNETCOLOR.cgColor
-        //self.SetKeyBoardUnderTextView()
+        self.txt_des_message.layer.borderColor = ColorUtils.lightGray.cgColor
+        self.SetKeyBoardUnderTextView()
      
         
     }
@@ -139,11 +140,22 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     
     func LoadRecord()
     {
-       
-        let l_PrgPost:Int64? = self.Parent?.PrgPost
-        let l_Postview:PostsView = PostsView()
-        l_Postview.SetOnProPostMessageLoadded(propostMessageobs: self)
-        l_Postview.LoadPostMessages(prg_post: l_PrgPost)
+        if self.CONTENTTYPE == ContentType.PostMessage
+        {
+            self.txt_des_message.isHidden = false
+            self.btn_SendMessage.isHidden = false
+            let l_PrgPost:Int64? = self.Parent?.PrgPost
+            let l_Postview:PostsView = PostsView()
+            l_Postview.SetOnProPostMessageLoadded(propostMessageobs: self)
+            l_Postview.LoadPostMessages(prg_post: l_PrgPost)
+        }
+        
+        else
+        {
+            self.txt_des_message.isHidden = true
+            self.btn_SendMessage.isHidden = true
+        }
+        
     }
     
     
@@ -162,7 +174,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         let l_NotificationCenter:NotificationCenter = NotificationCenter.default
         l_NotificationCenter.addObserver(self, selector: #selector(OnKeyBoardShiwn), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
+        l_NotificationCenter.addObserver(self, selector: #selector(OnKeyBoardHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func OnKeyBoardShiwn(notification:Notification)
@@ -170,9 +182,12 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         guard let l_UserInfo:[AnyHashable:Any] = notification.userInfo else{return}
         guard let l_KeyboarScreenFrame:CGRect = (l_UserInfo[UIResponder.keyboardFrameEndUserInfoKey]as? NSValue)?.cgRectValue else{return}
         let l_KeyboardFrame:CGRect = self.view.convert(l_KeyboarScreenFrame, from: self.view.window)
-        //self.txt_des_message.contentInset = UIEdgeInsets(top:42.0, left: 0.0, bottom:l_KeyboardFrame.height , right: 0.0)
-        self.additionalSafeAreaInsets = UIEdgeInsets(top:42, left: 0.0, bottom:l_KeyboardFrame.height, right: 0.0)
+        self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: l_KeyboardFrame.height, right: 0.0)
+    }
+    
+    @objc func OnKeyBoardHidden(notification:Notification)
+    {
        
-        
+        self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
 }
