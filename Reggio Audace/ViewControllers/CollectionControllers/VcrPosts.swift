@@ -113,7 +113,7 @@ class VcrPosts: VcrBase,ProPostsObs
         return l_Cell
         
     }
-
+    
     
     open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
