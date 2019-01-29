@@ -210,20 +210,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyY-7W-xqf" customClass="BtnRadioBase" customModule="Reggio_Audace" customModuleProvider="target">
-                                <rect key="frame" x="282" y="536" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="V98-2j-izs"/>
-                                    <constraint firstAttribute="width" secondItem="LyY-7W-xqf" secondAttribute="height" multiplier="1:1" id="byM-Dd-9Lx"/>
-                                    <constraint firstAttribute="height" constant="30" id="zpA-nb-n89"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="SendTextWhite"/>
-                                <connections>
-                                    <action selector="OnBtnSendMessageClick:" destination="fNm-Ea-j1s" eventType="touchUpInside" id="awR-jE-xdP"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-vH-Hyh">
                                 <rect key="frame" x="0.0" y="20" width="320" height="514"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -232,26 +218,54 @@
                                     <outlet property="delegate" destination="fNm-Ea-j1s" id="QH7-M8-40S"/>
                                 </connections>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pTi-8q-1Yp">
-                                <rect key="frame" x="8" y="536" width="272" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-7J-Atg">
+                                <rect key="frame" x="0.0" y="534" width="320" height="124"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyY-7W-xqf" customClass="BtnRadioBase" customModule="Reggio_Audace" customModuleProvider="target">
+                                        <rect key="frame" x="282" y="2" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.48627450979999998" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="ROI-u2-ySH"/>
+                                            <constraint firstAttribute="width" secondItem="LyY-7W-xqf" secondAttribute="height" multiplier="1:1" id="WSi-fK-Ema"/>
+                                            <constraint firstAttribute="height" constant="30" id="cTE-n9-TCO"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="SendTextWhite"/>
+                                        <connections>
+                                            <action selector="OnBtnSendMessageClick:" destination="fNm-Ea-j1s" eventType="touchUpInside" id="awR-jE-xdP"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pTi-8q-1Yp">
+                                        <rect key="frame" x="8" y="2" width="272" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pTi-8q-1Yp" firstAttribute="top" secondItem="t4N-7J-Atg" secondAttribute="top" constant="2" id="8Es-6J-Ky0"/>
+                                    <constraint firstItem="LyY-7W-xqf" firstAttribute="leading" secondItem="pTi-8q-1Yp" secondAttribute="trailing" constant="2" id="EUN-mM-TID"/>
+                                    <constraint firstAttribute="bottom" secondItem="LyY-7W-xqf" secondAttribute="bottom" constant="92" id="HUt-zT-Lt0"/>
+                                    <constraint firstItem="LyY-7W-xqf" firstAttribute="leading" secondItem="pTi-8q-1Yp" secondAttribute="trailing" constant="2" id="RC2-zo-qwJ"/>
+                                    <constraint firstItem="pTi-8q-1Yp" firstAttribute="leading" secondItem="t4N-7J-Atg" secondAttribute="leading" constant="8" id="gb2-BV-bG4"/>
+                                    <constraint firstAttribute="bottom" secondItem="pTi-8q-1Yp" secondAttribute="bottom" constant="92" id="mRR-22-Zos"/>
+                                    <constraint firstAttribute="trailing" secondItem="LyY-7W-xqf" secondAttribute="trailing" constant="8" id="pFL-oy-tBe"/>
+                                    <constraint firstItem="pTi-8q-1Yp" firstAttribute="top" secondItem="LyY-7W-xqf" secondAttribute="top" id="xBu-eD-1st"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bkj-ls-f1V" firstAttribute="bottom" secondItem="LyY-7W-xqf" secondAttribute="bottom" constant="2" id="7O6-5d-Yui"/>
-                            <constraint firstItem="bkj-ls-f1V" firstAttribute="bottom" secondItem="pTi-8q-1Yp" secondAttribute="bottom" constant="2" id="Aam-SZ-mvm"/>
-                            <constraint firstItem="pTi-8q-1Yp" firstAttribute="top" secondItem="LyY-7W-xqf" secondAttribute="top" id="Euo-Yn-jac"/>
+                            <constraint firstItem="t4N-7J-Atg" firstAttribute="top" secondItem="ELx-vH-Hyh" secondAttribute="bottom" id="AiW-Oo-72c"/>
+                            <constraint firstItem="t4N-7J-Atg" firstAttribute="bottom" secondItem="bkj-ls-f1V" secondAttribute="bottom" constant="90" id="G8z-JP-xzA"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="leading" secondItem="bkj-ls-f1V" secondAttribute="leading" id="I9M-tI-0sc"/>
-                            <constraint firstItem="bkj-ls-f1V" firstAttribute="trailing" secondItem="LyY-7W-xqf" secondAttribute="trailing" constant="8" id="Pig-fw-7uU"/>
+                            <constraint firstItem="t4N-7J-Atg" firstAttribute="leading" secondItem="bkj-ls-f1V" secondAttribute="leading" id="IHl-Ox-FhJ"/>
+                            <constraint firstItem="t4N-7J-Atg" firstAttribute="centerX" secondItem="Rjw-58-gYF" secondAttribute="centerX" id="dZu-BD-jDs"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="trailing" secondItem="bkj-ls-f1V" secondAttribute="trailing" id="eDw-bE-CLP"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="top" secondItem="bkj-ls-f1V" secondAttribute="top" id="fLG-6A-CNO"/>
-                            <constraint firstItem="LyY-7W-xqf" firstAttribute="leading" secondItem="pTi-8q-1Yp" secondAttribute="trailing" constant="2" id="jkG-WP-4mP"/>
                             <constraint firstItem="ELx-vH-Hyh" firstAttribute="centerX" secondItem="Rjw-58-gYF" secondAttribute="centerX" id="pPJ-mE-RBu"/>
-                            <constraint firstItem="pTi-8q-1Yp" firstAttribute="top" secondItem="ELx-vH-Hyh" secondAttribute="bottom" constant="2" id="qqK-wm-K8P"/>
-                            <constraint firstItem="pTi-8q-1Yp" firstAttribute="leading" secondItem="bkj-ls-f1V" secondAttribute="leading" constant="8" id="tKa-Q2-JgG"/>
+                            <constraint firstItem="t4N-7J-Atg" firstAttribute="trailing" secondItem="bkj-ls-f1V" secondAttribute="trailing" id="x3e-zg-QwL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bkj-ls-f1V"/>
                     </view>
