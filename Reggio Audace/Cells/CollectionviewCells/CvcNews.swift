@@ -66,7 +66,7 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         
     }
     
-    func SetUiImageFile(prg_file: Int64)
+    func SetUiImageFile(prg_file: Int64?)
     {
     
         self.DownloadIndicator.startAnimating()
@@ -78,6 +78,7 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
         l_FileView.SetOnFileLoaded(proFileObs: self)
         // Load file
         l_FileView.LoadFile(prg_file: prg_file)
+        
         
     }
     func setChannelImage(prg_file:Int64)

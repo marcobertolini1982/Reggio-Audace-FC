@@ -23,14 +23,19 @@ class PagPost: PagBase,ProPostPollObs
         get{return self.PRGPOST}
         set{self.PRGPOST = newValue}
     }
+    
+   
+    
     public required init?(coder: NSCoder)
     {
         super.init(coder: coder)
         self.ViewControllers = [
                                 MainStoryboard.instantiateViewController(withIdentifier:"CtlPost"),
                                 MainStoryboard.instantiateViewController(withIdentifier:"VcrPostImages"),
+                                MainStoryboard.instantiateViewController(withIdentifier:"CtlPostMessage"),
                                 MainStoryboard.instantiateViewController(withIdentifier:"CtlPostMessage")
                                ]
+        
     }
 open override var IndicatorsText: [String]
 {
@@ -49,9 +54,15 @@ open override var IndicatorsText: [String]
     {
        
         super.viewDidLoad()
-
-       
+      
     }
    
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        (self.ViewControllers[2] as?CtlPostMessage)?.contentType = CtlPostMessage.ContentType.PostMessage
+        (self.ViewControllers[3] as?CtlPostMessage)?.contentType = CtlPostMessage.ContentType.Reaction
+    }
    
 }
