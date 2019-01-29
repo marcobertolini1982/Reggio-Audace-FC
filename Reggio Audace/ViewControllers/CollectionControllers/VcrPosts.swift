@@ -92,7 +92,7 @@ class VcrPosts: VcrBase,ProPostsObs
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         // Declarations
-        let l_Index:Int = indexPath.row
+        let l_Index:Int = indexPath.item
         // Set Image
         guard let l_Cell:CvcNews = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcNews
         else
@@ -107,7 +107,7 @@ class VcrPosts: VcrBase,ProPostsObs
         l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
         l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
         l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
-        l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file!)
+        l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file)
         
         // Return
         return l_Cell
