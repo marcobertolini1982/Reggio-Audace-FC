@@ -58,6 +58,8 @@
 		D1633DD421B01E9600D5CE2F /* VcrChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD321B01E9600D5CE2F /* VcrChats.swift */; };
 		D1633DD621B0276500D5CE2F /* CvcChat.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1633DD521B0276500D5CE2F /* CvcChat.xib */; };
 		D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1633DD821B02B1700D5CE2F /* CvcChat.swift */; };
+		D1640C6D220085D50000D98E /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1640C6C220085D50000D98E /* Reaction.swift */; };
+		D1640C6F220089A20000D98E /* ProReactionObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1640C6E220089A20000D98E /* ProReactionObs.swift */; };
 		D166B87A21F86C9A00B9FD78 /* TvcPostPoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166B87921F86C9A00B9FD78 /* TvcPostPoll.swift */; };
 		D166B87C21F86CDC00B9FD78 /* TvcBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166B87B21F86CDC00B9FD78 /* TvcBase.swift */; };
 		D166B87F21F89F9800B9FD78 /* ProPostPollCellObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166B87E21F89F9800B9FD78 /* ProPostPollCellObs.swift */; };
@@ -177,6 +179,8 @@
 		D1633DD321B01E9600D5CE2F /* VcrChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrChats.swift; sourceTree = "<group>"; };
 		D1633DD521B0276500D5CE2F /* CvcChat.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcChat.xib; sourceTree = "<group>"; };
 		D1633DD821B02B1700D5CE2F /* CvcChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcChat.swift; sourceTree = "<group>"; };
+		D1640C6C220085D50000D98E /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		D1640C6E220089A20000D98E /* ProReactionObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProReactionObs.swift; sourceTree = "<group>"; };
 		D166B87921F86C9A00B9FD78 /* TvcPostPoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvcPostPoll.swift; sourceTree = "<group>"; };
 		D166B87B21F86CDC00B9FD78 /* TvcBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvcBase.swift; sourceTree = "<group>"; };
 		D166B87E21F89F9800B9FD78 /* ProPostPollCellObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostPollCellObs.swift; sourceTree = "<group>"; };
@@ -428,15 +432,15 @@
 			children = (
 				D19F62FC21B830A000726165 /* ChannelView.swift */,
 				D1633DCF21B0008A00D5CE2F /* ChatView.swift */,
-				D11B714D21AF0A6600887D2A /* FileView.swift */,
-				D174231B21AE93AC009AAEFC /* PostsView.swift */,
-				D17963FA21B1509D005311A8 /* SeasonView.swift */,
-				D16BBFA921C161FC008AF36E /* UserView.swift */,
-				D19B3E0E21D625F600BD5F15 /* RankingView.swift */,
 				D175884521F714AE00488CE6 /* DeviceView.swift */,
-				D175884721F71E3000488CE6 /* ReactionsView.swift */,
+				D11B714D21AF0A6600887D2A /* FileView.swift */,
 				D175884921F7368100488CE6 /* PostPollsView.swift */,
 				D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */,
+				D174231B21AE93AC009AAEFC /* PostsView.swift */,
+				D19B3E0E21D625F600BD5F15 /* RankingView.swift */,
+				D175884721F71E3000488CE6 /* ReactionsView.swift */,
+				D17963FA21B1509D005311A8 /* SeasonView.swift */,
+				D16BBFA921C161FC008AF36E /* UserView.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -515,17 +519,18 @@
 		D18B8B6E21F620DA0096941B /* LibraryProtocols */ = {
 			isa = PBXGroup;
 			children = (
-				D11B714F21AF0F3600887D2A /* ProFileObs.swift */,
-				D1633DCD21B0000000D5CE2F /* ProChatObs.swift */,
-				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
 				D19F62FE21B8312900726165 /* ProChannelObs.swift */,
-				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
-				D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */,
-				D192985A21DD1A6600850DF2 /* ProPostsObs.swift */,
-				D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */,
+				D1633DCD21B0000000D5CE2F /* ProChatObs.swift */,
+				D11B714F21AF0F3600887D2A /* ProFileObs.swift */,
 				D1855E3621DF70A700F812C0 /* ProPostFilesObs.swift */,
 				D185534C21E605B600C2DE62 /* ProPostMessageObs.swift */,
 				D175884D21F7433700488CE6 /* ProPostPollObs.swift */,
+				D192985A21DD1A6600850DF2 /* ProPostsObs.swift */,
+				D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */,
+				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
+				D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */,
+				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
+				D1640C6E220089A20000D98E /* ProReactionObs.swift */,
 			);
 			path = LibraryProtocols;
 			sourceTree = "<group>";
@@ -595,8 +600,8 @@
 		D1BE6D9421AD7D2E00114084 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				D174231A21AE938F009AAEFC /* Factories */,
 				D1BE6D9521AD7D3700114084 /* Entities */,
+				D174231A21AE938F009AAEFC /* Factories */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -614,6 +619,7 @@
 				D1855E3821DF712900F812C0 /* File.swift */,
 				D185535221E64A8B00C2DE62 /* PostMessage.swift */,
 				D175884B21F73B1000488CE6 /* PostPoll.swift */,
+				D1640C6C220085D50000D98E /* Reaction.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -901,6 +907,7 @@
 				D1EDE77121BEBBB300FDA751 /* VcrSeasonMenu.swift in Sources */,
 				D16DEB8821F1D7E20055D8DC /* CvcHeader.swift in Sources */,
 				D175884C21F73B1000488CE6 /* PostPoll.swift in Sources */,
+				D1640C6D220085D50000D98E /* Reaction.swift in Sources */,
 				D17963FD21B151EB005311A8 /* ProSeasonObs.swift in Sources */,
 				D1EA26A021F0E51700A85B5F /* TvcPostMessage.swift in Sources */,
 				D19B3E1521D65A6300BD5F15 /* VcrRanking.swift in Sources */,
@@ -933,6 +940,7 @@
 				D15ABDB621B91C8800C980EE /* CtlBase.swift in Sources */,
 				D1633DD921B02B1700D5CE2F /* CvcChat.swift in Sources */,
 				D18B8B7121F621350096941B /* ProCviHeader.swift in Sources */,
+				D1640C6F220089A20000D98E /* ProReactionObs.swift in Sources */,
 				D19F62FD21B830A000726165 /* ChannelView.swift in Sources */,
 				D15EBBF421B6C64100835C0B /* ColorUtils.swift in Sources */,
 				D19B3E1921D66FC700BD5F15 /* CvcBase.swift in Sources */,

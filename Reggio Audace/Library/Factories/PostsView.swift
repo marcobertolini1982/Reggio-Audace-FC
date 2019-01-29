@@ -265,7 +265,7 @@ public class PostsView
                     l_PostMessage.prg_post = l_JsonResponse["prg_post"] as? Int64
                     l_PostMessage.cod_user = l_JsonResponse["cod_user"] as? String
                     l_PostMessage.des_user = l_JsonResponse["des_user"] as? String
-                    l_PostMessage.dat_message = DateUtils.StringToDate(l_JsonResponse["dat_message"] as?String,DateUtils.STRINGDATEFORMAT.FORMAT_FULL_WITH_MILLISECONDS)
+                    l_PostMessage.dat_message = DateUtils.StringToDate(l_JsonResponse["dat_message"] as?String,DateUtils.STRINGDATEFORMAT.FULL_WITH_MILLISECONDS)
                     l_PostMessage.des_message = l_JsonResponse["des_message"] as?String
                     l_PostMessage.prg_file = l_JsonResponse["prg_file"] as? Int64
                     l_PostMessages.append(l_PostMessage)
@@ -294,7 +294,7 @@ public class PostsView
             {
                 guard let l_JsonRepsonse:[String:Any] = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any] else{return}
                 l_PostMessage.cod_user = l_JsonRepsonse["cod_user"] as? String
-                l_PostMessage.dat_message = DateUtils.StringToDate(l_JsonRepsonse["dat_message"] as? String,DateUtils.STRINGDATEFORMAT.FORMAT_FULL_WITH_MILLISECONDS)
+                l_PostMessage.dat_message = DateUtils.StringToDate(l_JsonRepsonse["dat_message"] as? String,DateUtils.STRINGDATEFORMAT.FULL_WITH_MILLISECONDS)
                 l_PostMessage.des_message = l_JsonRepsonse["des_message"] as? String
                 l_PostMessage.des_user = l_JsonRepsonse["des_user"] as? String
                 l_PostMessage.prg_file = l_JsonRepsonse["prg_file"] as? Int64

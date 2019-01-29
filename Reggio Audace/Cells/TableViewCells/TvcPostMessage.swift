@@ -33,7 +33,7 @@ class TvcPostMessage: TvcBase,ProFileObs
         }
         
     }
-    func SetUiImageFile(prg_file: Int64)
+    func SetUiImageFile(prg_file: Int64?)
     {
         
         // Declarations
