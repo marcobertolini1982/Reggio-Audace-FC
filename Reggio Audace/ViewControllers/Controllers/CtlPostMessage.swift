@@ -16,6 +16,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var btn_SendMessage: BtnRadioBase!
     @IBOutlet weak var txt_des_message: UITextView!
+    private var  POSTMESSAGES:[PostMessage] = [PostMessage]()
     private var CONTENTTYPE:ContentType = ContentType.PostMessage
     // Methods
     func PostMessageSaved(postmessgae: PostMessage)
@@ -48,7 +49,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
       }
         
     }
-    private var  POSTMESSAGES:[PostMessage] = [PostMessage]()
+    
     
     override func Init()
     {
