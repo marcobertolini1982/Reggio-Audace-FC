@@ -107,6 +107,10 @@ class VcrPosts: VcrBase,ProPostsObs
         l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
         l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
         l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
+        if l_Cell.img_prg_file.image != nil
+        {
+            l_Cell.img_prg_file.image = nil
+        }
         l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file)
         
         // Return
@@ -114,7 +118,6 @@ class VcrPosts: VcrBase,ProPostsObs
         
     }
     
-   
     
     open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
