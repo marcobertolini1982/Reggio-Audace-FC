@@ -684,7 +684,13 @@
 					D1BE6D6221AD60D800114084 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
 								enabled = 1;
 							};
 						};
