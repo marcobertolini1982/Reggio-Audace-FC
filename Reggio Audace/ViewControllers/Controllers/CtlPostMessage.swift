@@ -10,6 +10,7 @@ import UIKit
 
 
 class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostMessageObs
+
 {
     // Properties
     @IBOutlet weak var tableView:UITableView!
@@ -17,20 +18,37 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     @IBOutlet weak var txt_des_message: UITextView!
     func PostMessageSaved(postmessgae: PostMessage)
     {
-        self.POSTMESSAGES.append(postmessgae)
-        self.BindData()
+    
+       self.POSTMESSAGES.append(postmessgae)
+       self.BindData()
     }
     
+    enum ContentType
+    {
+        case PostMessage
+        case Reaction
+    }
+    
+    public var CONTENTYPE:ContentType?
+    {
+        didSet
+        {
+            self.txt_des_message.isHidden = (self.CONTENTYPE == ContentType.PostMessage)
+        }
+    }
     
     @IBAction func OnBtnSendMessageClick(_ sender: UIButton)
     {
-        let l_PostView:PostsView = PostsView()
-        l_PostView.SetOnProPostMessageLoadded(propostMessageobs: self)
-        l_PostView.SavvePostMessage(prg_post: self.Parent?.PrgPost, des_message: txt_des_message.text)
-        self.txt_des_message.text = nil
+        if self.txt_des_message.text != nil && !self.txt_des_message.text.isEmpty
+        {
+            let l_PostView:PostsView = PostsView()
+            l_PostView.SetOnProPostMessageLoadded(propostMessageobs: self)
+            l_PostView.SavvePostMessage(prg_post: self.Parent?.PrgPost, des_message: txt_des_message.text)
+            self.txt_des_message.text = nil
+      }
         
     }
-    private var POSTMESSAGES:[PostMessage] = [PostMessage]()
+    private var  POSTMESSAGES:[PostMessage] = [PostMessage]()
     
     override func Init()
     {
@@ -39,7 +57,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
         self.txt_des_message.layer.borderWidth = 1.0
         self.txt_des_message.layer.borderColor = GARNETCOLOR.cgColor
-        self.SetKeyBoardUnderTextView()
+        //self.SetKeyBoardUnderTextView()
      
         
     }
@@ -85,6 +103,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
      func tableView(_ tableview: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of items
+        
         return self.POSTMESSAGES.count
     }
 
@@ -100,6 +119,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         
         }
         // Declarations
+       
         let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
         // Set porperties
         let l_MessageText:String = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
