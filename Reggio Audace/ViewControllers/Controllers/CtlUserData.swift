@@ -67,6 +67,8 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     {
         super.Init()
         self.img_User.layer.cornerRadius = self.img_User.frame.width/2
+        // Set user data
+        self.SetUserData()
         
     }
     
@@ -104,8 +106,7 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
         super.viewWillAppear(animated)
         // Disable text fields
         self.SetUserInfoEnabled(false)
-        // Set user data
-         self.SetUserData()
+        
     }
     
     open override func viewDidAppear(_ animated: Bool)
