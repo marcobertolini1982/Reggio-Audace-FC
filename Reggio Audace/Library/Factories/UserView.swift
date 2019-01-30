@@ -13,18 +13,32 @@ class UserView
     
     // Declarations
     private lazy var proUserObss:[ProUserObs] = [ProUserObs]()
+    private var proUserImageObss:[ProUserImageObs] = [ProUserImageObs]()
     
-    open func AddUserObs(prouserobs:ProUserObs)
+    final func AddUserObs(prouserobs:ProUserObs)
     {
         self.proUserObss.append(prouserobs)
     }
     
-    open func RaiseUserLoaded(user:User)
+    private final func RaiseUserLoaded(user:User)
     {
         // Raise event(s)
         for prouserobs in self.proUserObss
         {
             prouserobs.UserLoaded(user: user)
+        }
+    }
+    
+    final func SetProImageUserObs(prouserimageobs:ProUserImageObs)
+    {
+        self.proUserImageObss.append(prouserimageobs)
+    }
+    
+    private final func RaiseUserImageSaved(prg_file:Int64?)
+    {
+        for prouserimageobs in self.proUserImageObss
+        {
+            prouserimageobs.UserImageSaved(prg_file: prg_file)
         }
     }
     
@@ -38,7 +52,7 @@ class UserView
         var l_Json:[String:Any?] = [String:Any?]()
         l_Json ["cod_device"] = device.cod_device
         l_Json["des_device"]  = device.des_device
-        l_Json["des_device"]  = device.des_device
+        l_Json["cod_user"]  = user.cod_user
         l_Json["des_email"]   = user.des_email
         guard let l_Data:Data = try? JSONSerialization.data(withJSONObject: l_Json, options: []) else{return}
         l_Request.httpBody = l_Data
@@ -114,12 +128,12 @@ class UserView
        
     }
     
-    final func SetUserImage(cod_user:String?,bin_file:String)
+    final func SetUserImage(prg_file:Int64?)
     {
         // Set json key/value pairs
-        var l_Json:[String:Any] = [String:Any]()
-        l_Json["cod_user"] = cod_user
-        l_Json["bin_file"] = bin_file
+        var l_Json:[String:Any?] = [String:Any?]()
+        l_Json["prg_file"] = prg_file
+        l_Json["cod_user"] = AuthUtils.Uid
         // Eval
         guard let l_Data:Data = try? JSONSerialization.data(withJSONObject: l_Json, options: []) else{return}
         guard let l_Url:URL = URL(string: UrlUtils.URL_SET_USERIMAGE) else{return}
@@ -129,7 +143,24 @@ class UserView
         l_Request.httpMethod = "POST"
         l_Request.httpBody = l_Data
         // Create async data task
-        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request)
+        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with: l_Request){(data:Data?,response:URLResponse?,error:Error?)in
+            guard data != nil && error == nil else{return}
+            var l_flg_result:Bool?
+            do
+            {
+                guard let l_JSonResponse:[String:Any] = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any] else{return}
+                l_flg_result = l_JSonResponse["flg_result"] as? Bool
+                if l_flg_result == true
+                {
+                    self.RaiseUserImageSaved(prg_file: prg_file)
+                }
+            }
+            
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
+        }
         // Resume async data task
         l_DataTask.resume()
         

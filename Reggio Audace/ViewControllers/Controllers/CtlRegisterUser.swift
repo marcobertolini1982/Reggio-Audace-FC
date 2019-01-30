@@ -21,6 +21,10 @@ class CtlRegisterUser: CtlBase
     {
         if  self.txt_Password.text != self.txt_password_confirm.text
         {
+            //Declarations
+            let l_alert = UIAlertController(title: "Error", message: "Password and confirm password fields don't match please retry", preferredStyle: UIAlertController.Style.alert)
+            l_alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default))
+            self.present(l_alert, animated: true)
             return
         }
         AuthUtils.Authentication.createUser(withEmail: txt_User.text!, password: txt_Password.text!){(authResult,error)in
@@ -28,6 +32,7 @@ class CtlRegisterUser: CtlBase
             guard let l_usr:FirebaseAuth.User = authResult?.user
             else
             {
+                
                 return
             }
             // Declartatyions

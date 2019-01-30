@@ -14,21 +14,8 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     
     func FileLoaded(data: Data)
     {
-        DispatchQueue.main.async
-        {
-           
-                 self.img_User.image = UIImage(data: data)
-                let l_Url:URL = URL(fileURLWithPath: PathUtils.UserImageFile)
-                do
-                {
-                    try data.write(to: l_Url)
-                }
-                catch let e as NSError
-                {
-                    print(e.localizedDescription)
-                }
-            
-        }
+        SetUIIMageFromData(data:data)
+       
     }
     
    
@@ -44,6 +31,7 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
         guard let l_Image:UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
+
         let l_Data:Data = l_Image.jpegData(compressionQuality: 1.0)
         else
         {
@@ -51,12 +39,14 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
             return
             
         }
+        
+       
         // Declarations
         let l_Base64String:String = l_Data.base64EncodedString()
-        let l_UserView:UserView = UserView()
+        let l_Fileview:FileView = FileView()
+        l_Fileview.SaveFile(bin_file: l_Base64String, des_notes: nil)
+        l_Fileview.SetOnFileLoaded(proFileObs: self)
         // Set user image
-        self.img_User.image = UIImage(data:l_Data)
-        l_UserView.SetUserImage(cod_user: AuthUtils.Uid, bin_file: l_Base64String)
         self.dismiss(animated: true)
     }
     
@@ -77,7 +67,7 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     {
         super.Init()
         self.img_User.layer.cornerRadius = self.img_User.frame.width/2
-         self.SetUserData()
+        
     }
     
     func UserLoaded(user: User)
@@ -90,16 +80,13 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     
     private final func LoadUserData(user:User)
     {
-        if !PathUtils.UserImageExists, let l_PrgFile = user.prg_file
-        {
+            guard let l_PrgFile = user.prg_file else{return}
             let l_Fileview:FileView = FileView()
             l_Fileview.SetOnFileLoaded(proFileObs: self)
             l_Fileview.LoadFile(prg_file: l_PrgFile)
-        }
-        else
-        {
-            self.LoadUserImageFromCache()
-        }
+        
+        
+       
         DispatchQueue.main.async
             {
                 self.txt_UserData[0].text = user.des_user
@@ -117,7 +104,8 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
         super.viewWillAppear(animated)
         // Disable text fields
         self.SetUserInfoEnabled(false)
-        // Show edit button
+        // Set user data
+         self.SetUserData()
     }
     
     open override func viewDidAppear(_ animated: Bool)
@@ -188,27 +176,6 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
         self.SetUserInfoEnabled(false)
     }
     
-    private final func LoadUserImageFromCache()
-    {
-        
-        
-       
-        let l_Url:URL = URL(fileURLWithPath: PathUtils.UserImageFile )
-        DispatchQueue.main.async
-            {
-            do
-            {
-                let l_Data:Data = try Data(contentsOf: l_Url)
-                self.img_User.image = UIImage(data:l_Data)
-            
-            }
-            catch let e as NSError
-            {
-                print(e.localizedDescription)
-            }
-        }
-    }
-    
     private final func SetUserData()
     {
         let l_UserView:UserView = UserView()
@@ -216,5 +183,12 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
         l_UserView.GetUser(cod_user: AuthUtils.Uid!)
     }
     
-    
+    private final func SetUIIMageFromData(data:Data)
+    {
+        DispatchQueue.main.async
+            {
+               self.img_User.image = UIImage(data: data)
+                
+        }
+    }
 }
