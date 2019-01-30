@@ -45,7 +45,8 @@ class CtlRegisterUser: CtlBase
                         {
                            try AuthUtils.Authentication.signOut()
                            //Declarations
-                           let l_alert = UIAlertController(title: "email sent", message: "An email was sent to your address", preferredStyle: UIAlertController.Style.actionSheet)
+                           let l_alert = UIAlertController(title: "email sent", message: "An email was sent to your address", preferredStyle: UIAlertController.Style.alert)
+                            l_alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default))
                             self.present(l_alert, animated: true)
                             
                         }
