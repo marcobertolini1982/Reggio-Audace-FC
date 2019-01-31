@@ -46,8 +46,8 @@ class ReactionsView
             {
             l_Reaction = Reaction()
             l_Reaction.prg_reaction = l_JsonResponse["prg_reaction"] as? Int64
-            l_Reaction.des_reaction = l_JsonResponse["des_emoticon"] as? String
-            l_Reaction.des_emoticon = l_JsonResponse["des_emoticonn"] as? String
+            l_Reaction.des_reaction = l_JsonResponse["des_reaction"] as? String
+            l_Reaction.des_emoticon = l_JsonResponse["des_emoticon"] as? String
             l_Reaction.des_user = l_JsonResponse["des_user"] as? String
             l_Reaction.prg_file = l_JsonResponse["prg_file"] as? Int64
             l_Reaction.dat_lastmodified = DateUtils.StringToDate(l_JsonResponse["dat_lastmodified"] as? String, DateUtils.STRINGDATEFORMAT.FULL_WITH_MILLISECONDS)

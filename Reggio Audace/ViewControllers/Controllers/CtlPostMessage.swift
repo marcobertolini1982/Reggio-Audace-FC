@@ -123,7 +123,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         // Declarations
-        let l_Index:Int = indexPath.row
+        
         // Eval
         guard  let l_Cell:TvcPostMessage = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TvcPostMessage
         else
@@ -134,37 +134,13 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         // Declarations
        if self.CONTENTTYPE == ContentType.PostMessage
        {
-        let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
-        // Set porperties
-        let l_MessageText:String = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
-        let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)
-        let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostMessage.des_user!)
-        l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
-        l_Cell.txt_message.attributedText = l_AttributedText
-        if l_PostMessage.prg_file != nil
-        {
-            l_Cell.SetUiImageFile(prg_file: l_PostMessage.prg_file!)
-            
-        }
-        
-        
-            
+         self.SetPostMessageInCell(cell: l_Cell,indexPath:indexPath)
         }
        else
        {
-            let l_PostReaction:Reaction = self.POSTREACTIONS[l_Index]
-            let l_des_usert:String = l_PostReaction.des_user ?? ""
-            let l_data_lastmodified:String  = DateUtils.DateToString(date:l_PostReaction.dat_lastmodified) ?? ""
-            let l_des_emoticon:String =  l_PostReaction.des_emoticon ?? ""
-            let l_des_reaction:String = l_PostReaction.des_reaction ?? ""
-            let l_MessageText:String = l_des_usert + " " + l_data_lastmodified + "\n" + l_des_emoticon + l_des_reaction
-            let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)
-            let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostReaction.des_user!)
-            l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
-            l_Cell.txt_message.attributedText = l_AttributedText
-            l_Cell.SetUiImageFile(prg_file: l_PostReaction.prg_file)
+           self.SetPostReactionInCell(cell:l_Cell,indexPath:indexPath)
         
-    }
+      }
     
         // Return
         return l_Cell
@@ -230,5 +206,40 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         self.txt_des_message.isHidden = hidden
         self.btn_SendMessage.isHidden = hidden
+    }
+    
+    private final func SetPostReactionInCell(cell:TvcPostMessage,indexPath:IndexPath)
+   {
+
+    let l_Index:Int = indexPath.row
+    let l_PostReaction:Reaction = self.POSTREACTIONS[l_Index]
+    let l_des_usert:String = l_PostReaction.des_user ?? ""
+    let l_data_lastmodified:String  = DateUtils.DateToString(date:l_PostReaction.dat_lastmodified) ?? ""
+    let l_des_emoticon:String =  l_PostReaction.des_emoticon ?? ""
+    let l_des_reaction:String = l_PostReaction.des_reaction ?? ""
+    let l_MessageText:String = l_des_usert + " " + l_data_lastmodified + "\n" + l_des_emoticon + " " +  l_des_reaction
+    let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)
+    let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostReaction.des_user!)
+    l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
+    cell.txt_message.attributedText = l_AttributedText
+    cell.SetUiImageFile(prg_file: l_PostReaction.prg_file)
+   }
+    
+    private final func SetPostMessageInCell(cell:TvcPostMessage,indexPath:IndexPath)
+    {
+       
+        let l_Index:Int = indexPath.row
+        let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
+        // Set porperties
+        let l_MessageText:String = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
+        let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)
+        let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostMessage.des_user!)
+        l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
+        cell.txt_message.attributedText = l_AttributedText
+        if l_PostMessage.prg_file != nil
+        {
+            cell.SetUiImageFile(prg_file: l_PostMessage.prg_file!)
+            
+        }
     }
 }

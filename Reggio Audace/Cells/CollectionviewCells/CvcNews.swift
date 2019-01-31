@@ -97,6 +97,7 @@ class CvcNews: CvcBase,ProFileObs,ProChannelObs
     {
         super.prepareForReuse()
         self.img_prg_file.image = nil
+        self.img_prg_file.setNeedsDisplay()
     }
     
 }
