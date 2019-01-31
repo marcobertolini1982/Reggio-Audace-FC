@@ -20,9 +20,9 @@ class VcrSeasonMenu: VcrBase
     {
         return "CvcSeasonMenu"
     }
-    open override func Init() {
-        super.Init()
-        self.SetLayoutVertical(heigth:self.collectionView.bounds.height)
+    override var LayoutHeight: CGFloat
+    {
+        return self.collectionView.bounds.height
     }
 
     override func viewDidLoad()

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class VcrBase: UICollectionViewController,UITextFieldDelegate
+class VcrBase: UICollectionViewController,UITextFieldDelegate,UICollectionViewDelegateFlowLayout
 {
    open  var LayoutInsets:UIEdgeInsets
     {
@@ -27,11 +27,17 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate
         return String()
     }
     
+    open var LayoutHeight:CGFloat
+    {
+        return 0.0
+    }
     open func Init()
     {
         // Register control
-        self.collectionView?.register(UINib(nibName: self.NibNabe, bundle: nil), forCellWithReuseIdentifier: self.reuseIdentifier)
-       
+        self.collectionView.register(UINib(nibName: self.NibNabe, bundle: nil), forCellWithReuseIdentifier: self.reuseIdentifier)
+        (self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = LayoutLineSpacing
+        self.collectionView.delegate = self
+        self.collectionView.clipsToBounds = false
     }
     
     open override func viewDidLoad()
@@ -42,20 +48,7 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate
         self.SetTextFieldsDelegate()
         
     }
-    func SetLayoutVertical(heigth: CGFloat)
-    {
-        
-        // Declarations
-        let l_Layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        
-        // Set layout properties
-        l_Layout.itemSize = CGSize(width: collectionView.bounds.width, height: heigth)
-        l_Layout.sectionInset = self.LayoutInsets
-        l_Layout.minimumLineSpacing = self.LayoutLineSpacing
-        // Set layout
-        self.collectionView.collectionViewLayout = l_Layout
-        
-    }
+ 
 
     func BindData()
     {
@@ -106,5 +99,10 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate
         return true
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width:collectionView.bounds.width, height:self.LayoutHeight)
+    }
    
 }

@@ -34,18 +34,12 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
         self.BindData()
         
     }
-   
-   open override func Init()
-   {
     
-        super.Init()
-        // Set layout
-        self.SetLayoutVertical(heigth: 300)
-        
+    override var LayoutHeight: CGFloat
+    {
+        return 300.0
     }
-    
-    
-    
+   
     func LoadRecord()
     {
         // Declarations
@@ -179,5 +173,9 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
         l_PagPost.SetSelectedIndex(index:3)
         self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
     }
+    
+    
+    
+   
     
 }

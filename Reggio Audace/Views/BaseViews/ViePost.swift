@@ -19,6 +19,7 @@ class ViePost: VieBase
     @IBOutlet weak var lbl_Reactions: UILabel!
     @IBOutlet weak var tbv_PostPolls: TbvPostPolls!
     @IBOutlet weak var btn_PostMessage: UIButton!
+    @IBOutlet weak var btn_PostReaction: UIButton!
     open override var NIBNAME: String
     {
         return "ViePost"

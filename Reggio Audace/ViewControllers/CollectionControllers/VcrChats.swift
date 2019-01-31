@@ -40,11 +40,10 @@ class VcrChats: VcrBase,ProChatObs
         
     }
     
-   open override func Init()
-    {
-       super.Init()
-        self.SetLayoutVertical(heigth: 100)
-    }
+  override var LayoutHeight: CGFloat
+  {
+    return 100.0
+  }
 
     override func viewDidLoad() {
         super.viewDidLoad()

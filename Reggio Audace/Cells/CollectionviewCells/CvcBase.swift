@@ -10,5 +10,8 @@ import UIKit
 
 class CvcBase: UICollectionViewCell
 {
-    
+    override func awakeFromNib()
+    {
+        super.awakeFromNib()
+    }
 }

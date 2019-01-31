@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="CONTENTVIEW" destination="iN0-l3-epB" id="MTN-1S-uHt"/>
                 <outlet property="btn_PostMessage" destination="Oan-Rh-eMm" id="eCZ-rh-v0Z"/>
+                <outlet property="btn_PostReaction" destination="WqX-ul-3bb" id="LFf-Mw-ae0"/>
                 <outlet property="img_Post" destination="awQ-GB-qOL" id="S13-aE-fFE"/>
                 <outlet property="lbl_Comment" destination="c9c-BE-VCg" id="60U-3o-psz"/>
                 <outlet property="lbl_Date" destination="g2q-KX-6In" id="TIo-lk-Hbe"/>
@@ -52,7 +53,7 @@
                             </vibrancyEffect>
                         </visualEffectView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9Q-H2-owN">
-                            <rect key="frame" x="6" y="249" width="308" height="32.5"/>
+                            <rect key="frame" x="6" y="249" width="308" height="35"/>
                             <attributedString key="attributedText">
                                 <fragment content="TITOLO">
                                     <attributes>
@@ -65,7 +66,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-KX-6In">
-                            <rect key="frame" x="6" y="289.5" width="308" height="17"/>
+                            <rect key="frame" x="6" y="292" width="308" height="17"/>
                             <attributedString key="attributedText">
                                 <fragment content="DATA E ORA">
                                     <attributes>
@@ -78,7 +79,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
-                            <rect key="frame" x="4" y="314.5" width="312" height="40.5"/>
+                            <rect key="frame" x="4" y="317" width="312" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <attributedString key="attributedText">
                                 <fragment content="testo">
@@ -93,7 +94,7 @@
                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                         </textView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jli-v7-TTU">
-                            <rect key="frame" x="276" y="209" width="36" height="25"/>
+                            <rect key="frame" x="275" y="209" width="37" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="6dr-wt-q4X"/>
                             </constraints>
@@ -109,7 +110,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9c-BE-VCg">
-                            <rect key="frame" x="200" y="209" width="36" height="25"/>
+                            <rect key="frame" x="198" y="209" width="37" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="D0W-AY-KyG"/>
                             </constraints>
@@ -125,7 +126,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqX-ul-3bb">
-                            <rect key="frame" x="244" y="210" width="24" height="24"/>
+                            <rect key="frame" x="243" y="210" width="24" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="24" id="rpU-wu-vO5"/>
                                 <constraint firstAttribute="height" constant="24" id="srd-Y7-uYY"/>
@@ -133,7 +134,7 @@
                             <state key="normal" image="Like"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-Rh-eMm">
-                            <rect key="frame" x="168" y="213" width="24" height="24"/>
+                            <rect key="frame" x="166" y="213" width="24" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="3lW-9r-qfc"/>
                                 <constraint firstAttribute="width" constant="24" id="v4F-6g-A5y"/>
@@ -141,7 +142,7 @@
                             <state key="normal" image="Comment"/>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DpJ-aC-pJO" customClass="TbvPostPolls" customModule="Reggio_Audace" customModuleProvider="target">
-                            <rect key="frame" x="4" y="359" width="312" height="372.5"/>
+                            <rect key="frame" x="4" y="355" width="312" height="372.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
@@ -204,11 +205,11 @@
                 <constraint firstItem="SKo-bW-ua8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zNf-dV-MnO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-2653" y="185"/>
+            <point key="canvasLocation" x="-3576" y="-50"/>
         </view>
     </objects>
     <resources>
-        <image name="Comment" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="Like" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Comment" width="32" height="32"/>
+        <image name="Like" width="32" height="32"/>
     </resources>
 </document>
