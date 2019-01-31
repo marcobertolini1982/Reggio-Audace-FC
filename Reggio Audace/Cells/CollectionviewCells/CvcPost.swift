@@ -7,8 +7,19 @@
 //
 
 import UIKit
-class CvcPost: CvcBase,ProFileObs,ProChannelObs
+class CvcPost: CvcBase,ProFileObs,ProChannelObs,ProReactionObs
 {
+    // Declarations
+    @IBOutlet weak var lbl_des_title : UILabel!
+    @IBOutlet weak var img_prg_file : UIImageView!
+    @IBOutlet weak var img_prg_channel : UIImageView!
+    @IBOutlet weak var lbl_dat_post : UILabel!
+    @IBOutlet weak var lbl_Comments: UILabel!
+    @IBOutlet weak var lbl_Reactions: UILabel!
+    @IBOutlet weak var btn_Comments: UIButton!
+    @IBOutlet weak var DownloadIndicator: UIActivityIndicatorView!
+    private weak var PROPOSTCELLOBS:ProPOstCellObs?
+    
     func ChannelLoaded(data: Data)
     {
         DispatchQueue.main.async
@@ -31,23 +42,22 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
         
     }
 
-    // Declarations
-    @IBOutlet weak var lbl_des_title : UILabel!
-    @IBOutlet weak var img_prg_file : UIImageView!
-    @IBOutlet weak var img_prg_channel : UIImageView!
-    @IBOutlet weak var lbl_dat_post : UILabel!
-    @IBOutlet weak var lbl_Comments: UILabel!
-    @IBOutlet weak var lbl_Reactions: UILabel!
-    @IBOutlet weak var btn_Comments: UIButton!
     
-    private weak var PROPOSTCELLOBS:ProPOstCellObs?
+   
+    @IBAction func OnBtnReactionLongPresse(_ sender: UIButton)
+    {
+        let l_ReactionView:ReactionsView = ReactionsView()
+        l_ReactionView.SetReactionsLOaded(proreactionobs: self)
+        l_ReactionView.LoadReactions()
+        
+    }
     
     public final var  proPOstCellObs:ProPOstCellObs?
     {
         get{return self.PROPOSTCELLOBS}
         set{self.PROPOSTCELLOBS = newValue}
     }
-    @IBOutlet weak var DownloadIndicator: UIActivityIndicatorView!
+ 
     @IBAction func OnBtnComemntsClick(_ sender: UIButton)
     {
         
@@ -104,4 +114,8 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
         self.img_prg_file.setNeedsDisplay()
     }
     
+    func ReactionsLoaded(reactions: [Reaction])
+    {
+      
+    }
 }

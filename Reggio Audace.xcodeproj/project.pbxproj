@@ -543,11 +543,11 @@
 				D175884D21F7433700488CE6 /* ProPostPollObs.swift */,
 				D192985A21DD1A6600850DF2 /* ProPostsObs.swift */,
 				D19B3E1221D6557B00BD5F15 /* ProRankingObs.swift */,
+				D1640C6E220089A20000D98E /* ProReactionObs.swift */,
 				D17963FC21B151EB005311A8 /* ProSeasonObs.swift */,
 				D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */,
-				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
-				D1640C6E220089A20000D98E /* ProReactionObs.swift */,
 				D190528A2201FA8600EA1F5F /* ProUserImageObs.swift */,
+				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
 			);
 			path = LibraryProtocols;
 			sourceTree = "<group>";

@@ -7,7 +7,9 @@
 //
 
 import Foundation
-protocol ProReactionObs
+@objc  protocol ProReactionObs:class
 {
-    func PostReactionsLoaded(reactions:[Reaction])
+   @objc optional func PostReactionsLoaded(reactions:[Reaction])
+   @objc optional func ReactionsLoaded(reactions:[Reaction])
+    
 }

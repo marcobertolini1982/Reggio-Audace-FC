@@ -98,6 +98,7 @@
                         </constraints>
                         <state key="normal" image="Like"/>
                         <connections>
+                            <action selector="OnBtnReactionLongPresse:" destination="Lpb-Xd-BMo" eventType="touchUpOutside" id="wxJ-yj-Q18"/>
                             <action selector="OnBtnReactionsClick:" destination="Lpb-Xd-BMo" eventType="touchUpInside" id="kHF-Y5-etH"/>
                         </connections>
                     </button>
@@ -170,7 +171,7 @@
                 <outlet property="lbl_dat_post" destination="uZq-8g-PfD" id="MfJ-Lq-iur"/>
                 <outlet property="lbl_des_title" destination="eba-yU-F5O" id="2wY-rd-mHm"/>
             </connections>
-            <point key="canvasLocation" x="-6319" y="-822"/>
+            <point key="canvasLocation" x="-6885" y="-839.26056338028172"/>
         </collectionViewCell>
     </objects>
     <resources>
