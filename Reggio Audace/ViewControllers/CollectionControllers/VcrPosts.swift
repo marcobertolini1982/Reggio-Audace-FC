@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VcrPosts: VcrBase,ProPostsObs
+class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
 {
     
     
@@ -17,7 +17,7 @@ class VcrPosts: VcrBase,ProPostsObs
     
     open override var NibNabe: String
     {
-        return "CvcNews"
+        return "CvcPost"
     }
     open override var reuseIdentifier: String
     {
@@ -94,7 +94,7 @@ class VcrPosts: VcrBase,ProPostsObs
         // Declarations
         let l_Index:Int = indexPath.item
         // Set Image
-        guard let l_Cell:CvcNews = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcNews
+        guard let l_Cell:CvcPost = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcPost
         else
         {
             return UICollectionViewCell()
@@ -118,26 +118,26 @@ class VcrPosts: VcrBase,ProPostsObs
         let l_Index:Int = indexPath.row
         let l_Post:Post = self.POSTS[l_Index]
         let l_prg_file:Int64? = l_Post.prg_file
-        guard let l_Cell:CvcNews = cell as? CvcNews
+        guard let l_Cell:CvcPost = cell as? CvcPost
             else
         {
             return
         }
         l_Cell.SetUiImageFile(prg_file: l_prg_file)
-        l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
+        l_Cell.proPOstCellObs = self
         
     }
     
     
     override func collectionView(_ collectionView:UICollectionView,didEndDisplaying cell:UICollectionViewCell,forItemAt indexPath:IndexPath)
     {
-        guard let l_Cell:CvcNews = cell as? CvcNews
+        guard let l_Cell:CvcPost = cell as? CvcPost
         else
         {
             return
         }
         
-        l_Cell.BtnCommentsEvent = nil
+        l_Cell.proPOstCellObs = nil
         
     }
     
@@ -156,13 +156,27 @@ class VcrPosts: VcrBase,ProPostsObs
         
     }
     
-    func OnBtnCommentsclick(_ cell:UICollectionViewCell)
+    func OnBtnPostMessageClick(_ cell:UICollectionViewCell)
     {
         guard let l_IndexPath = self.collectionView.indexPath(for: cell) else{return}
         let l_Index:Int = l_IndexPath.item
         guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost else{return}
+         l_PagPost.PostMessageController?.contentType = CtlPostMessage.ContentType.PostMessage
+
         l_PagPost.PrgPost = self.POSTS[l_Index].prg_post
+       
         l_PagPost.SetSelectedIndex(index:2)
+        self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
+    }
+    
+    func OnBtnPostReactionsClick(_ cell: UICollectionViewCell)
+    {
+        guard let l_IndexPath = self.collectionView.indexPath(for: cell) else{return}
+        let l_Index:Int = l_IndexPath.item
+        guard let l_PagPost:PagPost = MainStoryboard.instantiateViewController(withIdentifier: "PagPost") as? PagPost else{return}
+        l_PagPost.PostReactionController?.contentType = CtlPostMessage.ContentType.Reaction
+        l_PagPost.PrgPost = self.POSTS[l_Index].prg_post
+        l_PagPost.SetSelectedIndex(index:3)
         self.tabBarController?.navigationController?.pushViewController(l_PagPost, animated: true)
     }
     

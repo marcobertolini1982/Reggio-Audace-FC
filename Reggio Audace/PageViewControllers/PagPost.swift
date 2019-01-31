@@ -50,19 +50,30 @@ open override var IndicatorsText: [String]
     {
         return self.ViewControllers[1] as? VcrPostImages
     }
+    
+    public final var PostMessageController:CtlPostMessage?
+    
+    {
+        let l_CtlPostMessage:CtlPostMessage? = self.ViewControllers[2] as? CtlPostMessage
+        return l_CtlPostMessage
+    }
+    
+    public final var PostReactionController:CtlPostMessage?
+        
+    {
+        let l_CtlPostMessage:CtlPostMessage? = self.ViewControllers[3] as? CtlPostMessage
+        return l_CtlPostMessage
+    }
     override func viewDidLoad()
     {
        
         super.viewDidLoad()
+        (self.ViewControllers[2] as?CtlPostMessage)?.contentType = CtlPostMessage.ContentType.PostMessage
+        (self.ViewControllers[3] as?CtlPostMessage)?.contentType = CtlPostMessage.ContentType.Reaction
       
     }
    
     
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-        (self.ViewControllers[2] as?CtlPostMessage)?.contentType = CtlPostMessage.ContentType.PostMessage
-        (self.ViewControllers[3] as?CtlPostMessage)?.contentType = CtlPostMessage.ContentType.Reaction
-    }
+  
    
 }
