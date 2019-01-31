@@ -27,6 +27,11 @@ class VcrPostImages: VcrBase, ProPostFilesObs
         return "CvcPostImage"
     }
     
+    override var LayoutHeight: CGFloat
+    {
+        return 300.0
+    }
+    
     func PostFilesLoaded(postfiles: [File])
     {
         self.FILES = postfiles
@@ -41,11 +46,7 @@ class VcrPostImages: VcrBase, ProPostFilesObs
     }
    
     
-    open override func Init()
-    {
-        super.Init()
-        self.SetLayoutVertical(heigth:300)
-    }
+    
     
     override func viewDidLoad()
     {

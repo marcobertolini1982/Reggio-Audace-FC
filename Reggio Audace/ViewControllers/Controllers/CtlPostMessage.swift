@@ -150,20 +150,12 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         if self.CONTENTTYPE == ContentType.PostMessage
         {
-            self.SetPostMessageControlsHidden(false)
-            let l_PrgPost:Int64? = self.Parent?.PrgPost
-            let l_Postview:PostsView = PostsView()
-            l_Postview.SetOnProPostMessageLoadded(propostMessageobs: self)
-            l_Postview.LoadPostMessages(prg_post: l_PrgPost)
+           self.LoadPostMessagesRecord()
         }
         
         else
         {
-            self.SetPostMessageControlsHidden(true)
-            let l_ReactionView:ReactionsView = ReactionsView()
-            l_ReactionView.SetReactionsLOaded(proreactionobs: self)
-            l_ReactionView.LoadReactions(prg_post: self.Parent?.PrgPost)
-            self.SetPostMessageControlsHidden(true)
+            self.LoadReactionsRecord()
         }
         
     }
@@ -231,7 +223,10 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         let l_Index:Int = indexPath.row
         let l_PostMessage:PostMessage = self.POSTMESSAGES[l_Index]
         // Set porperties
-        let l_MessageText:String = l_PostMessage.des_user! + " " + DateUtils.DateToString(date:l_PostMessage.dat_message)! + "\n" + l_PostMessage.des_message!
+        let l_des_user:String = l_PostMessage.des_user ?? ""
+        let l_dat_message:String = DateUtils.DateToString(date:l_PostMessage.dat_message) ?? ""
+        let l_des_message = l_PostMessage.des_message ?? ""
+        let l_MessageText:String = l_des_user + " " + l_dat_message + "\n" + l_des_message
         let l_AttributedText:NSMutableAttributedString = NSMutableAttributedString(string: l_MessageText)
         let l_Range:NSRange = (l_AttributedText.string as NSString).range(of: l_PostMessage.des_user!)
         l_AttributedText.setAttributes([NSAttributedString.Key.font:UIFont(name: "Hind-Bold", size: 15.0)!], range:l_Range)
@@ -241,5 +236,23 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
             cell.SetUiImageFile(prg_file: l_PostMessage.prg_file!)
             
         }
+    }
+    
+    private final func LoadPostMessagesRecord()
+    {
+        self.SetPostMessageControlsHidden(false)
+        let l_PrgPost:Int64? = self.Parent?.PrgPost
+        let l_Postview:PostsView = PostsView()
+        l_Postview.SetOnProPostMessageLoadded(propostMessageobs: self)
+        l_Postview.LoadPostMessages(prg_post: l_PrgPost)
+    }
+    
+    private final func LoadReactionsRecord()
+    {
+        self.SetPostMessageControlsHidden(true)
+        let l_ReactionView:ReactionsView = ReactionsView()
+        l_ReactionView.SetReactionsLOaded(proreactionobs: self)
+        l_ReactionView.LoadReactions(prg_post: self.Parent?.PrgPost)
+        self.SetPostMessageControlsHidden(true)
     }
 }

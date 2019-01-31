@@ -36,7 +36,6 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
     @IBOutlet weak var img_prg_file : UIImageView!
     @IBOutlet weak var img_prg_channel : UIImageView!
     @IBOutlet weak var lbl_dat_post : UILabel!
-    @IBOutlet weak var btn_share : UIButton!
     @IBOutlet weak var lbl_Comments: UILabel!
     @IBOutlet weak var lbl_Reactions: UILabel!
     @IBOutlet weak var btn_Comments: UIButton!
@@ -56,6 +55,10 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
         
     }
    
+    @IBAction func OnBtnReactionsClick(_ sender:UIButton)
+    {
+        self.PROPOSTCELLOBS?.OnBtnPostReactionsClick?(self)
+    }
     // Raised when the xib merge is execute
     override func awakeFromNib()
     {

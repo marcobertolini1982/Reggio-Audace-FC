@@ -61,6 +61,8 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         self.VIEPOST.tbv_PostPolls.delegate = self
         self.VIEPOST.tbv_PostPolls.dataSource = self
         self.VIEPOST.btn_PostMessage.addTarget(self, action:SelectorUtils.BtnPostMessageSelector, for:UIControl.Event.touchUpInside)
+        self.VIEPOST.btn_PostReaction.addTarget(self, action:SelectorUtils.BtnPostReactionSelector, for:UIControl.Event.touchUpInside)
+        
     }
     
     // Methods
@@ -241,6 +243,13 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
         self.Parent?.PageIndicator.Cvi_Headcers.selectItem(at: l_IndexPath, animated: true, scrollPosition: UICollectionView.ScrollPosition.right)
         
         
+    }
+    
+    @objc func OnBtnPostReactionClick(_ sender:UIButton)
+    {
+     
+            let l_IndexPath:IndexPath = IndexPath(item:3, section: 0)
+            self.Parent?.PageIndicator.Cvi_Headcers.selectItem(at: l_IndexPath, animated: true, scrollPosition: UICollectionView.ScrollPosition.right)
     }
    
 }

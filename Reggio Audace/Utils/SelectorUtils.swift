@@ -27,4 +27,9 @@ class SelectorUtils
     {
         return #selector(CtlPost.OnBtnPostMessageClick)
     }
+    
+    public static var BtnPostReactionSelector:Selector
+    {
+        return #selector(CtlPost.OnBtnPostReactionClick)
+    }
 }

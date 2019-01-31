@@ -34,10 +34,9 @@ class VcrRanking: VcrBase,ProRankingObs
         self.BindData()
     }
     
-    open override func Init()
+    override var LayoutHeight: CGFloat
     {
-        super.Init()
-        self.SetLayoutVertical(heigth: 60)
+        return 60.0
     }
 
     private final func LoadRecord()
