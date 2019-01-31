@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5232497A21BEB99D00174439 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		5232497C21BEB9A300174439 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		523627962201C107005216D5 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523627952201C107005216D5 /* AuthenticationServices.framework */; };
 		526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ABD4021B1564B004177CB /* GoogleService-Info.plist */; };
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
 		526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcRankingItem.xib */; };
@@ -129,6 +130,7 @@
 /* Begin PBXFileReference section */
 		438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reggio_Audace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52127B2E21B5882E006CE2AB /* Reggio Audace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Reggio Audace.entitlements"; sourceTree = "<group>"; };
+		523627952201C107005216D5 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcRankingItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcRankingItem.xib; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523627962201C107005216D5 /* AuthenticationServices.framework in Frameworks */,
 				D5D8A8995F382F955705B5E6 /* Pods_Reggio_Audace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +280,7 @@
 		740F66140C8470DE6B6460A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				523627952201C107005216D5 /* AuthenticationServices.framework */,
 				438C1A2158ECE0211B372589 /* Pods_Reggio_Audace.framework */,
 			);
 			name = Frameworks;
@@ -687,6 +691,9 @@
 					D1BE6D6221AD60D800114084 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.AutoFillCredentialProvider = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -694,7 +701,7 @@
 								enabled = 1;
 							};
 							com.apple.Siri = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
