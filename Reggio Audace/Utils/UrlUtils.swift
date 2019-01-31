@@ -39,10 +39,7 @@ class UrlUtils
     {
         return URL_WEBAPP + "/SavePostMessage"
     }
-    public static var URL_GETFILES:String
-    {
-        return URL_WEBAPP + "/GetFiles"
-    }
+    
     public static var URL_LOADREACTIONS:String
     {
         return URL_WEBAPP + "/LoadReactions"
@@ -63,10 +60,23 @@ class UrlUtils
         return URL_WEBAPP + "/PostPollVote"
     }
     
+    // Files
+    
+    public static var URL_GETFILES:String
+    {
+        return URL_WEBAPP + "/GetFiles"
+    }
+    
     public static  var URL_GETFILE :String
-{
-    return URL_WEBAPP + "/GetFile"
-}
+    {
+        return URL_WEBAPP + "/GetFile"
+    }
+    
+    public static  var URL_SAVEFILE :String
+    {
+        return URL_WEBAPP + "/SaveFile"
+    }
+    
 //Like
     public static  var URL_SETLIKE:String
     {
@@ -169,7 +179,6 @@ class UrlUtils
     }
     
     
-   
 }
 
 

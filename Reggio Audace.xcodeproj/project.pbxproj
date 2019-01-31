@@ -102,6 +102,7 @@
 		D1855E3F21DFB78B00F812C0 /* TvcPostMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */; };
 		D18AC9E421EF699800362523 /* ViePostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AC9E321EF699800362523 /* ViePostMessage.swift */; };
 		D18B8B7121F621350096941B /* ProCviHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B8B7021F621350096941B /* ProCviHeader.swift */; };
+		D190528B2201FA8600EA1F5F /* ProUserImageObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190528A2201FA8600EA1F5F /* ProUserImageObs.swift */; };
 		D192985721DCF96800850DF2 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985621DCF96800850DF2 /* DeviceUtils.swift */; };
 		D192985921DD04D200850DF2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985821DD04D200850DF2 /* DateUtils.swift */; };
 		D192985B21DD1A6600850DF2 /* ProPostsObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192985A21DD1A6600850DF2 /* ProPostsObs.swift */; };
@@ -224,6 +225,7 @@
 		D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TvcPostMessage.xib; sourceTree = "<group>"; };
 		D18AC9E321EF699800362523 /* ViePostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePostMessage.swift; sourceTree = "<group>"; };
 		D18B8B7021F621350096941B /* ProCviHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCviHeader.swift; sourceTree = "<group>"; };
+		D190528A2201FA8600EA1F5F /* ProUserImageObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserImageObs.swift; sourceTree = "<group>"; };
 		D192985621DCF96800850DF2 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		D192985821DD04D200850DF2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D192985A21DD1A6600850DF2 /* ProPostsObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPostsObs.swift; sourceTree = "<group>"; };
@@ -535,6 +537,7 @@
 				D192985C21DD1DEB00850DF2 /* ProSinglePostObs.swift */,
 				D17D2D2921C942FE002A7178 /* ProUserObs.swift */,
 				D1640C6E220089A20000D98E /* ProReactionObs.swift */,
+				D190528A2201FA8600EA1F5F /* ProUserImageObs.swift */,
 			);
 			path = LibraryProtocols;
 			sourceTree = "<group>";
@@ -641,13 +644,13 @@
 		D1EDE76A21BE865F00FDA751 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D185535021E617B200C2DE62 /* CtlPostMessage.swift */,
-				D160DC5B21B568BD00DAEF67 /* CtlRegisterUser.swift */,
-				D160DC5421B531B700DAEF67 /* CtlUserLogin.swift */,
-				D15ABDB121B915C700C980EE /* CtlUserDataReset.swift */,
 				D15ABDB521B91C8800C980EE /* CtlBase.swift */,
 				D171970A21BAB550008D786B /* CtlPost.swift */,
+				D185535021E617B200C2DE62 /* CtlPostMessage.swift */,
+				D160DC5B21B568BD00DAEF67 /* CtlRegisterUser.swift */,
 				D15ABDBB21B9353D00C980EE /* CtlUserData.swift */,
+				D15ABDB121B915C700C980EE /* CtlUserDataReset.swift */,
+				D160DC5421B531B700DAEF67 /* CtlUserLogin.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19B3E1321D6557B00BD5F15 /* ProRankingObs.swift in Sources */,
+				D190528B2201FA8600EA1F5F /* ProUserImageObs.swift in Sources */,
 				D160DC5A21B5375200DAEF67 /* PagLogin.swift in Sources */,
 				D17963F921B14779005311A8 /* VcrChannels.swift in Sources */,
 				D14D6F2321F21E3300C4B381 /* CviHeader.swift in Sources */,
