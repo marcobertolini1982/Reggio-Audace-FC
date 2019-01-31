@@ -22,7 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate
         // Set window main view
         window?.rootViewController = MainStoryboard.instantiateInitialViewController()
         // Start firebase
-        FirebaseApp.configure()
+
+             FirebaseApp.configure()
+        
+       
         // Set Firebase Messaging delegate
         Messaging.messaging().delegate = self
         // Return

@@ -106,13 +106,28 @@ class VcrPosts: VcrBase,ProPostsObs
         l_Cell.lbl_dat_post.text = DateUtils.DateToString(date:POSTS[l_Index].dat_post)
         l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
         l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
-        l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
-        l_Cell.SetUiImageFile(prg_file: self.POSTS[l_Index].prg_file)
+       
         
         // Return
         return l_Cell
         
     }
+    
+    override func collectionView(_ collectionView:UICollectionView,willDisplay cell:UICollectionViewCell,forItemAt indexPath:IndexPath)
+    {
+        let l_Index:Int = indexPath.row
+        let l_Post:Post = self.POSTS[l_Index]
+        let l_prg_file:Int64? = l_Post.prg_file
+        guard let l_Cell:CvcNews = cell as? CvcNews
+            else
+        {
+            return
+        }
+        l_Cell.SetUiImageFile(prg_file: l_prg_file)
+        l_Cell.BtnCommentsEvent = self.OnBtnCommentsclick
+        
+    }
+    
     
     override func collectionView(_ collectionView:UICollectionView,didEndDisplaying cell:UICollectionViewCell,forItemAt indexPath:IndexPath)
     {
@@ -122,7 +137,8 @@ class VcrPosts: VcrBase,ProPostsObs
             return
         }
         
-        l_Cell.img_prg_file.image = nil
+        l_Cell.BtnCommentsEvent = nil
+        
     }
     
     open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
