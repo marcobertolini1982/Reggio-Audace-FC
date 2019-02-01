@@ -14,7 +14,6 @@
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
 		526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcRankingItem.xib */; };
 		526BFBBC22047F09008FB595 /* CvcReaction.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BFBBB22047F09008FB595 /* CvcReaction.xib */; };
-		526BFBBE22047FD0008FB595 /* VcrReactions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BFBBD22047FD0008FB595 /* VcrReactions.xib */; };
 		52797B2A21DF566900350D7D /* CvcRankingHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52797B2921DF566900350D7D /* CvcRankingHeader.xib */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
@@ -46,6 +45,7 @@
 		D1604EC821F9D495004C7926 /* BtnRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC721F9D495004C7926 /* BtnRadio.swift */; };
 		D1604ECA21FA1D4B004C7926 /* PostPollUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */; };
 		D1609E51220483B80043A56B /* VcrReactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1609E50220483B80043A56B /* VcrReactions.swift */; };
+		D1609E53220488300043A56B /* CvcReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1609E52220488300043A56B /* CvcReaction.swift */; };
 		D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4A21B521F000DAEF67 /* AuthUtils.swift */; };
 		D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */; };
 		D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4C21B521F000DAEF67 /* UrlUtils.swift */; };
@@ -139,7 +139,6 @@
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcRankingItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcRankingItem.xib; sourceTree = "<group>"; };
 		526BFBBB22047F09008FB595 /* CvcReaction.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcReaction.xib; sourceTree = "<group>"; };
-		526BFBBD22047FD0008FB595 /* VcrReactions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VcrReactions.xib; sourceTree = "<group>"; };
 		52797B2921DF566900350D7D /* CvcRankingHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcRankingHeader.xib; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 		D1604EC721F9D495004C7926 /* BtnRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnRadio.swift; sourceTree = "<group>"; };
 		D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPollUserView.swift; sourceTree = "<group>"; };
 		D1609E50220483B80043A56B /* VcrReactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrReactions.swift; sourceTree = "<group>"; };
+		D1609E52220488300043A56B /* CvcReaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcReaction.swift; sourceTree = "<group>"; };
 		D160DC4A21B521F000DAEF67 /* AuthUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthUtils.swift; sourceTree = "<group>"; };
 		D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardUtils.swift; sourceTree = "<group>"; };
 		D160DC4C21B521F000DAEF67 /* UrlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlUtils.swift; sourceTree = "<group>"; };
@@ -325,16 +325,16 @@
 		D15ABDB321B919B800C980EE /* CollectionControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D174232221AEAE68009AAEFC /* VcrPosts.swift */,
 				D1633DC721AFEB7B00D5CE2F /* VcrBase.swift */,
 				D17963F821B14779005311A8 /* VcrChannels.swift */,
 				D1633DD321B01E9600D5CE2F /* VcrChats.swift */,
 				D15ABDB721B9202E00C980EE /* VcrMedia.swift */,
 				D1855E3421DF56F600F812C0 /* VcrPostImages.swift */,
+				D174232221AEAE68009AAEFC /* VcrPosts.swift */,
 				D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */,
+				D1609E50220483B80043A56B /* VcrReactions.swift */,
 				D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */,
 				D17963F621B146EF005311A8 /* VcrUsers.swift */,
-				D1609E50220483B80043A56B /* VcrReactions.swift */,
 			);
 			path = CollectionControllers;
 			sourceTree = "<group>";
@@ -367,12 +367,11 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		D1609E4F220481DF0043A56B /* CollectionControllers */ = {
+		D1609E5422048F2C0043A56B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				526BFBBD22047FD0008FB595 /* VcrReactions.xib */,
 			);
-			path = CollectionControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D160DC4921B521C900DAEF67 /* Utils */ = {
@@ -437,6 +436,7 @@
 				D19B3E1A21D6705500BD5F15 /* CvcRankingItem.swift */,
 				D1EDE77221BEBCE100FDA751 /* CvcSeasonMenu.swift */,
 				D16DEB8721F1D7E20055D8DC /* CvcHeader.swift */,
+				D1609E52220488300043A56B /* CvcReaction.swift */,
 			);
 			path = CollectionviewCells;
 			sourceTree = "<group>";
@@ -508,7 +508,7 @@
 		D174232B21AED7C1009AAEFC /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				D1609E4F220481DF0043A56B /* CollectionControllers */,
+				D1609E5422048F2C0043A56B /* ViewControllers */,
 				D19F62FB21B7DFD000726165 /* Views */,
 				D174232C21AED7D4009AAEFC /* Cells */,
 			);
@@ -770,7 +770,6 @@
 				527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */,
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
-				526BFBBE22047FD0008FB595 /* VcrReactions.xib in Resources */,
 				52A78B2821F1C353000E197E /* ViePageIndicator.xib in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */,
@@ -913,6 +912,7 @@
 				D190528B2201FA8600EA1F5F /* ProUserImageObs.swift in Sources */,
 				D160DC5A21B5375200DAEF67 /* PagLogin.swift in Sources */,
 				D17963F921B14779005311A8 /* VcrChannels.swift in Sources */,
+				D1609E53220488300043A56B /* CvcReaction.swift in Sources */,
 				D14D6F2321F21E3300C4B381 /* CviHeader.swift in Sources */,
 				D1633DD221B0135100D5CE2F /* Chat.swift in Sources */,
 				D160DC5C21B568BD00DAEF67 /* CtlRegisterUser.swift in Sources */,

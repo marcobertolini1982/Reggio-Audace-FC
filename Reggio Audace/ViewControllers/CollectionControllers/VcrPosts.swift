@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProReactionObs
+class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
 {
     
     
@@ -176,38 +176,11 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProReactionObs
     
     func OnBtnPostReactionLongPress(_ cell: UICollectionViewCell)
     {
-        let l_Reactuionview:ReactionsView = ReactionsView()
-        l_Reactuionview.SetReactionsLOaded(proreactionobs: self)
-        l_Reactuionview.LoadReactions()
+        let l_VcrReactions:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "VcrReactions")
+        self.present(l_VcrReactions, animated: true)
     }
     
-    
-    func ReactionsLoaded(reactions: [Reaction])
-    {
-      // Declarations
-        DispatchQueue.main.async
-     {
-            
-        
-        let l_Alertcontroller: UIViewController = UIViewController()
-    
-            var l_X:CGFloat = 0.0
-            var l_Y:CGFloat = 0.0
-          for L_Reaction in reactions
-          {
-            if l_X + 15 == l_Alertcontroller.view.bounds.width
-            {
-                l_Y += 15
-            }
-            
-            let l_BUtton:UIButton = UIButton(frame:CGRect(x: l_X, y: l_Y, width: 10, height: 10))
-            l_BUtton.setTitle(L_Reaction.des_emoticon, for: UIControl.State.normal)
-            l_Alertcontroller.view.addSubview(l_BUtton)
-            l_X += 15
-        
-        }
-            self.present(l_Alertcontroller, animated: true)
-   }
+
 }
     
-}
+
