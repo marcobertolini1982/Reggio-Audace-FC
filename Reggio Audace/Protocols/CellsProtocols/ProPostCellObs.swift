@@ -11,4 +11,5 @@ import UIKit
 {
    @objc optional func OnBtnPostMessageClick(_ cell:UICollectionViewCell)
    @objc optional func OnBtnPostReactionsClick(_ cell:UICollectionViewCell)
+   @objc optional func OnBtnPostReactionLongPress(_ cell:UICollectionViewCell)
 }

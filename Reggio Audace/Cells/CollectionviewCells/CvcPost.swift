@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class CvcPost: CvcBase,ProFileObs,ProChannelObs,ProReactionObs
+class CvcPost: CvcBase,ProFileObs,ProChannelObs
 {
     // Declarations
     @IBOutlet weak var lbl_des_title : UILabel!
@@ -18,6 +18,7 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs,ProReactionObs
     @IBOutlet weak var lbl_Reactions: UILabel!
     @IBOutlet weak var btn_Comments: UIButton!
     @IBOutlet weak var DownloadIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var btn_PostReactions: UIButton!
     private weak var PROPOSTCELLOBS:ProPOstCellObs?
     
     func ChannelLoaded(data: Data)
@@ -46,9 +47,7 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs,ProReactionObs
    
     @IBAction func OnBtnReactionLongPresse(_ sender: UIButton)
     {
-        let l_ReactionView:ReactionsView = ReactionsView()
-        l_ReactionView.SetReactionsLOaded(proreactionobs: self)
-        l_ReactionView.LoadReactions()
+        self.PROPOSTCELLOBS?.OnBtnPostReactionLongPress?(self)
         
     }
     
@@ -114,8 +113,5 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs,ProReactionObs
         self.img_prg_file.setNeedsDisplay()
     }
     
-    func ReactionsLoaded(reactions: [Reaction])
-    {
-      
-    }
+   
 }

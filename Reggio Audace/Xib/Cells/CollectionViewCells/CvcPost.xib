@@ -98,7 +98,7 @@
                         </constraints>
                         <state key="normal" image="Like"/>
                         <connections>
-                            <action selector="OnBtnReactionLongPresse:" destination="Lpb-Xd-BMo" eventType="touchUpOutside" id="wxJ-yj-Q18"/>
+                            <action selector="OnBtnReactionLongPresse:" destination="Lpb-Xd-BMo" eventType="touchDown" id="tJA-7i-uy1"/>
                             <action selector="OnBtnReactionsClick:" destination="Lpb-Xd-BMo" eventType="touchUpInside" id="kHF-Y5-etH"/>
                         </connections>
                     </button>
@@ -164,6 +164,7 @@
             <connections>
                 <outlet property="DownloadIndicator" destination="1qo-wT-xP1" id="k6R-uk-rN2"/>
                 <outlet property="btn_Comments" destination="lIT-fb-dNa" id="IqP-ru-Tcf"/>
+                <outlet property="btn_PostReactions" destination="fPX-N5-ihO" id="752-tx-AFP"/>
                 <outlet property="img_prg_channel" destination="tTj-4Z-Tbs" id="iBj-6j-zhK"/>
                 <outlet property="img_prg_file" destination="IU2-Eq-ywo" id="bhp-pK-98F"/>
                 <outlet property="lbl_Comments" destination="DIH-Cg-Xhr" id="LKp-EY-jYo"/>
@@ -171,7 +172,7 @@
                 <outlet property="lbl_dat_post" destination="uZq-8g-PfD" id="MfJ-Lq-iur"/>
                 <outlet property="lbl_des_title" destination="eba-yU-F5O" id="2wY-rd-mHm"/>
             </connections>
-            <point key="canvasLocation" x="-6885" y="-839.26056338028172"/>
+            <point key="canvasLocation" x="-6883" y="-863"/>
         </collectionViewCell>
     </objects>
     <resources>
