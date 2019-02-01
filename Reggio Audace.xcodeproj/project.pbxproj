@@ -329,7 +329,6 @@
 				D1633DD321B01E9600D5CE2F /* VcrChats.swift */,
 				D15ABDB721B9202E00C980EE /* VcrMedia.swift */,
 				D1855E3421DF56F600F812C0 /* VcrPostImages.swift */,
-				526BFBBD22047FD0008FB595 /* VcrReactions.xib */,
 				D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */,
 				D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */,
 				D17963F621B146EF005311A8 /* VcrUsers.swift */,
@@ -363,6 +362,14 @@
 				D171DB8721FB1E8B00E08480 /* RoundShapedButtons */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		D1609E4F220481DF0043A56B /* CollectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				526BFBBD22047FD0008FB595 /* VcrReactions.xib */,
+			);
+			path = CollectionControllers;
 			sourceTree = "<group>";
 		};
 		D160DC4921B521C900DAEF67 /* Utils */ = {
@@ -498,6 +505,7 @@
 		D174232B21AED7C1009AAEFC /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				D1609E4F220481DF0043A56B /* CollectionControllers */,
 				D19F62FB21B7DFD000726165 /* Views */,
 				D174232C21AED7D4009AAEFC /* Cells */,
 			);
