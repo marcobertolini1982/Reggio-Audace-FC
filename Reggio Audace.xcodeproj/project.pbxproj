@@ -45,6 +45,7 @@
 		D1604EC621F9D46E004C7926 /* BtnRadioBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC521F9D46E004C7926 /* BtnRadioBase.swift */; };
 		D1604EC821F9D495004C7926 /* BtnRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC721F9D495004C7926 /* BtnRadio.swift */; };
 		D1604ECA21FA1D4B004C7926 /* PostPollUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */; };
+		D1609E51220483B80043A56B /* VcrReactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1609E50220483B80043A56B /* VcrReactions.swift */; };
 		D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4A21B521F000DAEF67 /* AuthUtils.swift */; };
 		D160DC4E21B521F000DAEF67 /* StoryboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */; };
 		D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D160DC4C21B521F000DAEF67 /* UrlUtils.swift */; };
@@ -171,6 +172,7 @@
 		D1604EC521F9D46E004C7926 /* BtnRadioBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnRadioBase.swift; sourceTree = "<group>"; };
 		D1604EC721F9D495004C7926 /* BtnRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnRadio.swift; sourceTree = "<group>"; };
 		D1604EC921FA1D4B004C7926 /* PostPollUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPollUserView.swift; sourceTree = "<group>"; };
+		D1609E50220483B80043A56B /* VcrReactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcrReactions.swift; sourceTree = "<group>"; };
 		D160DC4A21B521F000DAEF67 /* AuthUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthUtils.swift; sourceTree = "<group>"; };
 		D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardUtils.swift; sourceTree = "<group>"; };
 		D160DC4C21B521F000DAEF67 /* UrlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlUtils.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */,
 				D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */,
 				D17963F621B146EF005311A8 /* VcrUsers.swift */,
+				D1609E50220483B80043A56B /* VcrReactions.swift */,
 			);
 			path = CollectionControllers;
 			sourceTree = "<group>";
@@ -918,6 +921,7 @@
 				D1604ECA21FA1D4B004C7926 /* PostPollUserView.swift in Sources */,
 				D171970921BAB152008D786B /* ViePost.swift in Sources */,
 				D1633DD021B0008A00D5CE2F /* ChatView.swift in Sources */,
+				D1609E51220483B80043A56B /* VcrReactions.swift in Sources */,
 				D16870972203130500154CFD /* ProPostCellObs.swift in Sources */,
 				D192985921DD04D200850DF2 /* DateUtils.swift in Sources */,
 				D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */,

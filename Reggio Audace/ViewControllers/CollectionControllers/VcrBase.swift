@@ -29,7 +29,7 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate,UICollectionViewDe
     
     open var LayoutHeight:CGFloat
     {
-        return 0.0
+        return 50.0
     }
     open func Init()
     {
@@ -37,7 +37,6 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate,UICollectionViewDe
         self.collectionView.register(UINib(nibName: self.NibNabe, bundle: nil), forCellWithReuseIdentifier: self.reuseIdentifier)
         (self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = LayoutLineSpacing
         self.collectionView.delegate = self
-        self.collectionView.clipsToBounds = false
     }
     
     open override func viewDidLoad()
