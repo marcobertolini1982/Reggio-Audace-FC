@@ -15,15 +15,25 @@ class ReactionsView
         self.PROREACTIONOBSS.append(proreactionobs)
     }
     
-    func RaisePOstReactionsLoaded(reactions:[Reaction])
+    func RaisePostReactionsLoaded(reactions:[Reaction])
     {
         for l_proreactionobs in self.PROREACTIONOBSS
         {
-            l_proreactionobs.PostReactionsLoaded(reactions: reactions)
+            l_proreactionobs.PostReactionsLoaded?(reactions: reactions)
         }
     }
     
-    final func LoadReactions(prg_post:Int64?)
+    func RaiseReactionsLoaded(reactions:[Reaction])
+    {
+        for l_proreactionobs in self.PROREACTIONOBSS
+        {
+            l_proreactionobs.ReactionsLoaded?(reactions: reactions)
+            
+            
+        }
+    }
+    
+    final func LoadPostReactions(prg_post:Int64?)
    {
     
     
@@ -58,8 +68,44 @@ class ReactionsView
        {
         print(e.localizedDescription)
         }
-        self.RaisePOstReactionsLoaded(reactions: l_Reactions)
+        self.RaisePostReactionsLoaded(reactions: l_Reactions)
     }
    l_DataTask.resume()
  }
+    
+    
+    func LoadReactions()
+    {
+        guard let l_Urll:URL = URL(string:UrlUtils.URL_LOADREACTIONS) else{return}
+        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with:l_Urll){(data:Data?,response:URLResponse?,error:Error?)in
+            
+            var l_Reactiuons:[Reaction] = [Reaction]()
+            var l_Reaction:Reaction
+            guard error == nil && data != nil else{return}
+            do
+            {
+                guard  let l_JsonArray:[[String:Any]] = try  JSONSerialization.jsonObject(with: data!, options:[]) as? [[String:Any]]
+                
+                else
+                {
+                    return
+                }
+                
+                for l_JsonObj in l_JsonArray
+                {
+                    l_Reaction = Reaction()
+                    l_Reaction.des_emoticon = l_JsonObj["des_emoticon"] as? String
+                    l_Reaction.des_reaction = l_JsonObj["des_reaction"] as? String
+                    l_Reactiuons.append(l_Reaction)
+                }
+                
+            }
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
+            self.RaiseReactionsLoaded(reactions: l_Reactiuons)
+        }
+        l_DataTask.resume()
+    }
 }

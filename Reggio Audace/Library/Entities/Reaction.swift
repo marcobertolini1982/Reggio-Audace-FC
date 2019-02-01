@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Reaction
+class Reaction:NSObject
 {
     var prg_reaction:Int64?
     var des_emoticon:String?

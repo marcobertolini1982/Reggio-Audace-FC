@@ -155,7 +155,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         
         else
         {
-            self.LoadReactionsRecord()
+            self.LoadPostReactionsRecord()
         }
         
     }
@@ -247,12 +247,12 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         l_Postview.LoadPostMessages(prg_post: l_PrgPost)
     }
     
-    private final func LoadReactionsRecord()
+    private final func LoadPostReactionsRecord()
     {
         self.SetPostMessageControlsHidden(true)
         let l_ReactionView:ReactionsView = ReactionsView()
         l_ReactionView.SetReactionsLOaded(proreactionobs: self)
-        l_ReactionView.LoadReactions(prg_post: self.Parent?.PrgPost)
+        l_ReactionView.LoadPostReactions(prg_post: self.Parent?.PrgPost)
         self.SetPostMessageControlsHidden(true)
     }
 }
