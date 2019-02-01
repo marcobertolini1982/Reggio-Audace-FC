@@ -19,15 +19,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3p-RE-ara">
-                        <rect key="frame" x="2" y="10" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
-                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7V-en-t8m">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="t3p-RE-ara" firstAttribute="centerY" secondItem="mqr-jB-CDs" secondAttribute="centerY" id="1SF-vB-sGR"/>
-                <constraint firstItem="t3p-RE-ara" firstAttribute="centerX" secondItem="mqr-jB-CDs" secondAttribute="centerX" id="wbR-DD-s7M"/>
+                <constraint firstItem="T7V-en-t8m" firstAttribute="top" secondItem="mqr-jB-CDs" secondAttribute="top" id="6MS-pN-Ys3"/>
+                <constraint firstItem="T7V-en-t8m" firstAttribute="leading" secondItem="mqr-jB-CDs" secondAttribute="leading" id="Lhz-ue-Ftc"/>
+                <constraint firstItem="T7V-en-t8m" firstAttribute="centerX" secondItem="mqr-jB-CDs" secondAttribute="centerX" id="VxB-Mg-4ee"/>
+                <constraint firstAttribute="trailing" secondItem="T7V-en-t8m" secondAttribute="trailing" id="Z3s-AK-X8f"/>
+                <constraint firstAttribute="bottom" secondItem="T7V-en-t8m" secondAttribute="bottom" id="cG1-nX-CB9"/>
+                <constraint firstItem="T7V-en-t8m" firstAttribute="centerY" secondItem="mqr-jB-CDs" secondAttribute="centerY" id="xCi-2B-R3R"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="6wf-oC-pgi"/>
             <point key="canvasLocation" x="-81" y="-86"/>
