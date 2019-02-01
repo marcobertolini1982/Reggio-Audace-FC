@@ -13,6 +13,8 @@
 		526ABD4121B1564B004177CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ABD4021B1564B004177CB /* GoogleService-Info.plist */; };
 		526BF73021B0450500465AD7 /* CvcSinglePlayerRoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */; };
 		526BF73221B0452400465AD7 /* CvcRankingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BF73121B0452400465AD7 /* CvcRankingItem.xib */; };
+		526BFBBC22047F09008FB595 /* CvcReaction.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BFBBB22047F09008FB595 /* CvcReaction.xib */; };
+		526BFBBE22047FD0008FB595 /* VcrReactions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BFBBD22047FD0008FB595 /* VcrReactions.xib */; };
 		52797B2A21DF566900350D7D /* CvcRankingHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52797B2921DF566900350D7D /* CvcRankingHeader.xib */; };
 		527E94EE21B0648200A8CAD0 /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C121B0570000CBD2BE /* big_noodle_titling.ttf */; };
 		527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F650C421B0603600CBD2BE /* Hind-Bold.ttf */; };
@@ -135,6 +137,8 @@
 		526ABD4021B1564B004177CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcSinglePlayerRoster.xib; sourceTree = "<group>"; };
 		526BF73121B0452400465AD7 /* CvcRankingItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CvcRankingItem.xib; sourceTree = "<group>"; };
+		526BFBBB22047F09008FB595 /* CvcReaction.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcReaction.xib; sourceTree = "<group>"; };
+		526BFBBD22047FD0008FB595 /* VcrReactions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VcrReactions.xib; sourceTree = "<group>"; };
 		52797B2921DF566900350D7D /* CvcRankingHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcRankingHeader.xib; sourceTree = "<group>"; };
 		527E94F421B06A7B00A8CAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5293A14F21B576E90081E805 /* ViePost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViePost.xib; sourceTree = "<group>"; };
@@ -325,6 +329,7 @@
 				D1633DD321B01E9600D5CE2F /* VcrChats.swift */,
 				D15ABDB721B9202E00C980EE /* VcrMedia.swift */,
 				D1855E3421DF56F600F812C0 /* VcrPostImages.swift */,
+				526BFBBD22047FD0008FB595 /* VcrReactions.xib */,
 				D19B3E1421D65A6300BD5F15 /* VcrRanking.swift */,
 				D1EDE77021BEBBB300FDA751 /* VcrSeasonMenu.swift */,
 				D17963F621B146EF005311A8 /* VcrUsers.swift */,
@@ -528,6 +533,7 @@
 				526BF72F21B0450500465AD7 /* CvcSinglePlayerRoster.xib */,
 				D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */,
 				52A78B2921F1C3EA000E197E /* CvcHeader.xib */,
+				526BFBBB22047F09008FB595 /* CvcReaction.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -746,12 +752,14 @@
 				D1633DD621B0276500D5CE2F /* CvcChat.xib in Resources */,
 				52E7168521BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib in Resources */,
 				5232497A21BEB99D00174439 /* (null) in Resources */,
+				526BFBBC22047F09008FB595 /* CvcReaction.xib in Resources */,
 				52B8070721F86A1A009E4C43 /* TvcPostPoll.xib in Resources */,
 				D1BE6D6E21AD60EA00114084 /* Assets.xcassets in Resources */,
 				527E94F121B0648900A8CAD0 /* Hind-Medium.ttf in Resources */,
 				527E94EF21B0648400A8CAD0 /* Hind-Bold.ttf in Resources */,
 				527E94F321B0648E00A8CAD0 /* Hind-SemiBold.ttf in Resources */,
 				527E94F221B0648C00A8CAD0 /* Hind-Regular.ttf in Resources */,
+				526BFBBE22047FD0008FB595 /* VcrReactions.xib in Resources */,
 				52A78B2821F1C353000E197E /* ViePageIndicator.xib in Resources */,
 				527E94F021B0648700A8CAD0 /* Hind-Light.ttf in Resources */,
 				52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */,
