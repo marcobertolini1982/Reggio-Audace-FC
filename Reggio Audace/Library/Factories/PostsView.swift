@@ -12,7 +12,6 @@ public class PostsView
 {
     //Declarations
     private weak var PROPOSTOBS:ProPostsObs?
-    
     private var ProSinglePOstObss:[ProSinglePostObs] = [ProSinglePostObs]()
     private var ProPostFilesObss:[ProPostFilesObs] = [ProPostFilesObs]()
     private var ProPostMessageObss:[ProPostMessageObs] = [ProPostMessageObs]()
