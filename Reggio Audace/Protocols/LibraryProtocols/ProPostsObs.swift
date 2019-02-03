@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ProPostsObs
+protocol ProPostsObs:class
 {
     func PostsLoaded(posts:[Post])
 }

@@ -45,7 +45,7 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
         let l_Base64String:String = l_Data.base64EncodedString()
         let l_Fileview:FileView = FileView()
         l_Fileview.SaveFile(bin_file: l_Base64String, des_notes: nil)
-        l_Fileview.SetOnFileLoaded(proFileObs: self)
+        l_Fileview.SetOnFileLoaded(profileobs: self)
         // Set user image
         self.dismiss(animated: true)
     }
@@ -84,7 +84,7 @@ class CtlUserData: CtlBase,ProUserObs,ProFileObs, UIImagePickerControllerDelegat
     {
             guard let l_PrgFile = user.prg_file else{return}
             let l_Fileview:FileView = FileView()
-            l_Fileview.SetOnFileLoaded(proFileObs: self)
+            l_Fileview.SetOnFileLoaded(profileobs: self)
             l_Fileview.LoadFile(prg_file: l_PrgFile)
         
         

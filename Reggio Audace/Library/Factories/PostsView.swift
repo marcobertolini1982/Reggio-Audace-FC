@@ -11,22 +11,22 @@ import UIKit
 public class PostsView
 {
     //Declarations
-    private var ProPostsObss:[ProPostsObs] = [ProPostsObs]()
+    private weak var PROPOSTOBS:ProPostsObs?
+    
     private var ProSinglePOstObss:[ProSinglePostObs] = [ProSinglePostObs]()
     private var ProPostFilesObss:[ProPostFilesObs] = [ProPostFilesObs]()
     private var ProPostMessageObss:[ProPostMessageObs] = [ProPostMessageObs]()
     func SetOnPostsLoaded(proPostsObs:ProPostsObs)
     {
-        self.ProPostsObss.append(proPostsObs)
+        self.PROPOSTOBS = proPostsObs
         
     }
     
     func RaisePostsLoaded(posts: [Post])
     {
-        for proPostsObs in self.ProPostsObss
-        {
-         proPostsObs.PostsLoaded(posts: posts)
-        }
+        
+         self.PROPOSTOBS?.PostsLoaded(posts: posts)
+        
     }
     
     func SetSinglePOstLoaded(proSinglePostObs:ProSinglePostObs)

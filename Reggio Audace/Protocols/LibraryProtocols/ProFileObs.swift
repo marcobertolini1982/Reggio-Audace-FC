@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ProFileObs
+protocol ProFileObs:class
 {
     func FileLoaded(data:Data)
 }
