@@ -11,7 +11,7 @@ import UIKit
 class FileView:ProUserImageObs
 {
     
-    private  var ProFileObss = [ProFileObs]()
+    private weak var proFileObss:ProFileObs?
  
     func UserImageSaved(prg_file:Int64?)
     {
@@ -21,17 +21,16 @@ class FileView:ProUserImageObs
         
     }
     
-    func SetOnFileLoaded(proFileObs:ProFileObs)
+    func SetOnFileLoaded(profileobs:ProFileObs)
     {
-        ProFileObss.append(proFileObs)
+        self.proFileObss = profileobs
     }
     
     func RaiseFileLoaded(data:Data)
     {
-        for proFileObs in ProFileObss
-        {
-            proFileObs.FileLoaded(data:data)
-        }
+       
+            self.proFileObss?.FileLoaded(data:data)
+        
     }
     
     func LoadFile(prg_file:Int64?)

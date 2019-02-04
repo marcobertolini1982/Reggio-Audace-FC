@@ -88,7 +88,8 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
         let l_FileView : FileView = FileView()
         
         // Add event
-        l_FileView.SetOnFileLoaded(proFileObs: self)
+        l_FileView.SetOnFileLoaded(profileobs: self)
+        
         // Load file
         l_FileView.LoadFile(prg_file: prg_file)
         

@@ -182,7 +182,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
     private final func LoadPostImage(prg_file:Int64)
     {
         let l_FileView:FileView = FileView()
-        l_FileView.SetOnFileLoaded(proFileObs: self)
+        l_FileView.SetOnFileLoaded(profileobs: self)
         l_FileView.LoadFile(prg_file: prg_file)
         
     }

@@ -128,14 +128,6 @@ class UserView
        
     }
     
-   
-    
-    
-   
-    final func SetProFileObs(fileview:FileView,profileobs:ProFileObs)
-    {
-        fileview.SetOnFileLoaded(proFileObs: profileobs)
-    }
     
     
 }
