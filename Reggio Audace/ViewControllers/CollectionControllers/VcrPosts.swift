@@ -180,7 +180,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
        
         let l_Alert:UIAlertController = UIAlertController(title:"Reactions", message:String(), preferredStyle:UIAlertController.Style.alert)
         guard let l_VcrReactions:VcrReactions = MainStoryboard.instantiateViewController(withIdentifier: "VcrReactions") as? VcrReactions else{return}
-        guard let l_IndexPath:IndexPath = l_VcrReactions.collectionView.indexPath(for: cell)
+        guard let l_IndexPath:IndexPath = self.collectionView.indexPath(for: cell)
         else
         {
             return
@@ -190,10 +190,9 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
         l_Alert.addChild(l_VcrReactions)
         l_Alert.view.addSubview(l_VcrReactions.view)
         l_Alert.view.bounds.size.height += l_VcrReactions.view.bounds.size.height
-        if self.presentedViewController == nil
-        {
+        
            self.present(l_Alert, animated: true)
-        }
+        
        
         
     }

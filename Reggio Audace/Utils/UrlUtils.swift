@@ -50,9 +50,9 @@ class UrlUtils
         return URL_WEBAPP + "/LoadPostReactions"
     }
     
-    public static var URL_SAVEREACTION:String
+    public static var URL_SAVEPOSTREACTION:String
     {
-        return URL_WEBAPP + "/SaveReaction"
+        return URL_WEBAPP + "/SavePostReaction"
     }
     
     public static var URL_LOADPOSTPOLLS:String

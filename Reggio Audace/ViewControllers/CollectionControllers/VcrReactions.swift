@@ -65,6 +65,7 @@ class VcrReactions: VcrBase,ProReactionObs
         let l_ReactionView:ReactionsView = ReactionsView()
         l_ReactionView.SaveReaction(prg_post: self.PRGPOST, des_emoticon: self.REACTIONS[indexPath.item].des_emoticon)
         l_Parent.dismiss(animated: true)
+        print(self.PRGPOST)
     }
     
     func ReactionsLoaded(reactions: [Reaction])

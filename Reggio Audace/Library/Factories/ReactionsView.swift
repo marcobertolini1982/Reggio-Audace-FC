@@ -114,13 +114,22 @@ class ReactionsView
     
     final func SaveReaction(prg_post:Int64?,des_emoticon:String?)
     {
-        guard let l_Url:URL = URL(string:UrlUtils.URL_SAVEREACTION) else {return}
+        guard let l_Url:URL = URL(string:UrlUtils.URL_SAVEPOSTREACTION) else {return}
         var l_Request:URLRequest = URLRequest(url:l_Url)
         let l_JsonInput:[String:Any?] = ["prg_post":prg_post,"cod_user":AuthUtils.Uid,"des_emoticon":des_emoticon]
         l_Request.httpMethod = "POST"
         l_Request.setValue(RequestUtils.APPLICATION_JSON, forHTTPHeaderField:RequestUtils.HTTPCONTENTTYPE)
         l_Request.httpBody = try? JSONSerialization.data(withJSONObject: l_JsonInput, options: [])
         let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request)
+        {(data:Data?,repsonse:URLResponse?,error:Error?)in
+          guard data != nil && error == nil
+          else
+            {
+                return
+            }
+            print(String(data: data!, encoding: String.Encoding.utf8))
+        }
+        
         l_DataTask.resume()
     }
 }
