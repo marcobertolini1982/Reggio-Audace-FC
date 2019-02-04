@@ -39,7 +39,9 @@ class ReactionsView
     
     guard let l_Url:URL = URL(string: UrlUtils.URL_LOADPOSTREACTIONS)else{return}
     var l_Request:URLRequest = URLRequest(url:l_Url)
+     l_Request.setValue(RequestUtils.APPLICATION_JSON, forHTTPHeaderField:RequestUtils.HTTPCONTENTTYPE)
     let  l_Json:[String:Any?] = ["prg_post":prg_post]
+   
     let l_Data:Data? = try? JSONSerialization.data(withJSONObject: l_Json, options: [])
     l_Request.httpMethod = "POST"
     l_Request.httpBody = l_Data
@@ -106,6 +108,19 @@ class ReactionsView
             }
             self.RaiseReactionsLoaded(reactions: l_Reactiuons)
         }
+        l_DataTask.resume()
+    }
+    
+    
+    final func SaveReaction(prg_post:Int64?,des_emoticon:String?)
+    {
+        guard let l_Url:URL = URL(string:UrlUtils.URL_SAVEREACTION) else {return}
+        var l_Request:URLRequest = URLRequest(url:l_Url)
+        let l_JsonInput:[String:Any?] = ["prg_post":prg_post,"cod_user":AuthUtils.Uid,"des_emoticon":des_emoticon]
+        l_Request.httpMethod = "POST"
+        l_Request.setValue(RequestUtils.APPLICATION_JSON, forHTTPHeaderField:RequestUtils.HTTPCONTENTTYPE)
+        l_Request.httpBody = try? JSONSerialization.data(withJSONObject: l_JsonInput, options: [])
+        let l_DataTask:URLSessionDataTask = URLSession.shared.dataTask(with:l_Request)
         l_DataTask.resume()
     }
 }

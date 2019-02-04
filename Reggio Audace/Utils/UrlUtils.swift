@@ -39,7 +39,7 @@ class UrlUtils
     {
         return URL_WEBAPP + "/SavePostMessage"
     }
-    
+    // Reactions
     public static var URL_LOADREACTIONS:String
     {
         return URL_WEBAPP + "/LoadReactions"
@@ -48,6 +48,11 @@ class UrlUtils
     public static var URL_LOADPOSTREACTIONS:String
     {
         return URL_WEBAPP + "/LoadPostReactions"
+    }
+    
+    public static var URL_SAVEREACTION:String
+    {
+        return URL_WEBAPP + "/SaveReaction"
     }
     
     public static var URL_LOADPOSTPOLLS:String

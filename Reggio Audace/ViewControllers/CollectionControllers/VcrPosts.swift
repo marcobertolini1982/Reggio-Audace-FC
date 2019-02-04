@@ -61,6 +61,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
         
         // Super
         super.viewDidLoad()
+    self.edgesForExtendedLayout = UIRectEdge(rawValue:0)
     }
     
     open override func viewWillAppear(_ animated: Bool)
@@ -176,9 +177,27 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
     
     func OnBtnPostReactionLongPress(_ cell: UICollectionViewCell)
     {
-        let l_VcrReactions:UIViewController = MainStoryboard.instantiateViewController(withIdentifier: "VcrReactions")
-        self.present(l_VcrReactions, animated: true)
+       
+        let l_Alert:UIAlertController = UIAlertController(title:"Reactions", message:String(), preferredStyle:UIAlertController.Style.alert)
+        guard let l_VcrReactions:VcrReactions = MainStoryboard.instantiateViewController(withIdentifier: "VcrReactions") as? VcrReactions else{return}
+        guard let l_IndexPath:IndexPath = l_VcrReactions.collectionView.indexPath(for: cell)
+        else
+        {
+            return
+            
+        }
+        l_VcrReactions.PrgPost = self.POSTS[l_IndexPath.item].prg_post
+        l_Alert.addChild(l_VcrReactions)
+        l_Alert.view.addSubview(l_VcrReactions.view)
+        l_Alert.view.bounds.size.height += l_VcrReactions.view.bounds.size.height
+        if self.presentedViewController == nil
+        {
+           self.present(l_Alert, animated: true)
+        }
+       
+        
     }
+    
     
 
 }

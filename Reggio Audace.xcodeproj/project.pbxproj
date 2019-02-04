@@ -28,6 +28,7 @@
 		52E7168321BEBAF8002E1BA1 /* VieCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168221BEBAF8002E1BA1 /* VieCalendar.xib */; };
 		52E7168521BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168421BEBC82002E1BA1 /* VieClubGranataSingleSponsor.xib */; };
 		52E7168721BED3F6002E1BA1 /* CvcSeasonMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E7168621BED3F5002E1BA1 /* CvcSeasonMenu.xib */; };
+		D1033B0B2208A24400754EC7 /* RequestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1033B0A2208A24400754EC7 /* RequestUtils.swift */; };
 		D11B714E21AF0A6600887D2A /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714D21AF0A6600887D2A /* FileView.swift */; };
 		D11B715021AF0F3600887D2A /* ProFileObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B714F21AF0F3600887D2A /* ProFileObs.swift */; };
 		D14D6F2321F21E3300C4B381 /* CviHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D6F2221F21E3300C4B381 /* CviHeader.swift */; };
@@ -155,6 +156,7 @@
 		52F650C621B0603600CBD2BE /* Hind-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-SemiBold.ttf"; sourceTree = "<group>"; };
 		52F650C721B0603600CBD2BE /* Hind-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hind-Medium.ttf"; sourceTree = "<group>"; };
 		544CC687D7D6DCF8A15E205F /* Pods-Reggio Audace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reggio Audace.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reggio Audace/Pods-Reggio Audace.release.xcconfig"; sourceTree = "<group>"; };
+		D1033B0A2208A24400754EC7 /* RequestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtils.swift; sourceTree = "<group>"; };
 		D11B714D21AF0A6600887D2A /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		D11B714F21AF0F3600887D2A /* ProFileObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProFileObs.swift; sourceTree = "<group>"; };
 		D14D6F2221F21E3300C4B381 /* CviHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CviHeader.swift; sourceTree = "<group>"; };
@@ -367,13 +369,6 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		D1609E5422048F2C0043A56B /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		D160DC4921B521C900DAEF67 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +381,7 @@
 				D15EBBE921B69A1600835C0B /* SelectorUtils.swift */,
 				D160DC4B21B521F000DAEF67 /* StoryboardUtils.swift */,
 				D160DC4C21B521F000DAEF67 /* UrlUtils.swift */,
+				D1033B0A2208A24400754EC7 /* RequestUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -508,7 +504,6 @@
 		D174232B21AED7C1009AAEFC /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				D1609E5422048F2C0043A56B /* ViewControllers */,
 				D19F62FB21B7DFD000726165 /* Views */,
 				D174232C21AED7D4009AAEFC /* Cells */,
 			);
@@ -965,6 +960,7 @@
 				D160DC4D21B521F000DAEF67 /* AuthUtils.swift in Sources */,
 				D11B714E21AF0A6600887D2A /* FileView.swift in Sources */,
 				D19B3E0F21D625F600BD5F15 /* RankingView.swift in Sources */,
+				D1033B0B2208A24400754EC7 /* RequestUtils.swift in Sources */,
 				D17D2D2A21C942FE002A7178 /* ProUserObs.swift in Sources */,
 				D171970721BAABD7008D786B /* PagPost.swift in Sources */,
 				D175884E21F7433700488CE6 /* ProPostPollObs.swift in Sources */,

@@ -19,13 +19,6 @@ class VcrReactions: VcrBase,ProReactionObs
         get{return self.PRGPOST}
         set{self.PRGPOST = newValue}
     }
-    
-    
-    required init?(coder aDecoder: NSCoder)
-    {
-        super.init(coder:aDecoder)
-    }
-
 
    override var reuseIdentifier: String
     {
@@ -61,13 +54,17 @@ class VcrReactions: VcrBase,ProReactionObs
         
     
         // Configure the cell
+        
         l_Cell.txt_des_emoticon.text = self.REACTIONS[indexPath.item].des_emoticon
         return l_Cell
     }
     
    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-       self.navigationController?.popViewController(animated:true)
+        guard let l_Parent:UIAlertController = self.parent as? UIAlertController else{return}
+        let l_ReactionView:ReactionsView = ReactionsView()
+        l_ReactionView.SaveReaction(prg_post: self.PRGPOST, des_emoticon: self.REACTIONS[indexPath.item].des_emoticon)
+        l_Parent.dismiss(animated: true)
     }
     
     func ReactionsLoaded(reactions: [Reaction])
@@ -79,9 +76,7 @@ class VcrReactions: VcrBase,ProReactionObs
     
     override func Init()
     {
-        super.Init()
-        self.modalPresentationStyle = UIModalPresentationStyle.currentContext
-        
+        super.Init()        
     }
     
     func LoadRecord()
@@ -98,6 +93,6 @@ class VcrReactions: VcrBase,ProReactionObs
     }
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width:50, height: 50)
+        return CGSize(width:24.0, height: 22.0)
     }
 }

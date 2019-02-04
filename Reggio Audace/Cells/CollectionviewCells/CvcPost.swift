@@ -45,11 +45,7 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
 
     
    
-    @IBAction func OnBtnReactionLongPresse(_ sender: UIButton)
-    {
-        self.PROPOSTCELLOBS?.OnBtnPostReactionLongPress?(self)
-        
-    }
+  
     
     public final var  proPOstCellObs:ProPOstCellObs?
     {
@@ -76,6 +72,8 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
         super.awakeFromNib()
         // Set word wrap for the label
         self.lbl_des_title.lineBreakMode = NSLineBreakMode.byWordWrapping
+        let l_GestureRecognizer:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.OnBtnReactLongPress))
+        btn_PostReactions.addGestureRecognizer(l_GestureRecognizer)
         
     }
     
@@ -113,6 +111,9 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
         self.img_prg_file.image = nil
         self.img_prg_file.setNeedsDisplay()
     }
-    
-   
+    @objc func OnBtnReactLongPress(_ gestureRecognizer:UIGestureRecognizer)
+    {
+     
+        self.PROPOSTCELLOBS?.OnBtnPostReactionLongPress?(self)
+    }
 }

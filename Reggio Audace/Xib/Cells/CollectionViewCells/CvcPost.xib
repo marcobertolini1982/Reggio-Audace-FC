@@ -98,8 +98,7 @@
                         </constraints>
                         <state key="normal" image="Like"/>
                         <connections>
-                            <action selector="OnBtnReactionLongPresse:" destination="Lpb-Xd-BMo" eventType="touchDown" id="tJA-7i-uy1"/>
-                            <action selector="OnBtnReactionsClick:" destination="Lpb-Xd-BMo" eventType="touchUpInside" id="kHF-Y5-etH"/>
+                            <action selector="OnBtnReactionsClick:" destination="Lpb-Xd-BMo" eventType="touchUpInside" id="VXl-jg-X9W"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-fb-dNa">
