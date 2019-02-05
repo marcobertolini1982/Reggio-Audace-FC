@@ -18,6 +18,7 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     @IBOutlet weak var btn_SendMessage: BtnRadioBase!
     @IBOutlet weak var txt_des_message: UITextView!
     private var  POSTMESSAGES:[PostMessage] = [PostMessage]()
+    @IBOutlet weak var vie_postm_message: UIView!
     private var POSTREACTIONS:[Reaction] = [Reaction]()
     private var CONTENTTYPE:ContentType = ContentType.PostMessage
     // Methods
@@ -175,16 +176,17 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     private final func SetKeyBoardUnderTextView()
     {
         let l_NotificationCenter:NotificationCenter = NotificationCenter.default
-        l_NotificationCenter.addObserver(self, selector: #selector(OnKeyBoardShiwn), name: UIResponder.keyboardWillShowNotification, object: nil)
+        l_NotificationCenter.addObserver(self, selector: #selector(OnKeyBoardShown), name: UIResponder.keyboardWillShowNotification, object: nil)
         l_NotificationCenter.addObserver(self, selector: #selector(OnKeyBoardHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @objc func OnKeyBoardShiwn(notification:Notification)
+    @objc func OnKeyBoardShown(notification:Notification)
     {
         guard let l_UserInfo:[AnyHashable:Any] = notification.userInfo else{return}
         guard let l_KeyboarScreenFrame:CGRect = (l_UserInfo[UIResponder.keyboardFrameEndUserInfoKey]as? NSValue)?.cgRectValue else{return}
         let l_KeyboardFrame:CGRect = self.view.convert(l_KeyboarScreenFrame, from: self.view.window)
-        self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: l_KeyboardFrame.height, right: 0.0)
+        self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: l_KeyboardFrame.width - 42.0, right: 0.0)
+        
     }
     
     @objc func OnKeyBoardHidden(notification:Notification)
@@ -196,8 +198,8 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     
     private final func SetPostMessageControlsHidden(_ hidden:Bool)
     {
-        self.txt_des_message.isHidden = hidden
-        self.btn_SendMessage.isHidden = hidden
+        self.vie_postm_message.isHidden = hidden
+      
     }
     
     private final func SetPostReactionInCell(cell:TvcPostMessage,indexPath:IndexPath)

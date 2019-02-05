@@ -19,6 +19,7 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
     @IBOutlet weak var btn_Comments: UIButton!
     @IBOutlet weak var DownloadIndicator: UIActivityIndicatorView!
     @IBOutlet weak var btn_PostReactions: UIButton!
+    @IBOutlet weak var vie_post_message:UIView!
     private weak var PROPOSTCELLOBS:ProPOstCellObs?
     
     func ChannelLoaded(data: Data)

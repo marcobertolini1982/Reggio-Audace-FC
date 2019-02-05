@@ -70,7 +70,7 @@
             <objects>
                 <collectionViewController restorationIdentifier="VcrPosts" storyboardIdentifier="VcrPosts" id="mxM-Kh-xes" customClass="VcrPosts" customModule="Reggio_Audace" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RGm-gC-Cxo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Cf-nz-2Xr">
@@ -241,6 +241,7 @@
                         <outlet property="btn_SendMessage" destination="LyY-7W-xqf" id="9xU-iu-zGM"/>
                         <outlet property="tableView" destination="ELx-vH-Hyh" id="thK-DX-vHw"/>
                         <outlet property="txt_des_message" destination="pTi-8q-1Yp" id="pzZ-zf-tzF"/>
+                        <outlet property="vie_postm_message" destination="t4N-7J-Atg" id="xL8-2X-ada"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiw-1N-TkL" userLabel="First Responder" sceneMemberID="firstResponder"/>

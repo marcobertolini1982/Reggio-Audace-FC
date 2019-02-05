@@ -29,7 +29,7 @@ class CtlRegisterUser: CtlBase
         }
         AuthUtils.Authentication.createUser(withEmail: txt_User.text!, password: txt_Password.text!){(authResult,error)in
             // Eval
-            guard let l_usr:FirebaseAuth.User = authResult?.user
+            guard let l_usr:FirebaseAuth.User = authResult?.user,error == nil
             else
             {
                 
@@ -44,8 +44,15 @@ class CtlRegisterUser: CtlBase
              if !l_usr.isEmailVerified
              {
                 l_usr.sendEmailVerification{(error)in
-                    if error == nil
-                    {
+                   guard  error == nil
+                   else
+                   {
+                    let l_alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                    l_alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default))
+                    self.present(l_alert, animated: true)
+                    return
+                    
+                    }
                         do
                         {
                            try AuthUtils.Authentication.signOut()
@@ -59,14 +66,15 @@ class CtlRegisterUser: CtlBase
                         {
                             print(e.localizedDescription)
                         }
-                    }
+                    l_User.cod_user = l_usr.uid
+                    l_User.des_email = l_usr.email
+                    l_Device.cod_device = l_Dev.identifierForVendor?.uuidString
+                    l_Device.des_device = InstanceID.instanceID().token()
+                    l_UserView.SetUserCreate(device: l_Device, user: l_User)
+                    
                 }
             }
-            l_User.cod_user = l_usr.uid
-            l_User.des_email = l_usr.email
-            l_Device.cod_device = l_Dev.identifierForVendor?.uuidString
-            l_Device.des_device = InstanceID.instanceID().token()
-            l_UserView.SetUserCreate(device: l_Device, user: l_User)
+          
         }
        
         
