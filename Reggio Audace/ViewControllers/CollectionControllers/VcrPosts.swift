@@ -177,24 +177,22 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
     
     func OnBtnPostReactionLongPress(_ cell: UICollectionViewCell)
     {
-       
+        
         let l_Alert:UIAlertController = UIAlertController(title:"Reactions", message:String(), preferredStyle:UIAlertController.Style.alert)
         guard let l_VcrReactions:VcrReactions = MainStoryboard.instantiateViewController(withIdentifier: "VcrReactions") as? VcrReactions else{return}
-        guard let l_IndexPath:IndexPath = self.collectionView.indexPath(for: cell)
-        else
-        {
-            return
-            
-        }
+        guard let l_IndexPath:IndexPath = self.collectionView.indexPath(for: cell) else{return}
+        
+     
+      
         l_VcrReactions.PrgPost = self.POSTS[l_IndexPath.item].prg_post
         l_Alert.addChild(l_VcrReactions)
         l_Alert.view.addSubview(l_VcrReactions.view)
         l_Alert.view.bounds.size.height += l_VcrReactions.view.bounds.size.height
         
            self.present(l_Alert, animated: true)
+           self.LoadRecord()
         
        
-        
     }
     
     

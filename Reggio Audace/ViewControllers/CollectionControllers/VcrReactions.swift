@@ -61,11 +61,11 @@ class VcrReactions: VcrBase,ProReactionObs
     
    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
+        let l_Index:Int = indexPath.item
         guard let l_Parent:UIAlertController = self.parent as? UIAlertController else{return}
         let l_ReactionView:ReactionsView = ReactionsView()
-        l_ReactionView.SaveReaction(prg_post: self.PRGPOST, des_emoticon: self.REACTIONS[indexPath.item].des_emoticon)
+        l_ReactionView.SaveReaction(prg_post: self.PRGPOST,prg_reaction:self.REACTIONS[l_Index].prg_reaction)
         l_Parent.dismiss(animated: true)
-        print(self.PRGPOST)
     }
     
     func ReactionsLoaded(reactions: [Reaction])

@@ -98,6 +98,7 @@ class ReactionsView
                     l_Reaction = Reaction()
                     l_Reaction.des_emoticon = l_JsonObj["des_emoticon"] as? String
                     l_Reaction.des_reaction = l_JsonObj["des_reaction"] as? String
+                    l_Reaction.prg_reaction = l_JsonObj["prg_reaction"] as? Int64
                     l_Reactiuons.append(l_Reaction)
                 }
                 
@@ -112,11 +113,11 @@ class ReactionsView
     }
     
     
-    final func SaveReaction(prg_post:Int64?,des_emoticon:String?)
+    final func SaveReaction(prg_post:Int64?,prg_reaction:Int64?)
     {
         guard let l_Url:URL = URL(string:UrlUtils.URL_SAVEPOSTREACTION) else {return}
         var l_Request:URLRequest = URLRequest(url:l_Url)
-        let l_JsonInput:[String:Any?] = ["prg_post":prg_post,"cod_user":AuthUtils.Uid,"des_emoticon":des_emoticon]
+        let l_JsonInput:[String:Any?] = ["prg_post":prg_post,"cod_user":AuthUtils.Uid,"prg_reaction":prg_reaction]
         l_Request.httpMethod = "POST"
         l_Request.setValue(RequestUtils.APPLICATION_JSON, forHTTPHeaderField:RequestUtils.HTTPCONTENTTYPE)
         l_Request.httpBody = try? JSONSerialization.data(withJSONObject: l_JsonInput, options: [])
@@ -127,7 +128,7 @@ class ReactionsView
             {
                 return
             }
-            print(String(data: data!, encoding: String.Encoding.utf8))
+        
         }
         
         l_DataTask.resume()
