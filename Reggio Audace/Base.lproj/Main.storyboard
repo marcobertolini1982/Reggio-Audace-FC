@@ -208,7 +208,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="pTi-8q-1Yp" firstAttribute="centerY" secondItem="t4N-7J-Atg" secondAttribute="centerY" constant="-17" id="6iI-bB-YFN"/>
                                     <constraint firstItem="pTi-8q-1Yp" firstAttribute="top" secondItem="t4N-7J-Atg" secondAttribute="top" constant="2" id="8Es-6J-Ky0"/>
