@@ -51,12 +51,9 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate,UICollectionViewDe
 
     func BindData()
     {
-        
-        DispatchQueue.main.async {
-            
-            // Bind data
-            self.collectionView?.reloadData()
-            
+        DispatchQueue.main.async
+        {
+            self.collectionView.reloadData()
         }
         
     }

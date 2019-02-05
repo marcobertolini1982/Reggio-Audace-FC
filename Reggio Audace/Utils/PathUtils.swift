@@ -30,4 +30,9 @@ class PathUtils
     {
         return FileManager.default.fileExists(atPath: PathUtils.UserImageFile)
     }
+    
+    public static var PostsPath:String
+    {
+        return CachePath + "/Posts.json" 
+    }
 }

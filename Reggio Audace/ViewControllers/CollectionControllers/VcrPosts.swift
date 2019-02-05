@@ -51,8 +51,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs
         
         // Load file
         l_PostsView.LoadPosts(cod_device:DeviceUtils.CodDevice)
-        
-        
+       
         
     }
     
@@ -67,9 +66,10 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs
     
     open override func viewWillAppear(_ animated: Bool)
     {
+        super.viewWillAppear(animated)
         // Load record
         self.LoadRecord()
-        super.viewWillAppear(animated)
+
         
     }
     
@@ -82,6 +82,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of items
+        print( POSTS.count)
         return POSTS.count
     }
 

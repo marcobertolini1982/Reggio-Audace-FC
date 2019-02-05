@@ -94,45 +94,20 @@ public class PostsView
         l_URLRequest.httpBody = l_JsonData
         
         // Set task
-        let l_Task = URLSession.shared.dataTask(with: l_URLRequest) { data, response, error in
+        let l_Task = URLSession.shared.downloadTask(with: l_URLRequest) { (dataurl:URL?, response:URLResponse?, error:Error?) in
             
             // Eval
-            guard let dataResponse = data, error == nil else { return }
+            guard dataurl != nil && error == nil else { return }
             
             // Decode json
              do
             {
-                guard error == nil && data != nil else{return}
-              guard  let l_JsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: .allowFragments) as? [[String: Any]]
-              else
-              {
-                return
-              }
+               
+                let l_Data:Data = try Data(contentsOf: dataurl!)
+                try l_Data.write(to: URL(fileURLWithPath: PathUtils.PostsPath))
+               self.GetPosts()
                 // Declarations
-                var l_Post:Post
-
-                for dict in l_JsonResponse
-                {
-                    
-                    // Init
-                    l_Post = Post()
-                    
-                    // Get response data
-                    l_Post.prg_post = dict["prg_post"] as? Int64
-                    l_Post.dat_post = DateUtils.StringToDate(dict["dat_post"]as? String,DateUtils.STRINGDATEFORMAT.FORMAT_FULL)
-                    l_Post.des_title = dict["des_title"] as? String
-                    l_Post.des_post = dict["des_post"] as? String
-                    l_Post.des_channel = dict["des_channel"] as? String
-                    l_Post.prg_file = dict["prg_file"] as? Int64
-                    l_Post.num_reactions = dict["num_reactions"] as? Int64
-                    l_Post.num_postmessages = dict["num_postmessages"] as? Int64
-                    l_Post.num_files = dict["num_files"] as? Int64
-                    l_Post.num_poll = dict["num_postpolls"] as? Int64
-                    
-                    // Add
-                    l_Posts.append(l_Post)
-                    
-                }
+              
                 
             }
             catch let e as NSError
@@ -177,7 +152,7 @@ public class PostsView
                 l_Post.num_postmessages = l_JsonResponse["num_postmessages"] as? Int64
                 l_Post.num_files = l_JsonResponse["num_files"] as? Int64
                 l_Post.num_poll = l_JsonResponse["num_postpolls"] as? Int64
-        
+                
                 
             }
             catch let e as NSError
@@ -310,6 +285,48 @@ public class PostsView
         }
         
         l_DataTasdk.resume()
+    }
+    
+   func GetPosts()
+    {
+        DispatchQueue.global().async
+        {
+            
+        
+        var l_Post:Post
+        var l_Posts:[Post] = [Post]()
+        let l_url:URL = URL(fileURLWithPath: PathUtils.PostsPath)
+        guard let l_Data:Data = try? Data(contentsOf: l_url) else{return}
+        do
+        {
+            guard let l_JSonrespnse:[[String:Any]] = try JSONSerialization.jsonObject(with:l_Data, options: []) as? [[String:Any]]
+            else
+            {
+               return
+            }
+          
+            for dict in l_JSonrespnse
+            {
+                l_Post = Post()
+                l_Post.prg_post = dict["prg_post"] as? Int64
+                l_Post.dat_post = DateUtils.StringToDate(dict["dat_post"]as? String,DateUtils.STRINGDATEFORMAT.FORMAT_FULL)
+                l_Post.des_title = dict["des_title"] as? String
+                l_Post.des_post = dict["des_post"] as? String
+                l_Post.des_channel = dict["des_channel"] as? String
+                l_Post.prg_file = dict["prg_file"] as? Int64
+                l_Post.num_reactions = dict["num_reactions"] as? Int64
+                l_Post.num_postmessages = dict["num_postmessages"] as? Int64
+                l_Post.num_files = dict["num_files"] as? Int64
+                l_Post.num_poll = dict["num_postpolls"] as? Int64
+                l_Posts.append(l_Post)
+            }
+        }
+        catch let e as NSError
+        {
+            print(e.localizedDescription)
+        }
+         self.RaisePostsLoaded(posts: l_Posts)
+        }
     }
    
     }
