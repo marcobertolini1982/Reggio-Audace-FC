@@ -12,14 +12,22 @@ import UIKit
 
 class VcrReactions: VcrBase,ProReactionObs
 {
-    private var REACTIONS:[Reaction] = [Reaction]()
+   // Properties
+    private weak var PROVCRREACTIONSOBS:ProVcrReactionsObs?
     private var PRGPOST:Int64?
+    private var num_reactions:Int64?
+    private var REACTIONS:[Reaction] = [Reaction]()
     public final  var PrgPost:Int64?
     {
         get{return self.PRGPOST}
         set{self.PRGPOST = newValue}
     }
-
+   
+    public final var proVcrReactionsObs:ProVcrReactionsObs?
+    {
+        get{return self.PROVCRREACTIONSOBS}
+        set{PROVCRREACTIONSOBS = newValue}
+    }
    override var reuseIdentifier: String
     {
         return "Reaction"
@@ -65,6 +73,7 @@ class VcrReactions: VcrBase,ProReactionObs
         guard let l_Parent:UIAlertController = self.parent as? UIAlertController else{return}
         let l_ReactionView:ReactionsView = ReactionsView()
         l_ReactionView.SaveReaction(prg_post: self.PRGPOST,prg_reaction:self.REACTIONS[l_Index].prg_reaction)
+        self.PROVCRREACTIONSOBS?.Dismissed()
         l_Parent.dismiss(animated: true)
     }
     
@@ -96,4 +105,9 @@ class VcrReactions: VcrBase,ProReactionObs
     {
         return CGSize(width:24.0, height: 22.0)
     }
+    
+   
+            
 }
+
+

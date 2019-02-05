@@ -105,6 +105,7 @@
 		D1855E3B21DF798000F812C0 /* CvcPostImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855E3A21DF798000F812C0 /* CvcPostImage.swift */; };
 		D1855E3D21DF7AD900F812C0 /* CvcPostImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */; };
 		D1855E3F21DFB78B00F812C0 /* TvcPostMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */; };
+		D189EE6B2209BE8C00169F39 /* ProVcrReactionsObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189EE6A2209BE8C00169F39 /* ProVcrReactionsObs.swift */; };
 		D18AC9E421EF699800362523 /* ViePostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AC9E321EF699800362523 /* ViePostMessage.swift */; };
 		D18B8B7121F621350096941B /* ProCviHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B8B7021F621350096941B /* ProCviHeader.swift */; };
 		D190528B2201FA8600EA1F5F /* ProUserImageObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190528A2201FA8600EA1F5F /* ProUserImageObs.swift */; };
@@ -233,6 +234,7 @@
 		D1855E3A21DF798000F812C0 /* CvcPostImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CvcPostImage.swift; sourceTree = "<group>"; };
 		D1855E3C21DF7AD900F812C0 /* CvcPostImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CvcPostImage.xib; sourceTree = "<group>"; };
 		D1855E3E21DFB78B00F812C0 /* TvcPostMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TvcPostMessage.xib; sourceTree = "<group>"; };
+		D189EE6A2209BE8C00169F39 /* ProVcrReactionsObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProVcrReactionsObs.swift; sourceTree = "<group>"; };
 		D18AC9E321EF699800362523 /* ViePostMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViePostMessage.swift; sourceTree = "<group>"; };
 		D18B8B7021F621350096941B /* ProCviHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCviHeader.swift; sourceTree = "<group>"; };
 		D190528A2201FA8600EA1F5F /* ProUserImageObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUserImageObs.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 		D174231D21AEA802009AAEFC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D189EE682209BE3F00169F39 /* ViewControllersProtocols */,
 				D166B87D21F89F4300B9FD78 /* CellsProtocols */,
 				D18B8B6F21F621080096941B /* ViewProtocols */,
 				D18B8B6E21F620DA0096941B /* LibraryProtocols */,
@@ -526,6 +529,22 @@
 				52B8070621F86A1A009E4C43 /* TvcPostPoll.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		D189EE682209BE3F00169F39 /* ViewControllersProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D189EE692209BE5A00169F39 /* CollectionviewControllersProtocols */,
+			);
+			path = ViewControllersProtocols;
+			sourceTree = "<group>";
+		};
+		D189EE692209BE5A00169F39 /* CollectionviewControllersProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D189EE6A2209BE8C00169F39 /* ProVcrReactionsObs.swift */,
+			);
+			path = CollectionviewControllersProtocols;
 			sourceTree = "<group>";
 		};
 		D18AC9E221EF643E00362523 /* CollectionViewCells */ = {
@@ -933,6 +952,7 @@
 				D185534D21E605B700C2DE62 /* ProPostMessageObs.swift in Sources */,
 				D1855E3B21DF798000F812C0 /* CvcPostImage.swift in Sources */,
 				D160DC4F21B521F000DAEF67 /* UrlUtils.swift in Sources */,
+				D189EE6B2209BE8C00169F39 /* ProVcrReactionsObs.swift in Sources */,
 				D174232321AEAE68009AAEFC /* VcrPosts.swift in Sources */,
 				D179640121B184CE005311A8 /* PagBase.swift in Sources */,
 				D1855E3521DF56F600F812C0 /* VcrPostImages.swift in Sources */,

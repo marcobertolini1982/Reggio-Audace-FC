@@ -8,8 +8,9 @@
 
 import UIKit
 
-class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
+class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs
 {
+   
     
     
     // Declarations
@@ -180,6 +181,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
         
         let l_Alert:UIAlertController = UIAlertController(title:"Reactions", message:String(), preferredStyle:UIAlertController.Style.alert)
         guard let l_VcrReactions:VcrReactions = MainStoryboard.instantiateViewController(withIdentifier: "VcrReactions") as? VcrReactions else{return}
+        l_VcrReactions.proVcrReactionsObs = self
         guard let l_IndexPath:IndexPath = self.collectionView.indexPath(for: cell) else{return}
         
      
@@ -188,14 +190,17 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs
         l_Alert.addChild(l_VcrReactions)
         l_Alert.view.addSubview(l_VcrReactions.view)
         l_Alert.view.bounds.size.height += l_VcrReactions.view.bounds.size.height
-        
-           self.present(l_Alert, animated: true)
-           self.LoadRecord()
-        
-       
+        if presentedViewController == nil
+        {
+            self.present(l_Alert, animated: true)
+        }
+    
     }
     
-    
+    func Dismissed()
+    {
+        self.LoadRecord()
+    }
 
 }
     
