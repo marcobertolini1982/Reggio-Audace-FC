@@ -185,13 +185,22 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
         guard let l_UserInfo:[AnyHashable:Any] = notification.userInfo else{return}
         guard let l_KeyboarScreenFrame:CGRect = (l_UserInfo[UIResponder.keyboardFrameBeginUserInfoKey]as? NSValue)?.cgRectValue else{return}
         let l_KeyboardFrame:CGRect = self.view.convert(l_KeyboarScreenFrame, from: self.view.window)
-        self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: l_KeyboardFrame.height, right: 0.0)
+        if self.view.frame.origin.y == 0
+        {
+            self.view.frame.origin.y -= l_KeyboardFrame.height
+            self.additionalSafeAreaInsets = UIEdgeInsets(top:l_KeyboardFrame.height + 42.0, left: 0.0, bottom: 0.0, right: 0.0)
+        }
         
     }
     
     @objc func OnKeyBoardHidden(notification:Notification)
     {
-       self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: 0.0, right: 0.0)
+       
+        if self.view.frame.origin.y != 0
+        {
+            self.view.frame.origin.y = 0
+            self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: 0.0, right: 0.0)
+        }
     }
     
     
