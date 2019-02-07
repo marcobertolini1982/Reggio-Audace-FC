@@ -22,7 +22,7 @@ class VcrPostImages: VcrBase, ProPostFilesObs
     {
         return "PostImages"
     }
-    open override var NibNabe: String
+    open override var NibName: String
     {
         return "CvcPostImage"
     }

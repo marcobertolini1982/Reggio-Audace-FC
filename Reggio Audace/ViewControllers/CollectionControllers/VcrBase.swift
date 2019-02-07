@@ -22,7 +22,7 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate,UICollectionViewDe
         return String()
     }
     
-    open var NibNabe:String
+    open var NibName:String
     {
         return String()
     }
@@ -34,7 +34,7 @@ class VcrBase: UICollectionViewController,UITextFieldDelegate,UICollectionViewDe
     open func Init()
     {
         // Register control
-        self.collectionView.register(UINib(nibName: self.NibNabe, bundle: nil), forCellWithReuseIdentifier: self.reuseIdentifier)
+        self.collectionView.register(UINib(nibName: self.NibName, bundle: nil), forCellWithReuseIdentifier: self.reuseIdentifier)
         (self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = LayoutLineSpacing
         self.collectionView.delegate = self
     }

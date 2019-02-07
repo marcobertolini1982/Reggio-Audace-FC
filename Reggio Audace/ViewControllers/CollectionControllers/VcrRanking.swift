@@ -21,7 +21,7 @@ class VcrRanking: VcrBase,ProRankingObs
         return "Ranking"
     }
     
-    open override var NibNabe: String
+    open override var NibName: String
     {
         // Return
         return "CvcRankingItem"

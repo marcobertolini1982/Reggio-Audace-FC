@@ -16,7 +16,7 @@ class VcrSeasonMenu: VcrBase
        return "IDSEASONMENU"
     }
     
-    open override var NibNabe: String
+    open override var NibName: String
     {
         return "CvcSeasonMenu"
     }

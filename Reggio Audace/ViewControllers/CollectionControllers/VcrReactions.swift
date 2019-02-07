@@ -33,7 +33,7 @@ class VcrReactions: VcrBase,ProReactionObs
         return "Reaction"
     }
    
-    override var NibNabe: String
+    override var NibName: String
     {
         return "CvcReaction"
     }

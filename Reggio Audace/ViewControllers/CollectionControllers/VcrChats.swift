@@ -11,7 +11,7 @@ import UIKit
 
 class VcrChats: VcrBase,ProChatObs
 {
-    open override var NibNabe: String
+    open override var NibName: String
     {
         return "CvcChat"
     }

@@ -16,7 +16,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs
     // Declarations
     var POSTS:[Post] = [Post]()
     
-    open override var NibNabe: String
+    open override var NibName: String
     {
         return "CvcPost"
     }
