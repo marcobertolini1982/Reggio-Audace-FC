@@ -191,7 +191,7 @@ class CtlPost: CtlBase,ProSinglePostObs,ProFileObs,ProPostPollObs,UITableViewDel
        
         super.viewWillAppear(animated)
         self.LoadPoastContent(prg_post: self.Parent?.PrgPost)
-        print(self.POSTPOLLS.isEmpty)
+
         
     }
     

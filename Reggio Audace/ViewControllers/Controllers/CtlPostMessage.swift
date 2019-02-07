@@ -67,12 +67,14 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     {
         super.Init()
         self.tableView.register(UINib(nibName: self.NibName, bundle: nil), forCellReuseIdentifier: self.reuseIdentifier)
-        self.view.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
-        self.tableView.backgroundColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
+        self.tableView.backgroundView = nil
+        let l_Color:UIColor = ColorUtils.ColorFromPatternImage(patternimagename: "Sfondo Chat e Commenti")
+        self.tableView.backgroundColor = l_Color
         self.txt_des_message.layer.borderWidth = 1.0
         self.txt_des_message.layer.borderColor = ColorUtils.lightGray.cgColor
+        self.view.backgroundColor = l_Color
         self.SetKeyBoardUnderTextView()
-      print(self.CONTENTTYPE)
+   
         
     }
     
@@ -183,24 +185,17 @@ class CtlPostMessage: CtlBase,UITableViewDelegate,UITableViewDataSource,ProPostM
     @objc func OnKeyBoardShown(notification:Notification)
     {
         guard let l_UserInfo:[AnyHashable:Any] = notification.userInfo else{return}
-        guard let l_KeyboarScreenFrame:CGRect = (l_UserInfo[UIResponder.keyboardFrameBeginUserInfoKey]as? NSValue)?.cgRectValue else{return}
+        guard let l_KeyboarScreenFrame:CGRect = (l_UserInfo[UIResponder.keyboardFrameEndUserInfoKey]as? NSValue)?.cgRectValue else{return}
         let l_KeyboardFrame:CGRect = self.view.convert(l_KeyboarScreenFrame, from: self.view.window)
-        if self.view.frame.origin.y == 0
-        {
-            self.view.frame.origin.y -= l_KeyboardFrame.height
-            self.additionalSafeAreaInsets = UIEdgeInsets(top:l_KeyboardFrame.height + 42.0, left: 0.0, bottom: 0.0, right: 0.0)
-        }
-        
+        let l_Height:CGFloat = l_KeyboardFrame.height - self.view.safeAreaInsets.bottom
+        self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: l_Height, right: 0.0)
     }
     
     @objc func OnKeyBoardHidden(notification:Notification)
     {
        
-        if self.view.frame.origin.y != 0
-        {
-            self.view.frame.origin.y = 0
             self.additionalSafeAreaInsets = UIEdgeInsets(top: 42.0, left: 0.0, bottom: 0.0, right: 0.0)
-        }
+        
     }
     
     

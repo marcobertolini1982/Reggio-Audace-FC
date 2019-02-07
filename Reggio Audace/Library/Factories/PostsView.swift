@@ -79,8 +79,6 @@ public class PostsView
     func LoadPosts(cod_device:String?)
     {
         
-        // Declarations
-        var l_Posts:[Post] = [Post]()
         
         let l_Json : [String: Any?] = ["cod_device": cod_device]
         let l_JsonData = try? JSONSerialization.data(withJSONObject: l_Json)
@@ -97,7 +95,13 @@ public class PostsView
         let l_Task = URLSession.shared.downloadTask(with: l_URLRequest) { (dataurl:URL?, response:URLResponse?, error:Error?) in
             
             // Eval
-            guard dataurl != nil && error == nil else { return }
+            guard dataurl != nil && error == nil
+            else
+            {
+                self.GetPosts()
+                return
+                
+            }
             
             // Decode json
              do
@@ -105,7 +109,7 @@ public class PostsView
                
                 let l_Data:Data = try Data(contentsOf: dataurl!)
                 try l_Data.write(to: URL(fileURLWithPath: PathUtils.PostsPath))
-               self.GetPosts()
+                self.GetPosts()
                 // Declarations
               
                 
@@ -115,7 +119,7 @@ public class PostsView
                 print(e.localizedDescription)
             }
             // Raise event
-            self.RaisePostsLoaded(posts: l_Posts)
+           
             
         }
       
@@ -289,10 +293,7 @@ public class PostsView
     
    func GetPosts()
     {
-        DispatchQueue.global().async
-        {
-            
-        
+      
         var l_Post:Post
         var l_Posts:[Post] = [Post]()
         let l_url:URL = URL(fileURLWithPath: PathUtils.PostsPath)
@@ -326,7 +327,7 @@ public class PostsView
             print(e.localizedDescription)
         }
          self.RaisePostsLoaded(posts: l_Posts)
-        }
+        
     }
    
     }
