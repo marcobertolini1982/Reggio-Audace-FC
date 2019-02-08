@@ -8,9 +8,12 @@
 
 import UIKit
 
-class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs
+class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs,ProFileObs
 {
-   
+    func FileLoaded(data: Data)
+    {
+        print(data.count)
+    }
     
     
     // Declarations
@@ -111,7 +114,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs
     
     override func collectionView(_ collectionView:UICollectionView,willDisplay cell:UICollectionViewCell,forItemAt indexPath:IndexPath)
     {
-        let l_Index:Int = indexPath.row
+        let l_Index:Int = indexPath.item
         let l_Post:Post = self.POSTS[l_Index]
         let l_prg_file:Int64? = l_Post.prg_file
         guard let l_Cell:CvcPost = cell as? CvcPost
