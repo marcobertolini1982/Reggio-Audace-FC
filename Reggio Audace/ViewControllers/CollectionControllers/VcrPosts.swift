@@ -122,7 +122,24 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs,ProFileObs
         {
             return
         }
-        l_Cell.SetUiImageFile(prg_file: l_prg_file)
+      
+     
+        DispatchQueue.global().async
+        {
+            
+            guard l_prg_file != nil, let l_Url:URL = URL(string: "http://portal.lensolution.it:8080/wRegia/GetFile?prg_file=\(l_prg_file!)")
+                else
+            {
+                return
+                
+            }
+            guard let l_Data:Data = try? Data(contentsOf: l_Url) else{return}
+            DispatchQueue.main.async
+            {
+                l_Cell.img_prg_file.image = UIImage(data: l_Data)
+            }
+            
+        }
         l_Cell.proPOstCellObs = self
         
     }
@@ -135,7 +152,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs,ProFileObs
         {
             return
         }
-        
+        l_Cell.img_prg_file.image = nil
         l_Cell.proPOstCellObs = nil
         
     }
