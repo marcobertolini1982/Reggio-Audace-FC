@@ -92,6 +92,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs,ProFileObs
     {
         // Declarations
         let l_Index:Int = indexPath.item
+        let l_post:Post = self.POSTS[l_Index]
         // Set Image
         guard let l_Cell:CvcPost = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? CvcPost
         else
@@ -102,11 +103,11 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs,ProFileObs
         
         // Set textual data
         l_Cell.lbl_des_title.text = self.POSTS[l_Index].des_title
-        l_Cell.lbl_dat_post.text = DateUtils.DateToString(date:POSTS[l_Index].dat_post)
-        l_Cell.lbl_Comments.text = "\(self.POSTS[l_Index].num_postmessages ?? 0)"
-        l_Cell.lbl_Reactions.text = "\(self.POSTS[l_Index].num_reactions ?? 0)"
-       
-        
+        l_Cell.lbl_dat_post.text = DateUtils.DateToString(date:l_post.dat_post)
+        l_Cell.lbl_Comments.text = "\(l_post.num_postmessages ?? 0)"
+        l_Cell.lbl_Reactions.text = "\(l_post.num_reactions ?? 0)"
+        l_Cell.img_prg_file.image = nil
+        l_Cell.PrgFile = l_post.prg_file
         // Return
         return l_Cell
         
@@ -123,24 +124,11 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs,ProFileObs
             return
         }
       
-     
-        DispatchQueue.global().async
-        {
-            
-            guard l_prg_file != nil, let l_Url:URL = URL(string: "http://portal.lensolution.it:8080/wRegia/GetFile?prg_file=\(l_prg_file!)")
-                else
-            {
-                return
-                
-            }
-            guard let l_Data:Data = try? Data(contentsOf: l_Url) else{return}
-            DispatchQueue.main.async
-            {
-                l_Cell.img_prg_file.image = UIImage(data: l_Data)
-            }
-            
-        }
         l_Cell.proPOstCellObs = self
+        if l_Cell.PrgFile == l_Post.prg_file
+        {
+            l_Cell.SetUiImageFile()
+        }
         
     }
     
@@ -152,7 +140,7 @@ class VcrPosts: VcrBase,ProPostsObs,ProPOstCellObs,ProVcrReactionsObs,ProFileObs
         {
             return
         }
-        l_Cell.img_prg_file.image = nil
+      
         l_Cell.proPOstCellObs = nil
         
     }

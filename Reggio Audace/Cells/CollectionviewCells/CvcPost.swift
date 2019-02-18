@@ -10,6 +10,12 @@ import UIKit
 class CvcPost: CvcBase,ProFileObs,ProChannelObs
 {
     // Declarations
+    private var prg_file:Int64?
+    public final var PrgFile:Int64?
+    {
+        get{return self.prg_file}
+        set{self.prg_file = newValue}
+    }
     @IBOutlet weak var lbl_des_title : UILabel!
     @IBOutlet weak var img_prg_file : UIImageView!
     @IBOutlet weak var img_prg_channel : UIImageView!
@@ -37,7 +43,7 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
         // Set image
         DispatchQueue.main.async
         {
-            
+           
             self.img_prg_file.image = UIImage(data: data)
             self.DownloadIndicator.stopAnimating()
         }
@@ -78,21 +84,22 @@ class CvcPost: CvcBase,ProFileObs,ProChannelObs
         
     }
     
-    func SetUiImageFile(prg_file: Int64?)
+    func SetUiImageFile()
     {
-    
-        self.DownloadIndicator.startAnimating()
+        
+            
+            self.DownloadIndicator.startAnimating()
        
-        // Declarations
-        let l_FileView : FileView = FileView()
+            // Declarations
+            let l_FileView : FileView = FileView()
         
-        // Add event
-        l_FileView.SetOnFileLoaded(profileobs: self)
+            // Add event
+            l_FileView.SetOnFileLoaded(profileobs: self)
         
-        // Load file
-        l_FileView.LoadFile(prg_file: prg_file)
+            // Load file
+            l_FileView.LoadFile(prg_file: self.prg_file)
         
-        
+      
     }
     func setChannelImage(prg_file:Int64)
     {

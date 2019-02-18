@@ -42,13 +42,23 @@ class FileView:ProUserImageObs
         // Set properties
         
         // Set task
-        let l_Task:URLSessionDataTask = URLSession.shared.dataTask(with:l_Url) { data, response, error in
+        let l_Task:URLSessionDownloadTask = URLSession.shared.downloadTask(with:l_Url) { dataurl, response, error in
             
             // Eval
-            guard data != nil && error == nil  else { return }
-
+            guard dataurl != nil && error == nil  else { return }
+            
+            do
+            {
+                let l_Data:Data = try Data(contentsOf: dataurl!)
+                try l_Data.write(to: URL(fileURLWithPath: PathUtils.CachePath+"/\(prg_file!)"))
+            }
+            
+            catch let e as NSError
+            {
+                print(e.localizedDescription)
+            }
                 // Raise event
-                self.RaiseFileLoaded(data:data!)
+            
             
         }
         
