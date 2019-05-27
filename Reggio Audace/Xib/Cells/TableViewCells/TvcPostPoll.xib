@@ -29,11 +29,11 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAB-ja-KJp">
-                        <rect key="frame" x="31" y="6" width="344" height="24.5"/>
+                        <rect key="frame" x="31" y="6" width="344" height="18"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
-                                    <font key="NSFont" size="15" name="Hind-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="15"/>
                                 </attributes>
                             </fragment>
                         </attributedString>

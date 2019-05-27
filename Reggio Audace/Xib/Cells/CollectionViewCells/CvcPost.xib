@@ -35,7 +35,7 @@
                         </vibrancyEffect>
                     </visualEffectView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZq-8g-PfD">
-                        <rect key="frame" x="10" y="269" width="34" height="20"/>
+                        <rect key="frame" x="10" y="269" width="37.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="oyR-kI-meO"/>
                         </constraints>
@@ -43,7 +43,7 @@
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="15" name="Hind-Light"/>
+                                    <font key="NSFont" metaFont="system" size="15"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -76,7 +76,7 @@
                         <rect key="frame" x="141.5" y="131" width="37" height="37"/>
                     </activityIndicatorView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P20-O0-nWo">
-                        <rect key="frame" x="278" y="269" width="34" height="20"/>
+                        <rect key="frame" x="274.5" y="269" width="37.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="OwA-Gp-lCX"/>
                         </constraints>
@@ -84,14 +84,14 @@
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="15" name="Hind-Light"/>
+                                    <font key="NSFont" metaFont="system" size="15"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPX-N5-ihO">
-                        <rect key="frame" x="256" y="269" width="20" height="20"/>
+                        <rect key="frame" x="252.5" y="269" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="boZ-oK-Z8G"/>
                             <constraint firstAttribute="height" constant="20" id="fRU-HQ-e6h"/>
@@ -102,7 +102,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-fb-dNa">
-                        <rect key="frame" x="193" y="273" width="20" height="20"/>
+                        <rect key="frame" x="186" y="273" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="ECE-ZY-b0G"/>
                             <constraint firstAttribute="height" constant="20" id="pvk-6z-Mdi"/>
@@ -113,7 +113,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIH-Cg-Xhr">
-                        <rect key="frame" x="216" y="269" width="34" height="20"/>
+                        <rect key="frame" x="209" y="269" width="37.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="gcW-Zy-IdC"/>
                         </constraints>
@@ -121,7 +121,7 @@
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="15" name="Hind-Light"/>
+                                    <font key="NSFont" metaFont="system" size="15"/>
                                 </attributes>
                             </fragment>
                         </attributedString>

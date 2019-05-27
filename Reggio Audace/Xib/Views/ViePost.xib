@@ -53,7 +53,7 @@
                             </vibrancyEffect>
                         </visualEffectView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9Q-H2-owN">
-                            <rect key="frame" x="6" y="249" width="308" height="35"/>
+                            <rect key="frame" x="6" y="249" width="308" height="32.5"/>
                             <attributedString key="attributedText">
                                 <fragment content="TITOLO">
                                     <attributes>
@@ -66,7 +66,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-KX-6In">
-                            <rect key="frame" x="6" y="292" width="308" height="17"/>
+                            <rect key="frame" x="6" y="289.5" width="308" height="17"/>
                             <attributedString key="attributedText">
                                 <fragment content="DATA E ORA">
                                     <attributes>
@@ -79,13 +79,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-lV-4qd">
-                            <rect key="frame" x="4" y="317" width="312" height="34"/>
+                            <rect key="frame" x="4" y="314.5" width="312" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <attributedString key="attributedText">
                                 <fragment content="testo">
                                     <attributes>
                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="15" name="Hind-Regular"/>
+                                        <font key="NSFont" metaFont="system" size="15"/>
                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
                                 </fragment>
@@ -102,7 +102,7 @@
                                 <fragment content="Label">
                                     <attributes>
                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="15" name="Hind-SemiBold"/>
+                                        <font key="NSFont" metaFont="system" size="15"/>
                                         <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
                                 </fragment>
@@ -118,7 +118,7 @@
                                 <fragment content="Label">
                                     <attributes>
                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="15" name="Hind-SemiBold"/>
+                                        <font key="NSFont" metaFont="system" size="15"/>
                                         <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
                                 </fragment>
@@ -142,7 +142,7 @@
                             <state key="normal" image="Comment"/>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DpJ-aC-pJO" customClass="TbvPostPolls" customModule="Reggio_Audace" customModuleProvider="target">
-                            <rect key="frame" x="4" y="355" width="312" height="372.5"/>
+                            <rect key="frame" x="4" y="352.5" width="312" height="372.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
